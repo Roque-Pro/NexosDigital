@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .bg { fill: #000; }
+      .accent { fill: #3b82f6; }
+    </style>
+  </defs>
+  <rect class="bg" width="256" height="256" rx="40"/>
+  <circle class="accent" cx="85" cy="85" r="25"/>
+  <circle class="accent" cx="171" cy="85" r="25"/>
+  <circle class="accent" cx="85" cy="171" r="25"/>
+  <circle class="accent" cx="171" cy="171" r="25"/>
+  <line x1="110" y1="85" x2="146" y2="85" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="171" y1="110" x2="171" y2="146" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="146" y1="171" x2="110" y2="171" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+  <line x1="85" y1="146" x2="85" y2="110" stroke="#3b82f6" stroke-width="4" stroke-linecap="round"/>
+</svg>
