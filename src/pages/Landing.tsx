@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import { motion } from "framer-motion";
 import {
     Code2,
@@ -242,7 +243,7 @@ const Landing = () => {
                                     className="relative rounded-3xl overflow-hidden shadow-2xl"
                                 >
                                     <img
-                                        src="/src/img/roque-rafael-proenca-consultor.png"
+                                        src={roqueImage}
                                         alt="Roque Rafael Proença - Consultor Sênior"
                                         className="w-full h-auto object-cover"
                                     />
