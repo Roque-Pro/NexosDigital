@@ -108,6 +108,17 @@ const Landing = () => {
                         </Button>
                         <Button
                             onClick={() => {
+                                const element = document.getElementById("tecnologias");
+                                element?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                            variant="ghost"
+                            size="sm"
+                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                        >
+                            Tecnologias
+                        </Button>
+                        <Button
+                            onClick={() => {
                                 const element = document.getElementById("faq");
                                 element?.scrollIntoView({ behavior: "smooth" });
                             }}
@@ -484,11 +495,11 @@ const Landing = () => {
                                 transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
                             >
                                 <p className="text-4xl sm:text-5xl font-display font-black text-purple-600 mb-2">
-                                    250+
+                                    2-3
                                 </p>
                             </motion.div>
                             <p className="text-gray-700 text-sm font-semibold">
-                                Empresas transformadas com tecnologia
+                                Projetos de consultoria por período
                             </p>
                         </div>
 
@@ -769,6 +780,323 @@ const Landing = () => {
                             </div>
                         </motion.div>
                     </div>
+                </div>
+            </section>
+
+            {/* Technologies Section */}
+            <section id="tecnologias" className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-50 to-white">
+                {/* Animated background elements */}
+                <div className="absolute inset-0 overflow-hidden -z-10">
+                    <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                        className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-300/10 rounded-full blur-3xl"
+                    />
+                    <motion.div
+                        animate={{ rotate: -360 }}
+                        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                        className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-purple-300/10 rounded-full blur-3xl"
+                    />
+                </div>
+
+                <div className="max-w-6xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12 sm:mb-16"
+                    >
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-4">
+                            Stack Tecnológico Robusto
+                        </h2>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Ferramentas e plataformas modernas, escaláveis e com altíssima demanda no mercado
+                        </p>
+                    </motion.div>
+
+                    {/* Tech Grid com Design Criativo */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
+                        {[
+                            {
+                                name: "Supabase",
+                                category: "Backend / Database",
+                                description: "PostgreSQL serverless com autenticação integrada",
+                                icon: "🗄️",
+                                color: "from-green-500 to-emerald-600",
+                                features: ["Real-time", "JWT Auth", "Escalável"],
+                            },
+                            {
+                                name: "React",
+                                category: "Frontend",
+                                description: "Interface reativa e performática",
+                                icon: "⚛️",
+                                color: "from-blue-500 to-cyan-600",
+                                features: ["Hooks", "Component-based", "SEO-ready"],
+                            },
+                            {
+                                name: "TypeScript",
+                                category: "Linguagem",
+                                description: "Tipagem estática para código mais seguro",
+                                icon: "📘",
+                                color: "from-blue-600 to-blue-700",
+                                features: ["Type Safety", "IDE Support", "Refactor Safe"],
+                            },
+                            {
+                                name: "Tailwind CSS",
+                                category: "Styling",
+                                description: "Design system rápido e consistente",
+                                icon: "🎨",
+                                color: "from-cyan-500 to-blue-500",
+                                features: ["Responsive", "Dark Mode", "Customizable"],
+                            },
+                            {
+                                name: "Node.js",
+                                category: "Runtime",
+                                description: "JavaScript no servidor com performance",
+                                icon: "🟢",
+                                color: "from-green-500 to-lime-600",
+                                features: ["Event-driven", "Non-blocking", "NPM Ecosystem"],
+                            },
+                            {
+                                name: "AWS / Vercel",
+                                category: "Cloud",
+                                description: "Deploy global com alta disponibilidade",
+                                icon: "☁️",
+                                color: "from-orange-500 to-red-600",
+                                features: ["CDN Global", "Auto-scaling", "99.99% SLA"],
+                            },
+                        ].map((tech, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: index * 0.1, duration: 0.6 }}
+                                viewport={{ once: true }}
+                                whileHover={{ y: -8, transition: { duration: 0.3 } }}
+                                className="group relative h-full"
+                            >
+                                {/* Glow Effect */}
+                                <div className={`absolute inset-0 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-20 rounded-2xl blur-xl transition-opacity duration-300`} />
+                                
+                                {/* Card */}
+                                <div className={`relative h-full bg-white border-2 border-gray-200 group-hover:border-gray-300 rounded-2xl p-6 sm:p-8 transition-all duration-300 backdrop-blur-sm`}>
+                                    {/* Header with Icon */}
+                                    <div className="mb-6">
+                                        <div className={`w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${tech.color} rounded-xl flex items-center justify-center text-3xl sm:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                                            {tech.icon}
+                                        </div>
+                                        <h3 className="text-xl sm:text-2xl font-display font-bold text-gray-900 mb-1">
+                                            {tech.name}
+                                        </h3>
+                                        <p className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide">
+                                            {tech.category}
+                                        </p>
+                                    </div>
+
+                                    {/* Description */}
+                                    <p className="text-gray-600 text-sm sm:text-base mb-6 leading-relaxed">
+                                        {tech.description}
+                                    </p>
+
+                                    {/* Features */}
+                                    <div className="space-y-2">
+                                        {tech.features.map((feature, fIdx) => (
+                                            <div key={fIdx} className="flex items-center gap-2 text-sm text-gray-700">
+                                                <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${tech.color}`} />
+                                                {feature}
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    {/* Bottom accent */}
+                                    <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-100 rounded-b-2xl transition-opacity duration-300`} />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Tech Stats */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12"
+                    >
+                        <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 rounded-2xl">
+                            <p className="text-3xl sm:text-4xl font-display font-black text-blue-600 mb-2">100%</p>
+                            <p className="text-gray-700 font-semibold text-sm">Open Source & Escalável</p>
+                        </div>
+                        <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 rounded-2xl">
+                            <p className="text-3xl sm:text-4xl font-display font-black text-purple-600 mb-2">24/7</p>
+                            <p className="text-gray-700 font-semibold text-sm">Suporte Técnico Premium</p>
+                        </div>
+                        <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 rounded-2xl">
+                            <p className="text-3xl sm:text-4xl font-display font-black text-green-600 mb-2">∞</p>
+                            <p className="text-gray-700 font-semibold text-sm">Performance Otimizada</p>
+                        </div>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 via-gray-900 to-black overflow-hidden">
+                {/* Animated Grid Background */}
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute inset-0 opacity-10">
+                        <div className="absolute w-full h-full" style={{
+                            backgroundImage: `linear-gradient(0deg, transparent 24%, rgba(139, 92, 246, .05) 25%, rgba(139, 92, 246, .05) 26%, transparent 27%, transparent 74%, rgba(139, 92, 246, .05) 75%, rgba(139, 92, 246, .05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(139, 92, 246, .05) 25%, rgba(139, 92, 246, .05) 26%, transparent 27%, transparent 74%, rgba(139, 92, 246, .05) 75%, rgba(139, 92, 246, .05) 76%, transparent 77%, transparent)`,
+                            backgroundSize: '50px 50px',
+                        }} />
+                    </div>
+                    <motion.div
+                        animate={{ scale: [1, 1.1, 1] }}
+                        transition={{ duration: 8, repeat: Infinity }}
+                        className="absolute top-1/3 left-1/3 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+                    />
+                </div>
+
+                <div className="max-w-6xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12 sm:mb-16"
+                    >
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-white mb-4">
+                            O Que Dizem Sobre Nosso Trabalho
+                        </h2>
+                        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+                            Resultados reais de clientes que transformaram seus negócios
+                        </p>
+                    </motion.div>
+
+                    {/* Testimonials Carousel */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                        {[
+                            {
+                                name: "Carlos Mendes",
+                                role: "CEO, TechStart Brasil",
+                                image: "👨‍💼",
+                                text: "Roque transformou nossa visão em realidade em apenas 18 dias. O sistema está rodando perfeitamente, escalável e o código é impecável.",
+                                rating: 5,
+                                highlight: "MVP em 18 dias",
+                            },
+                            {
+                                name: "Fernanda Silva",
+                                role: "Diretora de Operações, E-commerce",
+                                image: "👩‍💼",
+                                text: "Depois da implementação, nosso ROI aumentou 340%. O sistema integra com tudo que precisamos. Suporte excepcional pós-entrega.",
+                                rating: 5,
+                                highlight: "ROI 340% ↑",
+                            },
+                            {
+                                name: "Roberto Oliveira",
+                                role: "Fundador, SaaS Consulting",
+                                image: "👨‍💻",
+                                text: "A qualidade do código é excepcional. TypeScript, React, tudo bem estruturado. Time deu suporte completo durante os 6 meses. Recomendo muito.",
+                                rating: 5,
+                                highlight: "Código Premium",
+                            },
+                        ].map((testimonial, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.15, duration: 0.8 }}
+                                viewport={{ once: true }}
+                                whileHover={{ y: -12, transition: { duration: 0.3 } }}
+                                className="group relative"
+                            >
+                                {/* Gradient Border Effect */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 rounded-2xl p-1 transition-opacity duration-300" />
+                                
+                                {/* Card Content */}
+                                <div className="relative bg-gray-800/50 backdrop-blur-xl border border-gray-700 group-hover:border-transparent rounded-2xl p-6 sm:p-8 h-full">
+                                    {/* Top Badge */}
+                                    <div className="inline-block mb-4 px-3 py-1 bg-purple-500/20 border border-purple-400/50 rounded-full">
+                                        <p className="text-sm font-semibold text-purple-200">
+                                            {testimonial.highlight}
+                                        </p>
+                                    </div>
+
+                                    {/* Stars */}
+                                    <div className="flex gap-1 mb-4">
+                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                            <motion.span
+                                                key={i}
+                                                initial={{ opacity: 0, scale: 0 }}
+                                                whileInView={{ opacity: 1, scale: 1 }}
+                                                transition={{ delay: 0.2 + i * 0.1 }}
+                                                className="text-xl"
+                                            >
+                                                ⭐
+                                            </motion.span>
+                                        ))}
+                                    </div>
+
+                                    {/* Quote */}
+                                    <p className="text-gray-200 text-base sm:text-lg leading-relaxed mb-6 font-light italic">
+                                        "{testimonial.text}"
+                                    </p>
+
+                                    {/* Author */}
+                                    <div className="flex items-center gap-4 pt-6 border-t border-gray-700">
+                                        <div className="text-4xl">{testimonial.image}</div>
+                                        <div>
+                                            <p className="text-white font-semibold text-sm sm:text-base">
+                                                {testimonial.name}
+                                            </p>
+                                            <p className="text-gray-400 text-xs sm:text-sm">
+                                                {testimonial.role}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    {/* Bottom accent */}
+                                    <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 rounded-b-2xl transition-opacity duration-300" />
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Testimonials Stats */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="mt-12 sm:mt-16 p-8 sm:p-12 bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-2xl backdrop-blur-sm"
+                    >
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div className="text-center">
+                                <p className="text-3xl sm:text-4xl font-display font-black text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-2">
+                                    100%
+                                </p>
+                                <p className="text-sm text-gray-400">Satisfação de Clientes</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-3xl sm:text-4xl font-display font-black text-transparent bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text mb-2">
+                                    +300%
+                                </p>
+                                <p className="text-sm text-gray-400">ROI Médio</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-3xl sm:text-4xl font-display font-black text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text mb-2">
+                                    18-40
+                                </p>
+                                <p className="text-sm text-gray-400">Dias para MVP</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-3xl sm:text-4xl font-display font-black text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text mb-2">
+                                    10+
+                                </p>
+                                <p className="text-sm text-gray-400">Anos de Experiência</p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
