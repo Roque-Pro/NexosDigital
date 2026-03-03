@@ -17,12 +17,12 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="flex items-center gap-2 font-display text-lg font-bold tracking-tight text-foreground">
-          <span className="hidden sm:inline">
+        <div className="flex items-center gap-2">
+          <span className="text-primary text-2xl font-black">&lt;/&gt;</span>
+          <a href="#" className="hidden md:flex items-center gap-1 font-display text-lg font-bold tracking-tight text-foreground">
             Nexos<span className="text-primary">Digital</span>
-          </span>
-          <span className="sm:hidden text-primary text-xl font-black">&lt;/&gt;</span>
-        </a>
+          </a>
+        </div>
 
         {/* Desktop */}
         <div className="hidden items-center gap-6 md:flex">
