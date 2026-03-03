@@ -33,7 +33,7 @@ const Landing = () => {
         if (email) {
             setSubmitted(true);
             setTimeout(() => {
-                navigate("/plan-auth", { state: { email } });
+                navigate("/diagnostico-gratuito", { state: { email } });
             }, 1500);
         }
     };
@@ -137,7 +137,7 @@ const Landing = () => {
                             Contato
                         </Button>
                         <Button
-                            onClick={() => navigate("/plan-auth")}
+                            onClick={() => navigate("/diagnostico-gratuito")}
                             size="sm"
                             className="bg-purple-600 hover:bg-purple-700 text-white font-bold"
                         >
@@ -425,7 +425,7 @@ const Landing = () => {
                                     className="flex flex-col sm:flex-row gap-4 justify-center"
                                 >
                                     <Button
-                                        onClick={() => navigate("/plan-auth")}
+                                        onClick={() => navigate("/diagnostico-gratuito")}
                                         size="lg"
                                         className="bg-white text-purple-600 hover:bg-white/90 font-bold text-lg px-8 py-6 rounded-xl shadow-xl hover:shadow-2xl transition-all gap-2"
                                     >
@@ -771,7 +771,7 @@ const Landing = () => {
                                 </div>
 
                                 <Button
-                                    onClick={() => navigate("/plan-auth")}
+                                    onClick={() => navigate("/diagnostico-gratuito")}
                                     size="lg"
                                     className="w-full bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 text-white font-bold text-lg px-8 py-6 rounded-xl shadow-xl shadow-purple-500/30 hover:shadow-purple-500/50 transition-all"
                                 >

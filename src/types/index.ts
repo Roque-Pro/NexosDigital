@@ -48,17 +48,28 @@ export interface Employee {
 }
 
 export interface Service {
-  id: string;
-  client_id: string;
-  client_name: string;
-  vehicle: string;
-  plate: string;
-  service_type: string;
-  description: string;
-  value: number;
-  employee_id: string;
-  employee_name: string;
-  installations: number;
-  service_date: string;
-  created_at: string;
+   id: string;
+   client_id: string;
+   client_name: string;
+   vehicle: string;
+   plate: string;
+   service_type: string;
+   description: string;
+   value: number;
+   employee_id: string;
+   employee_name: string;
+   installations: number;
+   service_date: string;
+   created_at: string;
+}
+
+export interface BlogPost {
+   id: string;
+   title: string;
+   slug: string;
+   html_content: string;
+   excerpt?: string;
+   published: boolean;
+   created_at: string;
+   updated_at: string;
 }

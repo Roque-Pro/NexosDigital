@@ -32,9 +32,7 @@ const PlanAuth = () => {
         );
     }
 
-    if (session) {
-        return <Navigate to="/client-dashboard" replace />;
-    }
+
 
     const handleDiagnosticSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -318,30 +316,47 @@ const PlanAuth = () => {
             </section>
 
             {/* FORMULÁRIO */}
-            <section id="diagnostic-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
-                <div className="max-w-2xl mx-auto">
+            <section id="diagnostic-form" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-gray-50 to-white">
+                {/* Animated background elements */}
+                <div className="absolute inset-0 overflow-hidden -z-10">
+                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl" />
+                    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-300/10 rounded-full blur-3xl" />
+                </div>
+                <div className="max-w-2xl mx-auto relative z-10">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="bg-white rounded-2xl p-8 sm:p-10 shadow-xl border border-purple-100"
+                        className="relative"
+                    >
+                        {/* Gradient border decoration */}
+                        <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 rounded-3xl blur-md opacity-75 group-hover:opacity-100 transition duration-1000 -z-10" />
+                    </motion.div>
+                </div>
+                <div className="max-w-2xl mx-auto relative z-10">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="bg-white rounded-3xl p-8 sm:p-12 shadow-2xl border-2 border-transparent relative"
+                        style={{
+                            borderImage: 'linear-gradient(135deg, #a855f7, #ec4899, #a855f7) 1'
+                        }}
                     >
                         {/* Header do Formulário */}
-                        <div className="flex items-center gap-3 mb-8">
-                            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
-                                <AlertCircle className="w-6 h-6 text-white" />
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 via-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                                <AlertCircle className="w-8 h-8 text-white" />
                             </div>
                             <div>
-                                <h2 className="text-2xl sm:text-3xl font-display font-bold text-gray-900">
-                                    Solicite seu Diagnóstico Estratégico
+                                <h2 className="text-3xl sm:text-4xl font-display font-black text-gray-900">
+                                    Seu Diagnóstico Estratégico
                                 </h2>
+                                <p className="text-gray-600 text-sm mt-1">Responda 5 perguntas em 2 minutos</p>
                             </div>
                         </div>
-
-                        <p className="text-gray-600 mb-8 text-lg">
-                            Preencha as informações abaixo. Leva menos de 2 minutos.
-                        </p>
 
                         <form onSubmit={handleDiagnosticSubmit} className="space-y-5">
                             {/* Nome */}
@@ -360,7 +375,7 @@ const PlanAuth = () => {
                                         })
                                     }
                                     required
-                                    className="border-gray-300"
+                                    className="border-2 border-purple-300/50 !text-gray-900 placeholder:!text-gray-500 focus:border-purple-500 focus:bg-purple-50 focus:outline-none transition-all rounded-xl bg-gray-50"
                                 />
                             </div>
 
@@ -380,14 +395,14 @@ const PlanAuth = () => {
                                         })
                                     }
                                     required
-                                    className="border-gray-300"
+                                    className="border-2 border-pink-300/50 !text-gray-900 placeholder:!text-gray-500 focus:border-pink-500 focus:bg-pink-50 focus:outline-none transition-all rounded-xl bg-gray-50"
                                 />
                             </div>
 
                             {/* Empresa */}
                             <div className="space-y-2">
                                 <Label htmlFor="diagnosticCompany" className="font-semibold text-gray-900">
-                                    Nome da empresa <span className="text-gray-400">(opcional)</span>
+                                    Nome da empresa <span className="text-gray-500">(opcional)</span>
                                 </Label>
                                 <Input
                                     id="diagnosticCompany"
@@ -399,7 +414,7 @@ const PlanAuth = () => {
                                             diagnosticCompany: e.target.value,
                                         })
                                     }
-                                    className="border-gray-300"
+                                    className="border-2 border-blue-300/50 !text-gray-900 placeholder:!text-gray-500 focus:border-blue-500 focus:bg-blue-50 focus:outline-none transition-all rounded-xl bg-gray-50"
                                 />
                             </div>
 
@@ -418,7 +433,7 @@ const PlanAuth = () => {
                                         })
                                     }
                                     required
-                                    className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-emerald-300/50 bg-gray-50 !text-gray-900 font-medium focus:border-emerald-500 focus:bg-emerald-50 focus:outline-none transition-all appearance-none cursor-pointer"
                                 >
                                     <option value="">Selecione uma opção</option>
                                     <option value="vendas">Vendas</option>
@@ -437,7 +452,7 @@ const PlanAuth = () => {
                                 </Label>
                                 <textarea
                                     id="diagnosticDescription"
-                                    placeholder="Ex: controle manual em planilhas, retrabalho, falta de integração, demora no atendimento..."
+                                    placeholder="Ex: controle manual em planilhas, retrabalho, falta de integração..."
                                     value={diagnosticData.diagnosticDescription}
                                     onChange={(e) =>
                                         setDiagnosticData({
@@ -446,63 +461,63 @@ const PlanAuth = () => {
                                         })
                                     }
                                     required
-                                    className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent min-h-24 resize-none"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-cyan-300/50 bg-gray-50 !text-gray-900 placeholder:!text-gray-500 font-medium focus:border-cyan-500 focus:bg-cyan-50 focus:outline-none transition-all min-h-24 resize-none"
                                 />
                             </div>
 
                             {/* Botão */}
                             <Button
                                 type="submit"
-                                className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white font-bold py-3 text-lg mt-8"
+                                className="w-full bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 hover:from-purple-700 hover:via-pink-600 hover:to-purple-700 text-white font-black py-4 text-lg mt-8 rounded-xl shadow-lg shadow-purple-500/40 transition-all hover:shadow-purple-500/60"
                                 disabled={submitting}
                             >
-                                {submitting ? "Enviando..." : "Solicitar Diagnóstico"}
+                                {submitting ? "⏳ Processando..." : "🚀 Enviar Diagnóstico"}
                             </Button>
-                        </form>
+                            </form>
 
-                        {/* O que acontece depois */}
-                        <div className="mt-10 pt-8 border-t border-gray-200">
+                            {/* O que acontece depois */}
+                            <div className="mt-10 pt-8 border-t border-gray-200">
                             <h3 className="font-display font-bold text-gray-900 mb-6 text-lg">
-                                O Que Acontece Depois:
+                                ✨ O Que Acontece Depois:
                             </h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                     <div>
                                         <span className="text-gray-900 font-semibold">Análise Profunda em Até 24 Horas</span>
                                         <p className="text-gray-600 text-sm mt-1">Você receberá um orçamento completo em formato PDF</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                     <div>
                                         <span className="text-gray-900 font-semibold">Sem Surpresas, Sem Letras Miúdas</span>
                                         <p className="text-gray-600 text-sm mt-1">Tudo transparente e claro desde o início. Nenhum custo oculto.</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                   <div>
                                     <span className="text-gray-900 font-semibold">Desenvolvimento Responsável</span>
                                     <p className="text-gray-600 text-sm mt-1">Acompanhamento total e direto comigo durante todo o projeto</p>
                                   </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                   <div>
                                     <span className="text-gray-900 font-semibold">Transparência na Negociação</span>
                                     <p className="text-gray-600 text-sm mt-1">Você acompanha cada etapa direto comigo. Comunicação clara e honesta em todo o processo.</p>
                                   </div>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                                    <div>
-                                        <span className="text-gray-900 font-semibold">Entrega do Projeto Completa</span>
-                                        <p className="text-gray-600 text-sm mt-1">Código 100% seu, documentação, treinamento e 6 meses de suporte premium</p>
-                                    </div>
+                                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                  <div>
+                                    <span className="text-gray-900 font-semibold">Entrega do Projeto Completa</span>
+                                    <p className="text-gray-600 text-sm mt-1">Código 100% seu, documentação, treinamento e 6 meses de suporte premium</p>
+                                  </div>
                                 </li>
                             </ul>
-                        </div>
+                            </div>
                     </motion.div>
                 </div>
             </section>

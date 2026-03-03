@@ -245,7 +245,7 @@ const ClientDashboard = () => {
     }
 
     if (!session) {
-        return <Navigate to="/plan-auth" replace />;
+        return <Navigate to="/auth" replace />;
     }
 
     if (dataLoading) {
