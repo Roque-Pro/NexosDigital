@@ -13,6 +13,7 @@ import BlogAdmin from "./pages/BlogAdmin";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
+import AutoClubPro from "./pages/AutoClubPro";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/" element={<Landing />} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/diagnostico-gratuito" element={<PlanAuth />} />
+            <Route path="/autoclub-pro" element={<AutoClubPro />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route

@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import AutoClubProDetailedSection from "@/components/AutoClubProDetailedSection";
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -1295,6 +1296,9 @@ const Landing = () => {
                     </div>
                 </motion.div>
             </section>
+
+            {/* AutoClub Pro Section */}
+            <AutoClubProDetailedSection />
 
             {/* Footer */}
             <footer className="relative border-t-2 border-gray-200 bg-white">

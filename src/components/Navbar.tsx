@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
@@ -17,20 +18,15 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
-        <div className="flex items-center gap-2">
-          <span className="text-primary text-2xl font-black">&lt;/&gt;</span>
-          <a href="#" className="hidden md:flex items-center gap-1 font-display text-lg font-bold tracking-tight text-foreground">
-            Nexos<span className="text-primary">Digital</span>
-          </a>
-        </div>
+         <Link to="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+           <span className="text-primary text-2xl font-black">&lt;/&gt;</span>
+           <div className="hidden md:flex items-center gap-1 font-display text-lg font-bold tracking-tight text-foreground">
+             Nexos<span className="text-primary">Digital</span>
+           </div>
+         </Link>
 
         {/* Desktop */}
         <div className="hidden items-center gap-6 md:flex">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-primary">
-              {l.label}
-            </a>
-          ))}
           <Button size="sm" className="glow-sm gap-2" asChild>
             <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-4 w-4" /> WhatsApp
@@ -48,11 +44,6 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="container flex flex-col gap-4 py-6">
-            {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="text-sm text-muted-foreground hover:text-primary">
-                {l.label}
-              </a>
-            ))}
             <Button size="sm" className="glow-sm gap-2 w-fit" asChild>
               <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" /> WhatsApp

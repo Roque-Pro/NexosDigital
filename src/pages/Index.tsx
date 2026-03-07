@@ -11,6 +11,7 @@ import VideoSection from "@/components/VideoSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import AutoClubProDetailedSection from "@/components/AutoClubProDetailedSection";
 
 const Index = () => {
   return (
@@ -22,6 +23,7 @@ const Index = () => {
          <MethodologySection />
          <ProblemsResultsSection />
          <PortfolioSection />
+         <AutoClubProDetailedSection />
          <AudienceSection />
          <WhyMeSection />
          <FAQSection />
