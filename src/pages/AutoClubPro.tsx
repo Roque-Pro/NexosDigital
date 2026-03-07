@@ -122,26 +122,32 @@ const AutoClubPro = () => {
   const problems = [
     {
       problem: "Clientes espalhados em planilhas e anotações",
+      result: "Perdem-se clientes, menos retorno",
       solution: "Banco de dados centralizado com histórico completo",
     },
     {
       problem: "Vendedores não sabem quanto já venderam",
+      result: "Sem motivação, vendas caem",
       solution: "Dashboard de vendas em tempo real por vendedor",
     },
     {
       problem: "Estoque desaparece sem explicação",
+      result: "Perda de lucro e desorganização",
       solution: "Rastreamento completo de movimentações",
     },
     {
       problem: "Comissões demorando semanas para calcular",
+      result: "Desgaste com vendedor, brigas",
       solution: "Cálculo automático e comprovante instantâneo",
     },
     {
       problem: "Agendamentos viram bagunça no telefone",
+      result: "Cliente não retorna, agenda vazia",
       solution: "Sistema de agendamento automático online",
     },
     {
       problem: "Lucro minguando sem saber por quê",
+      result: "Decisões no escuro, negócio estagna",
       solution: "Dashboard executivo com métricas em tempo real",
     },
   ];
@@ -332,8 +338,8 @@ const AutoClubPro = () => {
                       {item.problem}
                     </h3>
                   </div>
-                  <p className="text-slate-600 dark:text-slate-400 mb-3">
-                    Resultado: Margem de lucro 5-8% quando deveria ser 15-25%
+                  <p className="text-red-500 dark:text-red-400 mb-3 text-sm font-semibold">
+                    Resultado: {item.result}
                   </p>
                   <div className="flex items-start gap-2 text-green-600 dark:text-green-400">
                     <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
