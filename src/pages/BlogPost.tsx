@@ -29,7 +29,8 @@ const BlogPostPage = () => {
     const updateMetaTags = (post: BlogPost) => {
         const postUrl = `https://www.technexos.com.br/blog/${post.slug}`;
         const description = post.excerpt || post.html_content.substring(0, 160);
-        const imageUrl = "https://www.technexos.com.br/src/img/roque-rafael-proenca-consultor.png";
+        // Imagem padrão para compartilhamento em redes sociais
+        const imageUrl = "https://www.technexos.com.br/og-image-blog.png";
 
         // Title
         document.title = `${post.title} | TechNexos Blog`;

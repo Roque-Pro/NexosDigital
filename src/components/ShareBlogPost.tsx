@@ -22,7 +22,7 @@ export default function ShareBlogPost({ title, slug, excerpt }: ShareBlogPostPro
             color: "bg-blue-50 hover:bg-blue-100 text-blue-700",
             action: () => {
                 window.open(
-                    `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+                    `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}&title=${encodedTitle}`,
                     "_blank",
                     "width=600,height=600"
                 );
@@ -35,7 +35,7 @@ export default function ShareBlogPost({ title, slug, excerpt }: ShareBlogPostPro
             color: "bg-blue-50 hover:bg-blue-100 text-blue-600",
             action: () => {
                 window.open(
-                    `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+                    `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}&quote=${encodedTitle}`,
                     "_blank",
                     "width=600,height=600"
                 );
