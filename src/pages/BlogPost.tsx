@@ -26,11 +26,18 @@ const BlogPostPage = () => {
         }
     }, [post]);
 
+    const extractFirstImage = (htmlContent: string): string | null => {
+        const imgRegex = /<img[^>]+src=["']([^"']+)["']/;
+        const match = htmlContent.match(imgRegex);
+        return match ? match[1] : null;
+    };
+
     const updateMetaTags = (post: BlogPost) => {
         const postUrl = `https://www.technexos.com.br/blog/${post.slug}`;
         const description = post.excerpt || post.html_content.substring(0, 160);
-        // Imagem padrão para compartilhamento em redes sociais
-        const imageUrl = "https://www.technexos.com.br/og-image-blog.png";
+        // Usar primeira imagem do post ou imagem padrão
+        const firstImage = extractFirstImage(post.html_content);
+        const imageUrl = firstImage || "https://www.technexos.com.br/og-image-blog.png";
 
         // Title
         document.title = `${post.title} | TechNexos Blog`;
