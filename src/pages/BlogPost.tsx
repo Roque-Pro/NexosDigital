@@ -50,11 +50,14 @@ const BlogPostPage = () => {
         updateMetaTag("property", "og:type", "article");
         updateMetaTag("property", "og:title", post.title);
         updateMetaTag("property", "og:description", description);
-        updateMetaTag("property", "og:url", postUrl);
+        updateMetaTag("property", "og:url", postUrl); // URL específica do post
         updateMetaTag("property", "og:image", imageUrl);
+        updateMetaTag("property", "og:image:type", "image/png");
         updateMetaTag("property", "og:image:width", "1200");
         updateMetaTag("property", "og:image:height", "630");
+        updateMetaTag("property", "og:image:alt", post.title);
         updateMetaTag("property", "og:site_name", "TechNexos");
+        updateMetaTag("property", "og:locale", "pt_BR");
 
         // Twitter Card
         updateMetaTag("name", "twitter:card", "summary_large_image");
@@ -67,7 +70,7 @@ const BlogPostPage = () => {
         updateMetaTag("property", "article:author", "Roque Rafael Proença");
         updateMetaTag("property", "article:section", "Tecnologia");
 
-        // Canonical URL
+        // Canonical URL (muito importante para SEO)
         let canonical = document.querySelector('link[rel="canonical"]');
         if (!canonical) {
             canonical = document.createElement("link");
@@ -75,6 +78,10 @@ const BlogPostPage = () => {
             document.head.appendChild(canonical);
         }
         canonical.setAttribute("href", postUrl);
+
+        // Cache buster para redes sociais
+        const cacheTime = new Date().getTime();
+        updateMetaTag("property", "og:url", `${postUrl}?v=${cacheTime}`);
     };
 
     const updateMetaTag = (
