@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
 import { BlogPost } from "@/types";
+import ShareBlogPost from "@/components/ShareBlogPost";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -171,23 +172,30 @@ const BlogPostPage = () => {
                 className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
             >
                 {/* Title */}
-                <div className="mb-8">
+                <div className="mb-10">
                     <h1 className="text-5xl sm:text-6xl font-display font-black text-gray-900 mb-4 leading-tight">
                         {post.title}
                     </h1>
-                    <div className="flex items-center gap-4 text-gray-600">
-                        <time dateTime={post.created_at}>
-                            {new Date(post.created_at).toLocaleDateString("pt-BR", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                            })}
-                        </time>
-                        <span>•</span>
-                        <span>
-                            {Math.ceil(post.html_content.split(" ").length / 200)} min de
-                            leitura
-                        </span>
+                    <div className="flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-4 text-gray-600">
+                            <time dateTime={post.created_at}>
+                                {new Date(post.created_at).toLocaleDateString("pt-BR", {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                })}
+                            </time>
+                            <span>•</span>
+                            <span>
+                                {Math.ceil(post.html_content.split(" ").length / 200)} min de
+                                leitura
+                            </span>
+                        </div>
+                        <ShareBlogPost 
+                            title={post.title} 
+                            slug={post.slug}
+                            excerpt={post.excerpt}
+                        />
                     </div>
                 </div>
 
