@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,6 +24,29 @@ const AutoClubPro = () => {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48 horas em segundos
+
+  // Timer que reinicia a cada 48 horas
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          return 48 * 60 * 60; // Reinicia para 48 horas
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Função para formatar o tempo em HH:MM:SS
+  const formatTime = (seconds: number) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -777,9 +800,18 @@ const AutoClubPro = () => {
                        </h3>
                      </div>
                     <p className="text-5xl font-black text-blue-600 dark:text-blue-400 mb-1">
-                      R$ 4.500
+                      R$ 3.700
                     </p>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">/ano</p>
+                    
+                    {/* Countdown Timer */}
+                    <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                      <p className="text-xs text-red-600 dark:text-red-400 font-semibold mb-1">⏱️ Oferta válida por:</p>
+                      <p className="text-2xl font-black text-red-600 dark:text-red-400 font-mono">
+                        {formatTime(timeLeft)}
+                      </p>
+                    </div>
+                    
                     <div className="space-y-2 text-sm mt-2">
                       <p className="font-semibold text-slate-700 dark:text-slate-300">
                         Pagamento:
@@ -976,7 +1008,7 @@ const AutoClubPro = () => {
             </div>
 
             <p className="text-blue-100 text-sm">
-              Investimento: R$ 4.500/ano (30% • 30% em 10 dias • 40% com 1 mês) | Entrega: 10 dias | Suporte: 24/7h
+              Investimento: R$ 3.700/ano (30% • 30% em 10 dias • 40% com 1 mês) | Entrega: 10 dias | Suporte: 24/7h
             </p>
           </div>
         </section>
