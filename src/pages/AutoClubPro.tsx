@@ -229,7 +229,7 @@ const AutoClubPro = () => {
                   <div className="relative w-full max-w-sm">
                     <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
                     <img
-                      src="/src/img/car.png"
+                      src="/car.png"
                       alt="Carro de Luxo"
                       className="relative rounded-2xl shadow-2xl w-full h-auto"
                       style={{ maxHeight: '400px', objectFit: 'contain' }}
@@ -300,7 +300,7 @@ const AutoClubPro = () => {
                   
                   {/* Image */}
                   <img
-                    src="/src/img/car.png"
+                    src="/car.png"
                     alt="Carro de Luxo"
                     className="relative rounded-2xl shadow-2xl"
                     style={{ width: '450px', height: '450px', objectFit: 'cover' }}
@@ -401,10 +401,10 @@ const AutoClubPro = () => {
               </div>
               <div className="md:order-1 relative">
                 <img
-                   src="/src/img/cap-clientes.PNG"
+                   src="/cap-clientes.PNG"
                    alt="Captação de Clientes de Redes Sociais"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
-                   onClick={() => setSelectedImage("/src/img/cap-clientes.PNG")}
+                   onClick={() => setSelectedImage("/cap-clientes.PNG")}
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 CRM de Captação de Clientes de Redes Sociais
@@ -450,10 +450,10 @@ const AutoClubPro = () => {
               </div>
               <div className="relative">
                 <img
-                   src="/src/img/cap-historico.PNG"
+                   src="/cap-historico.PNG"
                    alt="Histórico e Auditoria"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
-                   onClick={() => setSelectedImage("/src/img/cap-historico.PNG")}
+                   onClick={() => setSelectedImage("/cap-historico.PNG")}
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Log de Auditoria e Histórico de Movimentações
@@ -497,10 +497,10 @@ const AutoClubPro = () => {
               </div>
               <div className="md:order-1 relative">
                 <img
-                   src="/src/img/cap-vendas.PNG"
+                   src="/cap-vendas.PNG"
                    alt="Vendas e Comissões"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
-                   onClick={() => setSelectedImage("/src/img/cap-vendas.PNG")}
+                   onClick={() => setSelectedImage("/cap-vendas.PNG")}
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Relatório de Vendas e Comissões por Vendedor
@@ -545,10 +545,10 @@ const AutoClubPro = () => {
               </div>
               <div className="relative">
                 <img
-                   src="/src/img/cap-estoque.PNG"
+                   src="/cap-estoque.PNG"
                    alt="Controle de Estoque"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
-                   onClick={() => setSelectedImage("/src/img/cap-estoque.PNG")}
+                   onClick={() => setSelectedImage("/cap-estoque.PNG")}
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Dashboard de Estoque com Alertas
@@ -593,10 +593,10 @@ const AutoClubPro = () => {
               </div>
               <div className="md:order-1 relative">
                 <img
-                   src="/src/img/cap-agendamento.PNG"
+                   src="/cap-agendamento.PNG"
                    alt="Agendamentos"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
-                   onClick={() => setSelectedImage("/src/img/cap-agendamento.PNG")}
+                   onClick={() => setSelectedImage("/cap-agendamento.PNG")}
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Agenda Online com Lembretes Automáticos
