@@ -199,6 +199,14 @@ const Landing = () => {
                             FAQ
                         </Button>
                         <Button
+                            onClick={() => navigate("/blog")}
+                            variant="ghost"
+                            size="sm"
+                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                        >
+                            Blog
+                        </Button>
+                        <Button
                             onClick={() => window.open("https://wa.me/5532991075164", "_blank")}
                             variant="ghost"
                             size="sm"
