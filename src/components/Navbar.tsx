@@ -21,7 +21,7 @@ export default function Navbar() {
          <Link to="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
            <span className="text-primary text-2xl font-black">&lt;/&gt;</span>
            <div className="hidden md:flex items-center gap-1 font-display text-lg font-bold tracking-tight text-foreground">
-             Nexos<span className="text-primary">Digital</span>
+             TechNexos<span className="text-primary">Digital</span>
            </div>
          </Link>
 

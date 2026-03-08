@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="container relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary">
-            <Zap className="h-3 w-3" /> NexosDigital — Consultoria & Desenvolvimento Digital
+            <Zap className="h-3 w-3" /> TechNexos Digital — Consultoria & Desenvolvimento Digital
           </div>
 
           <h1 className="font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">

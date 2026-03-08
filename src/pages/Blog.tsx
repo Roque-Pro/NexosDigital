@@ -69,7 +69,7 @@ const Blog = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl sm:text-6xl md:text-7xl font-display font-black text-gray-900 mb-6 leading-tight"
           >
-            Blog Nexos{" "}
+            Blog TechNexos{" "}
             <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
               Consultoria
             </span>

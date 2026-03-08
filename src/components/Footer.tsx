@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="container">
         <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
-            <p className="font-display text-lg font-bold">Nexos<span className="text-primary">Digital</span></p>
+            <p className="font-display text-lg font-bold">TechNexos<span className="text-primary">Digital</span></p>
             <p className="mt-1 text-xs text-muted-foreground">Roque Rafael Proença — Consultoria & Soluções Digitais sob Medida</p>
           </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-8 text-center text-xs text-muted-foreground/60">
-          © {new Date().getFullYear()} NexosDigital — Roque Rafael Proença. Todos os direitos reservados.
+          © {new Date().getFullYear()} TechNexos Digital — Roque Rafael Proença. Todos os direitos reservados.
         </p>
       </div>
     </footer>

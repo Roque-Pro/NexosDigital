@@ -86,7 +86,7 @@ const Landing = () => {
                         </motion.div>
                         <div>
                             <h1 className="text-lg sm:text-xl font-display font-bold text-gray-900">
-                                Nexos Consultoria
+                                TechNexos Consultoria
                             </h1>
                             <p className="text-xs sm:text-sm text-gray-600">
                                 Tecnologia que Transforma
@@ -302,7 +302,7 @@ const Landing = () => {
                             <strong className="text-gray-900"> sua empresa fica para trás da concorrência.</strong>
                         </p>
                         <p className="text-lg sm:text-xl text-gray-600 mb-10 leading-relaxed">
-                            Por isso criamos Nexos: para transformar sua visão em soluções reais,
+                            Por isso criamos TechNexos: para transformar sua visão em soluções reais,
                             <strong className="text-gray-900"> escaláveis e rentáveis,</strong> sem riscos e com resultados comprovados.
                         </p>
                     </motion.div>
@@ -535,7 +535,7 @@ const Landing = () => {
                         className="text-center mb-12 sm:mb-16"
                     >
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-4 sm:mb-6">
-                            Por que escolher <span className="text-purple-600">Nexos Consultoria</span>?
+                            Por que escolher <span className="text-purple-600">TechNexos Consultoria</span>?
                         </h2>
                         <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                             Expertise que transforma ideias em soluções reais e rentáveis
@@ -637,7 +637,7 @@ const Landing = () => {
                         className="text-center mb-12 sm:mb-16"
                     >
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-4">
-                            Metodologia Nexos
+                            Metodologia TechNexos
                         </h2>
                         <p className="text-lg sm:text-xl text-gray-600">
                             Ponta a ponta: Consulta → Desenvolvimento → Implementação → Suporte
@@ -1307,7 +1307,7 @@ const Landing = () => {
                         {/* Brand */}
                         <div>
                             <h3 className="font-display font-bold text-gray-900 mb-4 text-lg">
-                                Nexos Consultoria
+                                TechNexos Consultoria
                             </h3>
                             <p className="text-sm text-gray-600 leading-relaxed">
                                 Consultoria em Tecnologia de ponta. Transformamos visões em soluções escaláveis e
@@ -1343,7 +1343,7 @@ const Landing = () => {
                             <ul className="space-y-3 text-sm text-gray-600">
                                 <li>
                                     <a href="#" className="hover:text-purple-600 transition font-medium">
-                                        Sobre Nexos
+                                        Sobre TechNexos
                                     </a>
                                 </li>
                                 <li>
@@ -1390,7 +1390,7 @@ const Landing = () => {
                     {/* Bottom */}
                     <div className="border-t border-gray-200 pt-8 sm:pt-12">
                         <p className="text-center text-sm text-gray-600 mb-2">
-                            © 2024 Nexos Consultoria em Tecnologia. Todos os direitos reservados.
+                            © 2024 TechNexos Consultoria em Tecnologia. Todos os direitos reservados.
                         </p>
                         <p className="text-center text-xs text-gray-500">
                             Desenvolvido com 💜 para empresas que buscam transformação digital real

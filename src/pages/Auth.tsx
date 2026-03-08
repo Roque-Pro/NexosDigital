@@ -72,7 +72,7 @@ const Auth = () => {
           <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg shadow-purple-500/50 mx-auto mb-4">
             <Code2 className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-2xl font-display font-bold text-gray-900">Nexos Consultoria</h1>
+          <h1 className="text-2xl font-display font-bold text-gray-900">TechNexos Consultoria</h1>
           <p className="text-sm text-gray-600 mt-1">Tecnologia que Transforma</p>
         </div>
 
