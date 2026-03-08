@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
 import { BlogPost } from "@/types";
 import ShareBlogPost from "@/components/ShareBlogPost";
+import { injectOpenGraphTags, fetchBlogMetadata } from "@/lib/og-tags";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -23,6 +24,17 @@ const BlogPostPage = () => {
     useEffect(() => {
         if (post) {
             updateMetaTags(post);
+            // Also inject via the new utility function for better compatibility
+            const metadata = {
+                title: post.title,
+                description: post.excerpt || post.html_content.substring(0, 160),
+                imageUrl: extractFirstImage(post.html_content) || "https://www.technexos.com.br/og-image-blog.png",
+                url: `https://www.technexos.com.br/blog/${post.slug}`,
+                author: "Roque Rafael Proença",
+                publishedAt: post.created_at,
+                type: 'article' as const,
+            };
+            injectOpenGraphTags(metadata);
         }
     }, [post]);
 
