@@ -18,6 +18,72 @@ const BlogPostPage = () => {
         loadPost();
     }, [slug]);
 
+    // Atualizar meta tags quando post carregar
+    useEffect(() => {
+        if (post) {
+            updateMetaTags(post);
+        }
+    }, [post]);
+
+    const updateMetaTags = (post: BlogPost) => {
+        const postUrl = `https://www.technexos.com.br/blog/${post.slug}`;
+        const description = post.excerpt || post.html_content.substring(0, 160);
+        const imageUrl = "https://www.technexos.com.br/src/img/roque-rafael-proenca-consultor.png";
+
+        // Title
+        document.title = `${post.title} | TechNexos Blog`;
+
+        // Meta tags básicas
+        updateMetaTag("name", "description", description);
+        updateMetaTag("name", "keywords", `${post.title}, blog, tecnologia, consultoria`);
+
+        // Open Graph - Essencial para compartilhamento
+        updateMetaTag("property", "og:type", "article");
+        updateMetaTag("property", "og:title", post.title);
+        updateMetaTag("property", "og:description", description);
+        updateMetaTag("property", "og:url", postUrl);
+        updateMetaTag("property", "og:image", imageUrl);
+        updateMetaTag("property", "og:image:width", "1200");
+        updateMetaTag("property", "og:image:height", "630");
+        updateMetaTag("property", "og:site_name", "TechNexos");
+
+        // Twitter Card
+        updateMetaTag("name", "twitter:card", "summary_large_image");
+        updateMetaTag("name", "twitter:title", post.title);
+        updateMetaTag("name", "twitter:description", description);
+        updateMetaTag("name", "twitter:image", imageUrl);
+
+        // Article specific
+        updateMetaTag("property", "article:published_time", post.created_at);
+        updateMetaTag("property", "article:author", "Roque Rafael Proença");
+        updateMetaTag("property", "article:section", "Tecnologia");
+
+        // Canonical URL
+        let canonical = document.querySelector('link[rel="canonical"]');
+        if (!canonical) {
+            canonical = document.createElement("link");
+            canonical.setAttribute("rel", "canonical");
+            document.head.appendChild(canonical);
+        }
+        canonical.setAttribute("href", postUrl);
+    };
+
+    const updateMetaTag = (
+        attribute: "name" | "property",
+        attributeValue: string,
+        content: string
+    ) => {
+        let element = document.querySelector(
+            `meta[${attribute}="${attributeValue}"]`
+        );
+        if (!element) {
+            element = document.createElement("meta");
+            element.setAttribute(attribute, attributeValue);
+            document.head.appendChild(element);
+        }
+        element.setAttribute("content", content);
+    };
+
     const loadPost = async () => {
         try {
             if (!slug) throw new Error("Slug não fornecido");
