@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -25,6 +26,89 @@ const AutoClubPro = () => {
   const [submitted, setSubmitted] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48 horas em segundos
+
+  // SEO Absurdo - AutoClub Pro
+  useSEO({
+    title: "AutoClub Pro | Sistema Completo para Oficina, Vidraçaria, Auto Center e Pneuaria | R$ 3.700/ano | TechNexos",
+    description: "AutoClub Pro - Sistema completo para oficinas, vidraçarias, auto centers e pneuarias. Gestão de clientes, vendas, comissões, estoque, agendamentos e integrações. MVP em 10 dias. R$ 3.700/ano com entrega em 10 dias. Suporte 24/7 via WhatsApp. Aumente seu faturamento até +300%.",
+    keywords: [
+      "autoclub pro",
+      "sistema officina",
+      "software auto center",
+      "gestão vidraçaria",
+      "sistema pneuaria",
+      "controle estoque",
+      "gestão comissões vendedor",
+      "agendamentos automáticos",
+      "integração whatsapp instagram facebook",
+      "dashboard vendas",
+      "sistema completo auto",
+      "software gestão veiculos",
+      "planos manutenção",
+      "controle caixa",
+      "gestão funcionários",
+      "comissão automática vendedor",
+      "sistema leads automático",
+      "inteligência artificial vendas",
+      "análise faturamento oficina",
+      "automação processos auto",
+      "software saas auto",
+      "sistema cloud auto center",
+      "software especializado oficina",
+      "tecnologia oficina Brasil",
+      "sistema gestão auto Brazil",
+      "software pneuaria especializado",
+      "gestão clientes oficina",
+      "histórico vehicles management",
+      "alerts reposição estoque",
+    ],
+    ogTitle: "AutoClub Pro | Sistema Profissional para Oficinas, Vidraçarias e Auto Centers",
+    ogDescription: "Sistema especializado que aumenta seu faturamento até +300%. Gestão completa, integrações inteligentes e suporte 24/7. R$ 3.700/ano - MVP em 10 dias.",
+    ogUrl: "https://www.technexos.com.br/autoclub-pro",
+    twitterTitle: "AutoClub Pro - Sistema para Oficina e Auto Center",
+    twitterDescription: "Transforme sua oficina/vidraçaria/auto center com sistema profissional. Aumente vendas, retenha clientes, automatize processos.",
+    canonicalUrl: "https://www.technexos.com.br/autoclub-pro",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "AutoClub Pro",
+      "applicationCategory": "BusinessApplication",
+      "description": "Sistema completo para gestão de oficinas, vidraçarias, auto centers e pneuarias",
+      "url": "https://www.technexos.com.br/autoclub-pro",
+      "creator": {
+        "@type": "Organization",
+        "name": "TechNexos Consultoria em Tecnologia",
+        "founder": {
+          "@type": "Person",
+          "name": "Roque Rafael Proença"
+        }
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "3700",
+        "priceCurrency": "BRL",
+        "priceValidUntil": "2025-12-31",
+        "description": "AutoClub Pro Sistema Profissional - R$ 3.700/ano",
+        "availability": "https://schema.org/InStock",
+        "deliveryTime": "P10D"
+      },
+      "features": [
+        "Gestão Completa de Clientes",
+        "Controle de Vendas",
+        "Comissões Automáticas",
+        "Gestão de Estoque",
+        "Agendamentos Inteligentes",
+        "Integração WhatsApp/Instagram/Facebook",
+        "Dashboard Analytics",
+        "Suporte 24/7"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "50"
+      }
+    }
+  });
 
   // Timer que reinicia a cada 48 horas
   useEffect(() => {

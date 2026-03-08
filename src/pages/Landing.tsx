@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import { motion } from "framer-motion";
+import { useSEO } from "@/hooks/useSEO";
 import {
     Code2,
     Zap,
@@ -28,6 +29,74 @@ const Landing = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
+
+    // SEO Absurdo
+    useSEO({
+        title: "TechNexos Consultoria em Tecnologia | Transformação Digital Ponta a Ponta | Desenvolvimento Personalizado React Node.js AWS",
+        description: "TechNexos - Consultoria em Tecnologia especializada em transformação digital, desenvolvimento personalizado, automação inteligente e implementação ágil. MVP em 18-40 dias. React, Node.js, AWS, TypeScript. Consultoria estratégica para oficinas, vidraçarias, auto centers e empresas de qualquer tamanho.",
+        keywords: [
+            "consultoria tecnologia",
+            "desenvolvimento software",
+            "transformação digital",
+            "consultoria empresas",
+            "soluções personalizadas",
+            "react desenvolvimento",
+            "node.js backend",
+            "aws cloud",
+            "typescript desenvolvedor",
+            "automação processos",
+            "sistema ERP",
+            "desenvolvimento web",
+            "consultoria roque rafael proença",
+            "tecnologia que transforma",
+            "mvp desenvolvimento rápido",
+            "oficina software",
+            "vidraçaria sistema",
+            "auto center gestão",
+            "dashboard analytics",
+            "integração whatsapp",
+            "saas desenvolvimento",
+            "consultoria digital brasil",
+            "tecnologia para negócios",
+            "sistema de gestão completo",
+            "desenvolvimento customizado",
+            "suporte técnico 24/7",
+            "implementação ponta a ponta",
+            "metodologia ágil",
+            "consultoria tecnológica brasil",
+        ],
+        ogTitle: "TechNexos - Consultoria em Tecnologia | Soluções Digitais Personalizadas",
+        ogDescription: "Transforme seu negócio com consultoria estratégica + desenvolvimento personalizado + implementação ágil. Especialista Roque Rafael Proença. MVP em 18-40 dias.",
+        ogUrl: "https://www.technexos.com.br",
+        twitterTitle: "TechNexos Consultoria em Tecnologia",
+        twitterDescription: "Soluções tecnológicas escaláveis e rentáveis. Desenvolvimento personalizado, automação inteligente e suporte 24/7.",
+        canonicalUrl: "https://www.technexos.com.br",
+        schema: {
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "TechNexos Consultoria em Tecnologia",
+            "description": "Consultoria estratégica em tecnologia, desenvolvimento personalizado e implementação ágil",
+            "url": "https://www.technexos.com.br",
+            "telephone": "+55-32-99107-5164",
+            "founder": {
+                "@type": "Person",
+                "name": "Roque Rafael Proença",
+                "image": "https://www.technexos.com.br/src/img/roque-rafael-proenca-consultor.png",
+                "jobTitle": "Consultor Tecnológico Especialista"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "BR"
+            },
+            "areaServed": ["BR"],
+            "knowsAbout": ["React", "Node.js", "AWS", "TypeScript", "Transformação Digital", "Automação", "ERP", "SaaS"],
+            "offers": {
+                "@type": "Offer",
+                "name": "Consultoria em Tecnologia",
+                "description": "Desenvolvimento personalizado e implementação de soluções digitais"
+            }
+        }
+    });
 
     const handleSubscribe = (e: React.FormEvent) => {
         e.preventDefault();
