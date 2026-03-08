@@ -208,10 +208,10 @@ const AutoClubPro = () => {
           </div>
 
           {/* Content */}
-          <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              {/* Left Side - Text */}
-              <div className="text-white space-y-8">
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+              {/* Left Side - Text - Takes 6 columns */}
+              <div className="md:col-span-6 text-white space-y-8 order-1 md:order-1">
                 <div>
                   <div className="inline-block mb-8">
                     <div className="bg-blue-600/30 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/50">
@@ -220,12 +220,24 @@ const AutoClubPro = () => {
                   </div>
 
                   <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6">
-                    Chega de{" "}
-                    <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                      Bagunça
-                    </span>
+                    Chega de <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Bagunça</span>
                   </h1>
+                </div>
 
+                {/* Mobile Image - positioned between title and paragraph */}
+                <div className="md:hidden flex justify-center">
+                  <div className="relative w-full max-w-sm">
+                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
+                    <img
+                      src="/src/img/car.png"
+                      alt="Carro de Luxo"
+                      className="relative rounded-2xl shadow-2xl w-full h-auto"
+                      style={{ maxHeight: '400px', objectFit: 'contain' }}
+                    />
+                  </div>
+                </div>
+
+                <div>
                   <p className="text-xl text-slate-200 leading-relaxed">
                     AutoClub Pro é o sistema profissional que transforma seu negócio automotivo. 
                     Vidraçaria, oficina, auto center, pneuaria, pintura, funilaria...
@@ -241,16 +253,6 @@ const AutoClubPro = () => {
                     <div>
                       <p className="font-bold text-white">Pronto em 10 Dias</p>
                       <p className="text-sm text-slate-300">Sistema personalizado e funcional</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 p-2 bg-blue-600/30 rounded-lg">
-                      <DollarSign className="h-6 w-6 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-white">R$ 4.500/ano</p>
-                      <p className="text-sm text-slate-300">30% início • 30% em 10 dias • 40% após 1 mês</p>
                     </div>
                   </div>
 
@@ -290,8 +292,8 @@ const AutoClubPro = () => {
                 </div>
               </div>
 
-              {/* Right Side - Image */}
-              <div className="hidden md:flex justify-end items-center">
+              {/* Right Side - Image - Takes 6 columns */}
+              <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
                 <div className="relative w-full max-w-xl">
                   {/* Glow Background */}
                   <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
