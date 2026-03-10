@@ -358,6 +358,8 @@ const AutoClubPro = () => {
                   src={heroes[currentHeroIndex].backgroundImage}
                   alt="Negócio Automotivo"
                   className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
+                  loading="eager"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40"></div>
               </div>

@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
+
+// Performance tip: Some animations could be disabled on mobile with `prefers-reduced-motion`
+// This is already handled by browsers respecting user preferences
 import {
     Code2,
     Zap,
@@ -351,6 +354,10 @@ const Landing = () => {
                                         src={roqueImage}
                                         alt="Roque Rafael Proença - Consultor Sênior"
                                         className="w-full h-auto object-cover"
+                                        loading="eager"
+                                        decoding="async"
+                                        width={600}
+                                        height={800}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                                     <motion.div

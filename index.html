@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://www.youtube.com">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/src/img/roque-rafael-proenca-consultor.png" type="image/png">
+    <link rel="preload" as="image" href="/oficina.webp" type="image/webp">
+    
     <!-- Primary SEO Tags -->
     <title>TechNexos Consultoria em Tecnologia | Transformação Digital Ponta a Ponta | Desenvolvimento Personalizado</title>
     <meta name="title" content="TechNexos Consultoria em Tecnologia | Desenvolvimento & Consultoria Digital Ponta a Ponta">
@@ -19,9 +29,9 @@
     <!-- Google Site Verification -->
     <meta name="google-site-verification" content="TU7NzrXfsfOsd_Y-dzJPhTKTXodzzW3jeG5vTx6kxRI">
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N4S6YE7VEK"></script>
-    <script>
+    <!-- Google Analytics 4 - Deferred for better performance -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-N4S6YE7VEK"></script>
+    <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -121,7 +131,7 @@
 </head>
 
   <body class="dark">
-    <div id="root"></div>
+    <div id="root" style="min-height: 100vh;"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
