@@ -12,6 +12,7 @@ interface SEOProps {
   twitterDescription?: string;
   canonicalUrl?: string;
   schema?: any;
+  googleSiteVerification?: string;
 }
 
 export const useSEO = ({
@@ -26,6 +27,7 @@ export const useSEO = ({
   twitterDescription,
   canonicalUrl,
   schema,
+  googleSiteVerification,
 }: SEOProps) => {
   useEffect(() => {
     // Update title
@@ -55,6 +57,11 @@ export const useSEO = ({
         document.head.appendChild(canonical);
       }
       canonical.setAttribute("href", canonicalUrl);
+    }
+
+    // Google Site Verification
+    if (googleSiteVerification) {
+      updateMetaTag("name", "google-site-verification", googleSiteVerification);
     }
 
     // Schema.org Structured Data

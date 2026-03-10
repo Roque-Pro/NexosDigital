@@ -86,6 +86,7 @@ const Landing = () => {
         twitterTitle: "TechNexos Consultoria em Tecnologia",
         twitterDescription: "Soluções tecnológicas escaláveis e rentáveis. Desenvolvimento personalizado, automação inteligente e suporte 24/7.",
         canonicalUrl: "https://www.technexos.com.br",
+        googleSiteVerification: "TU7NzrXfsfOsd_Y-dzJPhTKTXodzzW3jeG5vTx6kxRI",
         schema: {
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
