@@ -381,7 +381,7 @@ const AutoClubPro = () => {
                     </h1>
 
                     <div className="md:hidden flex justify-center mb-6">
-                      <img src={currentHeroIndex === 0 ? "/car.png" : "/img/moto.png"} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                      <img src={currentHeroIndex === 0 ? "/car.png" : "/moto.png"} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
                     </div>
 
                     <p className={`leading-relaxed mb-6 ${currentHeroIndex === 0 ? "text-xl text-slate-200" : "text-xl text-orange-100"}`}>
@@ -469,7 +469,7 @@ const AutoClubPro = () => {
                     <div className="relative w-full max-w-sm">
                       <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/30 to-yellow-600/30 rounded-3xl blur-3xl"></div>
                       <img
-                        src="/img/moto.png"
+                        src="/moto.png"
                         alt="Moto"
                         className="relative rounded-2xl shadow-2xl w-full h-auto"
                         style={{ maxHeight: '400px', objectFit: 'contain' }}
@@ -551,7 +551,7 @@ const AutoClubPro = () => {
                     
                     {/* Image */}
                     <img
-                      src="/img/moto.png"
+                      src="/moto.png"
                       alt="Moto"
                       className="relative rounded-3xl"
                       style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
@@ -602,7 +602,7 @@ const AutoClubPro = () => {
                     <div className="relative w-full max-w-sm">
                       <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-3xl blur-3xl"></div>
                       <img
-                        src="/img/truck.png"
+                        src="/truck.png"
                         alt="Caminhão"
                         className="relative rounded-2xl shadow-2xl w-full h-auto"
                         style={{ maxHeight: '400px', objectFit: 'contain' }}
@@ -684,7 +684,7 @@ const AutoClubPro = () => {
                     
                     {/* Image */}
                     <img
-                      src="/img/truck.png"
+                      src="/truck.png"
                       alt="Caminhão"
                       className="relative rounded-3xl"
                       style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
