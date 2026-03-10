@@ -732,7 +732,7 @@ const AutoClubPro = () => {
           </div>
 
           {/* Problems Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-white dark:from-black dark:to-slate-900">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               Por Que Seu Negócio Automotivo Está Perdendo Dinheiro Agora
@@ -768,7 +768,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* Features Section with Images */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-white dark:from-slate-900 dark:to-slate-900">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               O Sistema Que Seu Negócio Automotivo Merece
@@ -1024,7 +1024,7 @@ const AutoClubPro = () => {
         <YouTubeVideosSection />
 
         {/* Success Stories */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-800 via-slate-700 to-blue-900 dark:from-slate-800 dark:via-slate-700 dark:to-blue-950">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               Casos de Sucesso - Diferentes Segmentos Automotivos
@@ -1079,7 +1079,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* Why AutoClub Pro is Better - Image Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
@@ -1138,199 +1138,318 @@ const AutoClubPro = () => {
           </div>
         </section>
 
-        {/* ROI Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900 dark:from-blue-950 dark:via-blue-900 dark:to-blue-950 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-8">
-              O Custo Real de Não Fazer Nada (Para Qualquer Negócio Automotivo)
-            </h2>
+        {/* ROI Section - Redesigned */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+                O Custo Real de Não Fazer Nada
+              </h2>
+              <p className="text-xl text-slate-300">Para Qualquer Negócio Automotivo</p>
+            </div>
 
+            {/* ROI Cards Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
-                <p className="text-lg mb-4">
-                  Se você ganha R$15.000/mês e perde 2-3 clientes por mês:
-                </p>
-                <p className="text-3xl font-bold mb-2">R$8.500+/mês</p>
-                <p className="text-blue-200">
-                  Você está perdendo MAIS que o custo anual do AutoClub Pro EM
-                  UMA SEMANA. Seja vidraçaria, oficina ou pneuaria.
-                </p>
+              {/* Cost of Inaction Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-orange-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-red-600/10 to-orange-400/10 backdrop-blur-xl border border-red-500/30 rounded-2xl p-8 h-full flex flex-col justify-center hover:border-red-400/60 transition-all">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 rounded-full mb-6">
+                      <span className="text-red-300 font-semibold text-sm">❌ Sem AutoClub Pro</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-gray-300 mb-6 leading-relaxed">
+                    Se você ganha R$15.000/mês e perde 2-3 clientes por mês:
+                  </p>
+                  
+                  <div className="mb-6">
+                    <p className="text-6xl font-black bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent mb-2">
+                      R$8.500+
+                    </p>
+                    <p className="text-lg text-red-200 font-semibold">/mês em perdas</p>
+                  </div>
+
+                  <div className="border-t border-red-400/20 pt-6">
+                    <p className="text-sm text-red-200/80">
+                      Você está perdendo <span className="font-bold text-red-300">MAIS que o custo anual</span> do AutoClub Pro em apenas <span className="font-bold text-red-300">UMA SEMANA</span>.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-green-500/20 p-8 rounded-lg backdrop-blur-sm border border-green-400/30">
-                <p className="text-lg mb-4">Com AutoClub Pro você ganha:</p>
-                <ul className="text-left space-y-3 text-green-200">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>30% menos tempo administrativo</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>15-25% em faturamento em 3 meses</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                    <span>Sistema pronto e otimizado em 10 dias</span>
-                  </li>
-                </ul>
+              {/* AutoClub Pro Benefits Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-green-600/10 to-emerald-400/10 backdrop-blur-xl border border-green-500/30 rounded-2xl p-8 h-full flex flex-col justify-between hover:border-green-400/60 transition-all">
+                  <div className="mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 rounded-full">
+                      <span className="text-green-300 font-semibold text-sm">✓ Com AutoClub Pro</span>
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm text-gray-300 mb-6">Você ganha:</p>
+                  
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="p-2 bg-green-500/20 rounded-lg flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-5 h-5 text-green-400" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-green-300">30% menos tempo</p>
+                        <p className="text-xs text-gray-400">Administrativo automatizado</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="p-2 bg-green-500/20 rounded-lg flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-5 h-5 text-green-400" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-green-300">15-25% mais faturamento</p>
+                        <p className="text-xs text-gray-400">Em apenas 3 meses</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="p-2 bg-green-500/20 rounded-lg flex-shrink-0 mt-0.5">
+                        <CheckCircle2 className="w-5 h-5 text-green-400" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-green-300">Sistema pronto em 10 dias</p>
+                        <p className="text-xs text-gray-400">Otimizado e funcional</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <p className="text-xl text-blue-200">
-              A diferença é apenas UMA DECISÃO
-            </p>
+            {/* CTA Bottom */}
+            <div className="text-center">
+              <div className="inline-block">
+                <p className="text-2xl font-bold text-white mb-4">
+                  A diferença é apenas uma
+                </p>
+                <p className="text-4xl font-black bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+                  DECISÃO
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Proposal CTA Section */}
+        {/* Proposal CTA Section - Redesigned */}
         <section
           id="proposal"
-          className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-100 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20"
+          className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black"
         >
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-xl border-2 border-blue-500 shadow-lg">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-center">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
                 AutoClub Pro - Sua Solução Personalizada
               </h2>
-              <p className="text-center text-slate-600 dark:text-slate-400 mb-8">
-                Sistema sob medida para seu negócio automotivo (vidraçaria, oficina, auto center, pneuaria, pintura...)
+              <p className="text-xl text-blue-200 max-w-2xl mx-auto">
+                Sistema sob medida para seu negócio automotivo. Tudo pronto em 10 dias, suporte 24/7.
               </p>
+            </div>
 
-              {/* Pricing & Details */}
-              <div className="space-y-6 mb-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-3">
-                      <DollarSign className="w-7 h-7 text-blue-600 dark:text-blue-400" />
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">
-                         Investimento
-                       </h3>
-                     </div>
-                    <p className="text-5xl font-black text-blue-600 dark:text-blue-400 mb-1">
-                      R$ 3.700
-                    </p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">/ano</p>
-                    
-                    {/* Countdown Timer */}
-                    <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
-                      <p className="text-xs text-red-600 dark:text-red-400 font-semibold mb-1">⏱️ Oferta válida por:</p>
-                      <p className="text-2xl font-black text-red-600 dark:text-red-400 font-mono">
-                        {formatTime(timeLeft)}
-                      </p>
-                    </div>
-                    
-                    <div className="space-y-2 text-sm mt-2">
-                      <p className="font-semibold text-slate-700 dark:text-slate-300">
-                        Pagamento:
-                       </p>
-                      <div className="space-y-1 text-slate-600 dark:text-slate-400">
-                        <p>30% no início</p>
-                        <p>30% em 10 dias</p>
-                        <p className="flex items-center justify-center gap-2">40% com 1 mês da plataforma no AR <span className="w-2 h-2 bg-green-500 rounded-full"></span></p>
+            {/* Main Pricing Cards Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Investimento Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-blue-600/10 to-blue-400/10 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 h-full flex flex-col justify-between hover:border-blue-400/60 transition-all">
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="p-3 bg-blue-500/20 rounded-lg">
+                        <DollarSign className="w-6 h-6 text-blue-400" />
                       </div>
-                     </div>
-                  </div>
-
-                  <div className="text-center">
-                    <div className="flex items-center justify-center gap-2 mb-2">
-                      <Calendar className="w-6 h-6 text-green-600 dark:text-green-400" />
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-                        Entrega
-                      </h3>
+                      <h3 className="text-2xl font-bold text-white">Investimento</h3>
                     </div>
-                    <p className="text-4xl font-bold text-green-600 dark:text-green-400">
-                      10 Dias
-                    </p>
-                    <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-                      Sistema totalmente pronto e otimizado
-                    </p>
+                    <div className="mb-6">
+                      <p className="text-5xl font-black bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
+                        R$ 3.700
+                      </p>
+                      <p className="text-3xl font-bold text-white mt-2">/ano</p>
+                    </div>
+                  </div>
+                  
+                  {/* Pagamento */}
+                  <div className="border-t border-blue-400/20 pt-6">
+                    <p className="text-sm font-semibold text-blue-200 mb-4">Plano de Pagamento</p>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 text-sm">
+                        <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center text-blue-300 font-bold text-xs">1</div>
+                        <span className="text-gray-300">30% no início</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm">
+                        <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center text-blue-300 font-bold text-xs">2</div>
+                        <span className="text-gray-300">30% em 10 dias</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm">
+                        <div className="w-8 h-8 rounded-full bg-green-500/30 flex items-center justify-center text-green-300 font-bold text-xs">3</div>
+                        <span className="text-gray-300">40% ao ativar plataforma</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="text-center border-t border-blue-200 dark:border-blue-800 pt-6">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <Headphones className="w-6 h-6 text-purple-600 dark:text-purple-400" />
-                    <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-                      Suporte
-                    </h3>
+              {/* Entrega Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-green-600/10 to-emerald-400/10 backdrop-blur-xl border border-green-500/30 rounded-2xl p-8 h-full flex flex-col justify-center items-center text-center hover:border-green-400/60 transition-all">
+                  <div className="p-4 bg-green-500/20 rounded-xl mb-6">
+                    <Calendar className="w-8 h-8 text-green-400 mx-auto" />
                   </div>
-                  <p className="text-xl font-semibold text-purple-600 dark:text-purple-400">
-                    24/7h Via WhatsApp
+                  <h3 className="text-2xl font-bold text-white mb-4">Entrega Rápida</h3>
+                  <p className="text-6xl font-black bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent mb-4">
+                    10
                   </p>
-                  <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">
-                    Suporte total sempre disponível
+                  <p className="text-lg text-green-200 font-semibold mb-6">Dias</p>
+                  <p className="text-sm text-gray-400">
+                    Sistema totalmente configurado, testado e pronto para usar. Sua equipe treinada no dia 1.
                   </p>
                 </div>
               </div>
 
-
+              {/* Suporte Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-purple-600/10 to-pink-400/10 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8 h-full flex flex-col justify-center items-center text-center hover:border-purple-400/60 transition-all">
+                  <div className="p-4 bg-purple-500/20 rounded-xl mb-6">
+                    <Headphones className="w-8 h-8 text-purple-400 mx-auto" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Suporte Premium</h3>
+                  <p className="text-3xl font-bold text-purple-300 mb-2">24/7</p>
+                  <p className="text-sm text-purple-200 font-semibold mb-4">Via WhatsApp</p>
+                  <p className="text-sm text-gray-400">
+                    Equipe sempre disponível. Dúvidas, problemas ou ajustes — resolvemos em minutos.
+                  </p>
+                </div>
+              </div>
             </div>
+
+            {/* Countdown Timer */}
+            <div className="relative mx-auto max-w-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-400 rounded-2xl blur-lg opacity-20"></div>
+              <div className="relative bg-gradient-to-br from-red-600/10 to-red-400/10 backdrop-blur-xl border border-red-500/50 rounded-2xl p-8">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <span className="text-2xl">⏱️</span>
+                  <p className="text-lg font-bold text-red-200">Oferta com Tempo Limitado</p>
+                </div>
+                <p className="text-center text-5xl font-black text-red-400 font-mono tracking-widest">
+                  {formatTime(timeLeft)}
+                </p>
+                <p className="text-center text-sm text-red-200/70 mt-3">
+                  Após expirar, a próxima disponibilidade será em 48 horas
+                </p>
+              </div>
+            </div>
+
           </div>
         </section>
 
-        {/* What's Included Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 via-blue-400 via-white to-white dark:from-blue-950 dark:via-blue-800 dark:via-slate-800 dark:to-slate-900">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              O Que Está Incluído (Para Seu Negócio Automotivo)
-            </h2>
+        {/* What's Included Section - Redesigned */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+                O Que Está Incluído
+              </h2>
+              <p className="text-xl text-slate-300">Para Seu Negócio Automotivo</p>
+            </div>
 
+            {/* Content Cards Grid */}
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
-                <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">
-                  🚀 Na Entrega (10 dias)
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "Sistema completamente personalizado para sua oficina",
-                    "6 módulos configurados conforme sua necessidade",
-                    "Banco de dados estruturado",
-                    "Dashboard executivo funcional",
-                    "Integração com seu fluxo de trabalho",
-                    "Treinamento inicial da equipe",
-                    "Documentação técnica completa",
-                  ].map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-slate-700 dark:text-slate-300"
-                    >
-                      <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Delivery Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-green-600/10 to-emerald-400/10 backdrop-blur-xl border border-green-500/30 rounded-2xl p-8 hover:border-green-400/60 transition-all">
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="p-3 bg-green-500/20 rounded-lg">
+                      <span className="text-2xl">🚀</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">Na Entrega</h3>
+                      <p className="text-sm text-green-200">(10 dias)</p>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Sistema completamente personalizado para sua oficina",
+                      "6 módulos configurados conforme sua necessidade",
+                      "Banco de dados estruturado",
+                      "Dashboard executivo funcional",
+                      "Integração com seu fluxo de trabalho",
+                      "Treinamento inicial da equipe",
+                      "Documentação técnica completa",
+                    ].map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 group/item"
+                      >
+                        <div className="p-1.5 bg-green-500/20 rounded-lg flex-shrink-0 mt-0.5">
+                          <CheckCircle2 className="w-5 h-5 text-green-400" />
+                        </div>
+                        <span className="text-gray-300 group-hover/item:text-green-200 transition-colors text-sm leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              <div className="bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800">
-                <h3 className="text-xl font-bold mb-6 text-slate-900 dark:text-white">
-                  🎯 Próximos Passos (Opcional)
-                </h3>
-                <ul className="space-y-3">
-                  {[
-                    "Suporte contínuo pós-entrega",
-                    "Otimizações conforme uso real",
-                    "Novos módulos e integrações",
-                    "Treinamento avançado de equipe",
-                    "Consultoria na gestão",
-                    "Backup e segurança em nuvem",
-                    "Planos de suporte 24/7",
-                  ].map((item, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-slate-700 dark:text-slate-300"
-                    >
-                      <CheckCircle2 className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Optional Card */}
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-blue-600/10 to-cyan-400/10 backdrop-blur-xl border border-blue-500/30 rounded-2xl p-8 hover:border-blue-400/60 transition-all">
+                  <div className="flex items-center gap-3 mb-8">
+                    <div className="p-3 bg-blue-500/20 rounded-lg">
+                      <span className="text-2xl">🎯</span>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">Próximos Passos</h3>
+                      <p className="text-sm text-blue-200">(Opcional)</p>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4">
+                    {[
+                      "Suporte contínuo pós-entrega",
+                      "Otimizações conforme uso real",
+                      "Novos módulos e integrações",
+                      "Treinamento avançado de equipe",
+                      "Consultoria na gestão",
+                      "Backup e segurança em nuvem",
+                      "Planos de suporte 24/7",
+                    ].map((item, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-start gap-3 group/item"
+                      >
+                        <div className="p-1.5 bg-blue-500/20 rounded-lg flex-shrink-0 mt-0.5">
+                          <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                        </div>
+                        <span className="text-gray-300 group-hover/item:text-blue-200 transition-colors text-sm leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-white to-blue-400 dark:from-slate-900 dark:via-slate-900 dark:to-blue-800">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
               Perguntas Frequentes
@@ -1380,7 +1499,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Pronto para Transformar Seu Negócio Automotivo?
