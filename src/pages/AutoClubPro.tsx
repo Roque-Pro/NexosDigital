@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import {
   CheckCircle2,
   TrendingUp,
@@ -18,6 +19,8 @@ import {
   Calendar,
   Headphones,
   ChevronDown,
+  ChevronLeft,
+  ChevronRight,
   X,
 } from "lucide-react";
 
@@ -26,6 +29,22 @@ const AutoClubPro = () => {
   const [submitted, setSubmitted] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48 horas em segundos
+  const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
+
+  const heroes = [
+    {
+      id: 1,
+      backgroundImage: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600&h=900&fit=crop"
+    },
+    {
+      id: 2,
+      backgroundImage: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600&h=900&fit=crop"
+    },
+    {
+      id: 3,
+      backgroundImage: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600&h=900&fit=crop"
+    }
+  ];
 
   // SEO Absurdo - AutoClub Pro
   useSEO({
@@ -123,6 +142,24 @@ const AutoClubPro = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  // Auto-rotate hero carousel
+  useEffect(() => {
+    const carouselInterval = setInterval(() => {
+      setCurrentHeroIndex((prev) => (prev + 1) % heroes.length);
+    }, 8000); // Muda a cada 8 segundos
+
+    return () => clearInterval(carouselInterval);
+  }, [heroes.length]);
+
+  // Navegação do carrossel
+  const nextHero = () => {
+    setCurrentHeroIndex((prev) => (prev + 1) % heroes.length);
+  };
+
+  const prevHero = () => {
+    setCurrentHeroIndex((prev) => (prev - 1 + heroes.length) % heroes.length);
+  };
 
   // Função para formatar o tempo em HH:MM:SS
   const formatTime = (seconds: number) => {
@@ -302,130 +339,400 @@ const AutoClubPro = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main className="overflow-hidden">
-        {/* Hero Image Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-20 pb-10">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=1600&h=900&fit=crop"
-              alt="Negócio Automotivo"
-              className="w-full h-full object-cover opacity-35"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40"></div>
-          </div>
+        {/* Hero Carousel Container */}
+        <div className="relative min-h-screen overflow-hidden">
+          {/* Carousel Wrapper com transição suave */}
+          <div 
+            className="flex ease-in-out"
+            style={{ 
+              transform: `translateX(-${currentHeroIndex * 100}%)`,
+              transition: 'transform 1.5s ease-in-out'
+            }}
+          >
+            {/* Hero 1 */}
+            <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
+              {/* Background Image */}
+              <div className="absolute inset-0 z-0">
+                <img
+                  src={heroes[currentHeroIndex].backgroundImage}
+                  alt="Negócio Automotivo"
+                  className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40"></div>
+              </div>
 
-          {/* Content */}
-          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-              {/* Left Side - Text - Takes 6 columns */}
-              <div className="md:col-span-6 text-white space-y-8 order-1 md:order-1">
-                <div>
-                  <div className="inline-block mb-8">
-                    <div className="bg-blue-600/30 text-blue-300 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/50">
-                      🚗 Para Seu Negócio Automotivo
+              {/* Content */}
+              <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                  {/* Left Side */}
+                  <div className={`md:col-span-6 ${currentHeroIndex === 0 ? "text-white" : "text-yellow-50"}`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                    <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
+                      <div className={`px-4 py-2 rounded-full text-sm font-semibold border inline-block ${currentHeroIndex === 0 ? "bg-blue-600/30 text-blue-300 border-blue-500/50" : "bg-orange-600/40 text-orange-200 border-orange-500/50"}`}>
+                        {currentHeroIndex === 0 ? "🚗 Para Seu Negócio Automotivo" : "⚡ Solução Rápida e Eficiente"}
+                      </div>
+                    </div>
+
+                    <h1 className="leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl">
+                      {currentHeroIndex === 0 ? (
+                        <>Chega de <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Bagunça no Seu Negócio</span></>
+                      ) : (
+                        <>Transforme Seu <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Negócio Agora</span></>
+                      )}
+                    </h1>
+
+                    <div className="md:hidden flex justify-center mb-6">
+                      <img src={currentHeroIndex === 0 ? "/car.png" : "/src/img/moto.png"} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                    </div>
+
+                    <p className={`leading-relaxed mb-6 ${currentHeroIndex === 0 ? "text-xl text-slate-200" : "text-xl text-orange-100"}`}>
+                      {currentHeroIndex === 0 
+                        ? "AutoClub Pro é o sistema profissional que transforma seu negócio automotivo. Vidraçaria, oficina, auto center, pneuaria, pintura, funilaria..."
+                        : "Aumente seu faturamento em até 300%. Sistema inteligente, fácil de usar, pronto em 10 dias. Suporte 24/7 via WhatsApp."
+                      }
+                    </p>
+
+                    <div className="space-y-3 mb-8">
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className={`h-5 w-5 flex-shrink-0 ${currentHeroIndex === 0 ? "text-blue-400" : "text-orange-400"}`} />
+                        <div>
+                          <p className={`font-bold text-sm ${currentHeroIndex === 0 ? "text-white" : "text-orange-50"}`}>{currentHeroIndex === 0 ? "Pronto em 10 Dias" : "Implementação Rápida"}</p>
+                          <p className={`text-xs ${currentHeroIndex === 0 ? "text-slate-300" : "text-orange-200"}`}>{currentHeroIndex === 0 ? "Sistema personalizado" : "Sistema rodando em 10 dias"}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <CheckCircle2 className={`h-5 w-5 flex-shrink-0 ${currentHeroIndex === 0 ? "text-blue-400" : "text-orange-400"}`} />
+                        <div>
+                          <p className={`font-bold text-sm ${currentHeroIndex === 0 ? "text-white" : "text-orange-50"}`}>{currentHeroIndex === 0 ? "Suporte 24/7h" : "Suporte Premium"}</p>
+                          <p className={`text-xs ${currentHeroIndex === 0 ? "text-slate-300" : "text-orange-200"}`}>{currentHeroIndex === 0 ? "Via WhatsApp" : "Consultoria incluída"}</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <Button size="lg" className={`text-white px-8 py-6 font-bold ${currentHeroIndex === 0 ? "bg-blue-600 hover:bg-blue-700" : "bg-orange-600 hover:bg-orange-700"}`} onClick={() => document.getElementById("proposal")?.scrollIntoView({ behavior: "smooth" })}>
+                        {currentHeroIndex === 0 ? "Ver Proposta" : "Começar Agora"}
+                      </Button>
+                      <Button size="lg" className={`text-white px-8 py-6 font-bold ${currentHeroIndex === 0 ? "bg-green-600 hover:bg-green-700" : "bg-red-600 hover:bg-red-700"}`} onClick={() => window.open("https://wa.me/5532991075164")}>
+                        💬 WhatsApp
+                      </Button>
                     </div>
                   </div>
 
-                  <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight mb-6">
-                    Chega de <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Bagunça</span>
+                  {/* Right Side Image */}
+                  <div className="hidden md:flex md:col-span-6 justify-end">
+                    <div className="relative" style={{ width: '450px', height: '450px' }}>
+                      <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)', filter: 'blur(20px)' }}></div>
+                      <img src="/car.png" alt="Carro" className="relative rounded-3xl" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
+                <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
+                <ChevronDown className="w-5 h-5 text-blue-400 animate-bounce mx-auto" />
+              </div>
+            </section>
+
+            {/* Hero 2 - Duplicado com cores diferentes */}
+            <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src={heroes[1].backgroundImage}
+                alt="Negócio Automotivo"
+                className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-950 via-orange-950/70 to-orange-950/40"></div>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                {/* Left Side - Text - Takes 6 columns */}
+                <div className={`md:col-span-6 order-1 md:order-1 text-yellow-50`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
+                    <div className="inline-block">
+                      <div className={`px-4 py-2 rounded-full text-sm font-semibold border bg-orange-600/40 text-orange-200 border-orange-500/50`}>
+                        ⚡ Solução Rápida e Eficiente
+                      </div>
+                    </div>
+                  </div>
+
+                  <h1 className={`leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl`}>
+                    <>Transforme Seu <span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Negócio Agora</span></>
                   </h1>
+
+                  {/* Mobile Image - positioned between title and paragraph */}
+                  <div className="md:hidden flex justify-center">
+                    <div className="relative w-full max-w-sm">
+                      <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/30 to-yellow-600/30 rounded-3xl blur-3xl"></div>
+                      <img
+                        src="/src/img/moto.png"
+                        alt="Moto"
+                        className="relative rounded-2xl shadow-2xl w-full h-auto"
+                        style={{ maxHeight: '400px', objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className={`leading-relaxed text-lg text-orange-100`}>
+                      Aumente seu faturamento em até 300%. Sistema inteligente, fácil de usar, pronto em 10 dias. Suporte 24/7 via WhatsApp.
+                    </p>
+                  </div>
+
+                  {/* Value Props - Simples e Limpo */}
+                  <div className="space-y-5 pt-6">
+                    <div className="flex items-center gap-4">
+                      <div className={`flex-shrink-0 p-2 rounded-lg bg-orange-600/40`}>
+                        <CheckCircle2 className={`h-6 w-6 text-orange-400`} />
+                      </div>
+                      <div>
+                        <p className={`font-bold text-orange-50`}>
+                          Implementação Rápida
+                        </p>
+                        <p className={`text-sm text-orange-200`}>
+                          Seu sistema rodando em 10 dias
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className={`flex-shrink-0 p-2 rounded-lg bg-orange-600/40`}>
+                        <CheckCircle2 className={`h-6 w-6 text-orange-400`} />
+                      </div>
+                      <div>
+                        <p className={`font-bold text-orange-50`}>
+                          Suporte Premium 24/7
+                        </p>
+                        <p className={`text-sm text-orange-200`}>
+                          Consultoria incluída
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button
+                      size="lg"
+                      className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800`}
+                      onClick={() =>
+                        document
+                          .getElementById("proposal")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    >
+                      Começar Agora <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                    <Button
+                      size="lg"
+                      className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-red-600 hover:bg-red-700`}
+                      onClick={() =>
+                        window.open("https://wa.me/5532991075164", "_blank")
+                      }
+                    >
+                      💬 WhatsApp
+                    </Button>
+                  </div>
                 </div>
 
-                {/* Mobile Image - positioned between title and paragraph */}
-                <div className="md:hidden flex justify-center">
-                  <div className="relative w-full max-w-sm">
-                    <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
+                {/* Right Side - Image - Takes 6 columns */}
+                <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
+                  <div className="relative" style={{ width: '500px', height: '500px' }}>
+                    {/* Light Background */}
+                    <div className="absolute inset-0 rounded-3xl" style={{
+                      background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)',
+                      filter: 'blur(20px)',
+                      zIndex: 0
+                    }}></div>
+                    
+                    {/* Image */}
                     <img
-                      src="/car.png"
-                      alt="Carro de Luxo"
-                      className="relative rounded-2xl shadow-2xl w-full h-auto"
-                      style={{ maxHeight: '400px', objectFit: 'contain' }}
+                      src="/src/img/moto.png"
+                      alt="Moto"
+                      className="relative rounded-3xl"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
                     />
                   </div>
                 </div>
-
-                <div>
-                  <p className="text-xl text-slate-200 leading-relaxed">
-                    AutoClub Pro é o sistema profissional que transforma seu negócio automotivo. 
-                    Vidraçaria, oficina, auto center, pneuaria, pintura, funilaria...
-                  </p>
-                </div>
-
-                {/* Value Props - Simples e Limpo */}
-                <div className="space-y-5 pt-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 p-2 bg-blue-600/30 rounded-lg">
-                      <CheckCircle2 className="h-6 w-6 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-white">Pronto em 10 Dias</p>
-                      <p className="text-sm text-slate-300">Sistema personalizado e funcional</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="flex-shrink-0 p-2 bg-blue-600/30 rounded-lg">
-                      <CheckCircle2 className="h-6 w-6 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-white">Suporte Total 24/7h</p>
-                      <p className="text-sm text-slate-300">Via WhatsApp sempre disponível</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-6 font-bold shadow-lg rounded-lg"
-                    onClick={() =>
-                      document
-                        .getElementById("proposal")
-                        ?.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    Ver Proposta <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 font-bold shadow-lg rounded-lg"
-                    onClick={() =>
-                      window.open("https://wa.me/5532991075164", "_blank")
-                    }
-                  >
-                    💬 WhatsApp
-                  </Button>
-                </div>
               </div>
+            </div>
 
-              {/* Right Side - Image - Takes 6 columns */}
-              <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
-                <div className="relative w-full max-w-xl">
-                  {/* Glow Background */}
-                  <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/30 to-cyan-600/30 rounded-3xl blur-3xl"></div>
-                  
-                  {/* Image */}
-                  <img
-                    src="/car.png"
-                    alt="Carro de Luxo"
-                    className="relative rounded-2xl shadow-2xl"
-                    style={{ width: '450px', height: '450px', objectFit: 'cover' }}
-                  />
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
+              <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
+              <ChevronDown className="w-5 h-5 text-orange-400 animate-bounce mx-auto" />
+            </div>
+            </section>
+
+            {/* Hero 3 - Verde com Caminhão */}
+            <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+              <img
+                src={heroes[2].backgroundImage}
+                alt="Negócio Automotivo"
+                className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-green-950 via-green-950/70 to-green-950/40"></div>
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                {/* Left Side - Text - Takes 6 columns */}
+                <div className={`md:col-span-6 order-1 md:order-1 text-emerald-50`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
+                    <div className="inline-block">
+                      <div className={`px-4 py-2 rounded-full text-sm font-semibold border bg-emerald-600/40 text-emerald-200 border-emerald-500/50`}>
+                        📦 Gestão de Estoque
+                      </div>
+                    </div>
+                  </div>
+
+                  <h1 className={`leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl`}>
+                    Controle de <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Estoque Inteligente</span>
+                  </h1>
+
+                  {/* Mobile Image - positioned between title and paragraph */}
+                  <div className="md:hidden flex justify-center">
+                    <div className="relative w-full max-w-sm">
+                      <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-3xl blur-3xl"></div>
+                      <img
+                        src="/src/img/truck.png"
+                        alt="Caminhão"
+                        className="relative rounded-2xl shadow-2xl w-full h-auto"
+                        style={{ maxHeight: '400px', objectFit: 'contain' }}
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <p className={`leading-relaxed text-xl text-emerald-100`}>
+                      Código, categoria, preços e quantidade em tempo real. Alertas de mínimo automáticos, evite falta de produtos e estoque parado.
+                    </p>
+                  </div>
+
+                  {/* Value Props - Simples e Limpo */}
+                  <div className="space-y-5 pt-6">
+                    <div className="flex items-center gap-4">
+                      <div className={`flex-shrink-0 p-2 rounded-lg bg-emerald-600/40`}>
+                        <CheckCircle2 className={`h-6 w-6 text-emerald-400`} />
+                      </div>
+                      <div>
+                        <p className={`font-bold text-emerald-50`}>
+                          Alertas Automáticos
+                        </p>
+                        <p className={`text-sm text-emerald-200`}>
+                          Quando estoque atinge mínimo
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className={`flex-shrink-0 p-2 rounded-lg bg-emerald-600/40`}>
+                        <CheckCircle2 className={`h-6 w-6 text-emerald-400`} />
+                      </div>
+                      <div>
+                        <p className={`font-bold text-emerald-50`}>
+                          Rastreamento Completo
+                        </p>
+                        <p className={`text-sm text-emerald-200`}>
+                          Histórico de movimentações
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* CTAs */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                    <Button
+                      size="lg"
+                      className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800`}
+                      onClick={() =>
+                        document
+                          .getElementById("proposal")
+                          ?.scrollIntoView({ behavior: "smooth" })
+                      }
+                    >
+                      Ver Detalhes <ArrowRight className="ml-2 w-4 h-4" />
+                    </Button>
+                    <Button
+                      size="lg"
+                      className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-teal-600 hover:bg-teal-700`}
+                      onClick={() =>
+                        window.open("https://wa.me/5532991075164", "_blank")
+                      }
+                    >
+                      💬 WhatsApp
+                    </Button>
+                  </div>
+                </div>
+
+                {/* Right Side - Image - Takes 6 columns */}
+                <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
+                  <div className="relative" style={{ width: '500px', height: '500px' }}>
+                    {/* Light Background */}
+                    <div className="absolute inset-0 rounded-3xl" style={{
+                      background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)',
+                      filter: 'blur(20px)',
+                      zIndex: 0
+                    }}></div>
+                    
+                    {/* Image */}
+                    <img
+                      src="/src/img/truck.png"
+                      alt="Caminhão"
+                      className="relative rounded-3xl"
+                      style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
+                    />
+                  </div>
                 </div>
               </div>
             </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
+              <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
+              <ChevronDown className="w-5 h-5 text-emerald-400 animate-bounce mx-auto" />
+            </div>
+            </section>
           </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center">
-            <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
-            <ChevronDown className="w-5 h-5 text-blue-400 animate-bounce mx-auto" />
-          </div>
-        </section>
+          {/* Carousel Navigation - Botões */}
+          <button
+            onClick={prevHero}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
 
-        {/* Problems Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
+          <button
+            onClick={nextHero}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Carousel Dots - Indicadores */}
+          <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+            {heroes.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentHeroIndex(idx)}
+                className={`w-2 h-2 rounded-full transition ${
+                  idx === currentHeroIndex ? "bg-white" : "bg-white/50"
+                }`}
+              />
+            ))}
+          </div>
+          </div>
+
+          {/* Problems Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-white dark:from-black dark:to-slate-900">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               Por Que Seu Negócio Automotivo Está Perdendo Dinheiro Agora
@@ -461,7 +768,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* Features Section with Images */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-white dark:from-slate-900 dark:to-slate-900">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               O Sistema Que Seu Negócio Automotivo Merece
@@ -713,8 +1020,11 @@ const AutoClubPro = () => {
           </div>
         </section>
 
+        {/* YouTube Videos Section */}
+        <YouTubeVideosSection />
+
         {/* Success Stories */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-800 via-slate-700 to-blue-900 dark:from-slate-800 dark:via-slate-700 dark:to-blue-950">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">
               Casos de Sucesso - Diferentes Segmentos Automotivos
@@ -769,10 +1079,10 @@ const AutoClubPro = () => {
         </section>
 
         {/* Comparison Table */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-500 to-blue-900 dark:from-slate-900 dark:via-blue-900 dark:to-blue-950">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-              Por Que AutoClub Pro é Melhor
+             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+               Por Que AutoClub Pro é Melhor
             </h2>
 
             <div className="overflow-x-auto">
@@ -816,7 +1126,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* ROI Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-slate-900 text-white">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 via-blue-800 to-blue-900 dark:from-blue-950 dark:via-blue-900 dark:to-blue-950 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-8">
               O Custo Real de Não Fazer Nada (Para Qualquer Negócio Automotivo)
@@ -862,7 +1172,7 @@ const AutoClubPro = () => {
         {/* Proposal CTA Section */}
         <section
           id="proposal"
-          className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950"
+          className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-slate-100 to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-blue-900/20"
         >
           <div className="max-w-2xl mx-auto">
             <div className="bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-xl border-2 border-blue-500 shadow-lg">
@@ -946,9 +1256,9 @@ const AutoClubPro = () => {
         </section>
 
         {/* What's Included Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-900 via-blue-400 via-white to-white dark:from-blue-950 dark:via-blue-800 dark:via-slate-800 dark:to-slate-900">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
               O Que Está Incluído (Para Seu Negócio Automotivo)
             </h2>
 
@@ -1007,7 +1317,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-950">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-white to-blue-400 dark:from-slate-900 dark:via-slate-900 dark:to-blue-800">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
               Perguntas Frequentes
@@ -1057,7 +1367,7 @@ const AutoClubPro = () => {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 to-blue-800">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800">
           <div className="max-w-2xl mx-auto text-center text-white">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
               Pronto para Transformar Seu Negócio Automotivo?

@@ -1,0 +1,170 @@
+/* Smooth color transitions between sections */
+
+.section-transition-to-light {
+  position: relative;
+}
+
+.section-transition-to-light::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    var(--from-color, #ffffff),
+    var(--to-color, #f1f5f9)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-transition-to-dark {
+  position: relative;
+}
+
+.section-transition-to-dark::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    var(--from-color, #ffffff),
+    var(--to-color, #0f172a)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Alternative: Use background gradients directly */
+.smooth-bg-white-to-slate {
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+}
+
+.smooth-bg-slate-to-white {
+  background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+}
+
+.smooth-bg-white-to-dark {
+  background: linear-gradient(180deg, #ffffff 0%, #0f172a 100%);
+}
+
+.smooth-bg-dark-to-white {
+  background: linear-gradient(180deg, #0f172a 0%, #ffffff 100%);
+}
+
+.smooth-bg-slate-to-dark {
+  background: linear-gradient(180deg, #f1f5f9 0%, #0f172a 100%);
+}
+
+.smooth-bg-dark-to-slate {
+  background: linear-gradient(180deg, #0f172a 0%, #f1f5f9 100%);
+}
+
+/* For even smoother transitions, use multiple color stops */
+.smooth-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create smooth overlap between sections */
+.section-with-smooth-bottom {
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-with-smooth-top {
+  padding-top: 60px;
+  position: relative;
+  margin-top: -30px;
+}
+
+/* Gradient overlays for smooth transitions */
+.gradient-overlay-to-light {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(241, 245, 249, 1)
+  );
+  pointer-events: none;
+}
+
+.gradient-overlay-to-dark {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(15, 23, 42, 1)
+  );
+  pointer-events: none;
+}
+
+/* Hero to Problems Section Smooth Transition */
+.hero-to-problems-transition {
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #1a202c 20%,
+    #334155 40%,
+    #64748b 60%,
+    #f8fafc 80%,
+    #ffffff 100%
+  );
+}
+
+.hero-to-problems-transition-dark {
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    #1a202c 20%,
+    #374151 40%,
+    #475569 60%,
+    #1e293b 80%,
+    #0f172a 100%
+  );
+}
+
+/* Fade in effect for sections appearing after transition */
+@keyframes fade-in-smooth {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-fade-in {
+  animation: fade-in-smooth 0.8s ease-out forwards;
+}
+
+/* Smooth scroll trigger animation */
+@keyframes slide-up-smooth {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-slide-up {
+  animation: slide-up-smooth 1s ease-out forwards;
+}

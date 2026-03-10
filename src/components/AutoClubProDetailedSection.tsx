@@ -212,7 +212,10 @@ const AutoClubProDetailedSection = () => {
 
           {/* CTA Button */}
           <div className="text-center mt-20">
-          <Link to="/autoclub-pro">
+          <Link 
+            to="/autoclub-pro" 
+            onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+          >
            <Button
              size="lg"
              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-7 font-bold shadow-lg text-lg"

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import { motion } from "framer-motion";
@@ -20,6 +20,7 @@ import {
     Heart,
     Award,
     Phone,
+    ArrowUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -29,6 +30,20 @@ const Landing = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
+    const [showScrollTop, setShowScrollTop] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
 
     // SEO Absurdo
     useSEO({
@@ -1475,6 +1490,20 @@ const Landing = () => {
                     </div>
                 </div>
             </footer>
+
+            {/* Scroll to Top Button */}
+            {showScrollTop && (
+                <motion.button
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
+                    onClick={scrollToTop}
+                    className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl hover:from-purple-700 hover:to-pink-700 transition-all z-50"
+                    aria-label="Scroll to top"
+                >
+                    <ArrowUp className="w-5 h-5" />
+                </motion.button>
+            )}
         </div>
     );
 };
