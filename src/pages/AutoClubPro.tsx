@@ -87,6 +87,7 @@ const AutoClubPro = () => {
     twitterTitle: "AutoClub Pro - Sistema para Oficina e Auto Center",
     twitterDescription: "Transforme sua oficina/vidraçaria/auto center com sistema profissional. Aumente vendas, retenha clientes, automatize processos.",
     canonicalUrl: "https://www.technexos.com.br/autoclub-pro",
+    googleSiteVerification: "TU7NzrXfsfOsd_Y-dzJPhTKTXodzzW3jeG5vTx6kxRI",
     schema: {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
