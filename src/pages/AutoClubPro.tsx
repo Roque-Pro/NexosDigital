@@ -820,6 +820,7 @@ const AutoClubPro = () => {
                    alt="Captação de Clientes de Redes Sociais"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
                    onClick={() => setSelectedImage("/cap-clientes.PNG")}
+                   loading="lazy"
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 CRM de Captação de Clientes de Redes Sociais
@@ -869,6 +870,7 @@ const AutoClubPro = () => {
                    alt="Histórico e Auditoria"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
                    onClick={() => setSelectedImage("/cap-historico.PNG")}
+                   loading="lazy"
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Log de Auditoria e Histórico de Movimentações
@@ -916,6 +918,7 @@ const AutoClubPro = () => {
                    alt="Vendas e Comissões"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
                    onClick={() => setSelectedImage("/cap-vendas.PNG")}
+                   loading="lazy"
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Relatório de Vendas e Comissões por Vendedor
@@ -964,6 +967,7 @@ const AutoClubPro = () => {
                    alt="Controle de Estoque"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
                    onClick={() => setSelectedImage("/cap-estoque.PNG")}
+                   loading="lazy"
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Dashboard de Estoque com Alertas
@@ -1012,6 +1016,7 @@ const AutoClubPro = () => {
                    alt="Agendamentos"
                    className="w-full h-auto object-contain rounded-lg shadow-lg border-2 border-slate-200 dark:border-slate-700 cursor-pointer hover:opacity-80 transition-opacity"
                    onClick={() => setSelectedImage("/cap-agendamento.PNG")}
+                   loading="lazy"
                  />
                 <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-xs py-2 px-3 rounded-b-lg">
                   📸 Agenda Online com Lembretes Automáticos
