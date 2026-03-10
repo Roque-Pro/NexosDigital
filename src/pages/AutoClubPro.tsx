@@ -1078,49 +1078,62 @@ const AutoClubPro = () => {
           </div>
         </section>
 
-        {/* Comparison Table */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-blue-500 to-blue-900 dark:from-slate-900 dark:via-blue-900 dark:to-blue-950">
-          <div className="max-w-5xl mx-auto">
-             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-               Por Que AutoClub Pro é Melhor
-            </h2>
+        {/* Why AutoClub Pro is Better - Image Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 via-blue-50 to-white dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                    Por Que AutoClub Pro é Melhor
+                  </h2>
+                  <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-blue-400 rounded-full"></div>
+                </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b-2 border-slate-300 dark:border-slate-700">
-                    <th className="text-left py-4 px-4 font-bold text-slate-900 dark:text-white">
-                      Função
-                    </th>
-                    <th className="text-center py-4 px-4 font-bold text-slate-900 dark:text-white">
-                      Excel
-                    </th>
-                    <th className="text-center py-4 px-4 font-bold text-slate-900 dark:text-white">
-                      Sistemas Antigos
-                    </th>
-                    <th className="text-center py-4 px-4 font-bold bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400">
-                      AutoClub Pro
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {comparison.map((row, idx) => (
-                    <tr
+                <p className="text-lg text-gray-700 dark:text-gray-300">
+                  AutoClub Pro foi desenvolvido especificamente para negócios automotivos. Não é um sistema genérico. É uma solução inteligente, rápida e pronta para crescer com você.
+                </p>
+
+                {/* Benefits Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    { title: "Comissões Automáticas", desc: "Calcula sem erro, sem discussão" },
+                    { title: "Agendamentos Inteligentes", desc: "Clientes não esquecem, agenda sempre cheia" },
+                    { title: "Estoque em Tempo Real", desc: "Nunca mais falta produto nem sobra" },
+                    { title: "Gestão de Clientes", desc: "Histórico completo, vendas recorrentes" },
+                    { title: "Dashboard Executivo", desc: "Veja sua empresa funcionando em tempo real" },
+                    { title: "Suporte 24/7", desc: "WhatsApp sempre disponível para você" },
+                  ].map((benefit, idx) => (
+                    <div
                       key={idx}
-                      className="border-b border-slate-200 dark:border-slate-800"
+                      className="bg-white dark:bg-slate-800 p-4 rounded-lg border border-slate-200 dark:border-slate-700 hover:shadow-lg transition-shadow"
                     >
-                      <td className="py-4 px-4 font-medium text-slate-900 dark:text-white">
-                        {row.feature}
-                      </td>
-                      <td className="text-center py-4 px-4">{row.excel}</td>
-                      <td className="text-center py-4 px-4">{row.antigos}</td>
-                      <td className="text-center py-4 px-4 bg-blue-50 dark:bg-blue-900/20 text-green-600 dark:text-green-400 font-bold">
-                        {row.autoclub}
-                      </td>
-                    </tr>
+                      <h3 className="font-bold text-gray-900 dark:text-white mb-1 text-sm">
+                        ✓ {benefit.title}
+                      </h3>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">
+                        {benefit.desc}
+                      </p>
+                    </div>
                   ))}
-                </tbody>
-              </table>
+                </div>
+
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 rounded-xl text-white">
+                  <p className="font-bold mb-2">Resultado Real:</p>
+                  <p className="text-sm">Empresas que usam AutoClub Pro aumentam faturamento em até 300% nos primeiros 3 meses, com 40% menos tempo administrativo.</p>
+                </div>
+              </div>
+
+              {/* Right Image */}
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-blue-400/20 rounded-2xl blur-2xl"></div>
+                <img
+                  src="/oficina.webp"
+                  alt="Oficina Profissional com AutoClub Pro"
+                  className="relative w-full h-auto rounded-2xl shadow-2xl object-cover"
+                />
+              </div>
             </div>
           </div>
         </section>
