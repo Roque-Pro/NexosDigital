@@ -17,32 +17,32 @@ export default function YouTubeVideosSection({
     {
       id: "1",
       title: "Captação de Clientes e CRM",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "UWz7kwV3BIg",
     },
     {
       id: "2",
       title: "Serviços",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "lb65vTYwOos",
     },
     {
       id: "3",
       title: "Estoque e Inventário",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "0IzvOUTxmu8",
     },
     {
       id: "4",
       title: "Vendas",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "nJmB5dxiuTY",
     },
     {
       id: "5",
       title: "Histórico e Segurança",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "vZSjvvxvoL4",
     },
     {
       id: "6",
       title: "Painel Administrativo",
-      youtubeId: "dQw4w9WgXcQ",
+      youtubeId: "LsfPOtfy1Zw",
     },
   ],
 }: YouTubeVideosSectionProps) {

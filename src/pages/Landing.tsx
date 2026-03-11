@@ -271,66 +271,27 @@ const Landing = () => {
                             className="order-2 lg:order-1"
                         >
                             {/* Main Headline */}
-                            <motion.h1
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.2, duration: 0.8 }}
-                                className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-gray-900 mb-6 leading-tight"
-                            >
-                                Sua Empresa{" "}
-                                <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
-                                    Merece Tecnologia
-                                </span>
-                                <br />
-                                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
-                                    de Verdade
-                                </span>
-                            </motion.h1>
+                             <motion.h1
+                                 initial={{ opacity: 0, y: 20 }}
+                                 animate={{ opacity: 1, y: 0 }}
+                                 transition={{ delay: 0.2, duration: 0.8 }}
+                                 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-gray-900 mb-4 leading-tight"
+                             >
+                                 Sua Empresa{" "}
+                                 <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
+                                     Merece Tecnologia
+                                 </span>
+                             </motion.h1>
 
-                            {/* Subheadline */}
-                            <motion.p
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.3, duration: 0.8 }}
-                                className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed"
-                            >
-                                Consultoria estratégica, desenvolvimento personalizado e implementação ponta a ponta.
-                                <strong className="text-purple-600"> Da visão à realidade em poucos passos.</strong>
-                            </motion.p>
-
-
-
-                            {/* Value Highlight */}
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.6, duration: 0.8 }}
-                                className="bg-white border-2 border-purple-200 rounded-2xl p-6 sm:p-8 mb-8 shadow-xl"
-                            >
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="text-center">
-                                        <p className="text-gray-600 text-xs sm:text-sm mb-2">Investimento</p>
-                                        <p className="text-3xl sm:text-4xl font-display font-black text-purple-600">
-                                            Sob Demanda
-                                        </p>
-                                        <p className="text-xs text-gray-500 mt-2">
-                                            Customizado
-                                        </p>
-                                    </div>
-                                    <div className="text-center border-l border-gray-200">
-                                        <p className="text-gray-600 text-xs sm:text-sm mb-2">Com Você Em</p>
-                                        <div className="flex items-center justify-center gap-2">
-                                            <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-purple-500" />
-                                            <p className="text-2xl sm:text-3xl font-display font-bold text-purple-600">
-                                                100%
-                                            </p>
-                                        </div>
-                                        <p className="text-xs text-gray-500 mt-2">
-                                            Do Projeto
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
+                             {/* Subheadline */}
+                             <motion.p
+                                 initial={{ opacity: 0, y: 20 }}
+                                 animate={{ opacity: 1, y: 0 }}
+                                 transition={{ delay: 0.3, duration: 0.8 }}
+                                 className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed"
+                             >
+                                 Consultoria, desenvolvimento e implementação ponta a ponta. <strong className="text-purple-600">Da visão à realidade.</strong>
+                             </motion.p>
 
 
                         </motion.div>

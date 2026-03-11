@@ -103,130 +103,32 @@ const AutoClubProDetailedSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/30">
-      <div className="max-w-6xl mx-auto">
-        {/* Top Badge */}
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-blue-950/30">
+      <div className="max-w-4xl mx-auto">
+        {/* Top */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-slate-900 dark:text-white">
-            Sua Empresa de Reparos Automotivos Merece Crescer com{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Inteligência
-            </span>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-slate-900 dark:text-white">
+            Sua Empresa Merece Crescer com <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Inteligência</span>
           </h2>
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            AutoClub Pro: Sistema completo para <strong>oficinas mecânicas, auto centers, vidraçarias, pneuarias, pintura, funilaria e lojas de acessórios</strong>. Gestão de clientes, vendas, estoque, agendamentos e comissões — tudo automatizado.
+          <p className="text-lg text-slate-600 dark:text-slate-400">
+            AutoClub Pro: gestão de clientes, vendas, estoque e comissões automatizadas para oficinas, auto centers e vidraçarias.
           </p>
         </div>
 
-        {/* Main Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {mainBenefits.map((benefit, idx) => {
-            const IconComponent = benefit.icon;
-            return (
-              <div
-                key={idx}
-                className="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 hover:border-blue-500 dark:hover:border-blue-500 hover:shadow-lg transition-all"
-              >
-                <div className="mb-4 p-3 bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 rounded-lg w-fit group-hover:scale-110 transition-transform">
-                  <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-                  {benefit.description}
-                </p>
-                <p className="text-sm font-semibold text-green-600 dark:text-green-400">
-                  💡 {benefit.metric}
-                </p>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Problem-Solution Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-2 text-slate-900 dark:text-white">
-            Seus Principais Problemas. Resolvidos.
-          </h3>
-          <p className="text-center text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
-            Sem AutoClub Pro, você está deixando dinheiro na mesa. Veja como
-            resolvemos cada um desses problemas:
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {painPoints.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white dark:bg-slate-900 p-6 rounded-lg border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-all"
-              >
-                <div className="flex gap-3 mb-3">
-                  <div className="text-red-500 text-xl flex-shrink-0">❌</div>
-                  <p className="font-semibold text-slate-900 dark:text-white">
-                    {item.pain}
-                  </p>
-                </div>
-                <div className="flex gap-3 pl-0">
-                  <div className="text-green-500 text-xl flex-shrink-0">✅</div>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
-                    {item.solution}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Choose Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
-            Por Que AutoClub Pro é Diferente
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {whyChoose.map((reason, idx) => {
-              const IconComponent = reason.icon;
-              return (
-                <div
-                  key={idx}
-                  className="flex gap-4 bg-white dark:bg-slate-900 p-8 rounded-xl border border-slate-200 dark:border-slate-800"
-                >
-                  <div className="flex-shrink-0 mt-1">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30">
-                      <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                    </div>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
-                      {reason.title}
-                    </h4>
-                    <p className="text-slate-600 dark:text-slate-400">
-                      {reason.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="text-center mt-20">
+        {/* CTA Button */}
+        <div className="text-center">
           <Link 
             to="/autoclub-pro" 
             onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
           >
            <Button
              size="lg"
-             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-7 font-bold shadow-lg text-lg"
+             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-12 py-6 font-bold shadow-lg"
            >
              🚀 Conhecer o AutoClub Pro <ArrowRight className="ml-2 w-5 h-5" />
            </Button>
           </Link>
-          </div>
-
-
-
+        </div>
       </div>
     </section>
   );
