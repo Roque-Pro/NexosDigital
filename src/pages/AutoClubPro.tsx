@@ -5,6 +5,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
+import mec1Img from "@/img/mec1.png";
+import carImg from "@/img/car.png";
+import fundoHeroImg from "@/img/fundo-hero.png";
 import {
   CheckCircle2,
   TrendingUp,
@@ -34,15 +37,15 @@ const AutoClubPro = () => {
   const heroes = [
     {
       id: 1,
-      backgroundImage: "/src/img/fundo-hero.png"
+      backgroundImage: fundoHeroImg
     },
     {
       id: 2,
-      backgroundImage: "/src/img/fundo-hero.png"
+      backgroundImage: fundoHeroImg
     },
     {
       id: 3,
-      backgroundImage: "/src/img/fundo-hero.png"
+      backgroundImage: fundoHeroImg
     }
   ];
 
@@ -437,7 +440,7 @@ const AutoClubPro = () => {
                     </h1>
 
                     <div className="md:hidden flex justify-center mb-6">
-                      <img src={currentHeroIndex === 0 ? "/src/img/mec1.png" : "/src/img/car.png"} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
+                      <img src={currentHeroIndex === 0 ? mec1Img : carImg} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
                     </div>
 
                     <p className={`leading-relaxed mb-6 ${currentHeroIndex === 0 ? "text-xl text-slate-200" : "text-xl text-orange-100"}`}>
@@ -478,7 +481,7 @@ const AutoClubPro = () => {
                   <div className="hidden md:flex md:col-span-6 justify-end">
                     <div className="relative" style={{ width: '550px', height: '550px' }}>
                       <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)', filter: 'blur(20px)' }}></div>
-                      <img src="/src/img/mec1.png" alt="Carro" className="relative rounded-3xl" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom', transform: 'translateY(100px)' }} />
+                      <img src={mec1Img} alt="Carro" className="relative rounded-3xl" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom', transform: 'translateY(100px)' }} />
                     </div>
                   </div>
                 </div>
@@ -525,7 +528,7 @@ const AutoClubPro = () => {
                     <div className="relative w-full max-w-sm">
                       <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/30 to-yellow-600/30 rounded-3xl blur-3xl"></div>
                       <img
-                        src="/src/img/car.png"
+                        src={carImg}
                         alt="Carro"
                         className="relative rounded-2xl shadow-2xl w-full h-auto"
                         style={{ maxHeight: '400px', objectFit: 'contain' }}
@@ -607,7 +610,7 @@ const AutoClubPro = () => {
                     
                     {/* Image */}
                     <img
-                      src="/src/img/car.png"
+                      src={carImg}
                       alt="Carro"
                       className="relative rounded-3xl"
                       style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
