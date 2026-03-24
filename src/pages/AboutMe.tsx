@@ -239,6 +239,163 @@ const AboutMe = () => {
         </div>
       </section>
 
+      {/* Tech Stack */}
+      <section className="py-16 border-t border-border/50">
+        <div className="container max-w-3xl">
+          <h3 className="text-3xl font-bold mb-12">Stack Tecnológico</h3>
+
+          <div className="prose prose-invert max-w-none mb-12">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Trabalho com as tecnologias mais modernas e escaláveis do mercado,
+              selecionadas especificamente para entregar soluções de alta
+              performance, segurança e manutenibilidade.
+            </p>
+          </div>
+
+          <div className="grid gap-6">
+            {/* Frontend */}
+            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Code2 className="h-5 w-5 text-primary" />
+                Frontend & UI
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {["React", "TypeScript", "Tailwind CSS", "Vite"].map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Desenvolvimento de interfaces reativas, responsivas e acessíveis
+                com foco em UX/UI.
+              </p>
+            </div>
+
+            {/* Backend */}
+            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Zap className="h-5 w-5 text-primary" />
+                Backend & API
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {["Node.js", "TypeScript", "SQL", "REST APIs"].map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Arquitetura de servidores robustos, APIs escaláveis e integração
+                com plataformas empresariais.
+              </p>
+            </div>
+
+            {/* Database & Infrastructure */}
+            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Shield className="h-5 w-5 text-primary" />
+                Banco de Dados & Cloud
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Supabase",
+                  "PostgreSQL",
+                  "Real-time Database",
+                  "Cloud Storage",
+                ].map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Banco de dados relacional com PostgreSQL via Supabase,
+                integração real-time e armazenamento seguro em cloud.
+              </p>
+            </div>
+
+            {/* AI & Automation */}
+            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Lightbulb className="h-5 w-5 text-primary" />
+                IA & Automação
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Microsoft Copilot",
+                  "Power Automate",
+                  "Agentes de IA",
+                  "Azure AI",
+                  "Databricks",
+                ].map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Integração de agentes de IA, automação de processos empresariais
+                e orquestração de workflows inteligentes.
+              </p>
+            </div>
+
+            {/* Development Tools */}
+            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Code2 className="h-5 w-5 text-primary" />
+                Ferramentas & Metodologia
+              </h4>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Git/GitHub",
+                  "Amp CLI",
+                  "Docker",
+                  "Testing",
+                  "CI/CD",
+                ].map((tech) => (
+                  <div
+                    key={tech}
+                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </div>
+                ))}
+              </div>
+              <p className="text-sm text-muted-foreground mt-4">
+                Desenvolvimento ágil com controle de versão, testes automatizados
+                e deployment contínuo.
+              </p>
+            </div>
+          </div>
+
+          {/* Proficiency Statement */}
+          <div className="mt-12 p-6 border border-primary/50 rounded-xl bg-primary/5">
+            <p className="text-muted-foreground leading-relaxed">
+              <strong className="text-foreground">
+                Expertise em Full Stack Development:
+              </strong>{" "}
+              Capacidade comprovada de projetar e implementar soluções completas
+              do frontend até o backend, com foco em escalabilidade, segurança e
+              performance. Domínio profundo em integração de plataformas, IA
+              empresarial e automação de processos.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Diferenciais */}
       <section className="py-16 bg-card/50">
         <div className="container max-w-3xl">
