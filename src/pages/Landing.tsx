@@ -384,31 +384,15 @@ const Landing = () => {
                                     className="relative rounded-3xl overflow-hidden shadow-2xl"
                                 >
                                     <img
-                                        src={roqueImage}
-                                        alt="Roque Rafael Proença - Arquiteto de Soluções de IA"
+                                        src="/lamp"
+                                        alt="Transformação Digital com IA e Automação"
                                         className="w-full h-auto object-cover"
                                         loading="eager"
                                         decoding="async"
                                         width={600}
-                                        height={800}
+                                        height={600}
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.8, duration: 0.6 }}
-                                        className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md rounded-xl p-4 flex items-center gap-3 shadow-xl"
-                                    >
-                                        <Sparkles className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                                        <div>
-                                            <p className="text-sm font-bold text-gray-900">
-                                                Roque Rafael Proença
-                                            </p>
-                                            <p className="text-xs text-gray-600">
-                                                Arquiteto de Soluções de IA
-                                            </p>
-                                        </div>
-                                    </motion.div>
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </motion.div>
 
                                 {/* Feature cards under image */}

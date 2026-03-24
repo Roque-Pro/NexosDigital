@@ -1,6 +1,7 @@
-import { ArrowLeft, Award, Briefcase, Code2, Zap, Shield, Lightbulb } from "lucide-react";
+import { ArrowLeft, Award, Briefcase, Code2, Zap, Shield, Lightbulb, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 
 const AboutMe = () => {
   const navigate = useNavigate();
@@ -42,26 +43,51 @@ const AboutMe = () => {
         </div>
       </section>
 
-      {/* Quem Sou Eu */}
+      {/* Quem Sou Eu - Com Imagem */}
       <section className="py-16 border-t border-border/50">
-        <div className="container max-w-3xl">
-          <div className="prose prose-invert max-w-none">
-            <h3 className="text-3xl font-bold mb-6">Quem Sou Eu</h3>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Sou um profissional apaixonado por tecnologia com formação sólida
-              em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e
-              especialização em arquitetura de soluções empresariais. Minha
-              trajetória é marcada pela busca constante de excelência técnica e
-              pela capacidade de transformar desafios complexos em soluções
-              elegantes e escaláveis.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Trabalho na interseção entre estratégia empresarial e inovação
-              tecnológica, tendo desenvolvido expertise em design de sistemas de
-              automação inteligentes que não apenas resolvem problemas
-              imediatos, mas estabelecem bases sólidas para o crescimento
-              futuro das organizações.
-            </p>
+        <div className="container max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Texto */}
+            <div className="prose prose-invert max-w-none">
+              <h3 className="text-3xl font-bold mb-6">Quem Sou Eu</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Sou um profissional apaixonado por tecnologia com formação sólida
+                em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e
+                especialização em arquitetura de soluções empresariais. Minha
+                trajetória é marcada pela busca constante de excelência técnica e
+                pela capacidade de transformar desafios complexos em soluções
+                elegantes e escaláveis.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Trabalho na interseção entre estratégia empresarial e inovação
+                tecnológica, tendo desenvolvido expertise em design de sistemas de
+                automação inteligentes que não apenas resolvem problemas
+                imediatos, mas estabelecem bases sólidas para o crescimento
+                futuro das organizações.
+              </p>
+            </div>
+
+            {/* Imagem */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[500px]">
+              <img
+                src={roqueImage}
+                alt="Roque Rafael Proença - Arquiteto de Soluções de IA"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md rounded-xl p-4 flex items-center gap-3 shadow-xl">
+                <Sparkles className="w-5 h-5 text-primary flex-shrink-0" />
+                <div>
+                  <p className="text-sm font-bold text-foreground">
+                    Roque Rafael Proença
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    Arquiteto de Soluções de IA
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
