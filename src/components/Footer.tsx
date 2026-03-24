@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
@@ -36,6 +37,10 @@ export default function Footer() {
 
         <p className="mt-8 text-center text-xs text-muted-foreground/60">
           © {new Date().getFullYear()} TechNexos Digital — Roque Rafael Proença. Todos os direitos reservados.
+          <br />
+          <Link to="/autoclub-pro" className="text-xs text-muted-foreground hover:text-primary transition-colors mt-2 inline-block">
+            AutoClub Pro
+          </Link>
         </p>
       </div>
     </footer>

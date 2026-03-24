@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import AutoClubProDetailedSection from "@/components/AutoClubProDetailedSection";
+
 
 const Landing = () => {
     const navigate = useNavigate();
@@ -163,27 +163,32 @@ const Landing = () => {
 
             {/* Header */}
             <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-purple-200/30 bg-white/80">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-                    {/* Logo */}
-                    <div className="flex items-center gap-2 sm:gap-3">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
+                    {/* Logo - Shortened on Mobile */}
+                    <div className="flex items-center gap-2 flex-shrink-0">
                         <motion.div
                             whileHover={{ scale: 1.1, rotate: 5 }}
-                            className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg shadow-purple-500/50"
+                            className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg shadow-purple-500/50 flex-shrink-0"
                         >
-                            <Code2 className="w-6 h-6 text-white" />
+                            <Code2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                         </motion.div>
-                        <div>
+                        <div className="hidden sm:block">
                             <h1 className="text-lg sm:text-xl font-display font-bold text-gray-900">
-                                TechNexos Consultoria
+                                TechNexos
                             </h1>
-                            <p className="text-xs sm:text-sm text-gray-600">
+                            <p className="text-xs text-gray-600">
                                 Tecnologia que Transforma
                             </p>
+                        </div>
+                        <div className="sm:hidden">
+                            <h1 className="text-sm font-display font-bold text-gray-900">
+                                TechNexos
+                            </h1>
                         </div>
                     </div>
 
                     {/* Navigation */}
-                    <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="flex items-center gap-1 sm:gap-3 ml-auto">
                         <Button
                             onClick={() => {
                                 const element = document.getElementById("solucoes");
@@ -191,7 +196,7 @@ const Landing = () => {
                             }}
                             variant="ghost"
                             size="sm"
-                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                            className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                         >
                             Soluções
                         </Button>
@@ -202,7 +207,7 @@ const Landing = () => {
                             }}
                             variant="ghost"
                             size="sm"
-                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                            className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                         >
                             Tecnologias
                         </Button>
@@ -213,7 +218,7 @@ const Landing = () => {
                             }}
                             variant="ghost"
                             size="sm"
-                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                            className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                         >
                             FAQ
                         </Button>
@@ -221,7 +226,7 @@ const Landing = () => {
                             onClick={() => navigate("/blog")}
                             variant="ghost"
                             size="sm"
-                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600"
+                            className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                         >
                             Blog
                         </Button>
@@ -229,23 +234,23 @@ const Landing = () => {
                             onClick={() => window.open("https://wa.me/5532991075164", "_blank")}
                             variant="ghost"
                             size="sm"
-                            className="text-gray-700 hover:text-purple-600"
+                            className="hidden sm:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                         >
                             Contato
                         </Button>
                         <Button
                             onClick={() => navigate("/diagnostico-gratuito")}
                             size="sm"
-                            className="bg-purple-600 hover:bg-purple-700 text-white font-bold"
+                            className="bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2"
                         >
-                            <span className="hidden sm:inline">Solicitar Diagnóstico</span>
+                            <span className="hidden sm:inline">Diagnóstico</span>
                             <span className="sm:hidden">Diagnóstico</span>
                         </Button>
                         <Button
                             onClick={() => navigate("/auth")}
                             variant="outline"
                             size="sm"
-                            className="border-gray-300 text-white hover:border-purple-400 hover:text-white"
+                            className="border-gray-300 text-gray-700 hover:border-purple-400 hover:text-purple-600 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2"
                         >
                             <span className="hidden sm:inline">Acesso</span>
                             <span className="sm:hidden">Login</span>
@@ -1358,8 +1363,7 @@ const Landing = () => {
                 </motion.div>
             </section>
 
-            {/* AutoClub Pro Section */}
-            <AutoClubProDetailedSection />
+
 
             {/* Footer */}
             <footer className="relative border-t-2 border-gray-200 bg-white">
