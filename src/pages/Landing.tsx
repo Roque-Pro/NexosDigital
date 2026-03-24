@@ -280,16 +280,6 @@ const Landing = () => {
                             transition={{ duration: 0.8 }}
                             className="order-1 lg:order-1"
                         >
-                            {/* Badge */}
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1, duration: 0.6 }}
-                                className="inline-flex items-center gap-2 rounded-full border border-purple-300/50 bg-purple-50/50 px-4 py-2 text-sm font-medium text-purple-700 mb-6"
-                            >
-                                <Zap className="h-4 w-4" /> Transformação Digital & Automação Inteligente
-                            </motion.div>
-
                             {/* Main Headline - Enhanced */}
                              <motion.h1
                                  initial={{ opacity: 0, y: 20 }}
