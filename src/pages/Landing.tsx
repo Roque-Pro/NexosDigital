@@ -278,7 +278,7 @@ const Landing = () => {
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="order-2 lg:order-1"
+                            className="order-1 lg:order-1"
                         >
                             {/* Badge */}
                             <motion.div
@@ -373,7 +373,7 @@ const Landing = () => {
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.3, duration: 0.8 }}
-                            className="order-1 lg:order-2"
+                            className="order-2 lg:order-2"
                         >
                             {/* Hero Image */}
                             <div className="space-y-6 flex flex-col items-center lg:items-stretch">
