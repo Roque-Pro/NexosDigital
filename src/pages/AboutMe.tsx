@@ -7,35 +7,62 @@ const AboutMe = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-white via-white to-blue-50">
       {/* Header com botão voltar */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container flex items-center justify-between h-16">
           <Button
             variant="ghost"
             size="sm"
             onClick={() => navigate("/")}
-            className="gap-2"
+            className="gap-2 text-gray-700 hover:text-purple-600"
           >
             <ArrowLeft className="h-4 w-4" />
             Voltar
           </Button>
-          <h1 className="text-lg font-semibold">Sobre Mim</h1>
+          <h1 className="text-lg font-semibold text-gray-900">Sobre Mim</h1>
           <div className="w-20" />
         </div>
       </header>
 
       {/* Hero intro */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
         <div className="container relative z-10 max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-5xl font-bold mb-6 leading-tight">
+          {/* Personal Info Card */}
+          <div className="mb-12 p-6 sm:p-8 bg-white border-2 border-purple-200 rounded-2xl shadow-lg">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+              Roque Rafael Proença
+            </h1>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">📍</span>
+                <span className="font-semibold">Rio de Janeiro, RJ</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🎂</span>
+                <span className="font-semibold">41 anos</span>
+              </div>
+            </div>
+            <div className="border-t border-gray-200 pt-4">
+              <p className="text-gray-700">
+                <span className="font-semibold">Formação:</span> Universidade Estácio de Sá
+              </p>
+              <p className="text-gray-600 text-sm mt-2">
+                Análise e Desenvolvimento de Sistemas (ADS)
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h2 className="text-5xl font-bold mb-6 leading-tight text-gray-900">
               Transformando Ideias em{" "}
-              <span className="text-primary glow-text">Soluções de IA</span> que
-              Escalam
+              <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
+                Soluções de IA
+              </span>{" "}
+              que Escalam
             </h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               Especialista em arquitetura de soluções empresariais, automação
               inteligente e transformação digital.
             </p>
@@ -44,13 +71,13 @@ const AboutMe = () => {
       </section>
 
       {/* Quem Sou Eu - Com Imagem */}
-      <section className="py-16 border-t border-border/50">
+      <section className="py-16 border-t border-gray-200">
         <div className="container max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Texto */}
-            <div className="prose prose-invert max-w-none">
-              <h3 className="text-3xl font-bold mb-6">Quem Sou Eu</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+            <div className="max-w-none">
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">Quem Sou Eu</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Sou um profissional apaixonado por tecnologia com formação sólida
                 em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e
                 especialização em arquitetura de soluções empresariais. Minha
@@ -58,7 +85,7 @@ const AboutMe = () => {
                 pela capacidade de transformar desafios complexos em soluções
                 elegantes e escaláveis.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Trabalho na interseção entre estratégia empresarial e inovação
                 tecnológica, tendo desenvolvido expertise em design de sistemas de
                 automação inteligentes que não apenas resolvem problemas
@@ -93,26 +120,26 @@ const AboutMe = () => {
       </section>
 
       {/* Formação e Certificações */}
-      <section className="py-16 bg-card/50">
+      <section className="py-16 bg-gray-50">
         <div className="container max-w-3xl">
-          <h3 className="text-3xl font-bold mb-12">Formação & Certificações</h3>
+          <h3 className="text-3xl font-bold mb-12 text-gray-900">Formação & Certificações</h3>
 
           <div className="space-y-8">
             {/* Educação principal */}
-            <div className="border border-border/50 rounded-xl p-6 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white hover:border-purple-400 transition-colors shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <Award className="h-6 w-6 text-primary mt-1" />
+                  <Award className="h-6 w-6 text-purple-600 mt-1" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-2">
+                  <h4 className="text-xl font-bold mb-2 text-gray-900">
                     Análise e Desenvolvimento de Sistemas
                   </h4>
-                  <p className="text-muted-foreground mb-3">
+                  <p className="text-gray-700 mb-3">
                     Formação acadêmica com foco em arquitetura de sistemas,
                     engenharia de software e metodologias ágeis.
                   </p>
-                  <p className="text-sm text-primary font-medium">
+                  <p className="text-sm text-purple-600 font-medium">
                     Fundação para carreira em soluções empresariais
                   </p>
                 </div>
@@ -120,25 +147,25 @@ const AboutMe = () => {
             </div>
 
             {/* Cursos e especialização */}
-            <div className="border border-border/50 rounded-xl p-6 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white hover:border-purple-400 transition-colors shadow-sm">
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0">
-                  <Code2 className="h-6 w-6 text-primary mt-1" />
+                  <Code2 className="h-6 w-6 text-purple-600 mt-1" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold mb-4">
+                  <h4 className="text-xl font-bold mb-4 text-gray-900">
                     Especialização Contínua
                   </h4>
-                  <ul className="space-y-3 text-muted-foreground">
+                  <ul className="space-y-3 text-gray-700">
                     <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-purple-600 font-bold">•</span>
                       <span>
                         <strong>Arquitetura de Sistemas Distribuídos</strong> —
                         Design de integrações orientadas a APIs
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-purple-600 font-bold">•</span>
                       <span>
                         <strong>Automação Empresarial</strong> — Fluxos de
                         trabalho avançados com RPA, Power Automate e Copilot
@@ -146,21 +173,21 @@ const AboutMe = () => {
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-purple-600 font-bold">•</span>
                       <span>
                         <strong>IA e Machine Learning</strong> — Agentes de IA,
                         integração com plataformas Microsoft e Azure
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-purple-600 font-bold">•</span>
                       <span>
                         <strong>Plataformas de Dados Empresariais</strong> —
                         Databricks, integração de data lakes e pipelines
                       </span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary font-bold">•</span>
+                      <span className="text-purple-600 font-bold">•</span>
                       <span>
                         <strong>Governança e Escalabilidade</strong> — Padrões
                         de arquitetura para produção, segurança e auditabilidade
