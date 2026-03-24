@@ -523,14 +523,11 @@ const AboutMe = () => {
                 técnico profundo, visão estratégica e a capacidade de orientar
                 equipes na era da automação e IA, vamos conversar.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="glow-md gap-2" asChild>
-                  <a href="#contato">Solicitar Conversa</a>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="#contato">Fale Comigo</a>
-                </Button>
-              </div>
+              <Button size="lg" className="glow-md gap-2" asChild>
+                <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
+                  Fale Comigo no WhatsApp
+                </a>
+              </Button>
             </div>
           </div>
         </div>
