@@ -342,16 +342,6 @@ const Landing = () => {
                                  >
                                      <Users className="h-5 w-5" /> Sobre Mim
                                  </Button>
-                                 <Button
-                                     onClick={() => {
-                                         const element = document.getElementById("solucoes");
-                                         element?.scrollIntoView({ behavior: "smooth" });
-                                     }}
-                                     size="lg"
-                                     className="border-2 border-purple-600 bg-white text-purple-600 hover:bg-purple-50 font-bold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto transition-all"
-                                 >
-                                     <Play className="h-5 w-5" /> Ver Como Funciona
-                                 </Button>
                              </motion.div>
 
                              {/* Trust Indicators */}
