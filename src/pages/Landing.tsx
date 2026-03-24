@@ -376,21 +376,21 @@ const Landing = () => {
                             className="order-1 lg:order-2"
                         >
                             {/* Hero Image */}
-                            <div className="space-y-6">
+                            <div className="space-y-6 flex flex-col items-center lg:items-stretch">
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
-                                    className="relative rounded-3xl overflow-hidden shadow-2xl"
+                                    className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-full h-64 sm:h-80 lg:h-96"
                                 >
                                     <img
                                         src="/lamp"
                                         alt="Transformação Digital com IA e Automação"
-                                        className="w-full h-auto object-cover"
+                                        className="w-full h-full object-cover"
                                         loading="eager"
                                         decoding="async"
-                                        width={600}
-                                        height={600}
+                                        width={500}
+                                        height={500}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </motion.div>

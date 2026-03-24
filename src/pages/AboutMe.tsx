@@ -68,7 +68,7 @@ const AboutMe = () => {
             </div>
 
             {/* Imagem */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl h-full min-h-[500px]">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full h-80 sm:h-96 lg:h-[500px] max-w-sm mx-auto lg:mx-0">
               <img
                 src={roqueImage}
                 alt="Roque Rafael Proença - Arquiteto de Soluções de IA"
@@ -76,10 +76,10 @@ const AboutMe = () => {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-              <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md rounded-xl p-4 flex items-center gap-3 shadow-xl">
-                <Sparkles className="w-5 h-5 text-primary flex-shrink-0" />
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 bg-white/95 backdrop-blur-md rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 shadow-xl">
+                <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
                 <div>
-                  <p className="text-sm font-bold text-foreground">
+                  <p className="text-xs sm:text-sm font-bold text-foreground">
                     Roque Rafael Proença
                   </p>
                   <p className="text-xs text-muted-foreground">
