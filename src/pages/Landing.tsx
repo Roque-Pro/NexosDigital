@@ -259,9 +259,13 @@ const Landing = () => {
                 </div>
             </header>
 
-            {/* Hero + Problem Section Combined */}
-            <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12 lg:pt-24 lg:pb-20 bg-white">
-                <div className="max-w-7xl mx-auto w-full">
+            {/* Hero Section - Redesigned */}
+            <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12 lg:pt-24 lg:pb-20 bg-gradient-to-b from-white via-white to-blue-50 overflow-hidden">
+                {/* Background effects */}
+                <div className="absolute top-20 right-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-40" />
+                <div className="absolute bottom-20 left-20 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl opacity-40" />
+                
+                <div className="max-w-7xl mx-auto w-full relative z-10">
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -275,30 +279,104 @@ const Landing = () => {
                             transition={{ duration: 0.8 }}
                             className="order-2 lg:order-1"
                         >
-                            {/* Main Headline */}
+                            {/* Badge */}
+                            <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1, duration: 0.6 }}
+                                className="inline-flex items-center gap-2 rounded-full border border-purple-300/50 bg-purple-50/50 px-4 py-2 text-sm font-medium text-purple-700 mb-6"
+                            >
+                                <Zap className="h-4 w-4" /> Transformação Digital & Automação Inteligente
+                            </motion.div>
+
+                            {/* Main Headline - Enhanced */}
                              <motion.h1
                                  initial={{ opacity: 0, y: 20 }}
                                  animate={{ opacity: 1, y: 0 }}
                                  transition={{ delay: 0.2, duration: 0.8 }}
-                                 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-gray-900 mb-4 leading-tight"
+                                 className="text-5xl sm:text-6xl lg:text-7xl font-display font-black text-gray-900 mb-6 leading-tight"
                              >
-                                 Sua Empresa{" "}
+                                 Automatize sua empresa com{" "}
                                  <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
-                                     Merece Tecnologia
+                                     IA e Inteligência
                                  </span>
                              </motion.h1>
 
-                             {/* Subheadline */}
-                             <motion.p
+                             {/* Enhanced Subheadline */}
+                             <motion.div
                                  initial={{ opacity: 0, y: 20 }}
                                  animate={{ opacity: 1, y: 0 }}
                                  transition={{ delay: 0.3, duration: 0.8 }}
-                                 className="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed"
+                                 className="space-y-4 mb-10"
                              >
-                                 Consultoria, desenvolvimento e implementação ponta a ponta. <strong className="text-purple-600">Da visão à realidade.</strong>
-                             </motion.p>
+                                 <p className="text-xl text-gray-700 leading-relaxed font-semibold">
+                                     Arquiteto de soluções empresariais especializado em automação inteligente, agentes de IA e integração de plataformas.
+                                 </p>
+                                 <p className="text-lg text-gray-600 leading-relaxed">
+                                     Transformo processos complexos em fluxos automatizados, escaláveis e prontos para o futuro. De diagnóstico estratégico à implementação e suporte — tudo orientado para ROI máximo.
+                                 </p>
+                             </motion.div>
 
+                             {/* CTA Buttons */}
+                             <motion.div
+                                 initial={{ opacity: 0, y: 20 }}
+                                 animate={{ opacity: 1, y: 0 }}
+                                 transition={{ delay: 0.4, duration: 0.8 }}
+                                 className="flex flex-col sm:flex-row items-center gap-4 mb-10"
+                             >
+                                 <Button
+                                     onClick={() => {
+                                         const element = document.getElementById("contato");
+                                         element?.scrollIntoView({ behavior: "smooth" });
+                                     }}
+                                     size="lg"
+                                     className="bg-purple-600 hover:bg-purple-700 text-white font-bold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto shadow-lg shadow-purple-500/30"
+                                 >
+                                     Solicitar Diagnóstico Gratuito <ArrowRight className="h-5 w-5" />
+                                 </Button>
+                                 <Button
+                                     onClick={() => navigate("/about-me")}
+                                     variant="outline"
+                                     size="lg"
+                                     className="border-purple-300 text-gray-700 hover:border-purple-500 hover:text-purple-600 font-semibold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto"
+                                 >
+                                     <Users className="h-5 w-5" /> Sobre Mim
+                                 </Button>
+                                 <Button
+                                     onClick={() => {
+                                         const element = document.getElementById("solucoes");
+                                         element?.scrollIntoView({ behavior: "smooth" });
+                                     }}
+                                     variant="outline"
+                                     size="lg"
+                                     className="border-purple-300 text-gray-700 hover:border-purple-500 hover:text-purple-600 font-semibold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto"
+                                 >
+                                     <Play className="h-5 w-5" /> Ver Como Funciona
+                                 </Button>
+                             </motion.div>
 
+                             {/* Trust Indicators */}
+                             <motion.div
+                                 initial={{ opacity: 0, y: 20 }}
+                                 animate={{ opacity: 1, y: 0 }}
+                                 transition={{ delay: 0.5, duration: 0.8 }}
+                                 className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 text-sm text-gray-600 border-t border-gray-200 pt-6"
+                             >
+                                 <div className="flex items-center gap-2">
+                                     <span className="text-purple-600 font-bold text-lg">7+</span>
+                                     <span>Anos em Arquitetura</span>
+                                 </div>
+                                 <div className="hidden sm:block w-px h-6 bg-gray-300" />
+                                 <div className="flex items-center gap-2">
+                                     <span className="text-purple-600 font-bold text-lg">100+</span>
+                                     <span>Projetos de Automação</span>
+                                 </div>
+                                 <div className="hidden sm:block w-px h-6 bg-gray-300" />
+                                 <div className="flex items-center gap-2">
+                                     <span className="text-purple-600 font-bold text-lg">50+</span>
+                                     <span>Empresas Transformadas</span>
+                                 </div>
+                             </motion.div>
                         </motion.div>
 
                         {/* Right Side - Image + Stats */}
@@ -318,7 +396,7 @@ const Landing = () => {
                                 >
                                     <img
                                         src={roqueImage}
-                                        alt="Roque Rafael Proença - Consultor Sênior"
+                                        alt="Roque Rafael Proença - Arquiteto de Soluções de IA"
                                         className="w-full h-auto object-cover"
                                         loading="eager"
                                         decoding="async"
@@ -338,13 +416,31 @@ const Landing = () => {
                                                 Roque Rafael Proença
                                             </p>
                                             <p className="text-xs text-gray-600">
-                                                10+ anos de consultoria
+                                                Arquiteto de Soluções de IA
                                             </p>
                                         </div>
                                     </motion.div>
                                 </motion.div>
 
-
+                                {/* Feature cards under image */}
+                                <div className="grid grid-cols-3 gap-3">
+                                    {[
+                                        { label: "Arquitetura", icon: Code2 },
+                                        { label: "Automação", icon: Zap },
+                                        { label: "Inteligência", icon: TrendingUp },
+                                    ].map(({ label, icon: Icon }) => (
+                                        <motion.div
+                                            key={label}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: 0.6, duration: 0.6 }}
+                                            className="p-3 bg-white rounded-lg border border-gray-200 shadow-sm text-center hover:border-purple-300 hover:shadow-md transition-all"
+                                        >
+                                            <Icon className="h-5 w-5 text-purple-600 mx-auto mb-2" />
+                                            <p className="text-xs font-semibold text-gray-700">{label}</p>
+                                        </motion.div>
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
                     </motion.div>
