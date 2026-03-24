@@ -78,12 +78,12 @@ const AboutMe = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
               <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 bg-white/95 backdrop-blur-md rounded-lg sm:rounded-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 shadow-xl">
-                <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-primary flex-shrink-0" />
+                <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-purple-600 flex-shrink-0" />
                 <div>
-                  <p className="text-xs sm:text-sm font-bold text-foreground">
+                  <p className="text-xs sm:text-sm font-bold text-gray-900">
                     Roque Rafael Proença
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-gray-700">
                     Arquiteto de Soluções de IA
                   </p>
                 </div>
@@ -178,10 +178,10 @@ const AboutMe = () => {
       {/* O Que Ofereço */}
       <section className="py-16">
         <div className="container max-w-3xl">
-          <h3 className="text-3xl font-bold mb-12">O Que Posso Oferecer</h3>
+          <h3 className="text-3xl font-bold mb-12 text-gray-900">O Que Posso Oferecer</h3>
 
-          <div className="prose prose-invert max-w-none mb-12">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="mb-12">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Para empresas que buscam transformação digital genuína, oferecço
               muito mais que implementação técnica. Trago visão estratégica,
               profundo conhecimento técnico e a capacidade de orientar equipes
@@ -191,14 +191,14 @@ const AboutMe = () => {
 
           <div className="grid gap-6 mb-12">
             {/* Card 1 */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
               <div className="flex items-start gap-4">
-                <Zap className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <Zap className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-xl font-bold mb-3">
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">
                     Arquitetura de Soluções Inteligentes
                   </h4>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-700">
                     Design completo de sistemas de automação e IA de nível
                     empresarial. Integração de agentes de IA, APIs e plataformas
                     como Microsoft Copilot, Power Platform e Azure para criar
@@ -209,14 +209,14 @@ const AboutMe = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
               <div className="flex items-start gap-4">
-                <Briefcase className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <Briefcase className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-xl font-bold mb-3">
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">
                     Automação de Processos Empresariais
                   </h4>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-700">
                     Transformação de workflows manuais em fluxos inteligentes e
                     automatizados. Projetos com RPA, Power Automate, Copilot
                     Studio e orquestração multiagentes que reduzem custos
@@ -227,14 +227,14 @@ const AboutMe = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
               <div className="flex items-start gap-4">
-                <Shield className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <Shield className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-xl font-bold mb-3">
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">
                     Integração e Governança
                   </h4>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-700">
                     Arquitetura de integrações seguras entre agentes de IA,
                     plataformas de automação e sistemas empresariais,
                     particularmente Databricks. Estabeleço padrões de
@@ -246,14 +246,14 @@ const AboutMe = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
               <div className="flex items-start gap-4">
-                <Lightbulb className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                <Lightbulb className="h-6 w-6 text-purple-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="text-xl font-bold mb-3">
+                  <h4 className="text-xl font-bold mb-3 text-gray-900">
                     Liderança Técnica & Orientação
                   </h4>
-                  <p className="text-muted-foreground">
+                  <p className="text-gray-700">
                     Desenvolvimento de padrões de arquitetura, modelos
                     reutilizáveis e frameworks de automação de IA. Orientação
                     estratégica e mentoring de equipes na implementação de
@@ -267,12 +267,12 @@ const AboutMe = () => {
       </section>
 
       {/* Tech Stack */}
-      <section className="py-16 border-t border-border/50">
+      <section className="py-16 border-t border-gray-200">
         <div className="container max-w-3xl">
-          <h3 className="text-3xl font-bold mb-12">Stack Tecnológico</h3>
+          <h3 className="text-3xl font-bold mb-12 text-gray-900">Stack Tecnológico</h3>
 
-          <div className="prose prose-invert max-w-none mb-12">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+          <div className="mb-12">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Trabalho com as tecnologias mais modernas e escaláveis do mercado,
               selecionadas especificamente para entregar soluções de alta
               performance, segurança e manutenibilidade.
@@ -281,53 +281,53 @@ const AboutMe = () => {
 
           <div className="grid gap-6">
             {/* Frontend */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-primary" />
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
+              <h4 className="text-lg font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <Code2 className="h-5 w-5 text-purple-600" />
                 Frontend & UI
               </h4>
               <div className="flex flex-wrap gap-3">
                 {["React", "TypeScript", "Tailwind CSS", "Vite"].map((tech) => (
                   <div
                     key={tech}
-                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                    className="px-4 py-2 bg-purple-50 border border-purple-300 rounded-lg text-sm font-medium text-purple-700 hover:bg-purple-100 transition-colors"
                   >
                     {tech}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-gray-700 mt-4">
                 Desenvolvimento de interfaces reativas, responsivas e acessíveis
                 com foco em UX/UI.
               </p>
             </div>
 
             {/* Backend */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Zap className="h-5 w-5 text-primary" />
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
+              <h4 className="text-lg font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <Zap className="h-5 w-5 text-purple-600" />
                 Backend & API
               </h4>
               <div className="flex flex-wrap gap-3">
                 {["Node.js", "TypeScript", "SQL", "REST APIs"].map((tech) => (
                   <div
                     key={tech}
-                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                    className="px-4 py-2 bg-purple-50 border border-purple-300 rounded-lg text-sm font-medium text-purple-700 hover:bg-purple-100 transition-colors"
                   >
                     {tech}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-gray-700 mt-4">
                 Arquitetura de servidores robustos, APIs escaláveis e integração
                 com plataformas empresariais.
               </p>
             </div>
 
             {/* Database & Infrastructure */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Shield className="h-5 w-5 text-primary" />
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
+              <h4 className="text-lg font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <Shield className="h-5 w-5 text-purple-600" />
                 Banco de Dados & Cloud
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -339,22 +339,22 @@ const AboutMe = () => {
                 ].map((tech) => (
                   <div
                     key={tech}
-                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                    className="px-4 py-2 bg-purple-50 border border-purple-300 rounded-lg text-sm font-medium text-purple-700 hover:bg-purple-100 transition-colors"
                   >
                     {tech}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-gray-700 mt-4">
                 Banco de dados relacional com PostgreSQL via Supabase,
                 integração real-time e armazenamento seguro em cloud.
               </p>
             </div>
 
             {/* AI & Automation */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Lightbulb className="h-5 w-5 text-primary" />
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
+              <h4 className="text-lg font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <Lightbulb className="h-5 w-5 text-purple-600" />
                 IA & Automação
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -367,22 +367,22 @@ const AboutMe = () => {
                 ].map((tech) => (
                   <div
                     key={tech}
-                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                    className="px-4 py-2 bg-purple-50 border border-purple-300 rounded-lg text-sm font-medium text-purple-700 hover:bg-purple-100 transition-colors"
                   >
                     {tech}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-gray-700 mt-4">
                 Integração de agentes de IA, automação de processos empresariais
                 e orquestração de workflows inteligentes.
               </p>
             </div>
 
             {/* Development Tools */}
-            <div className="border border-border/50 rounded-xl p-6 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-colors">
-              <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-primary" />
+            <div className="border border-purple-200 rounded-xl p-6 bg-white shadow-sm hover:border-purple-400 transition-colors">
+              <h4 className="text-lg font-bold mb-4 text-gray-900 flex items-center gap-2">
+                <Code2 className="h-5 w-5 text-purple-600" />
                 Ferramentas & Metodologia
               </h4>
               <div className="flex flex-wrap gap-3">
@@ -395,13 +395,13 @@ const AboutMe = () => {
                 ].map((tech) => (
                   <div
                     key={tech}
-                    className="px-4 py-2 bg-primary/10 border border-primary/30 rounded-lg text-sm font-medium text-primary hover:bg-primary/20 transition-colors"
+                    className="px-4 py-2 bg-purple-50 border border-purple-300 rounded-lg text-sm font-medium text-purple-700 hover:bg-purple-100 transition-colors"
                   >
                     {tech}
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-sm text-gray-700 mt-4">
                 Desenvolvimento ágil com controle de versão, testes automatizados
                 e deployment contínuo.
               </p>
@@ -409,9 +409,9 @@ const AboutMe = () => {
           </div>
 
           {/* Proficiency Statement */}
-          <div className="mt-12 p-6 border border-primary/50 rounded-xl bg-primary/5">
-            <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">
+          <div className="mt-12 p-6 border border-purple-300 rounded-xl bg-purple-50">
+            <p className="text-gray-700 leading-relaxed">
+              <strong className="text-gray-900">
                 Expertise em Full Stack Development:
               </strong>{" "}
               Capacidade comprovada de projetar e implementar soluções completas
@@ -424,35 +424,35 @@ const AboutMe = () => {
       </section>
 
       {/* Diferenciais */}
-      <section className="py-16 bg-card/50">
+      <section className="py-16 bg-gray-50">
         <div className="container max-w-3xl">
-          <h3 className="text-3xl font-bold mb-12">Por Que Trabalhar Comigo</h3>
+          <h3 className="text-3xl font-bold mb-12 text-gray-900">Por Que Trabalhar Comigo</h3>
 
           <div className="grid gap-4 mb-12">
-            <div className="flex gap-4 p-4 border border-border/50 rounded-lg bg-background/50">
-              <span className="text-2xl font-bold text-primary min-w-fit">
+            <div className="flex gap-4 p-4 border border-purple-200 rounded-lg bg-white">
+              <span className="text-2xl font-bold text-purple-600 min-w-fit">
                 ✓
               </span>
               <div>
-                <h4 className="font-semibold mb-1">
+                <h4 className="font-semibold mb-1 text-gray-900">
                   Expertise Comprovada em Automação Empresarial
                 </h4>
-                <p className="text-muted-foreground text-sm">
+                <p className="text-gray-700 text-sm">
                   Experiência prática na implementação de soluções inteligentes
                   orientadas por IA em ambientes de produção.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 border border-border/50 rounded-lg bg-background/50">
-              <span className="text-2xl font-bold text-primary min-w-fit">
-                ✓
-              </span>
-              <div>
-                <h4 className="font-semibold mb-1">
-                  Domínio Técnico das Principais Plataformas
-                </h4>
-                <p className="text-muted-foreground text-sm">
+            <div className="flex gap-4 p-4 border border-purple-200 rounded-lg bg-white">
+              <span className="text-2xl font-bold text-purple-600 min-w-fit">
+                 ✓
+               </span>
+               <div>
+                 <h4 className="font-semibold mb-1 text-gray-900">
+                   Domínio Técnico das Principais Plataformas
+                 </h4>
+                 <p className="text-gray-700 text-sm">
                   Microsoft Copilot, Power Platform, Copilot Studio, Power
                   Automate, Azure e Databricks — as tecnologias que empresas
                   modernas precisam.
@@ -460,45 +460,45 @@ const AboutMe = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 border border-border/50 rounded-lg bg-background/50">
-              <span className="text-2xl font-bold text-primary min-w-fit">
-                ✓
-              </span>
-              <div>
-                <h4 className="font-semibold mb-1">
-                  Visão Estratégica e Pensamento Arquitetural
-                </h4>
-                <p className="text-muted-foreground text-sm">
+            <div className="flex gap-4 p-4 border border-purple-200 rounded-lg bg-white">
+              <span className="text-2xl font-bold text-purple-600 min-w-fit">
+                 ✓
+               </span>
+               <div>
+                 <h4 className="font-semibold mb-1 text-gray-900">
+                   Visão Estratégica e Pensamento Arquitetural
+                 </h4>
+                 <p className="text-gray-700 text-sm">
                   Não apenas codificar — projetar soluções escaláveis, seguras e
                   prontas para o futuro.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 border border-border/50 rounded-lg bg-background/50">
-              <span className="text-2xl font-bold text-primary min-w-fit">
-                ✓
-              </span>
-              <div>
-                <h4 className="font-semibold mb-1">
-                  Orientação de Equipes e Centros de Excelência
-                </h4>
-                <p className="text-muted-foreground text-sm">
+            <div className="flex gap-4 p-4 border border-purple-200 rounded-lg bg-white">
+              <span className="text-2xl font-bold text-purple-600 min-w-fit">
+                 ✓
+               </span>
+               <div>
+                 <h4 className="font-semibold mb-1 text-gray-900">
+                   Orientação de Equipes e Centros de Excelência
+                 </h4>
+                 <p className="text-gray-700 text-sm">
                   Capacidade comprovada de mentorar equipes e estabelecer
                   frameworks de automação que geram valor contínuo.
                 </p>
               </div>
             </div>
 
-            <div className="flex gap-4 p-4 border border-border/50 rounded-lg bg-background/50">
-              <span className="text-2xl font-bold text-primary min-w-fit">
-                ✓
-              </span>
-              <div>
-                <h4 className="font-semibold mb-1">
-                  Foco em ROI e Negócio
-                </h4>
-                <p className="text-muted-foreground text-sm">
+            <div className="flex gap-4 p-4 border border-purple-200 rounded-lg bg-white">
+              <span className="text-2xl font-bold text-purple-600 min-w-fit">
+                 ✓
+               </span>
+               <div>
+                 <h4 className="font-semibold mb-1 text-gray-900">
+                   Foco em ROI e Negócio
+                 </h4>
+                 <p className="text-gray-700 text-sm">
                   Toda solução é pensada em termos de impacto empresarial —
                   redução de custos, aumento de produtividade e receita.
                 </p>
@@ -511,14 +511,14 @@ const AboutMe = () => {
       {/* Proposta de Valor */}
       <section className="py-16">
         <div className="container max-w-3xl">
-          <div className="relative border border-primary/50 rounded-2xl p-8 bg-gradient-to-br from-primary/5 to-transparent overflow-hidden">
-            <div className="absolute top-0 right-0 w-40 h-40 bg-primary/10 rounded-full blur-3xl -mr-20 -mt-20" />
+          <div className="relative border border-purple-300 rounded-2xl p-8 bg-purple-50 overflow-hidden">
+            <div className="absolute top-0 right-0 w-40 h-40 bg-purple-200/30 rounded-full blur-3xl -mr-20 -mt-20" />
 
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold mb-6">
+              <h3 className="text-3xl font-bold mb-6 text-gray-900">
                 Pronto para Transformar Sua Empresa?
               </h3>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 Se sua organização busca um profissional que combine conhecimento
                 técnico profundo, visão estratégica e a capacidade de orientar
                 equipes na era da automação e IA, vamos conversar.
