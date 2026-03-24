@@ -28,45 +28,18 @@ const AboutMe = () => {
       {/* Hero intro */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
-        <div className="container relative z-10 max-w-3xl mx-auto">
-          {/* Personal Info Card */}
-          <div className="mb-12 p-6 sm:p-8 bg-white border-2 border-purple-200 rounded-2xl shadow-lg">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
-              Roque Rafael Proença
-            </h1>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-700 mb-4">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">📍</span>
-                <span className="font-semibold">Rio de Janeiro, RJ</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">🎂</span>
-                <span className="font-semibold">41 anos</span>
-              </div>
-            </div>
-            <div className="border-t border-gray-200 pt-4">
-              <p className="text-gray-700">
-                <span className="font-semibold">Formação:</span> Universidade Estácio de Sá
-              </p>
-              <p className="text-gray-600 text-sm mt-2">
-                Análise e Desenvolvimento de Sistemas (ADS)
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <h2 className="text-5xl font-bold mb-6 leading-tight text-gray-900">
-              Transformando Ideias em{" "}
-              <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
-                Soluções de IA
-              </span>{" "}
-              que Escalam
-            </h2>
-            <p className="text-xl text-gray-700 leading-relaxed">
-              Especialista em arquitetura de soluções empresariais, automação
-              inteligente e transformação digital.
-            </p>
-          </div>
+        <div className="container relative z-10 max-w-3xl mx-auto text-center">
+          <h2 className="text-5xl font-bold mb-6 leading-tight text-gray-900">
+            Transformando Ideias em{" "}
+            <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
+              Soluções de IA
+            </span>{" "}
+            que Escalam
+          </h2>
+          <p className="text-xl text-gray-700 leading-relaxed">
+            Especialista em arquitetura de soluções empresariais, automação
+            inteligente e transformação digital.
+          </p>
         </div>
       </section>
 
@@ -78,11 +51,12 @@ const AboutMe = () => {
             <div className="max-w-none">
               <h3 className="text-3xl font-bold mb-6 text-gray-900">Quem Sou Eu</h3>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                Sou um profissional apaixonado por tecnologia com formação sólida
-                em <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e
-                especialização em arquitetura de soluções empresariais. Minha
-                trajetória é marcada pela busca constante de excelência técnica e
-                pela capacidade de transformar desafios complexos em soluções
+                Meu nome é <strong>Roque Rafael Proença</strong>, tenho <strong>41 anos</strong> e sou
+                um profissional apaixonado por tecnologia baseado no <strong>Rio de Janeiro, RJ</strong>.
+                Sou formado pela <strong>Universidade Estácio de Sá</strong> em
+                <strong> Análise e Desenvolvimento de Sistemas (ADS)</strong>, com especialização em
+                arquitetura de soluções empresariais. Minha trajetória é marcada pela busca constante
+                de excelência técnica e pela capacidade de transformar desafios complexos em soluções
                 elegantes e escaláveis.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
