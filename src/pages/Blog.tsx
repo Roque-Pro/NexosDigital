@@ -26,7 +26,14 @@ const Blog = () => {
         .order("created_at", { ascending: false });
 
       if (error) throw error;
-      setPosts(data || []);
+      
+      // Processa posts para garantir que featured_image está preenchido
+      const processedData = (data || []).map(post => ({
+        ...post,
+        featured_image: post.featured_image || extractFirstImage(post.html_content)
+      }));
+      
+      setPosts(processedData as any);
     } catch (error: any) {
       toast({
         title: "Erro",
@@ -58,6 +65,13 @@ const Blog = () => {
     },
   };
 
+  // Extrair primeira imagem do HTML
+  const extractFirstImage = (htmlContent: string): string | null => {
+    const imgRegex = /<img[^>]+src=["']([^"']+)["']/;
+    const match = htmlContent.match(imgRegex);
+    return match ? match[1] : null;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-white to-gray-50">
       {/* Header */}
@@ -82,7 +96,7 @@ const Blog = () => {
             className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             Insights, estratégias e tendências sobre transformação digital,
-            automação e tecnologia para impulsionar seu negócio
+            automação, inteligência artificial e tecnologia para impulsionar seu negócio
           </motion.p>
 
           <motion.div
@@ -121,17 +135,27 @@ const Blog = () => {
               viewport={{ once: true }}
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
-              {posts.map((post) => (
+              {posts.map((post) => {
+                const imageUrl = (post as any).featured_image || extractFirstImage(post.html_content);
+                return (
                 <motion.div
-                  key={post.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -8 }}
-                  onClick={() => navigate(`/blog/${post.slug}`)}
-                  className="group cursor-pointer"
-                >
-                  <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-300 h-full flex flex-col">
-                    {/* Image placeholder */}
-                    <div className="w-full h-48 bg-gradient-to-br from-purple-200 via-pink-200 to-purple-300 group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-400 transition-all duration-300" />
+                   key={post.id}
+                   variants={itemVariants}
+                   whileHover={{ y: -8 }}
+                   onClick={() => navigate(`/blog/${post.slug}`)}
+                   className="group cursor-pointer"
+                 >
+                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-300 h-full flex flex-col">
+                     {/* Image with fallback */}
+                     <div className="w-full h-48 bg-gradient-to-br from-purple-200 via-pink-200 to-purple-300 group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-400 transition-all duration-300 overflow-hidden">
+                       {imageUrl ? (
+                         <img 
+                           src={imageUrl} 
+                           alt={post.title}
+                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                         />
+                       ) : null}
+                     </div>
 
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
@@ -164,10 +188,11 @@ const Blog = () => {
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+                    </div>
+                    </motion.div>
+                    );
+                    })}
+                    </motion.div>
           )}
         </div>
       </section>

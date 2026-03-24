@@ -7,7 +7,9 @@ import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft } from "lucide-react";
 import { BlogPost } from "@/types";
 import ShareBlogPost from "@/components/ShareBlogPost";
+import StrategicBacklinks from "@/components/StrategicBacklinks";
 import { injectOpenGraphTags, fetchBlogMetadata } from "@/lib/og-tags";
+import { injectBlogSchema } from "@/lib/seo-optimization";
 
 const BlogPostPage = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -24,17 +26,31 @@ const BlogPostPage = () => {
     useEffect(() => {
         if (post) {
             updateMetaTags(post);
-            // Also inject via the new utility function for better compatibility
+            const firstImage = extractFirstImage(post.html_content);
+            
+            // Injetar Open Graph Tags
             const metadata = {
                 title: post.title,
                 description: post.excerpt || post.html_content.substring(0, 160),
-                imageUrl: extractFirstImage(post.html_content) || "https://www.technexos.com.br/og-image-blog.png",
+                imageUrl: firstImage || "https://www.technexos.com.br/og-image-blog.png",
                 url: `https://www.technexos.com.br/blog/${post.slug}`,
                 author: "Roque Rafael Proença",
                 publishedAt: post.created_at,
                 type: 'article' as const,
             };
             injectOpenGraphTags(metadata);
+            
+            // Injetar Schema.org JSON-LD para rich snippets
+            injectBlogSchema(
+                {
+                    title: post.title,
+                    slug: post.slug,
+                    excerpt: post.excerpt || post.html_content.substring(0, 160),
+                    htmlContent: post.html_content,
+                    publishedAt: post.created_at,
+                },
+                firstImage
+            );
         }
     }, [post]);
 
@@ -239,28 +255,31 @@ const BlogPostPage = () => {
                 {/* HTML Content */}
                 <div
                     className="prose prose-lg max-w-none
-            prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900
-            prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg
-            prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
-            prose-a:text-purple-600 prose-a:underline hover:prose-a:text-purple-700
-            prose-strong:font-bold prose-strong:text-gray-900
-            prose-em:text-gray-700 prose-em:italic
-            prose-code:bg-gray-100 prose-code:text-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:border prose-code:border-gray-300
-            prose-pre:bg-gray-900 prose-pre:text-white prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-auto prose-pre:border prose-pre:border-gray-700
-            prose-blockquote:border-l-4 prose-blockquote:border-purple-600 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-4 prose-blockquote:border prose-blockquote:border-gray-300
-            prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-6
-            prose-ol:list-decimal prose-ol:ml-6 prose-ol:mb-6
-            prose-li:text-gray-700 prose-li:mb-2
-            prose-img:rounded-lg prose-img:shadow-lg prose-img:max-w-full prose-img:my-8
-            prose-table:border-collapse prose-table:w-full prose-table:my-6
-            prose-th:bg-gray-200 prose-th:font-bold prose-th:text-gray-900 prose-th:text-left prose-th:p-3 prose-th:border prose-th:border-gray-300
-            prose-td:text-gray-700 prose-td:border prose-td:border-gray-300 prose-td:p-3
-            prose-hr:border-gray-300 prose-hr:my-8"
+                prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900
+                prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg
+                prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
+                prose-a:text-purple-600 prose-a:underline hover:prose-a:text-purple-700
+                prose-strong:font-bold prose-strong:text-gray-900
+                prose-em:text-gray-700 prose-em:italic
+                prose-code:bg-gray-100 prose-code:text-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:border prose-code:border-gray-300
+                prose-pre:bg-gray-900 prose-pre:text-white prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-auto prose-pre:border prose-pre:border-gray-700
+                prose-blockquote:border-l-4 prose-blockquote:border-purple-600 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-4 prose-blockquote:border prose-blockquote:border-gray-300
+                prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-6
+                prose-ol:list-decimal prose-ol:ml-6 prose-ol:mb-6
+                prose-li:text-gray-700 prose-li:mb-2
+                prose-img:rounded-lg prose-img:shadow-lg prose-img:max-w-full prose-img:my-8
+                prose-table:border-collapse prose-table:w-full prose-table:my-6
+                prose-th:bg-gray-200 prose-th:font-bold prose-th:text-gray-900 prose-th:text-left prose-th:p-3 prose-th:border prose-th:border-gray-300
+                prose-td:text-gray-700 prose-td:border prose-td:border-gray-300 prose-td:p-3
+                prose-hr:border-gray-300 prose-hr:my-8"
                    style={{
                        color: '#111827',
                    }}
                     dangerouslySetInnerHTML={{ __html: post.html_content }}
                 />
+
+                {/* Strategic Backlinks Section */}
+                <StrategicBacklinks postSlug={post.slug} />
             </motion.div>
 
             {/* Footer CTA */}
