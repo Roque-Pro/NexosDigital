@@ -6,7 +6,7 @@ interface BacklinksProps {
 }
 
 const StrategicBacklinks = ({ postSlug }: BacklinksProps) => {
-  // 15 backlinks estratégicos - Autoridade alta, tema relacionado (Brasil)
+  // 15 backlinks estratégicos - Autoridade alta, tema relacionado
   const backlinks = [
     {
       text: "Inteligência Artificial no Brasil",
@@ -27,34 +27,22 @@ const StrategicBacklinks = ({ postSlug }: BacklinksProps) => {
       category: "Segurança",
     },
     {
-      text: "Software e Desenvolvimento",
-      url: "https://tecnoblog.net/tema/software/",
-      domain: "Tecnoblog",
-      category: "Desenvolvimento",
-    },
-    {
       text: "Cloud Computing e Infraestrutura",
       url: "https://www.sap.com/products/technology-platform.html",
       domain: "SAP",
       category: "Cloud",
     },
     {
-      text: "Negócios e Mercado de Tecnologia",
-      url: "https://tecnoblog.net/tema/negocios-e-mercado/",
-      domain: "Tecnoblog",
+      text: "DevOps e Desenvolvimento",
+      url: "https://github.blog/enterprise-software/devops/",
+      domain: "GitHub Blog",
+      category: "DevOps",
+    },
+    {
+      text: "AWS Cloud e Inovação",
+      url: "https://aws.amazon.com/pt/blogs/",
+      domain: "AWS Blogs",
       category: "Tecnologia",
-    },
-    {
-      text: "Soluções Enterprise e Escalabilidade",
-      url: "https://www.ibm.com/cloud/what-is-digital-transformation",
-      domain: "IBM Cloud",
-      category: "Enterprise",
-    },
-    {
-      text: "Automação e Processos Inteligentes",
-      url: "https://www.uipath.com/pt-br/automation/rpa",
-      domain: "UiPath",
-      category: "Automação",
     },
     {
       text: "Análise de Dados e Business Intelligence",
@@ -63,20 +51,14 @@ const StrategicBacklinks = ({ postSlug }: BacklinksProps) => {
       category: "BI/Analytics",
     },
     {
-      text: "Inovação Tecnológica",
-      url: "https://www.accenture.com/br-pt/insights/technology",
-      domain: "Accenture",
-      category: "Inovação",
-    },
-    {
-      text: "Eficiência Operacional Empresarial",
-      url: "https://www.oracle.com/br/erp/what-is-digital-transformation/",
-      domain: "Oracle",
-      category: "Consultoria",
+      text: "AI & ML no GitHub",
+      url: "https://github.blog/ai-and-ml/",
+      domain: "GitHub Blog",
+      category: "IA/ML",
     },
     {
       text: "Marketing Automation e CRM",
-      url: "https://www.salesforce.com/br/products/crm/",
+      url: "https://www.salesforce.com/crm/",
       domain: "Salesforce",
       category: "Marketing Tech",
     },
@@ -87,10 +69,28 @@ const StrategicBacklinks = ({ postSlug }: BacklinksProps) => {
       category: "IA",
     },
     {
-      text: "Cultura Digital e Transformação",
-      url: "https://www2.deloitte.com/br/pt/pages/technology/solutions/transformacao-digital.html",
-      domain: "Deloitte",
-      category: "Consultoria",
+      text: "Negócios e Mercado de Tecnologia",
+      url: "https://tecnoblog.net/tema/negocios-e-mercado/",
+      domain: "Tecnoblog",
+      category: "Tecnologia",
+    },
+    {
+      text: "Infraestrutura e DevSecOps",
+      url: "https://github.blog/enterprise-software/devsecops/",
+      domain: "GitHub Blog",
+      category: "Segurança",
+    },
+    {
+      text: "Software e Desenvolvimento",
+      url: "https://tecnoblog.net/tema/software/",
+      domain: "Tecnoblog",
+      category: "Desenvolvimento",
+    },
+    {
+      text: "HashiCorp: Infraestrutura Moderna",
+      url: "https://www.hashicorp.com/blog",
+      domain: "HashiCorp Blog",
+      category: "Infrastructure",
     },
     {
       text: "Tecnologia e Internet",
