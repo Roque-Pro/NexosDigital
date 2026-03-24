@@ -337,9 +337,8 @@ const Landing = () => {
                                  </Button>
                                  <Button
                                      onClick={() => navigate("/about-me")}
-                                     variant="outline"
                                      size="lg"
-                                     className="border-purple-300 text-gray-700 hover:border-purple-500 hover:text-purple-600 font-semibold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto"
+                                     className="border-2 border-purple-600 bg-white text-purple-600 hover:bg-purple-50 font-bold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto transition-all"
                                  >
                                      <Users className="h-5 w-5" /> Sobre Mim
                                  </Button>
@@ -348,9 +347,8 @@ const Landing = () => {
                                          const element = document.getElementById("solucoes");
                                          element?.scrollIntoView({ behavior: "smooth" });
                                      }}
-                                     variant="outline"
                                      size="lg"
-                                     className="border-purple-300 text-gray-700 hover:border-purple-500 hover:text-purple-600 font-semibold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto"
+                                     className="border-2 border-purple-600 bg-white text-purple-600 hover:bg-purple-50 font-bold text-base px-8 h-14 rounded-lg gap-2 w-full sm:w-auto transition-all"
                                  >
                                      <Play className="h-5 w-5" /> Ver Como Funciona
                                  </Button>
