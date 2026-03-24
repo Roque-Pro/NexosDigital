@@ -68,11 +68,11 @@ const AboutMe = () => {
             </div>
 
             {/* Imagem */}
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full h-80 sm:h-96 lg:h-[500px] max-w-sm mx-auto lg:mx-0">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-full max-w-xs sm:max-w-sm lg:max-w-full mx-auto lg:mx-0">
               <img
                 src={roqueImage}
                 alt="Roque Rafael Proença - Arquiteto de Soluções de IA"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

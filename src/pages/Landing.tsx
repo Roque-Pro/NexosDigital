@@ -381,16 +381,14 @@ const Landing = () => {
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
-                                    className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl w-full max-w-sm sm:max-w-md lg:max-w-full h-64 sm:h-80 lg:h-96"
+                                    className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl w-full max-w-xs sm:max-w-sm lg:max-w-full"
                                 >
                                     <img
                                         src="/lamp"
                                         alt="Transformação Digital com IA e Automação"
-                                        className="w-full h-full object-cover"
+                                        className="w-full h-auto object-contain"
                                         loading="eager"
                                         decoding="async"
-                                        width={500}
-                                        height={500}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </motion.div>
