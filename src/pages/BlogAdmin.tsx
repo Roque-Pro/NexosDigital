@@ -22,7 +22,6 @@ const BlogAdmin = () => {
         slug: "",
         html_content: "",
         excerpt: "",
-        featured_image: "",
         published: false,
     });
 
@@ -92,7 +91,6 @@ const BlogAdmin = () => {
                         slug: formData.slug,
                         html_content: formData.html_content,
                         excerpt: formData.excerpt,
-                        featured_image: formData.featured_image || null,
                         published: formData.published,
                         updated_at: now,
                     })
@@ -111,7 +109,6 @@ const BlogAdmin = () => {
                     slug: formData.slug,
                     html_content: formData.html_content,
                     excerpt: formData.excerpt,
-                    featured_image: formData.featured_image || null,
                     published: formData.published,
                     created_at: now,
                     updated_at: now,
@@ -142,7 +139,6 @@ const BlogAdmin = () => {
             slug: post.slug,
             html_content: post.html_content,
             excerpt: post.excerpt || "",
-            featured_image: (post as any).featured_image || "",
             published: post.published,
         });
         setEditingId(post.id);
@@ -178,7 +174,6 @@ const BlogAdmin = () => {
             slug: "",
             html_content: "",
             excerpt: "",
-            featured_image: "",
             published: false,
         });
         setEditingId(null);
@@ -270,24 +265,6 @@ const BlogAdmin = () => {
                                     }
                                     className="w-full px-4 py-2 rounded-lg border border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-20 resize-none !text-white bg-slate-700 placeholder-slate-400"
                                 />
-                            </div>
-
-                            {/* Featured Image URL */}
-                            <div className="space-y-2">
-                                <Label className="font-semibold text-indigo-300">
-                                    URL da Imagem em Destaque (opcional)
-                                </Label>
-                                <Input
-                                    placeholder="https://exemplo.com/imagem.jpg"
-                                    value={formData.featured_image}
-                                    onChange={(e) =>
-                                        setFormData({ ...formData, featured_image: e.target.value })
-                                    }
-                                    className="bg-slate-700 border-indigo-500 text-white placeholder-slate-400"
-                                />
-                                <p className="text-xs text-indigo-300">
-                                    Se deixar vazio, usará a primeira imagem do conteúdo HTML
-                                </p>
                             </div>
 
                             {/* HTML Content */}
