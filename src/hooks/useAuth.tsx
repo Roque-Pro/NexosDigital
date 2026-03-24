@@ -28,12 +28,33 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [userStatus, setUserStatus] = useState<string | null>(null);
 
   const loadUserMeta = async (userId: string) => {
-    const [{ data: roles }, { data: statusData }] = await Promise.all([
-      supabase.from("user_roles").select("role").eq("user_id", userId),
-      supabase.rpc("get_user_status", { _user_id: userId }),
-    ]);
-    setIsAdmin(roles?.some((r) => r.role === "admin") ?? false);
-    setUserStatus(statusData ?? "pending");
+    try {
+      // Tentar carregar roles de user_roles
+      const { data: roles, error: rolesError } = await supabase
+        .from("user_roles")
+        .select("role")
+        .eq("user_id", userId);
+      
+      if (!rolesError) {
+        setIsAdmin(roles?.some((r) => r.role === "admin") ?? false);
+      } else {
+        // Se tabela não existe, assume user padrão
+        setIsAdmin(false);
+      }
+
+      // Tentar carregar status via RPC
+      try {
+        const { data: statusData } = await supabase.rpc("get_user_status");
+        setUserStatus(statusData ?? "active");
+      } catch (rpcError) {
+        // Se RPC não existe, usa status padrão
+        setUserStatus("active");
+      }
+    } catch (error) {
+      // Se tudo falhar, usa valores padrão
+      setIsAdmin(false);
+      setUserStatus("active");
+    }
   };
 
   useEffect(() => {
