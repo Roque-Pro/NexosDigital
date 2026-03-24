@@ -249,9 +249,8 @@ const Landing = () => {
                         </Button>
                         <Button
                             onClick={() => navigate("/auth")}
-                            variant="outline"
                             size="sm"
-                            className="border-gray-300 text-gray-700 hover:border-purple-400 hover:text-purple-600 text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2"
+                            className="border-2 border-purple-600 bg-white text-purple-600 hover:bg-purple-50 font-bold text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded transition-all"
                         >
                             <span className="hidden sm:inline">Acesso</span>
                             <span className="sm:hidden">Login</span>
