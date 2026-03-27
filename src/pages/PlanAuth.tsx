@@ -4,6 +4,7 @@ import { AlertCircle, ArrowLeft as ArrowLeftIcon, CheckCircle, Clock } from "luc
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,6 +15,36 @@ const PlanAuth = () => {
     const { session, loading } = useAuth();
     const { toast } = useToast();
     const [submitting, setSubmitting] = useState(false);
+
+    // SEO para PMEs
+    useSEO({
+        title: "Diagnóstico Gratuito de Lucros PME | Análise Estruturada para Pequenas e Médias Empresas",
+        description: "Descubra onde sua PME está perdendo dinheiro. Análise gratuita com roadmap claro para estruturar processos, aumentar margem e escalar. Comércio, serviços, SaaS, indústria.",
+        keywords: [
+            "diagnóstico pme",
+            "análise lucros pequena empresa",
+            "consultoria media empresa",
+            "margem de lucro empresa",
+            "estrutura pme",
+            "escalar negócio",
+            "organização empresarial",
+            "análise financeira pme",
+            "diagnóstico gratuito empresa",
+            "consultoria gestão",
+            "pme brasil",
+            "pequeno negócio",
+            "empresa crescimento",
+            "fluxo de caixa",
+            "rentabilidade empresa",
+        ],
+        ogTitle: "Diagnóstico Gratuito - Descubra quanto você está perdendo",
+        ogDescription: "Análise personalizada que mostra exatamente onde sua PME está deixando dinheiro na mesa. Sem cartão, sem compromisso.",
+        ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
+        twitterTitle: "Análise Gratuita para sua PME",
+        twitterDescription: "Descobrir sua verdadeira margem de lucro em menos de 2 minutos.",
+        canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
+    });
+
     const [diagnosticData, setDiagnosticData] = useState({
         diagnosticName: "",
         diagnosticPhone: "",
@@ -100,20 +131,20 @@ const PlanAuth = () => {
                         className="mb-8 inline-block"
                     >
                         <div className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
-                            ⚠️ Você está perdendo dinheiro agora
+                            ⚠️ Sua empresa está deixando dinheiro na mesa
                         </div>
                     </motion.div>
 
-                    {/* HEADLINE - OPÇÃO 1 (padrão) */}
+                    {/* HEADLINE - PME */}
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="text-5xl sm:text-6xl font-black text-gray-900 mb-6 leading-tight"
                     >
-                        Seus clientes saem por aquela porta e você fica aqui{" "}
+                        Você trabalha todos os dias, mas{" "}
                         <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-                            perdendo dinheiro
+                            não sabe quanto está ganhando
                         </span>
                     </motion.h1>
 
@@ -123,7 +154,7 @@ const PlanAuth = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-xl text-gray-700 mb-6 leading-relaxed font-semibold"
                     >
-                        Enquanto você está trabalhando, clientes entram e saem pela porta. E você aqui, sem saber quantos voltam e quanto dinheiro realmente ficou.
+                        Seu negócio cresce, mas os lucros não acompanham. Processos desorganizados, clientes perdidos, faturamento confuso. Isso drena muito mais do que você imagina.
                     </motion.p>
 
                     <motion.p
@@ -132,7 +163,7 @@ const PlanAuth = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-lg text-gray-600 mb-10 leading-relaxed"
                     >
-                        Isso acontece <span className="font-bold text-gray-900">todos os dias</span> em praticamente todas as oficinas que não conseguem ver o quadro completo.
+                        Isso acontece <span className="font-bold text-gray-900">todos os dias</span> em praticamente todas as PMEs que crescem sem uma estrutura adequada.
                     </motion.p>
 
                     <motion.div
@@ -146,7 +177,7 @@ const PlanAuth = () => {
                             size="lg"
                             className="bg-red-600 hover:bg-red-700 text-white font-black px-4 sm:px-8 py-6 sm:py-7 text-sm sm:text-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 transition-all"
                         >
-                            👉 Descobrir onde perco dinheiro
+                            👉 Descobrir quantos lucros estou perdendo
                         </Button>
                     </motion.div>
                 </div>
@@ -162,15 +193,15 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Se você tem uma oficina, provavelmente está passando por isso:
+                        Se você tem uma PME, provavelmente está passando por isso:
                     </motion.h2>
 
                     <div className="grid gap-4">
                         {[
-                            { icon: "📉", text: "Você perde clientes porque não consegue responder rapidamente", subtitle: "Cliente liga, você está ocupado, passa para concorrente" },
-                            { icon: "⏱️", text: "Não sabe quanto tempo um serviço leva", subtitle: "Estimativa errada = lucro errado. Sempre faltando organização" },
-                            { icon: "🏢", text: "Não aproveita as seguradoras corretamente", subtitle: "A maioria das oficinas deixa 40-60% do potencial de renda nas seguradoras" },
-                            { icon: "💰", text: "No fim do mês não sabe se ganhou ou perdeu dinheiro", subtitle: "Tudo misturado em planilha, na cabeça, em pedaço de papel" },
+                            { icon: "📉", text: "Processos desorganizados causam perda de clientes e vendas", subtitle: "Sem um sistema unificado, comunicação falha, prazos descumpridos, cliente vai para concorrente" },
+                            { icon: "⏱️", text: "Não consegue medir a rentabilidade real de cada cliente ou projeto", subtitle: "Custos espalhados, precificação incorreta. Você vende, mas não sabe quanto lucrou de verdade" },
+                            { icon: "💼", text: "Dificuldade em escalar o negócio sem aumentar proporcionalmente os custos", subtitle: "Cresce manualmente, sem automação. Quanto mais vende, mais trabalho manual, menos margem" },
+                            { icon: "💰", text: "Fluxo de caixa desconfortável no final do mês", subtitle: "Tudo misturado em planilha, na cabeça, em pedaço de papel. Não sabe quanto entra, quanto sai" },
                         ].map((pain, index) => (
                             <motion.div
                                 key={index}
@@ -197,7 +228,7 @@ const PlanAuth = () => {
                         className="mt-12 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500"
                     >
                         <p className="text-center text-gray-700 text-base leading-relaxed">
-                            <span className="font-black text-gray-900">Aqui vem o problema:</span> A maioria das oficinas cresce baseada em "experiência" e "achismo". Ninguém senta para realmente ver onde o dinheiro está indo.
+                            <span className="font-black text-gray-900">Aqui vem o problema:</span> A maioria das PMEs cresce baseada em volume. Ninguém senta para realmente analisar: onde está o dinheiro saindo? Qual é a margem real? Como deixar de trabalhar "por hora" e crescer por resultado?
                         </p>
                     </motion.div>
                 </div>
@@ -214,7 +245,7 @@ const PlanAuth = () => {
                         className="flex flex-col sm:flex-row items-start gap-8"
                     >
                         <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg flex-shrink-0">
-                            <span className="text-4xl">🔧</span>
+                            <span className="text-4xl">📊</span>
                         </div>
 
                         <div>
@@ -222,13 +253,13 @@ const PlanAuth = () => {
                                 Roque Rafael
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                Passei anos vendo o mesmo padrão: oficina com muita demanda, mas perdendo clientes porque não consegue atender rápido. Oficina faturando bem, mas não sabe quanto é lucro de verdade. Oficina trabalhando com seguradoras, mas deixando dinheiro na mesa.
+                                Passei anos vendo o mesmo padrão em PMEs: empresa que vende bem, mas não sabe a margem. Crescimento desorganizado, sem controle de custos. Muita atividade, pouco resultado. Faturamento bonito, lucro feio.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                O que eu faço é simples: <span className="font-bold">analiso sua oficina e aponto exatamente onde você está perdendo oportunidade de ganhar mais.</span>
+                                O que eu faço é simples: <span className="font-bold">analiso sua empresa e aponto exatamente onde está o desperdício, qual é a margem real, como escalar sem destruir sua saúde mental e de bolso.</span>
                             </p>
                             <p className="text-gray-700 leading-relaxed">
-                                Sem vendas. Sem promessas. Só análise real do que está acontecendo com seu negócio.
+                                Sem vendas. Sem promessas. Só análise real do que está acontecendo com seu negócio. Baseado em dados, não em achismo.
                             </p>
                         </div>
                     </motion.div>
@@ -250,9 +281,9 @@ const PlanAuth = () => {
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         {[
-                            { icon: "🎯", title: "Análise de perda", desc: "Vou apontar exatamente onde você está perdendo dinheiro e clientes" },
-                            { icon: "📊", title: "Números reais", desc: "Quanto você poderia estar ganhando se controlasse melhor tudo" },
-                            { icon: "🛣️", title: "Caminho claro", desc: "Um plano simples de como sair dessa situação, sem complicação" },
+                            { icon: "🎯", title: "Análise de desperdício", desc: "Vou mapear exatamente onde está saindo dinheiro desnecessário e qual é sua margem real" },
+                            { icon: "📊", title: "Benchmarking real", desc: "Quanto empresas do seu tamanho e ramo lucram. Você está acima ou abaixo da média?" },
+                            { icon: "🚀", title: "Plano de ação", desc: "Um roadmap claro dos primeiros passos para estruturar seu negócio e escalar com lucro" },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
@@ -275,7 +306,7 @@ const PlanAuth = () => {
                 </div>
             </section>
 
-            {/* DESTAQUE SEGURADORAS - DIFERENCIAL CHAVE */}
+            {/* DESTAQUE RAMOS ATENDIDOS - DIFERENCIAL CHAVE */}
             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-50 to-pink-50">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
@@ -286,12 +317,12 @@ const PlanAuth = () => {
                         className="bg-white rounded-xl p-8 border-2 border-purple-300"
                     >
                         <div className="flex items-start gap-4 mb-6">
-                            <span className="text-5xl">🏢</span>
+                            <span className="text-5xl">🎯</span>
                             <div>
                                 <h3 className="text-2xl font-black text-gray-900">
-                                    Sobre as seguradoras...
+                                    Ramos que podemos analisar
                                 </h3>
-                                <p className="text-gray-600 text-sm mt-1">O diferencial mais importante</p>
+                                <p className="text-gray-600 text-sm mt-1">Já atuamos em diversos setores e sabemos os desafios específicos de cada um</p>
                             </div>
                         </div>
 
@@ -299,22 +330,36 @@ const PlanAuth = () => {
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Quase toda oficina perde com seguradoras</p>
-                                    <p className="text-gray-600 text-sm">Você deixa 40-60% do seu faturamento potencial na mesa sem perceber</p>
+                                    <p className="text-gray-900 font-bold">Comércio e varejo</p>
+                                    <p className="text-gray-600 text-sm">Controle de estoque, margem por produto, análise de vendas por canal e sazonalidade</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">O jeito que você faz não funciona para seguradoras</p>
-                                    <p className="text-gray-600 text-sm">Precisa de processos diferentes, mas você trata igual a cliente direto. Deixa boa parte do faturamento na mesa.</p>
+                                    <p className="text-gray-900 font-bold">Serviços (agências, consultoria, design, etc)</p>
+                                    <p className="text-gray-600 text-sm">Rentabilidade por projeto, eficiência de time, margem de erro em orçamentos e atrasos</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Isso impacta direto no seu bolso</p>
-                                    <p className="text-gray-600 text-sm">Quando você estrutura seguradoras, o faturamento muda bastante</p>
+                                    <p className="text-gray-900 font-bold">SaaS, software e tecnologia</p>
+                                    <p className="text-gray-600 text-sm">Custo de aquisição de cliente, churn, LTV, margem operacional, escalabilidade de custos</p>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <div>
+                                    <p className="text-gray-900 font-bold">Indústria e manufatura</p>
+                                    <p className="text-gray-600 text-sm">Margem por produto, custo de produção, desperdício, logística e análise de rentabilidade real</p>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <div>
+                                    <p className="text-gray-900 font-bold">E outros ramos</p>
+                                    <p className="text-gray-600 text-sm">Se você tem uma PME, mesmo que não listada acima, podemos analisar. Cada negócio tem suas especificidades</p>
                                 </div>
                             </li>
                         </ul>
@@ -333,7 +378,7 @@ const PlanAuth = () => {
                         className="bg-gray-100 rounded-lg p-6 border border-gray-300"
                     >
                         <p className="text-gray-700 font-semibold text-base">
-                            Se você não sabe exatamente quanto está perdendo por mês… esse já é o problema. E é por isso que você precisa preencher o formulário.
+                            Se você não consegue responder com segurança quanto é sua margem de lucro real… esse é o problema. É exatamente para isso que o diagnóstico existe.
                         </p>
                     </motion.div>
                 </div>
@@ -352,9 +397,9 @@ const PlanAuth = () => {
                         {/* Header */}
                         <div className="mb-8">
                             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-2">
-                                Me conta o que está acontecendo
+                                Descreva sua empresa
                             </h2>
-                            <p className="text-gray-600 text-base">Leva menos de 1 minuto. Vou analisar e te mostro exatamente onde está o problema.</p>
+                            <p className="text-gray-600 text-base">Leva menos de 2 minutos. Vou analisar seus dados e responder com um diagnóstico detalhado.</p>
                         </div>
 
                         <form onSubmit={handleDiagnosticSubmit} className="space-y-5">
@@ -401,11 +446,11 @@ const PlanAuth = () => {
                             {/* Empresa */}
                             <div className="space-y-2">
                                 <Label htmlFor="diagnosticCompany" className="font-black text-gray-900">
-                                    Nome da sua oficina <span className="text-gray-500 font-normal">(opcional)</span>
+                                    Nome da sua empresa <span className="text-gray-500 font-normal">(opcional)</span>
                                 </Label>
                                 <Input
                                     id="diagnosticCompany"
-                                    placeholder="Ex: Vidros do João"
+                                    placeholder="Ex: Tech Solutions Ltda"
                                     value={diagnosticData.diagnosticCompany}
                                     onChange={(e) =>
                                         setDiagnosticData({
@@ -420,7 +465,7 @@ const PlanAuth = () => {
                             {/* Área */}
                             <div className="space-y-2">
                                 <Label htmlFor="diagnosticArea" className="font-black text-gray-900">
-                                    Qual é seu maior problema AGORA? *
+                                    Qual é seu maior desafio AGORA? *
                                 </Label>
                                 <select
                                     id="diagnosticArea"
@@ -435,21 +480,22 @@ const PlanAuth = () => {
                                     className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white !text-gray-900 font-bold focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer text-base"
                                 >
                                     <option value="">Selecione uma opção...</option>
-                                    <option value="seguradoras">🏢 Não trabalho bem com seguradoras</option>
-                                    <option value="clientes">📉 Perco clientes por falta de organização</option>
-                                    <option value="agendamento">⏱️ Bagunça no agendamento / controle de serviços</option>
-                                    <option value="financeiro">💰 Falta de controle financeiro</option>
+                                    <option value="processos">📋 Processos desorganizados e falta de controle</option>
+                                    <option value="margem">💹 Não sei minha margem real de lucro</option>
+                                    <option value="escala">🚀 Dificuldade em escalar sem perder lucratividade</option>
+                                    <option value="fluxo">💰 Fluxo de caixa apertado ou imprevisível</option>
+                                    <option value="outro">🔄 Outro desafio</option>
                                 </select>
                             </div>
 
                             {/* Descrição */}
                             <div className="space-y-2">
                                 <Label htmlFor="diagnosticDescription" className="font-black text-gray-900">
-                                    Conte um pouco mais sobre o que está acontecendo *
+                                    Descreva um pouco seu negócio e o desafio *
                                 </Label>
                                 <textarea
                                     id="diagnosticDescription"
-                                    placeholder="Ex: Tenho muitos clientes na porta, mas não consigo atender rápido. Preciso saber como as seguradoras funcionam melhor. Não sei quanto estou ganhando por mês..."
+                                    placeholder="Ex: Sou agência de marketing com 5 clientes. Faturamos bem, mas não consigo dar aumento. Acho que temos muito custo fixo. Ou então: Comércio online, crescimento rápido mas margem caiu. Tenho medo de parar de crescer..."
                                     value={diagnosticData.diagnosticDescription}
                                     onChange={(e) =>
                                         setDiagnosticData({
@@ -468,40 +514,40 @@ const PlanAuth = () => {
                                 className="w-full bg-red-600 hover:bg-red-700 text-white font-black py-6 text-lg mt-6 rounded-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 transition-all"
                                 disabled={submitting}
                             >
-                                {submitting ? "⏳ Enviando..." : "🚀 Enviar meu diagnóstico agora"}
+                                {submitting ? "⏳ Enviando..." : "🚀 Solicitar análise gratuita"}
                             </Button>
 
                             {/* Reassurance */}
                             <p className="text-center text-gray-600 text-sm mt-4">
-                                ✓ Gratuito • ✓ Sem compromisso • ✓ Resposta em poucas horas
+                                ✓ Gratuito e confidencial • ✓ Sem venda pesada • ✓ Análise completa em 48h
                             </p>
                         </form>
 
                         {/* Transparência */}
                         <div className="mt-10 pt-8 border-t border-gray-200">
                             <h3 className="font-black text-gray-900 mb-4 text-base">
-                                Por que é gratuito?
+                                Por que uma análise gratuita?
                             </h3>
                             <ul className="space-y-3">
                                 <li className="flex items-start gap-3 text-sm">
                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                     <div>
-                                        <p className="text-gray-900 font-bold">Sem cobrar nada</p>
-                                        <p className="text-gray-600">Sem cartão de crédito, sem enganação</p>
+                                        <p className="text-gray-900 font-bold">Sem riscos</p>
+                                        <p className="text-gray-600">Nenhum cartão de crédito, nenhuma taxa escondida. Apenas dados que você já sabe</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3 text-sm">
                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                     <div>
                                         <p className="text-gray-900 font-bold">Sem compromisso</p>
-                                        <p className="text-gray-600">Você vai receber minha análise. Depois decide se quer continuar</p>
+                                        <p className="text-gray-600">Você recebe a análise completa. Depois apenas descobre se nossa abordagem faz sentido para você</p>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3 text-sm">
                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
                                     <div>
-                                        <p className="text-gray-900 font-bold">Análise real e personalizada</p>
-                                        <p className="text-gray-600">Focada na sua oficina, seus problemas, suas oportunidades</p>
+                                        <p className="text-gray-900 font-bold">Análise específica para seu negócio</p>
+                                        <p className="text-gray-600">Baseado no seu ramo, tamanho, desafios. Não é template genérico</p>
                                     </div>
                                 </li>
                             </ul>
@@ -520,17 +566,17 @@ const PlanAuth = () => {
                     className="w-full px-2"
                 >
                     <h2 className="text-2xl sm:text-3xl font-black mb-4">
-                        Enquanto você fica aqui, seus clientes estão indo embora
+                        Enquanto você toma essa decisão, seus concorrentes estão estruturando
                     </h2>
                     <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-                        Preenche o formulário. Vou te mostrar onde você está perdendo dinheiro.
+                        Preenche o formulário rápido. Vou analisar e te enviar uma diagnóstico detalhado com dados reais.
                     </p>
                     <Button
                         onClick={scrollToForm}
                         size="lg"
                         className="bg-red-600 hover:bg-red-700 text-white font-black px-4 sm:px-8 py-6 sm:py-6 text-sm sm:text-lg"
                     >
-                        Descobrir onde perco dinheiro
+                        Ver minha análise gratuita
                     </Button>
                 </motion.div>
             </section>
