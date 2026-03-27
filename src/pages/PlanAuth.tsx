@@ -276,14 +276,14 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        O que você vai receber (sem pagar nada)
+                        Você recebe uma solução completamente sua
                     </motion.h2>
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         {[
-                            { icon: "🎯", title: "Custos reais", desc: "Onde está indo seu dinheiro. CAC, churn, overhead, custos escondidos que matam a margem" },
-                            { icon: "📊", title: "Margem verdadeira", desc: "Quanto você realmente lucra por cliente, por projeto, por produto. Não adivinhe." },
-                            { icon: "🚀", title: "Próximos passos", desc: "Roadmap claro: o que mudar primeiro, como automatizar, onde cortar sem perder" },
+                            { icon: "🎯", title: "Diagnóstico real", desc: "Análise profunda do seu modelo específico. Não é template. A gente entende como SEU negócio funciona." },
+                            { icon: "🛠️", title: "Sem engessado", desc: "Sistemas genéricos matam startups. Você recebe exatamente o que precisa. Tecnologia adaptada ao seu crescimento." },
+                            { icon: "📋", title: "Roadmap claro", desc: "Não é 'faça tudo isso'. É 'primeiro mude isso, depois isso, depois escalamos'. Um passo de cada vez." },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
