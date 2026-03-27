@@ -16,31 +16,31 @@ const PlanAuth = () => {
     const { toast } = useToast();
     const [submitting, setSubmitting] = useState(false);
 
-    // SEO para PMEs
+    // SEO para pequenas e médias empresas
     useSEO({
-        title: "Diagnóstico Gratuito de Lucros PME | Análise Estruturada para Pequenas e Médias Empresas",
-        description: "Descubra onde sua PME está perdendo dinheiro. Análise gratuita com roadmap claro para estruturar processos, aumentar margem e escalar. Comércio, serviços, SaaS, indústria.",
+        title: "Diagnóstico Gratuito de Lucros | Análise para Pequenas e Médias Empresas",
+        description: "Descubra onde sua pequena ou média empresa está perdendo dinheiro. Análise gratuita com roadmap claro para estruturar processos, aumentar margem e escalar. Comércio, serviços, SaaS, indústria.",
         keywords: [
-            "diagnóstico pme",
+            "diagnóstico pequena média empresa",
             "análise lucros pequena empresa",
             "consultoria media empresa",
             "margem de lucro empresa",
-            "estrutura pme",
+            "estrutura empresa",
             "escalar negócio",
             "organização empresarial",
-            "análise financeira pme",
+            "análise financeira empresa",
             "diagnóstico gratuito empresa",
             "consultoria gestão",
-            "pme brasil",
+            "pequenas médias empresas brasil",
             "pequeno negócio",
             "empresa crescimento",
             "fluxo de caixa",
             "rentabilidade empresa",
         ],
         ogTitle: "Diagnóstico Gratuito - Descubra quanto você está perdendo",
-        ogDescription: "Análise personalizada que mostra exatamente onde sua PME está deixando dinheiro na mesa. Sem cartão, sem compromisso.",
+        ogDescription: "Análise personalizada que mostra exatamente onde sua pequena ou média empresa está deixando dinheiro na mesa. Sem cartão, sem compromisso.",
         ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-        twitterTitle: "Análise Gratuita para sua PME",
+        twitterTitle: "Análise Gratuita para sua Pequena ou Média Empresa",
         twitterDescription: "Descobrir sua verdadeira margem de lucro em menos de 2 minutos.",
         canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
     });
@@ -163,7 +163,7 @@ const PlanAuth = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-lg text-gray-600 mb-10 leading-relaxed"
                     >
-                        Isso acontece <span className="font-bold text-gray-900">todos os dias</span> em praticamente todas as PMEs que crescem sem uma estrutura adequada.
+                        Isso acontece <span className="font-bold text-gray-900">todos os dias</span> em praticamente todas as pequenas e médias empresas que crescem sem uma estrutura adequada.
                     </motion.p>
 
                     <motion.div
@@ -193,7 +193,7 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Se você tem uma PME, provavelmente está passando por isso:
+                        Se você tem uma pequena ou média empresa, provavelmente está passando por isso:
                     </motion.h2>
 
                     <div className="grid gap-4">
@@ -228,7 +228,7 @@ const PlanAuth = () => {
                         className="mt-12 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500"
                     >
                         <p className="text-center text-gray-700 text-base leading-relaxed">
-                            <span className="font-black text-gray-900">Aqui vem o problema:</span> A maioria das PMEs cresce baseada em volume. Ninguém senta para realmente analisar: onde está o dinheiro saindo? Qual é a margem real? Como deixar de trabalhar "por hora" e crescer por resultado?
+                            <span className="font-black text-gray-900">Aqui vem o problema:</span> A maioria das pequenas e médias empresas cresce baseada em volume. Ninguém senta para realmente analisar: onde está o dinheiro saindo? Qual é a margem real? Como deixar de trabalhar "por hora" e crescer por resultado?
                         </p>
                     </motion.div>
                 </div>
@@ -253,7 +253,7 @@ const PlanAuth = () => {
                                 Roque Rafael
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                Passei anos vendo o mesmo padrão em PMEs: empresa que vende bem, mas não sabe a margem. Crescimento desorganizado, sem controle de custos. Muita atividade, pouco resultado. Faturamento bonito, lucro feio.
+                                Passei anos vendo o mesmo padrão em pequenas e médias empresas: empresa que vende bem, mas não sabe a margem. Crescimento desorganizado, sem controle de custos. Muita atividade, pouco resultado. Faturamento bonito, lucro feio.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
                                 O que eu faço é simples: <span className="font-bold">analiso sua empresa e aponto exatamente onde está o desperdício, qual é a margem real, como escalar sem destruir sua saúde mental e de bolso.</span>
