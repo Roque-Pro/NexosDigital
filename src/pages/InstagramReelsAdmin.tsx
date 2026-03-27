@@ -41,38 +41,21 @@ const InstagramReelsAdmin = () => {
     try {
       const youtubeDownloadUrl = `https://www.youtube.com/watch?v=${youtubeId}`;
       
-      // Chamar Runway ML para processar o vídeo
-      const runwayResponse = await fetch("https://api.runwayml.com/v1/tasks", {
+      // Chamar nossa Vercel Function (proxy para Runway ML)
+      const runwayResponse = await fetch("/api/runway", {
         method: "POST",
         headers: {
-          "Authorization": `Bearer ${import.meta.env.VITE_RUNWAY_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          taskType: "video_edit",
-          inputs: {
-            source_video_url: youtubeDownloadUrl,
-            // Configurar para 9:16 (formato reel)
-            aspect_ratio: "9:16",
-            // Processar com foco em faces (para garantir que quem fala esteja em evidência)
-            auto_caption: true,
-            caption_language: "pt",
-            effects: [
-              {
-                type: "focus_on_face",
-                intensity: "high"
-              },
-              {
-                type: "enhance_audio",
-                intensity: "high"
-              }
-            ]
-          },
+          action: "create",
+          youtubeUrl: youtubeDownloadUrl,
         }),
       });
 
       if (!runwayResponse.ok) {
-        throw new Error("Erro ao processar vídeo com Runway ML");
+        const errorData = await runwayResponse.json();
+        throw new Error(errorData.error || "Erro ao processar vídeo com Runway ML");
       }
 
       const taskData = await runwayResponse.json();
@@ -85,11 +68,16 @@ const InstagramReelsAdmin = () => {
 
       while (attempts < maxAttempts) {
         const statusResponse = await fetch(
-          `https://api.runwayml.com/v1/tasks/${taskId}`,
+          `/api/runway`,
           {
+            method: "POST",
             headers: {
-              "Authorization": `Bearer ${import.meta.env.VITE_RUNWAY_API_KEY}`,
+              "Content-Type": "application/json",
             },
+            body: JSON.stringify({
+              action: "status",
+              taskId: taskId,
+            }),
           }
         );
 
