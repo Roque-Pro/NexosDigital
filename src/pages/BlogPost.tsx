@@ -21,6 +21,16 @@ const BlogPostPage = () => {
 
     useEffect(() => {
         loadPost();
+        
+        // Injetar Google AdSense no head se não estiver presente
+        const adSenseScript = document.querySelector('script[src*="googlesyndication"]');
+        if (!adSenseScript) {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3146585413190904';
+            script.crossOrigin = 'anonymous';
+            document.head.appendChild(script);
+        }
     }, [slug]);
 
     // Atualizar meta tags quando post carregar
