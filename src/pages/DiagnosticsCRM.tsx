@@ -15,6 +15,7 @@ import {
     Users,
     LogOut,
     BookOpen,
+    Clapperboard,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -274,6 +275,13 @@ const DiagnosticsCRM = () => {
                         >
                             <BookOpen className="w-4 h-4 mr-2" />
                             Blog
+                        </Button>
+                        <Button
+                            onClick={() => (window.location.href = "/instagram-reels-admin")}
+                            className="bg-pink-500 hover:bg-pink-600 text-white font-bold text-sm"
+                        >
+                            <Clapperboard className="w-4 h-4 mr-2" />
+                            Reels
                         </Button>
                         <Button
                             onClick={exportCSV}
