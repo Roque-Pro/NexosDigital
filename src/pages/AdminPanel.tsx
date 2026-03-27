@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Search, UserCog, Phone, Mail, Plus, Edit2, Trash2, Package, AlertTriangle, TrendingDown, Barcode } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { Search, UserCog, Phone, Mail, Plus, Edit2, Trash2, Package, AlertTriangle, TrendingDown, Barcode, Clapperboard } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
 import { Input } from "@/components/ui/input";
@@ -56,6 +57,7 @@ const employeeRoles = [
 ];
 
 const AdminPanel = () => {
+     const navigate = useNavigate();
      const [employees, setEmployees] = useState<Employee[]>([]);
      const [products, setProducts] = useState<Product[]>([]);
      const [assets, setAssets] = useState<Asset[]>([]);
@@ -783,52 +785,61 @@ const AdminPanel = () => {
                 description="Gerencie a equipe e estoque"
             />
 
-            {/* Abas */}
-            <div className="mb-6 flex gap-2 border-b border-border">
-              <button
-                onClick={() => setActiveTab("employees")}
-                className={cn(
-                  "px-4 py-2 font-medium border-b-2 transition-colors",
-                  activeTab === "employees"
-                    ? "border-primary text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
-                )}
+            {/* Abas + Botão Reels */}
+            <div className="mb-6 flex gap-2 border-b border-border items-center justify-between">
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setActiveTab("employees")}
+                  className={cn(
+                    "px-4 py-2 font-medium border-b-2 transition-colors",
+                    activeTab === "employees"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  Funcionários
+                </button>
+                <button
+                  onClick={() => setActiveTab("inventory")}
+                  className={cn(
+                    "px-4 py-2 font-medium border-b-2 transition-colors",
+                    activeTab === "inventory"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  Inventário
+                </button>
+                <button
+                  onClick={() => setActiveTab("patrimonio")}
+                  className={cn(
+                    "px-4 py-2 font-medium border-b-2 transition-colors",
+                    activeTab === "patrimonio"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  Patrimônio
+                </button>
+                <button
+                  onClick={() => setActiveTab("financial")}
+                  className={cn(
+                    "px-4 py-2 font-medium border-b-2 transition-colors",
+                    activeTab === "financial"
+                      ? "border-primary text-primary"
+                      : "border-transparent text-muted-foreground hover:text-foreground"
+                  )}
+                >
+                  Financeiro
+                </button>
+              </div>
+              <Button
+                onClick={() => navigate("/instagram-reels-admin")}
+                className="gap-2 gradient-primary text-primary-foreground font-semibold glow-primary"
               >
-                Funcionários
-              </button>
-              <button
-                onClick={() => setActiveTab("inventory")}
-                className={cn(
-                  "px-4 py-2 font-medium border-b-2 transition-colors",
-                  activeTab === "inventory"
-                    ? "border-primary text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Inventário
-              </button>
-              <button
-                onClick={() => setActiveTab("patrimonio")}
-                className={cn(
-                  "px-4 py-2 font-medium border-b-2 transition-colors",
-                  activeTab === "patrimonio"
-                    ? "border-primary text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Patrimônio
-              </button>
-              <button
-                onClick={() => setActiveTab("financial")}
-                className={cn(
-                  "px-4 py-2 font-medium border-b-2 transition-colors",
-                  activeTab === "financial"
-                    ? "border-primary text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Financeiro
-              </button>
+                <Clapperboard className="w-4 h-4" />
+                Gerador de Reels
+              </Button>
             </div>
 
             {/* SEÇÃO FUNCIONÁRIOS */}

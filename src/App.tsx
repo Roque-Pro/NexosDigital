@@ -13,6 +13,7 @@ const Auth = lazy(() => import("./pages/Auth"));
 const PlanAuth = lazy(() => import("./pages/PlanAuth"));
 const DiagnosticsCRM = lazy(() => import("./pages/DiagnosticsCRM"));
 const BlogAdmin = lazy(() => import("./pages/BlogAdmin"));
+const InstagramReelsAdmin = lazy(() => import("./pages/InstagramReelsAdmin"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -62,6 +63,14 @@ const App = () => (
                 element={
                   <ProtectedRoute>
                     <BlogAdmin />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/instagram-reels-admin"
+                element={
+                  <ProtectedRoute>
+                    <InstagramReelsAdmin />
                   </ProtectedRoute>
                 }
               />
