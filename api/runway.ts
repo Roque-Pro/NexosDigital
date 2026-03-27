@@ -6,7 +6,7 @@ export default async function handler(req: any, res: any) {
 
   try {
     const { action, taskId, youtubeUrl } = req.body;
-    const runwayApiKey = process.env.RUNWAY_API_KEY;
+    const runwayApiKey = process.env.VITE_RUNWAY_API_KEY;
 
     if (!runwayApiKey) {
       return res.status(500).json({ error: 'RUNWAY_API_KEY não configurada' });
