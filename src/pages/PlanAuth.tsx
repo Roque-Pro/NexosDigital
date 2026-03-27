@@ -283,7 +283,7 @@ const PlanAuth = () => {
                         {[
                             { icon: "🎯", title: "Diagnóstico real", desc: "Análise profunda do seu modelo específico. Não é template. A gente entende como SEU negócio funciona." },
                             { icon: "🚫", title: "Nada de Sistema Genérico", desc: "Sistemas genéricos matam startups. Você recebe exatamente o que precisa. Tecnologia adaptada ao seu crescimento." },
-                            { icon: "📋", title: "Roadmap claro", desc: "Não é 'faça tudo isso'. É 'primeiro mude isso, depois isso, depois escalamos'. Um passo de cada vez." },
+                            { icon: "📋", title: "Roadmap claro", desc: "Não é 'faça tudo isso'. É 'primeiro mude isso, depois isso, depois escalamos'. Um passo de cada vez. E você não fica sozinho - estarei acompanhando os resultados com você. Sem abandonar." },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
