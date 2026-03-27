@@ -8,6 +8,9 @@ export default async function handler(req: any, res: any) {
     const { action, taskId, youtubeUrl } = req.body;
     const runwayApiKey = process.env.RUNWAY_API_KEY;
 
+    console.log('RUNWAY_API_KEY presente?', !!runwayApiKey);
+    console.log('Tamanho da chave:', runwayApiKey?.length);
+    
     if (!runwayApiKey) {
       return res.status(500).json({ error: 'RUNWAY_API_KEY não configurada' });
     }
