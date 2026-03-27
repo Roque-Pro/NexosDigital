@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
+import { supabase } from "@/integrations/supabase/client";
 
 // Performance tip: Some animations could be disabled on mobile with `prefers-reduced-motion`
 // This is already handled by browsers respecting user preferences
@@ -38,6 +39,8 @@ const Landing = () => {
     const [submitted, setSubmitted] = useState(false);
     const [showScrollTop, setShowScrollTop] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [recentPosts, setRecentPosts] = useState<any[]>([]);
+    const [loadingPosts, setLoadingPosts] = useState(true);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -47,6 +50,28 @@ const Landing = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    useEffect(() => {
+        loadRecentPosts();
+    }, []);
+
+    const loadRecentPosts = async () => {
+        try {
+            const { data, error } = await supabase
+                .from("blog_posts")
+                .select("*")
+                .eq("published", true)
+                .order("created_at", { ascending: false })
+                .limit(3);
+
+            if (error) throw error;
+            setRecentPosts(data || []);
+        } catch (error) {
+            console.error("Erro ao carregar posts recentes:", error);
+        } finally {
+            setLoadingPosts(false);
+        }
+    };
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -149,6 +174,13 @@ const Landing = () => {
             y: 0,
             transition: { duration: 0.8, ease: "easeOut" },
         },
+    };
+
+    // Extrair primeira imagem do HTML
+    const extractFirstImage = (htmlContent: string): string | null => {
+        const imgRegex = /<img[^>]+src=["']([^"']+)["']/;
+        const match = htmlContent.match(imgRegex);
+        return match ? match[1] : null;
     };
 
     // Calculate annual pricing
@@ -1264,6 +1296,113 @@ const Landing = () => {
                     </motion.div>
                 </div>
             </section>
+
+            {/* Latest Blog Posts Section */}
+            {!loadingPosts && recentPosts.length > 0 && (
+                <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50">
+                    <div className="max-w-6xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                            className="text-center mb-12 sm:mb-16"
+                        >
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-4">
+                                Últimas Publicações do Blog
+                            </h2>
+                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                                Insights, estratégias e tendências sobre transformação digital e tecnologia
+                            </p>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ staggerChildren: 0.1, delayChildren: 0.2 }}
+                            viewport={{ once: true }}
+                            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+                        >
+                            {recentPosts.map((post, index) => {
+                                const imageUrl = post.featured_image || extractFirstImage(post.html_content);
+                                return (
+                                    <motion.div
+                                        key={post.id}
+                                        initial={{ opacity: 0, y: 30 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.1, duration: 0.6 }}
+                                        viewport={{ once: true }}
+                                        whileHover={{ y: -8 }}
+                                        onClick={() => navigate(`/blog/${post.slug}`)}
+                                        className="group cursor-pointer"
+                                    >
+                                        <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-300 h-full flex flex-col">
+                                            {/* Image with fallback */}
+                                            <div className="w-full h-48 bg-gradient-to-br from-purple-200 via-pink-200 to-purple-300 group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-400 transition-all duration-300 overflow-hidden">
+                                                {imageUrl ? (
+                                                    <img 
+                                                        src={imageUrl} 
+                                                        alt={post.title}
+                                                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                    />
+                                                ) : null}
+                                            </div>
+
+                                            {/* Content */}
+                                            <div className="p-6 flex-1 flex flex-col">
+                                                {/* Date */}
+                                                <p className="text-sm text-gray-500 mb-3">
+                                                    {new Date(post.created_at).toLocaleDateString("pt-BR")}
+                                                </p>
+
+                                                {/* Title */}
+                                                <h3 className="text-xl font-display font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors line-clamp-3">
+                                                    {post.title}
+                                                </h3>
+
+                                                {/* Excerpt */}
+                                                {post.excerpt && (
+                                                    <p className="text-gray-600 text-sm mb-4 line-clamp-2 flex-1">
+                                                        {post.excerpt}
+                                                    </p>
+                                                )}
+
+                                                {/* Read time */}
+                                                <p className="text-xs text-gray-500 mb-4">
+                                                    {Math.ceil(post.html_content.split(" ").length / 200)} min de leitura
+                                                </p>
+
+                                                {/* CTA */}
+                                                <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-3 transition-all">
+                                                    Ler mais
+                                                    <ArrowRight className="w-4 h-4" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </motion.div>
+
+                        {/* View All Posts Button */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            viewport={{ once: true }}
+                            className="text-center mt-12 sm:mt-16"
+                        >
+                            <Button
+                                onClick={() => navigate("/blog")}
+                                size="lg"
+                                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+                            >
+                                Ver Todos os Posts <ArrowRight className="w-5 h-5 ml-2" />
+                            </Button>
+                        </motion.div>
+                    </div>
+                </section>
+            )}
 
             {/* Final CTA Section */}
             <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-white">
