@@ -2,31 +2,17 @@ import { ArrowLeft, Award, Briefcase, Code2, Zap, Shield, Lightbulb, Sparkles } 
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
+import BlogNavbar from "@/components/BlogNavbar";
 
 const AboutMe = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-white to-blue-50">
-      {/* Header com botão voltar */}
-      <header className="sticky top-0 z-50 border-b border-gray-200/50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex items-center justify-between h-16">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => navigate("/")}
-            className="gap-2 text-gray-700 hover:text-purple-600"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Voltar
-          </Button>
-          <h1 className="text-lg font-semibold text-gray-900">Sobre Mim</h1>
-          <div className="w-20" />
-        </div>
-      </header>
+      <BlogNavbar />
 
       {/* Hero intro */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden" style={{ paddingTop: "6rem" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
         <div className="container relative z-10 max-w-3xl mx-auto text-center">
           <h2 className="text-5xl font-bold mb-6 leading-tight text-gray-900">

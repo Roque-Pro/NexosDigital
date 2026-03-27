@@ -8,6 +8,7 @@ import { ArrowLeft } from "lucide-react";
 import { BlogPost } from "@/types";
 import ShareBlogPost from "@/components/ShareBlogPost";
 import StrategicBacklinks from "@/components/StrategicBacklinks";
+import BlogNavbar from "@/components/BlogNavbar";
 import { injectOpenGraphTags, fetchBlogMetadata } from "@/lib/og-tags";
 import { injectBlogSchema } from "@/lib/seo-optimization";
 
@@ -195,21 +196,10 @@ const BlogPostPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
-            {/* Header */}
-            <header className="border-b border-gray-200 sticky top-0 z-40 bg-white/80 backdrop-blur">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-                    <Button
-                        onClick={() => navigate("/")}
-                        className="bg-purple-600 hover:bg-purple-700 text-white"
-                    >
-                        <ArrowLeft className="w-4 h-4 mr-2" />
-                        Voltar
-                    </Button>
-                </div>
-            </header>
+            <BlogNavbar />
 
             {/* Content */}
-            <motion.div
+            <motion.div style={{ paddingTop: "5rem" }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12"

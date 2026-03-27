@@ -44,11 +44,6 @@ export default function HeroSection() {
               </a>
             </Button>
             <Button variant="outline" size="lg" className="text-base gap-2 px-8 h-14 font-semibold border-border/60 hover:border-primary/50" asChild>
-              <Link to="/about-me">
-                <Users className="h-5 w-5" /> Sobre Mim
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" className="text-base gap-2 px-8 h-14 font-semibold border-border/60 hover:border-primary/50" asChild>
               <a href="#metodologia">
                 <Play className="h-5 w-5" /> Ver Como Funciona
               </a>

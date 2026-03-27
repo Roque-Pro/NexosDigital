@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
+  { label: "Sobre Mim", href: "/about-me", isLink: true },
   { label: "Metodologia", href: "#metodologia" },
   { label: "Resultados", href: "#resultados" },
   { label: "Projetos", href: "#projetos" },
@@ -27,6 +28,19 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden items-center gap-6 md:flex">
+          {links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              {...(link.isLink && { onClick: (e) => {
+                e.preventDefault();
+                window.location.href = link.href;
+              }})}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
           <Button size="sm" className="glow-sm gap-2" asChild>
             <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="h-4 w-4" /> WhatsApp
