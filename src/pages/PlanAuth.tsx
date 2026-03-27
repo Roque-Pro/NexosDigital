@@ -154,7 +154,7 @@ const PlanAuth = () => {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-xl text-gray-700 mb-6 leading-relaxed font-semibold"
                     >
-                        Seu negócio cresce, mas os lucros não acompanham. Processos desorganizados, clientes perdidos, faturamento confuso. Isso drena muito mais do que você imagina.
+                        Processos manuais, sistemas espalhados, faturamento confuso. Seu crescimento é real, mas a margem desaparece. E ninguém senta pra ver onde.
                     </motion.p>
 
                     <motion.p
@@ -163,7 +163,7 @@ const PlanAuth = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-lg text-gray-600 mb-10 leading-relaxed"
                     >
-                        Isso acontece <span className="font-bold text-gray-900">todos os dias</span> em praticamente todas as pequenas e médias empresas que crescem sem uma estrutura adequada.
+                        Isso é <span className="font-bold text-gray-900">muito comum</span>. Empresa que vende bem, mas lucra mal. E a solução? Não é contratar mais gente. É tecnologia certa, automação, e saber exatamente onde está o dinheiro.
                     </motion.p>
 
                     <motion.div
@@ -193,7 +193,7 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Se você tem uma pequena ou média empresa, provavelmente está passando por isso:
+                        Os culpados pela perda de lucro:
                     </motion.h2>
 
                     <div className="grid gap-4">
@@ -228,7 +228,7 @@ const PlanAuth = () => {
                         className="mt-12 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500"
                     >
                         <p className="text-center text-gray-700 text-base leading-relaxed">
-                            <span className="font-black text-gray-900">Aqui vem o problema:</span> A maioria das pequenas e médias empresas cresce baseada em volume. Ninguém senta para realmente analisar: onde está o dinheiro saindo? Qual é a margem real? Como deixar de trabalhar "por hora" e crescer por resultado?
+                            <span className="font-black text-gray-900">O real problema:</span> Você está tão ocupado "apagando fogo" que não consegue sentar e olhar pra realidade: quanto custa rodar seu negócio? Qual é a margem de verdade? Como automatizar pra escalar sem contratar mais gente?
                         </p>
                     </motion.div>
                 </div>
@@ -253,13 +253,13 @@ const PlanAuth = () => {
                                 Roque Rafael
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                Passei anos vendo o mesmo padrão em pequenas e médias empresas: empresa que vende bem, mas não sabe a margem. Crescimento desorganizado, sem controle de custos. Muita atividade, pouco resultado. Faturamento bonito, lucro feio.
+                                Passei anos vendo o mesmo padrão: empresa crescendo, faturamento aumentando, mas lucro caindo. Tudo porque não tinha automação, processos estavam espalhados em 10 lugares, ninguém conseguia responder "quanto a gente lucra de verdade?".
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                O que eu faço é simples: <span className="font-bold">analiso sua empresa e aponto exatamente onde está o desperdício, qual é a margem real, como escalar sem destruir sua saúde mental e de bolso.</span>
+                                <span className="font-bold">O que eu faço é diferente:</span> Não venho com "a solução que funciona pra todo mundo". Sento com você, entendo seu negócio específico, aponto exatamente onde o dinheiro está vazando, qual é sua margem real, como automatizar pra crescer com lucro.
                             </p>
                             <p className="text-gray-700 leading-relaxed">
-                                Sem vendas. Sem promessas. Só análise real do que está acontecendo com seu negócio. Baseado em dados, não em achismo.
+                                E aí a gente mexe. Passo a passo. Com você vendo os resultados. Sem abandonar no meio do caminho.
                             </p>
                         </div>
                     </motion.div>
@@ -276,14 +276,14 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Você recebe uma solução completamente sua
+                        Como funciona o diagnóstico
                     </motion.h2>
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         {[
-                            { icon: "🎯", title: "Diagnóstico real", desc: "Análise profunda do seu modelo específico. Não é template. A gente entende como SEU negócio funciona." },
-                            { icon: "🚫", title: "Nada de Sistema Genérico", desc: "Sistemas genéricos matam startups. Você recebe exatamente o que precisa. Tecnologia adaptada ao seu crescimento." },
-                            { icon: "📋", title: "Roadmap claro", desc: "Não é 'faça tudo isso'. É 'primeiro mude isso, depois isso, depois escalamos'. Um passo de cada vez. E você não fica sozinho - estarei acompanhando os resultados com você. Sem abandonar." },
+                            { icon: "🎯", title: "1. Diagnóstico real", desc: "Você preenche um formulário simples sobre seu negócio. Eu analiso profundamente, olho pra margem de verdade, custos escondidos, onde a automação mudaria tudo." },
+                            { icon: "🚫", title: "2. Solução personalizada", desc: "Nada de 'aqui está a solução que funciona pra todo mundo'. Você recebe um roadmap específico pro seu negócio. Tecnologia que faz sentido pro seu tamanho e crescimento." },
+                            { icon: "📋", title: "3. Próximos passos claros", desc: "Não é 'faça tudo isso'. É 'mude isso primeiro, aí isso, aí escalamos'. Um passo de cada vez. E você não fica sozinho - estarei acompanhando os resultados com você." },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
