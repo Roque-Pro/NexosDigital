@@ -281,9 +281,9 @@ const PlanAuth = () => {
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         {[
-                            { icon: "🎯", title: "Análise de desperdício", desc: "Vou mapear exatamente onde está saindo dinheiro desnecessário e qual é sua margem real" },
-                            { icon: "📊", title: "Benchmarking real", desc: "Quanto empresas do seu tamanho e ramo lucram. Você está acima ou abaixo da média?" },
-                            { icon: "🚀", title: "Plano de ação", desc: "Um roadmap claro dos primeiros passos para estruturar seu negócio e escalar com lucro" },
+                            { icon: "🎯", title: "Custos reais", desc: "Onde está indo seu dinheiro. CAC, churn, overhead, custos escondidos que matam a margem" },
+                            { icon: "📊", title: "Margem verdadeira", desc: "Quanto você realmente lucra por cliente, por projeto, por produto. Não adivinhe." },
+                            { icon: "🚀", title: "Próximos passos", desc: "Roadmap claro: o que mudar primeiro, como automatizar, onde cortar sem perder" },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
@@ -317,12 +317,12 @@ const PlanAuth = () => {
                         className="bg-white rounded-xl p-8 border-2 border-purple-300"
                     >
                         <div className="flex items-start gap-4 mb-6">
-                            <span className="text-5xl">🎯</span>
+                            <span className="text-5xl">⚙️</span>
                             <div>
                                 <h3 className="text-2xl font-black text-gray-900">
-                                    Ramos que podemos analisar
+                                    Foco em sistemas e automação
                                 </h3>
-                                <p className="text-gray-600 text-sm mt-1">Já atuamos em diversos setores e sabemos os desafios específicos de cada um</p>
+                                <p className="text-gray-600 text-sm mt-1">A maioria dos problemas de lucro vem de processos manuais e tecnologia errada</p>
                             </div>
                         </div>
 
@@ -330,36 +330,29 @@ const PlanAuth = () => {
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Comércio e varejo</p>
-                                    <p className="text-gray-600 text-sm">Controle de estoque, margem por produto, análise de vendas por canal e sazonalidade</p>
+                                    <p className="text-gray-900 font-bold">Você tem sistemas espalhados</p>
+                                    <p className="text-gray-600 text-sm">Excel, WhatsApp, papel, 3 softwares diferentes. Cada um custando e nenhum falando com o outro</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Serviços (agências, consultoria, design, etc)</p>
-                                    <p className="text-gray-600 text-sm">Rentabilidade por projeto, eficiência de time, margem de erro em orçamentos e atrasos</p>
+                                    <p className="text-gray-900 font-bold">Gasta dinheiro em ferramentas desnecessárias</p>
+                                    <p className="text-gray-600 text-sm">Assinaturas que ninguém usa. Softwares que custam caro mas fazem pouco. Integração inexistente</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">SaaS, software e tecnologia</p>
-                                    <p className="text-gray-600 text-sm">Custo de aquisição de cliente, churn, LTV, margem operacional, escalabilidade de custos</p>
+                                    <p className="text-gray-900 font-bold">Processos que deveriam ser automáticos são manuais</p>
+                                    <p className="text-gray-600 text-sm">Pessoa passa 3 horas digitando dados. Sistema poderia fazer em 30 segundos. Custo invisível na sua folha</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="font-black text-purple-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Indústria e manufatura</p>
-                                    <p className="text-gray-600 text-sm">Margem por produto, custo de produção, desperdício, logística e análise de rentabilidade real</p>
-                                </div>
-                            </li>
-                            <li className="flex items-start gap-3">
-                                <span className="font-black text-purple-600 mt-1">✓</span>
-                                <div>
-                                    <p className="text-gray-900 font-bold">E outros ramos</p>
-                                    <p className="text-gray-600 text-sm">Se você tem uma PME, mesmo que não listada acima, podemos analisar. Cada negócio tem suas especificidades</p>
+                                    <p className="text-gray-900 font-bold">Não consegue escalar porque tudo é manual</p>
+                                    <p className="text-gray-600 text-sm">Cresce = contrata mais gente. Sem automação, margem cai. Tecnologia certa resolveria isso</p>
                                 </div>
                             </li>
                         </ul>
