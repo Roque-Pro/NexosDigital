@@ -1,12 +1,10 @@
 import { Plugin } from 'vite'
 import { createClient } from '@supabase/supabase-js'
-import fs from 'fs'
-import path from 'path'
 
 /**
  * Vite plugin to inject Open Graph meta tags for blog posts
- * Detects when a social crawler or bot is accessing a blog URL
- * and injects the correct metadata into the HTML response
+ * Works with both SSR and SPA by injecting meta tags into the HTML
+ * for social media crawlers
  */
 
 interface BlogPost {
@@ -25,11 +23,11 @@ const extractFirstImage = (htmlContent: string): string | null => {
   return match ? match[1] : null
 }
 
-const generateMetaTagsHtml = (post: BlogPost): string => {
+const generateMetaTagsHtml = (post: BlogPost, domain: string): string => {
   const firstImage = extractFirstImage(post.html_content)
-  const imageUrl = firstImage || 'https://www.technexos.com.br/og-image-blog.png'
+  const imageUrl = firstImage || `${domain}/og-image-blog.png`
   const description = post.excerpt || post.html_content.substring(0, 160).replace(/<[^>]*>/g, '')
-  const postUrl = `https://www.technexos.com.br/blog/${post.slug}`
+  const postUrl = `${domain}/blog/${post.slug}`
 
   return `
     <!-- Dynamic OG Tags for Blog Post -->
@@ -53,8 +51,7 @@ const generateMetaTagsHtml = (post: BlogPost): string => {
     <meta name="twitter:image" content="${imageUrl}" />
     <meta name="description" content="${escapeHtml(description)}" />
     <meta name="keywords" content="${escapeHtml(post.title)}, blog, tecnologia, consultoria" />
-    <link rel="canonical" href="${postUrl}" />
-  `
+    <link rel="canonical" href="${postUrl}" />`
 }
 
 const escapeHtml = (text: string): string => {
@@ -84,6 +81,9 @@ const isBot = (userAgent: string): boolean => {
     'yandexbot',
     'discordbot',
     'applebot',
+    'pinterest',
+    'slackbot',
+    'tumblr',
   ]
   const userAgentLower = userAgent.toLowerCase()
   return botPatterns.some((pattern) => userAgentLower.includes(pattern))
@@ -91,11 +91,12 @@ const isBot = (userAgent: string): boolean => {
 
 export default function vitePluginOgTags(): Plugin {
   let supabase: any
-  let htmlContent: string
+  let config: any
 
   return {
     name: 'vite-plugin-og-tags',
-    configResolved(config) {
+    configResolved(resolvedConfig) {
+      config = resolvedConfig
       // Initialize Supabase client
       const supabaseUrl = process.env.VITE_SUPABASE_URL || ''
       const supabaseKey = process.env.VITE_SUPABASE_ANON_KEY || ''
@@ -105,13 +106,13 @@ export default function vitePluginOgTags(): Plugin {
       }
     },
     async transformIndexHtml(html, ctx) {
-      htmlContent = html
-
-      // Only apply transformation in production or when accessed via bot
+      // Get domain from environment or infer from request
+      const domain = process.env.VITE_APP_URL || 'https://www.technexos.com.br'
       const userAgent = ctx.request?.headers?.['user-agent'] || ''
       const url = ctx.request?.url || ''
 
-      // Check if it's a blog post URL and either a bot or production build
+      // Always apply transformation for blog URLs (not just for bots)
+      // This ensures meta tags are in the HTML from the start
       const blogPostMatch = url.match(/\/blog\/([a-zA-Z0-9\-_]+)/)
 
       if (blogPostMatch && supabase) {
@@ -127,24 +128,24 @@ export default function vitePluginOgTags(): Plugin {
             .single()
 
           if (post) {
-            const metaTagsHtml = generateMetaTagsHtml(post)
+            const metaTagsHtml = generateMetaTagsHtml(post, domain)
             const title = `${post.title} | TechNexos Blog`
 
-            // Replace generic meta tags with specific ones
+            // Remove old generic og tags and add new ones
             let modifiedHtml = html
+              // Update title
               .replace(/<title>.*?<\/title>/i, `<title>${escapeHtml(title)}</title>`)
-              .replace(
-                /(<meta property="og:type"[^>]*>)/i,
-                metaTagsHtml + '$1'
-              )
-
-            // If the og:type meta tag wasn't found, insert after the head opening tag
-            if (modifiedHtml === html) {
-              modifiedHtml = html.replace(
-                /(<\/head>)/i,
-                `${metaTagsHtml}$1`
-              )
-            }
+              // Remove old og:title, og:description, og:image, og:url
+              .replace(/<meta property="og:title"[^>]*>/i, '')
+              .replace(/<meta property="og:description"[^>]*>/i, '')
+              .replace(/<meta property="og:image"[^>]*>/i, '')
+              .replace(/<meta property="og:url"[^>]*>/i, '')
+              .replace(/<meta property="og:type"[^>]*>/i, '')
+              .replace(/<meta property="article:[^>]*>/i, '')
+              .replace(/<meta name="twitter:[^>]*>/i, '')
+              .replace(/<link rel="canonical"[^>]*>/i, '')
+              // Insert new meta tags before closing head
+              .replace(/(<\/head>)/i, `${metaTagsHtml}\n    $1`)
 
             return modifiedHtml
           }
