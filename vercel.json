@@ -3,17 +3,13 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/blog/:slug",
-      "destination": "/api/blog?slug=:slug"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/blog/:slug",
+      "source": "/blog/**",
       "headers": [
         {
           "key": "Cache-Control",
