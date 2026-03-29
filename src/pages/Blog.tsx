@@ -16,16 +16,6 @@ const Blog = () => {
 
   useEffect(() => {
     loadPosts();
-    
-    // Injetar Google AdSense no head se não estiver presente
-    const adSenseScript = document.querySelector('script[src*="googlesyndication"]');
-    if (!adSenseScript) {
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3146585413190904';
-      script.crossOrigin = 'anonymous';
-      document.head.appendChild(script);
-    }
   }, []);
 
   const loadPosts = async () => {
@@ -56,23 +46,11 @@ const Blog = () => {
     }
   };
 
-  const containerVariants = {
+  const itemVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.3 },
     },
   };
 
@@ -88,7 +66,7 @@ const Blog = () => {
       <BlogNavbar />
       
       {/* Header */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8" style={{ paddingTop: "5rem" }}>
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8 mt-16">
         <div className="max-w-5xl mx-auto text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -141,20 +119,16 @@ const Blog = () => {
               </Button>
             </div>
           ) : (
-            <motion.div
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => {
                 const imageUrl = (post as any).featured_image || extractFirstImage(post.html_content);
                 return (
                 <motion.div
                    key={post.id}
                    variants={itemVariants}
-                   whileHover={{ y: -8 }}
+                   initial="hidden"
+                   whileInView="visible"
+                   viewport={{ once: true }}
                    onClick={() => navigate(`/blog/${post.slug}`)}
                    className="group cursor-pointer"
                  >
@@ -205,7 +179,7 @@ const Blog = () => {
                     </motion.div>
                     );
                     })}
-                    </motion.div>
+                    </div>
           )}
         </div>
       </section>
