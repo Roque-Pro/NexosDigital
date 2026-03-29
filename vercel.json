@@ -1,27 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "env": {
-    "VITE_APP_URL": "@vite_app_url"
-  },
-  "envObjects": [
-    {
-      "key": "VITE_SUPABASE_URL",
-      "value": "@vite_supabase_url"
-    },
-    {
-      "key": "VITE_SUPABASE_ANON_KEY",
-      "value": "@vite_supabase_anon_key"
-    },
-    {
-      "key": "SUPABASE_URL",
-      "value": "@supabase_url"
-    },
-    {
-      "key": "SUPABASE_ANON_KEY",
-      "value": "@supabase_anon_key"
-    }
-  ],
   "rewrites": [
     {
       "source": "/blog/:slug",
