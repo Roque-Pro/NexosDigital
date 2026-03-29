@@ -103,17 +103,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const supabaseUrl = process.env.VITE_SUPABASE_URL || process.env.SUPABASE_URL
-    const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY
+    // Usar valores do ambiente ou fallback (valores padrão para desenvolvimento)
+    const supabaseUrl = process.env.VITE_SUPABASE_URL || 
+                       process.env.SUPABASE_URL || 
+                       'https://rctrqntkfacxlweezbfu.supabase.co'
+    
+    const supabaseAnonKey = process.env.VITE_SUPABASE_ANON_KEY || 
+                           process.env.SUPABASE_ANON_KEY
 
     if (!supabaseUrl || !supabaseAnonKey) {
-      console.error('Missing env vars:', { 
-        VITE_SUPABASE_URL: !!process.env.VITE_SUPABASE_URL,
-        SUPABASE_URL: !!process.env.SUPABASE_URL,
-        VITE_SUPABASE_ANON_KEY: !!process.env.VITE_SUPABASE_ANON_KEY,
-        SUPABASE_ANON_KEY: !!process.env.SUPABASE_ANON_KEY
-      })
-      return res.status(500).send('Server configuration error')
+      console.error('Missing Supabase credentials')
+      // Retorna HTML normal se não conseguir configurar
+      try {
+        const htmlPath = path.join(process.cwd(), 'dist', 'index.html')
+        const html = fs.readFileSync(htmlPath, 'utf-8')
+        res.setHeader('Content-Type', 'text/html')
+        return res.send(html)
+      } catch {
+        return res.status(500).send('Configuration error')
+      }
     }
 
     const supabase = createClient(supabaseUrl, supabaseAnonKey)
