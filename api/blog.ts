@@ -6,6 +6,7 @@ import path from 'path'
 /**
  * API Route para servir páginas de blog com OG tags injetadas
  * Detecta crawlers sociais e injeta meta tags dinâmicas no HTML
+ * Suporta: Facebook, LinkedIn, Twitter, WhatsApp, Telegram e outros
  */
 
 interface BlogPost {
