@@ -1,0 +1,117 @@
+Reescreva completamente a copy de uma página de captura de leads para um serviço B2B no Brasil.
+
+O serviço oferecido é:
+
+estruturação de tráfego pago
+criação de sistema de captação de leads
+organização do processo de conversão
+foco em gerar mais clientes (não apenas tráfego)
+
+IMPORTANTE:
+Não adapte o texto atual. Ignore completamente a copy existente e crie uma nova versão do zero, com foco máximo em conversão.
+
+🎯 OBJETIVO DA PÁGINA:
+
+Fazer empresários sentirem que estão perdendo clientes hoje e levá-los a solicitar um diagnóstico gratuito.
+
+🎯 PÚBLICO-ALVO:
+
+Donos de pequenas e médias empresas que:
+
+já tentaram tráfego e não tiveram resultado consistente
+recebem contatos mas não convertem bem
+têm atendimento desorganizado
+não possuem processo estruturado de captação e vendas
+sentem que poderiam estar vendendo mais, mas não sabem exatamente onde estão perdendo
+
+⚠️ PROBLEMA CENTRAL A EXPLORAR:
+
+O problema não é falta de tráfego.
+
+O problema é:
+
+perda de leads
+falta de processo
+baixa conversão
+desorganização no atendimento
+
+A copy deve deixar claro que:
+👉 “a empresa já está perdendo clientes antes mesmo de perceber”
+
+🚫 EVITAR:
+
+linguagem técnica (IA, automação, sistemas, etc.)
+promessas absolutas (“garantido”, “vai vender”, etc.)
+foco em tecnologia
+
+✅ INCLUIR:
+
+Headline forte baseada em perda de clientes
+Subheadline que gere identificação imediata
+Explicação clara de onde as empresas estão errando
+Lista de problemas comuns (efeito identificação)
+Quebra de crença: tráfego sozinho não resolve
+Explicação simples da solução (do tráfego até a conversão)
+Seção explicando como funciona o diagnóstico gratuito
+CTA forte para preenchimento do formulário
+Elementos de confiança (sem pressão, sem compromisso, etc.)
+
+🧱 ESTRUTURA DA PÁGINA:
+
+Headline
+Subheadline
+Dor principal
+Lista de problemas
+Explicação do erro comum
+Nova abordagem (processo completo)
+Apresentação do especialista
+Seção de provas (CARROSSEL)
+Como funciona o diagnóstico
+CTA
+Quebra de objeções
+
+🎠 SEÇÃO OBRIGATÓRIA: CARROSSEL COM 5 CASOS
+
+Criar uma seção com 5 exemplos fictícios realistas (estilo estudo de caso curto), cada um representando um tipo diferente de empresa.
+
+Para cada empresa, incluir:
+
+Nome fictício da empresa
+Segmento (ex: clínica, advogado, e-commerce, etc.)
+Situação antes (problema claro de captação/conversão)
+O que foi feito (estrutura de tráfego + captação + melhoria de conversão)
+Resultado alcançado (em termos práticos: mais leads, mais clientes, melhoria de conversão, organização)
+
+IMPORTANTE:
+
+Não usar números exagerados ou irreais
+Manter credibilidade total
+Linguagem simples
+Foco em transformação
+
+Exemplos de segmentos que devem ser incluídos:
+
+Clínica ou saúde
+Prestador de serviço (ex: advogado ou consultor)
+Negócio local (ex: estética, academia, etc.)
+E-commerce
+Empresa B2B
+
+Formato:
+Cada case deve ser curto, direto e fácil de ler (ideal para carrossel visual)
+
+🎯 TOM DA COPY:
+
+Direto
+Conversacional
+Sem enrolação
+Focado em dor real
+Linguagem de empresário para empresário
+
+💡 IDEIA CENTRAL:
+
+“Não adianta gerar tráfego se você não transforma isso em cliente”
+
+Gere a copy completa pronta para uma landing page.
+
+Não explique nada. Apenas entregue o texto final estruturado.

@@ -16,32 +16,30 @@ const PlanAuth = () => {
     const { toast } = useToast();
     const [submitting, setSubmitting] = useState(false);
 
-    // SEO para pequenas e médias empresas
+    // SEO para empresas com problemas de conversão de leads
     useSEO({
-        title: "Diagnóstico Gratuito de Lucros | Análise para Pequenas e Médias Empresas",
-        description: "Descubra onde sua pequena ou média empresa está perdendo dinheiro. Análise gratuita com roadmap claro para estruturar processos, aumentar margem e escalar. Comércio, serviços, SaaS, indústria.",
+        title: "Diagnóstico Gratuito: Estruturação de Tráfego Pago e Conversão de Leads",
+        description: "Sua empresa recebe contatos mas não converte? Diagnóstico gratuito que identifica onde você está perdendo clientes. Estruturação de tráfego + sistema de captação + processo de vendas.",
         keywords: [
-            "diagnóstico pequena média empresa",
-            "análise lucros pequena empresa",
-            "consultoria media empresa",
-            "margem de lucro empresa",
-            "estrutura empresa",
-            "escalar negócio",
-            "organização empresarial",
-            "análise financeira empresa",
-            "diagnóstico gratuito empresa",
-            "consultoria gestão",
-            "pequenas médias empresas brasil",
-            "pequeno negócio",
-            "empresa crescimento",
-            "fluxo de caixa",
-            "rentabilidade empresa",
+            "diagnóstico tráfego pago",
+            "conversão de leads",
+            "captação de clientes",
+            "estruturação de tráfego",
+            "conversão de tráfego",
+            "atendimento desorganizado",
+            "sistema de vendas",
+            "perda de leads",
+            "tráfego sem conversão",
+            "diagnóstico leads",
+            "processo de vendas",
+            "estratégia de tráfego",
+            "diagnóstico gratuito pme",
         ],
-        ogTitle: "Diagnóstico Gratuito - Descubra quanto você está perdendo",
-        ogDescription: "Análise personalizada que mostra exatamente onde sua pequena ou média empresa está deixando dinheiro na mesa. Sem cartão, sem compromisso.",
+        ogTitle: "Diagnóstico Gratuito: Por que você perde clientes no meio do caminho",
+        ogDescription: "Recebe contatos mas não transforma em cliente? Descubra exatamente onde você está perdendo. Análise completa do tráfego até a conversão.",
         ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-        twitterTitle: "Análise Gratuita para sua Pequena ou Média Empresa",
-        twitterDescription: "Descobrir sua verdadeira margem de lucro em menos de 2 minutos.",
+        twitterTitle: "Diagnóstico: Onde você está perdendo clientes",
+        twitterDescription: "Analise sua taxa de conversão de leads em 2 minutos.",
         canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
     });
 
@@ -120,8 +118,8 @@ const PlanAuth = () => {
                 <span className="text-sm font-medium">Voltar</span>
             </button>
 
-            {/* HERO SECTION - EMOÇÃO E PERDA IMEDIATA */}
-            <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-red-50 via-white to-white overflow-x-hidden">
+            {/* HERO SECTION - PROBLEMA CENTRAL: PERDA DE CLIENTES */}
+            <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-orange-50 via-white to-white overflow-x-hidden">
                 <div className="max-w-3xl mx-auto text-center w-full">
                     {/* Aviso visual */}
                     <motion.div
@@ -130,40 +128,42 @@ const PlanAuth = () => {
                         transition={{ duration: 0.6 }}
                         className="mb-8 inline-block"
                     >
-                        <div className="bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold">
-                            ⚠️ Sua empresa está deixando dinheiro na mesa
+                        <div className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
+                            ⚠️ Você está perdendo clientes sem nem saber
                         </div>
                     </motion.div>
 
-                    {/* HEADLINE - PME */}
+                    {/* HEADLINE - FOCO EM CONVERSÃO */}
                     <motion.h1
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         className="text-5xl sm:text-6xl font-black text-gray-900 mb-6 leading-tight"
                     >
-                        Você trabalha todos os dias, mas{" "}
-                        <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-                            não sabe quanto está ganhando
+                        Seu tráfego não é o problema.{" "}
+                        <span className="bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+                            Seu processo é.
                         </span>
                     </motion.h1>
 
+                    {/* SUBHEADLINE - IDENTIFICAÇÃO IMEDIATA */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="text-xl text-gray-700 mb-6 leading-relaxed font-semibold"
                     >
-                        Processos manuais, sistemas espalhados, faturamento confuso. Seu crescimento é real, mas a margem desaparece. E ninguém senta pra ver onde.
+                        Você investe em publicidade, recebe leads todos os dias, mas não consegue fechar a venda. Ou quando fecha, a conversão é tão baixa que o custo por cliente fica impossível de sustentar.
                     </motion.p>
 
+                    {/* DOR ESPECÍFICA */}
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-lg text-gray-600 mb-10 leading-relaxed"
                     >
-                        Isso é <span className="font-bold text-gray-900">muito comum</span>. Empresa que vende bem, mas lucra mal. E a solução? Não é contratar mais gente. É tecnologia certa, automação, e saber exatamente onde está o dinheiro.
+                        Enquanto isso, seus concorrentes estão estruturando tudo: desde a forma como captam o lead, até como organizam o atendimento, passando por um processo de vendas que realmente converte.
                     </motion.p>
 
                     <motion.div
@@ -175,15 +175,15 @@ const PlanAuth = () => {
                         <Button
                             onClick={scrollToForm}
                             size="lg"
-                            className="bg-red-600 hover:bg-red-700 text-white font-black px-4 sm:px-8 py-6 sm:py-7 text-sm sm:text-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 transition-all"
+                            className="bg-orange-600 hover:bg-orange-700 text-white font-black px-4 sm:px-8 py-6 sm:py-7 text-sm sm:text-lg shadow-lg shadow-orange-600/40 hover:shadow-orange-600/60 transition-all"
                         >
-                            👉 Descobrir quantos lucros estou perdendo
+                            👉 Analisar minha taxa de conversão
                         </Button>
                     </motion.div>
                 </div>
             </section>
 
-            {/* DORES ESPECÍFICAS - LISTA VISUAL */}
+            {/* LISTA DE PROBLEMAS - EFEITO IDENTIFICAÇÃO */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     <motion.h2
@@ -193,15 +193,15 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Os culpados pela perda de lucro:
+                        Você provavelmente reconhece algum desses problemas:
                     </motion.h2>
 
                     <div className="grid gap-4">
                         {[
-                            { icon: "📉", text: "Processos desorganizados causam perda de clientes e vendas", subtitle: "Sem um sistema unificado, comunicação falha, prazos descumpridos, cliente vai para concorrente" },
-                            { icon: "⏱️", text: "Não consegue medir a rentabilidade real de cada cliente ou projeto", subtitle: "Custos espalhados, precificação incorreta. Você vende, mas não sabe quanto lucrou de verdade" },
-                            { icon: "💼", text: "Dificuldade em escalar o negócio sem aumentar proporcionalmente os custos", subtitle: "Cresce manualmente, sem automação. Quanto mais vende, mais trabalho manual, menos margem" },
-                            { icon: "💰", text: "Fluxo de caixa desconfortável no final do mês", subtitle: "Tudo misturado em planilha, na cabeça, em pedaço de papel. Não sabe quanto entra, quanto sai" },
+                            { icon: "📞", text: "Recebe muitos contatos, mas poucos viram clientes", subtitle: "Seu atendimento é desorganizado. Um responde por WhatsApp, outro por email, ninguém tem histórico. Cliente se perde no meio" },
+                            { icon: "💸", text: "Investe em tráfego, mas o custo por cliente adquirido é muito alto", subtitle: "Você sabe que está gastando mais do que deveria pra trazer um cliente. A questão é: por quê?" },
+                            { icon: "🔄", text: "Não tem processo definido de vendas", subtitle: "Cada vendedor faz de um jeito. Algumas propostas levam 3 dias, outras 2 semanas. Sem padronização, tudo é mais lento e caro" },
+                            { icon: "📊", text: "Não consegue acompanhar onde cada lead está no funil", subtitle: "Não sabe quantos estão em negociação, quantos desistiram, e por quê. Funciona na intuição, não em dados" },
                         ].map((pain, index) => (
                             <motion.div
                                 key={index}
@@ -225,17 +225,17 @@ const PlanAuth = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                         viewport={{ once: true }}
-                        className="mt-12 p-6 bg-blue-50 rounded-xl border-l-4 border-blue-500"
+                        className="mt-12 p-6 bg-orange-50 rounded-xl border-l-4 border-orange-500"
                     >
                         <p className="text-center text-gray-700 text-base leading-relaxed">
-                            <span className="font-black text-gray-900">O real problema:</span> Você está tão ocupado "apagando fogo" que não consegue sentar e olhar pra realidade: quanto custa rodar seu negócio? Qual é a margem de verdade? Como automatizar pra escalar sem contratar mais gente?
+                            <span className="font-black text-gray-900">Aqui está o ponto:</span> Não adianta gerar tráfego se você não transforma isso em cliente. E não é um problema de tráfego. É um problema de falta de estrutura do tráfego até a conversão.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
-            {/* AUTORIDADE SEÇÃO - SEM CURRÍCULO */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-white">
+            {/* APRESENTAÇÃO DO ESPECIALISTA */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50 to-white">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -244,8 +244,8 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="flex flex-col sm:flex-row items-start gap-8"
                     >
-                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center shadow-lg flex-shrink-0">
-                            <span className="text-4xl">📊</span>
+                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg flex-shrink-0">
+                            <span className="text-4xl">🎯</span>
                         </div>
 
                         <div>
@@ -253,21 +253,110 @@ const PlanAuth = () => {
                                 Roque Rafael
                             </h3>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                Passei anos vendo o mesmo padrão: empresa crescendo, faturamento aumentando, mas lucro caindo. Tudo porque não tinha automação, processos estavam espalhados em 10 lugares, ninguém conseguia responder "quanto a gente lucra de verdade?".
+                                Trabalho há anos ajudando empresas a estruturarem sua captação de leads e conversão. Vi o mesmo problema centenas de vezes: empresas gastando milhares em tráfego, recebendo leads de qualidade, mas perdendo a venda na hora do atendimento.
                             </p>
                             <p className="text-gray-700 leading-relaxed mb-4">
-                                <span className="font-bold">O que eu faço é diferente:</span> Não venho com "a solução que funciona pra todo mundo". Sento com você, entendo seu negócio específico, aponto exatamente onde o dinheiro está vazando, qual é sua margem real, como automatizar pra crescer com lucro.
+                                <span className="font-bold">O diferencial:</span> Não é sobre vender mais caro ou tocar mais vezes no cliente. É sobre criar um sistema que funcione. Desde a forma como você capta o lead, passando por como seu time responde, até como você fecha a venda. Estruturado. Documentado. Replicável.
                             </p>
                             <p className="text-gray-700 leading-relaxed">
-                                E aí a gente mexe. Passo a passo. Com você vendo os resultados. Sem abandonar no meio do caminho.
+                                Sem tecnologia desnecessária. Sem jargão técnico. Apenas: o que precisa funcionar pra você ganhar mais clientes.
                             </p>
                         </div>
                     </motion.div>
                 </div>
             </section>
 
-            {/* O QUE VOCÊ VAI RECEBER - PRÁTICO */}
+            {/* SEÇÃO DE PROVAS - CARROSSEL COM 5 CASES */}
             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+                <div className="max-w-4xl mx-auto">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-3xl font-black text-gray-900 text-center mb-4"
+                    >
+                        Como isso funciona na prática
+                    </motion.h2>
+                    <p className="text-center text-gray-600 text-lg mb-12">Cinco empresas diferentes. Mesmo problema. Solução estruturada.</p>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
+                        {[
+                            { 
+                                name: "Clínica de Estética", 
+                                segment: "Saúde & Beleza",
+                                before: "Recebia 15-20 leads por mês em Google Ads, mas apenas 2-3 viravam agendamentos",
+                                what: "Estruturamos o processo: desde o primeiro contato até a venda. Criamos um padrão de resposta rápida no WhatsApp, um questionário de identificação de necessidade, e um follow-up automático",
+                                after: "Aumentou pra 8-10 agendamentos mês. A taxa de conversão subiu de 10% pra 50%"
+                            },
+                            { 
+                                name: "Agência de Marketing", 
+                                segment: "Serviços B2B",
+                                before: "Gerava muitos leads, mas levava 3-4 semanas pra fechar. Equipe desorganizada, sem processo claro",
+                                what: "Estruturamos o funil: lead → qualificação → proposta → assinatura. Cada etapa com ferramentas e templates. Todo mundo sabia o que fazer",
+                                after: "Tempo de fechamento caiu pra 1 semana. Equipe mais organizada. Margem melhorou porque sabia exatamente quanto custa fechar"
+                            },
+                            { 
+                                name: "E-commerce de Moda", 
+                                segment: "Varejo Online",
+                                before: "Gastava muito em Facebook Ads, conversão era de 1%. Não tinha retargeting, não tinha follow-up com abandono de carrinho",
+                                what: "Reestruturamos o fluxo: desde o pixel rastreando comportamento, até sequência de email automático pro carrinho abandonado",
+                                after: "Conversão subiu pra 3%. Custo por aquisição caiu em 40%. Não mudou o tráfego, mudou o processo"
+                            },
+                            { 
+                                name: "Consultório Advocatício", 
+                                segment: "Serviços Profissionais",
+                                before: "Recebia consultas, mas muitas desistiam antes de contratar. Não tinha sistema de acompanhamento",
+                                what: "Criamos um processo de educação do cliente antes da venda. Material explicativo, chamada diagnóstica estruturada, propostas personalizadas",
+                                after: "Taxa de conversão dobrou. Clientes mais qualificados. Menos devoluções. Cliente quer voltar"
+                            },
+                            { 
+                                name: "Empresa B2B de Softwares", 
+                                segment: "Tecnologia",
+                                before: "Leads vinham da Cold Outreach, mas perdiam interesse nas primeiras 48 horas. Ninguém acompanhava",
+                                what: "Estruturamos uma sequência de engajamento: primeiro email, video explicativo, calendário pra demo, follow-up automático",
+                                after: "30% dos leads viraram demos. 40% das demos viraram clientes. Pipeline previsível"
+                            }
+                        ].map((caseItem, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="bg-gradient-to-br from-orange-50 to-white rounded-xl p-8 border border-orange-200 shadow-sm hover:shadow-md transition-all"
+                            >
+                                <div className="flex items-start justify-between mb-4">
+                                    <div>
+                                        <h3 className="text-xl font-black text-gray-900">{caseItem.name}</h3>
+                                        <p className="text-sm text-orange-600 font-bold">{caseItem.segment}</p>
+                                    </div>
+                                </div>
+                                
+                                <div className="space-y-4">
+                                    <div>
+                                        <p className="text-xs font-black text-gray-600 mb-1">SITUAÇÃO ANTES</p>
+                                        <p className="text-gray-700 text-sm">{caseItem.before}</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p className="text-xs font-black text-gray-600 mb-1">O QUE FOI FEITO</p>
+                                        <p className="text-gray-700 text-sm">{caseItem.what}</p>
+                                    </div>
+                                    
+                                    <div>
+                                        <p className="text-xs font-black text-orange-600 mb-1">RESULTADO</p>
+                                        <p className="text-gray-900 text-sm font-bold">{caseItem.after}</p>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* COMO FUNCIONA O DIAGNÓSTICO */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-50 to-white">
                 <div className="max-w-4xl mx-auto">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -276,14 +365,14 @@ const PlanAuth = () => {
                         viewport={{ once: true }}
                         className="text-3xl font-black text-gray-900 text-center mb-12"
                     >
-                        Como funciona o diagnóstico
+                        Como funciona o diagnóstico gratuito
                     </motion.h2>
 
                     <div className="grid sm:grid-cols-3 gap-6">
                         {[
-                            { icon: "🎯", title: "1. Diagnóstico real", desc: "Você preenche um formulário simples sobre seu negócio. Eu analiso profundamente, olho pra margem de verdade, custos escondidos, onde a automação mudaria tudo." },
-                            { icon: "🚫", title: "2. Solução personalizada", desc: "Nada de 'aqui está a solução que funciona pra todo mundo'. Você recebe um roadmap específico pro seu negócio. Tecnologia que faz sentido pro seu tamanho e crescimento." },
-                            { icon: "📋", title: "3. Próximos passos claros", desc: "Não é 'faça tudo isso'. É 'mude isso primeiro, aí isso, aí escalamos'. Um passo de cada vez. E você não fica sozinho - estarei acompanhando os resultados com você." },
+                            { icon: "📝", title: "1. Você preenche o formulário", desc: "Rápido. Não pedimos informações pessoais desnecessárias. Apenas o essencial: como você capta leads agora, qual é sua maior dificuldade, e um pouco do seu negócio." },
+                            { icon: "🔍", title: "2. Analiso profundamente", desc: "Eu vejo onde você está perdendo clientes. Desde o primeiro contato até a negociação. Identifico o gargalo específico da sua empresa e calculo o impacto de corrigir isso." },
+                            { icon: "📊", title: "3. Você recebe um plano claro", desc: "Nada genérico. Um diagnóstico escrito, com os problemas específicos encontrados e um passo a passo de como resolver. Sem jargão. Prático. Implementável." },
                         ].map((benefit, index) => (
                             <motion.div
                                 key={index}
@@ -306,53 +395,53 @@ const PlanAuth = () => {
                 </div>
             </section>
 
-            {/* DESTAQUE RAMOS ATENDIDOS - DIFERENCIAL CHAVE */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-50 to-pink-50">
+            {/* QUEBRA DE OBJEÇÕES */}
+            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-50 to-white">
                 <div className="max-w-4xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="bg-white rounded-xl p-8 border-2 border-purple-300"
+                        className="bg-white rounded-xl p-8 border-2 border-orange-300"
                     >
                         <div className="flex items-start gap-4 mb-6">
-                            <span className="text-5xl">⚙️</span>
+                            <span className="text-5xl">❓</span>
                             <div>
                                 <h3 className="text-2xl font-black text-gray-900">
-                                    Foco em sistemas e automação
+                                    Perguntas que você deve estar fazendo
                                 </h3>
-                                <p className="text-gray-600 text-sm mt-1">A maioria dos problemas de lucro vem de processos manuais e tecnologia errada</p>
+                                <p className="text-gray-600 text-sm mt-1">Respondemos as objeções mais comuns</p>
                             </div>
                         </div>
 
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
-                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <span className="font-black text-orange-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Você tem sistemas espalhados</p>
-                                    <p className="text-gray-600 text-sm">Excel, WhatsApp, papel, 3 softwares diferentes. Cada um custando e nenhum falando com o outro</p>
+                                    <p className="text-gray-900 font-bold">"Não tenho orçamento para implementar mudanças agora"</p>
+                                    <p className="text-gray-600 text-sm">O diagnóstico te mostra onde você está perdendo dinheiro. Muitas vezes a solução é reorganizar o que você já tem, não comprar coisa nova. Você decide depois da análise.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <span className="font-black text-orange-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Gasta dinheiro em ferramentas desnecessárias</p>
-                                    <p className="text-gray-600 text-sm">Assinaturas que ninguém usa. Softwares que custam caro mas fazem pouco. Integração inexistente</p>
+                                    <p className="text-gray-900 font-bold">"Já tentei otimizar isso e não funcionou"</p>
+                                    <p className="text-gray-600 text-sm">Provável que você tenha otimizado partes isoladas. O problema é falta de uma visão do sistema completo. Do lead até o cliente. A gente mapeiam tudo.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <span className="font-black text-orange-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Processos que deveriam ser automáticos são manuais</p>
-                                    <p className="text-gray-600 text-sm">Pessoa passa 3 horas digitando dados. Sistema poderia fazer em 30 segundos. Custo invisível na sua folha</p>
+                                    <p className="text-gray-900 font-bold">"Vou ter que mexer em tudo e virar confusão"</p>
+                                    <p className="text-gray-600 text-sm">Nada. O plano que você recebe é priorizado. "Primeiro faça isso, depois isso outro". Tudo de forma que não paralisa seu negócio.</p>
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="font-black text-purple-600 mt-1">✓</span>
+                                <span className="font-black text-orange-600 mt-1">✓</span>
                                 <div>
-                                    <p className="text-gray-900 font-bold">Não consegue escalar porque tudo é manual</p>
-                                    <p className="text-gray-600 text-sm">Cresce = contrata mais gente. Sem automação, margem cai. Tecnologia certa resolveria isso</p>
+                                    <p className="text-gray-900 font-bold">"Minha empresa é diferente, isso não funciona pra mim"</p>
+                                    <p className="text-gray-600 text-sm">Por isso o diagnóstico é personalizado. Não é template. E é gratuito, sem compromisso. Você vê se faz sentido pra seu caso.</p>
                                 </div>
                             </li>
                         </ul>
@@ -360,7 +449,7 @@ const PlanAuth = () => {
                 </div>
             </section>
 
-            {/* ELEMENTO DE EXCLUSÃO */}
+            {/* ELEMENTO DE URGÊNCIA */}
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto text-center">
                     <motion.div
@@ -368,10 +457,10 @@ const PlanAuth = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="bg-gray-100 rounded-lg p-6 border border-gray-300"
+                        className="bg-orange-50 rounded-lg p-6 border border-orange-300"
                     >
                         <p className="text-gray-700 font-semibold text-base">
-                            Se você não consegue responder com segurança quanto é sua margem de lucro real… esse é o problema. É exatamente para isso que o diagnóstico existe.
+                            Enquanto você está lendo isso, seus concorrentes estão estruturando seus processos de vendas. A questão é: quanto tempo você vai esperar antes de organizar o seu?
                         </p>
                     </motion.div>
                 </div>
@@ -390,9 +479,9 @@ const PlanAuth = () => {
                         {/* Header */}
                         <div className="mb-8">
                             <h2 className="text-3xl sm:text-4xl font-black text-gray-900 mb-2">
-                                Descreva sua empresa
+                                Solicitar diagnóstico gratuito
                             </h2>
-                            <p className="text-gray-600 text-base">Leva menos de 2 minutos. Vou analisar seus dados e responder com um diagnóstico detalhado.</p>
+                            <p className="text-gray-600 text-base">2 minutos. Sem compromisso. Você receberá uma análise personalizada sobre onde está perdendo clientes.</p>
                         </div>
 
                         <form onSubmit={handleDiagnosticSubmit} className="space-y-5">
@@ -456,123 +545,123 @@ const PlanAuth = () => {
                             </div>
 
                             {/* Área */}
-                            <div className="space-y-2">
-                                <Label htmlFor="diagnosticArea" className="font-black text-gray-900">
-                                    Qual é seu maior desafio AGORA? *
-                                </Label>
-                                <select
-                                    id="diagnosticArea"
-                                    value={diagnosticData.diagnosticArea}
-                                    onChange={(e) =>
-                                        setDiagnosticData({
-                                            ...diagnosticData,
-                                            diagnosticArea: e.target.value,
-                                        })
-                                    }
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white !text-gray-900 font-bold focus:border-purple-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer text-base"
-                                >
-                                    <option value="">Selecione uma opção...</option>
-                                    <option value="processos">📋 Processos desorganizados e falta de controle</option>
-                                    <option value="margem">💹 Não sei minha margem real de lucro</option>
-                                    <option value="escala">🚀 Dificuldade em escalar sem perder lucratividade</option>
-                                    <option value="fluxo">💰 Fluxo de caixa apertado ou imprevisível</option>
-                                    <option value="outro">🔄 Outro desafio</option>
-                                </select>
-                            </div>
+                             <div className="space-y-2">
+                                 <Label htmlFor="diagnosticArea" className="font-black text-gray-900">
+                                     Qual é seu maior desafio com leads/vendas? *
+                                 </Label>
+                                 <select
+                                     id="diagnosticArea"
+                                     value={diagnosticData.diagnosticArea}
+                                     onChange={(e) =>
+                                         setDiagnosticData({
+                                             ...diagnosticData,
+                                             diagnosticArea: e.target.value,
+                                         })
+                                     }
+                                     required
+                                     className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white !text-gray-900 font-bold focus:border-orange-500 focus:bg-white focus:outline-none transition-all appearance-none cursor-pointer text-base"
+                                 >
+                                     <option value="">Selecione uma opção...</option>
+                                     <option value="atendimento">📞 Recebo muitos leads mas poucos viram clientes</option>
+                                     <option value="conversao">💸 Minha taxa de conversão é muito baixa</option>
+                                     <option value="processo">🔄 Meu processo de vendas é desorganizado</option>
+                                     <option value="funil">📊 Não consigo acompanhar leads no funil</option>
+                                     <option value="outro">❓ Outro desafio</option>
+                                 </select>
+                             </div>
 
                             {/* Descrição */}
-                            <div className="space-y-2">
-                                <Label htmlFor="diagnosticDescription" className="font-black text-gray-900">
-                                    Descreva um pouco seu negócio e o desafio *
-                                </Label>
-                                <textarea
-                                    id="diagnosticDescription"
-                                    placeholder="Ex: Sou agência de marketing com 5 clientes. Faturamos bem, mas não consigo dar aumento. Acho que temos muito custo fixo. Ou então: Comércio online, crescimento rápido mas margem caiu. Tenho medo de parar de crescer..."
-                                    value={diagnosticData.diagnosticDescription}
-                                    onChange={(e) =>
-                                        setDiagnosticData({
-                                            ...diagnosticData,
-                                            diagnosticDescription: e.target.value,
-                                        })
-                                    }
-                                    required
-                                    className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white !text-gray-900 placeholder:!text-gray-400 font-base focus:border-purple-500 focus:bg-white focus:outline-none transition-all min-h-24 resize-none text-base"
-                                />
-                            </div>
+                             <div className="space-y-2">
+                                 <Label htmlFor="diagnosticDescription" className="font-black text-gray-900">
+                                     Conte um pouco mais sobre seu negócio e o desafio específico *
+                                 </Label>
+                                 <textarea
+                                     id="diagnosticDescription"
+                                     placeholder="Ex: Sou clínica de estética. Recebo 20 leads por mês em Google Ads mas só 2-3 viram agendamentos. Não sei onde está o problema. Ou: E-commerce de roupas. Muitas pessoas veem meu produto mas poucos compram. Não tenho sistema de acompanhamento de carrinho abandonado..."
+                                     value={diagnosticData.diagnosticDescription}
+                                     onChange={(e) =>
+                                         setDiagnosticData({
+                                             ...diagnosticData,
+                                             diagnosticDescription: e.target.value,
+                                         })
+                                     }
+                                     required
+                                     className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 bg-white !text-gray-900 placeholder:!text-gray-400 font-base focus:border-orange-500 focus:bg-white focus:outline-none transition-all min-h-24 resize-none text-base"
+                                 />
+                             </div>
 
                             {/* CTA Button */}
-                            <Button
-                                type="submit"
-                                className="w-full bg-red-600 hover:bg-red-700 text-white font-black py-6 text-lg mt-6 rounded-lg shadow-lg shadow-red-600/40 hover:shadow-red-600/60 transition-all"
-                                disabled={submitting}
-                            >
-                                {submitting ? "⏳ Enviando..." : "🚀 Solicitar análise gratuita"}
-                            </Button>
+                             <Button
+                                 type="submit"
+                                 className="w-full bg-orange-600 hover:bg-orange-700 text-white font-black py-6 text-lg mt-6 rounded-lg shadow-lg shadow-orange-600/40 hover:shadow-orange-600/60 transition-all"
+                                 disabled={submitting}
+                             >
+                                 {submitting ? "⏳ Enviando..." : "🚀 Solicitar diagnóstico gratuito"}
+                             </Button>
 
-                            {/* Reassurance */}
-                            <p className="text-center text-gray-600 text-sm mt-4">
-                                ✓ Gratuito e confidencial • ✓ Sem venda pesada • ✓ Análise completa em 48h
-                            </p>
+                             {/* Reassurance */}
+                             <p className="text-center text-gray-600 text-sm mt-4">
+                                 ✓ 100% gratuito • ✓ Sem compromisso • ✓ Resposta em até 48h
+                             </p>
                         </form>
 
                         {/* Transparência */}
-                        <div className="mt-10 pt-8 border-t border-gray-200">
-                            <h3 className="font-black text-gray-900 mb-4 text-base">
-                                Por que uma análise gratuita?
-                            </h3>
-                            <ul className="space-y-3">
-                                <li className="flex items-start gap-3 text-sm">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                                    <div>
-                                        <p className="text-gray-900 font-bold">Sem riscos</p>
-                                        <p className="text-gray-600">Nenhum cartão de crédito, nenhuma taxa escondida. Apenas dados que você já sabe</p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-3 text-sm">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                                    <div>
-                                        <p className="text-gray-900 font-bold">Sem compromisso</p>
-                                        <p className="text-gray-600">Você recebe a análise completa. Depois apenas descobre se nossa abordagem faz sentido para você</p>
-                                    </div>
-                                </li>
-                                <li className="flex items-start gap-3 text-sm">
-                                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                                    <div>
-                                        <p className="text-gray-900 font-bold">Análise específica para seu negócio</p>
-                                        <p className="text-gray-600">Baseado no seu ramo, tamanho, desafios. Não é template genérico</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
+                         <div className="mt-10 pt-8 border-t border-gray-200">
+                             <h3 className="font-black text-gray-900 mb-4 text-base">
+                                 Por que eu faço isso gratuitamente?
+                             </h3>
+                             <ul className="space-y-3">
+                                 <li className="flex items-start gap-3 text-sm">
+                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                     <div>
+                                         <p className="text-gray-900 font-bold">Porque você merece saber a verdade</p>
+                                         <p className="text-gray-600">Muitos consultores cobram uma fortuna pra te vender algo. Eu prefiro te mostrar onde está o problema de verdade. Sem venda forçada.</p>
+                                     </div>
+                                 </li>
+                                 <li className="flex items-start gap-3 text-sm">
+                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                     <div>
+                                         <p className="text-gray-900 font-bold">Porque confiança é o começo</p>
+                                         <p className="text-gray-600">Se a análise fizer sentido pra você, você já sabe como vou trabalhar. Se não fizer, sem problema. Pelo menos você tem clareza.</p>
+                                     </div>
+                                 </li>
+                                 <li className="flex items-start gap-3 text-sm">
+                                     <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+                                     <div>
+                                         <p className="text-gray-900 font-bold">Porque empresas que estruturam crescem</p>
+                                         <p className="text-gray-600">E empresas que crescem com lucro viram clientes de longo prazo. Isso é melhor que vender uma solução genérica pra quem não quer.</p>
+                                     </div>
+                                 </li>
+                             </ul>
+                         </div>
                     </motion.div>
                 </div>
             </section>
 
             {/* CTA FINAL */}
-            <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 to-gray-800 text-white text-center overflow-x-hidden">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="w-full px-2"
-                >
-                    <h2 className="text-2xl sm:text-3xl font-black mb-4">
-                        Enquanto você toma essa decisão, seus concorrentes estão estruturando
-                    </h2>
-                    <p className="text-gray-300 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-                        Preenche o formulário rápido. Vou analisar e te enviar uma diagnóstico detalhado com dados reais.
-                    </p>
-                    <Button
-                        onClick={scrollToForm}
-                        size="lg"
-                        className="bg-red-600 hover:bg-red-700 text-white font-black px-4 sm:px-8 py-6 sm:py-6 text-sm sm:text-lg"
-                    >
-                        Ver minha análise gratuita
-                    </Button>
-                </motion.div>
-            </section>
+             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-900 to-orange-800 text-white text-center overflow-x-hidden">
+                 <motion.div
+                     initial={{ opacity: 0, y: 20 }}
+                     whileInView={{ opacity: 1, y: 0 }}
+                     transition={{ duration: 0.8 }}
+                     viewport={{ once: true }}
+                     className="w-full px-2"
+                 >
+                     <h2 className="text-2xl sm:text-3xl font-black mb-4">
+                         Enquanto você termina de ler isto, um competitor está estruturando seu processo de conversão
+                     </h2>
+                     <p className="text-orange-100 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
+                         2 minutos pra preencher. Vou analisar e você recebe um diagnóstico específico apontando exatamente onde você está perdendo clientes.
+                     </p>
+                     <Button
+                         onClick={scrollToForm}
+                         size="lg"
+                         className="bg-white hover:bg-orange-50 text-orange-600 font-black px-4 sm:px-8 py-6 sm:py-6 text-sm sm:text-lg"
+                     >
+                         Solicitar meu diagnóstico agora
+                     </Button>
+                 </motion.div>
+             </section>
         </div>
     );
 };
