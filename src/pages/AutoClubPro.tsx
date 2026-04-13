@@ -32,27 +32,11 @@ const AutoClubPro = () => {
     const [submitted, setSubmitted] = useState(false);
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [timeLeft, setTimeLeft] = useState(48 * 60 * 60); // 48 horas em segundos
-    const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
-
-    const heroes = [
-        {
-            id: 1,
-            backgroundImage: fundoHeroImg
-        },
-        {
-            id: 2,
-            backgroundImage: fundoHeroImg
-        },
-        {
-            id: 3,
-            backgroundImage: fundoHeroImg
-        }
-    ];
 
     // SEO Absurdo - AutoClub Pro
     useSEO({
-        title: "AutoClub Pro | Sistema de Agendamentos para Vidros, Estética, Películas, Som, Capotaria, Ar-condicionado e Pneus | R$ 349 + R$ 89/mês | TechNexos",
-        description: "AutoClub Pro - Sistema completo para vidraçarias, estética automotiva, películas/envelopamento, som/acessórios, capotaria, ar-condicionado e pneuarias. Gestão de clientes, agendamentos, comissões, estoque e integrações. MVP em 10 dias. R$ 349 de implementação + R$ 89/mês. Suporte 24/7 via WhatsApp. Aumente seu faturamento até +300%.",
+        title: "AutoClub Pro | Sistema Personalizado para Vidros, Estética, Películas, Som, Capotaria, Ar-condicionado e Pneus | TechNexos",
+        description: "AutoClub Pro - Sistema de gestão especializado para vidraçarias, estética automotiva, películas, som, capotaria, ar-condicionado e pneuarias. Plataforma personalizada com identidade visual da sua empresa. Agendamentos, gestão de clientes, comissões automáticas, controle de estoque. R$ 1.200 de implementação + R$ 120/mês de suporte 24/7. Aumente seu faturamento até +300%.",
         keywords: [
             "autoclub pro",
             "sistema vidros automotivos",
@@ -105,10 +89,10 @@ const AutoClubPro = () => {
             },
             "offers": {
                 "@type": "Offer",
-                "price": "3700",
+                "price": "1200",
                 "priceCurrency": "BRL",
                 "priceValidUntil": "2025-12-31",
-                "description": "AutoClub Pro Sistema Profissional - R$ 349 implementação + R$ 89/mês",
+                "description": "AutoClub Pro Sistema Personalizado - R$ 1.200 implementação + R$ 120/mês",
                 "availability": "https://schema.org/InStock",
                 "deliveryTime": "P10D"
             },
@@ -144,23 +128,7 @@ const AutoClubPro = () => {
         return () => clearInterval(interval);
     }, []);
 
-    // Auto-rotate hero carousel
-    useEffect(() => {
-        const carouselInterval = setInterval(() => {
-            setCurrentHeroIndex((prev) => (prev + 1) % heroes.length);
-        }, 8000); // Muda a cada 8 segundos
 
-        return () => clearInterval(carouselInterval);
-    }, [heroes.length]);
-
-    // Navegação do carrossel
-    const nextHero = () => {
-        setCurrentHeroIndex((prev) => (prev + 1) % heroes.length);
-    };
-
-    const prevHero = () => {
-        setCurrentHeroIndex((prev) => (prev - 1 + heroes.length) % heroes.length);
-    };
 
     // Função para formatar o tempo em HH:MM:SS
     const formatTime = (seconds: number) => {
@@ -393,402 +361,135 @@ const AutoClubPro = () => {
         <div className="min-h-screen bg-background text-foreground">
             <Navbar />
             <main className="overflow-hidden">
-                {/* Hero Carousel Container */}
-                <div className="relative min-h-screen overflow-hidden">
-                    {/* Carousel Wrapper com transição suave */}
-                    <div
-                        className="flex ease-in-out"
-                        style={{
-                            transform: `translateX(-${currentHeroIndex * 100}%)`,
-                            transition: 'transform 1.5s ease-in-out'
-                        }}
-                    >
-                        {/* Hero 1 */}
-                        <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
-                            {/* Background Image */}
-                            <div className="absolute inset-0 z-0">
-                                <img
-                                    src={heroes[currentHeroIndex].backgroundImage}
-                                    alt="Negócio Automotivo"
-                                    className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
-                                    loading="eager"
-                                    decoding="async"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/40"></div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-                                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                                    {/* Left Side */}
-                                    <div className={`md:col-span-6 ${currentHeroIndex === 0 ? "text-white" : "text-yellow-50"}`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                        <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
-                                            <div className={`px-4 py-2 rounded-full text-sm font-semibold border inline-block ${currentHeroIndex === 0 ? "bg-blue-600/30 text-blue-300 border-blue-500/50" : currentHeroIndex === 1 ? "bg-orange-600/40 text-orange-200 border-orange-500/50" : "bg-purple-600/40 text-purple-200 border-purple-500/50"}`}>
-                                                {currentHeroIndex === 0 ? "🚗 Vidraçaria com Agendamentos" : currentHeroIndex === 1 ? "✨ Estética Automotiva Premium" : "🎨 Películas & Envelopamento"}
-                                            </div>
-                                        </div>
-
-                                        <h1 className="leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl">
-                                            {currentHeroIndex === 0 ? (
-                                                <>Vidros Sempre<br /><span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Agendados.</span></>
-                                            ) : currentHeroIndex === 1 ? (
-                                                <>Transforme a Estética<br /><span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">em Lucro.</span></>
-                                            ) : (
-                                                <>Películas & Envelopamento<br /><span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Sempre Agendados.</span></>
-                                            )}
-                                        </h1>
-
-                                        <div className="md:hidden flex justify-center mb-6">
-                                            <img src={currentHeroIndex === 0 ? mec1Img : carImg} alt="Veículo" className="rounded-2xl shadow-2xl" style={{ maxHeight: '300px', objectFit: 'contain' }} />
-                                        </div>
-
-                                        <p className={`leading-relaxed mb-6 ${currentHeroIndex === 0 ? "text-xl text-slate-200" : currentHeroIndex === 1 ? "text-xl text-orange-100" : "text-xl text-purple-100"}`}>
-                                            {currentHeroIndex === 0
-                                                ? "Vidraçarias com agenda 60% vazia ganham +R$8.000/mês em 90 dias. Clientes marcam online 24/7, agenda sempre preenchida, zero cancelamentos."
-                                                : currentHeroIndex === 1
-                                                    ? "Estéticas que usam AutoClub Pro aumentam produtividade dos técnicos em 42%. Agenda cheia, clientes fidelizados, comissão automática."
-                                                    : "Películas e envelopamento têm margem de 30%+ mas perdem clientes por falta de agendamentos. Com AutoClub Pro: agenda 95% preenchida, +R$15.000/mês."
-                                            }
-                                        </p>
-
-                                        <div className="space-y-3 mb-8">
-                                            <div className="flex items-center gap-3">
-                                                <CheckCircle2 className={`h-5 w-5 flex-shrink-0 ${currentHeroIndex === 0 ? "text-blue-400" : "text-orange-400"}`} />
-                                                <div>
-                                                    <p className={`font-bold text-sm ${currentHeroIndex === 0 ? "text-white" : "text-orange-50"}`}>{currentHeroIndex === 0 ? "Pronto em 3 Dias" : "Implementação Rápida"}</p>
-                                                                               <p className={`text-xs ${currentHeroIndex === 0 ? "text-slate-300" : "text-orange-200"}`}>{currentHeroIndex === 0 ? "Sistema personalizado" : "Sistema rodando em 3 dias"}</p>
-                                                </div>
-                                            </div>
-                                            <div className="flex items-center gap-3">
-                                                <CheckCircle2 className={`h-5 w-5 flex-shrink-0 ${currentHeroIndex === 0 ? "text-blue-400" : "text-orange-400"}`} />
-                                                <div>
-                                                    <p className={`font-bold text-sm ${currentHeroIndex === 0 ? "text-white" : "text-orange-50"}`}>{currentHeroIndex === 0 ? "Suporte 24/7h" : "Suporte Premium"}</p>
-                                                    <p className={`text-xs ${currentHeroIndex === 0 ? "text-slate-300" : "text-orange-200"}`}>{currentHeroIndex === 0 ? "Via WhatsApp" : "Consultoria incluída"}</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="flex flex-col sm:flex-row gap-4">
-                                            <Button size="lg" className={`text-white px-8 py-6 font-bold ${currentHeroIndex === 0 ? "bg-blue-600 hover:bg-blue-700" : "bg-orange-600 hover:bg-orange-700"}`} onClick={() => document.getElementById("proposal")?.scrollIntoView({ behavior: "smooth" })}>
-                                                {currentHeroIndex === 0 ? "Ver Proposta" : "Começar Agora"}
-                                            </Button>
-                                            <Button size="lg" className={`text-white px-8 py-6 font-bold ${currentHeroIndex === 0 ? "bg-green-600 hover:bg-green-700" : "bg-red-600 hover:bg-red-700"}`} onClick={() => window.open("https://wa.me/5532991075164")}>
-                                                💬 WhatsApp
-                                            </Button>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Side Image */}
-                                    <div className="hidden md:flex md:col-span-6 justify-end">
-                                        <div className="relative" style={{ width: '550px', height: '550px' }}>
-                                            <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)', filter: 'blur(20px)' }}></div>
-                                            <img src={mec1Img} alt="Carro" className="relative rounded-3xl" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'bottom', transform: 'translateY(100px)' }} />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Scroll Indicator */}
-                            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
-                                <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
-                                <ChevronDown className="w-5 h-5 text-blue-400 animate-bounce mx-auto" />
-                            </div>
-                        </section>
-
-                        {/* Hero 2 - Duplicado com cores diferentes */}
-                        <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
-                            {/* Background Image */}
-                            <div className="absolute inset-0 z-0">
-                                <img
-                                    src={heroes[1].backgroundImage}
-                                    alt="Negócio Automotivo"
-                                    className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-orange-950 via-orange-950/70 to-orange-950/40"></div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                                    {/* Left Side - Text - Takes 6 columns */}
-                                    <div className={`md:col-span-6 order-1 md:order-1 text-yellow-50`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                        <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
-                                            <div className="inline-block">
-                                                <div className={`px-4 py-2 rounded-full text-sm font-semibold border bg-orange-600/40 text-orange-200 border-orange-500/50`}>
-                                                    ✨ Estética Automotiva
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <h1 className={`leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl`}>
-                                            <>Estética Automotiva<br /><span className="bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">Com Agendamentos.</span></>
-                                        </h1>
-
-                                        {/* Mobile Image - positioned between title and paragraph */}
-                                        <div className="md:hidden flex justify-center">
-                                            <div className="relative w-full max-w-sm">
-                                                <div className="absolute -inset-4 bg-gradient-to-r from-orange-600/30 to-yellow-600/30 rounded-3xl blur-3xl"></div>
-                                                <img
-                                                    src={carImg}
-                                                    alt="Carro"
-                                                    className="relative rounded-2xl shadow-2xl w-full h-auto"
-                                                    style={{ maxHeight: '400px', objectFit: 'contain' }}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p className={`leading-relaxed text-lg text-orange-100`}>
-                                                Estética automotiva cresce quando técnicos não ficam ociosos. Com agendamentos online, você preenche 90%+ da agenda. Mais clientes, mais técnicos trabalhando, mais lucro. Sistema pronto em 10 dias.
-                                            </p>
-                                        </div>
-
-                                        {/* Value Props - Simples e Limpo */}
-                                        <div className="space-y-5 pt-6">
-                                            <div className="flex items-center gap-4">
-                                                <div className={`flex-shrink-0 p-2 rounded-lg bg-orange-600/40`}>
-                                                    <CheckCircle2 className={`h-6 w-6 text-orange-400`} />
-                                                </div>
-                                                <div>
-                                                    <p className={`font-bold text-orange-50`}>
-                                                       Implementação Rápida
-                                                     </p>
-                                                     <p className={`text-sm text-orange-200`}>
-                                                       Seu sistema rodando em 3 dias
-                                                     </p>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex items-center gap-4">
-                                                <div className={`flex-shrink-0 p-2 rounded-lg bg-orange-600/40`}>
-                                                    <CheckCircle2 className={`h-6 w-6 text-orange-400`} />
-                                                </div>
-                                                <div>
-                                                    <p className={`font-bold text-orange-50`}>
-                                                        Suporte Premium 24/7
-                                                    </p>
-                                                    <p className={`text-sm text-orange-200`}>
-                                                        Consultoria incluída
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* CTAs */}
-                                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                            <Button
-                                                size="lg"
-                                                className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800`}
-                                                onClick={() =>
-                                                    document
-                                                        .getElementById("proposal")
-                                                        ?.scrollIntoView({ behavior: "smooth" })
-                                                }
-                                            >
-                                                Começar Agora <ArrowRight className="ml-2 w-4 h-4" />
-                                            </Button>
-                                            <Button
-                                                size="lg"
-                                                className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-red-600 hover:bg-red-700`}
-                                                onClick={() =>
-                                                    window.open("https://wa.me/5532991075164", "_blank")
-                                                }
-                                            >
-                                                💬 WhatsApp
-                                            </Button>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Side - Image - Takes 6 columns */}
-                                    <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
-                                        <div className="relative" style={{ width: '500px', height: '500px' }}>
-                                            {/* Light Background */}
-                                            <div className="absolute inset-0 rounded-3xl" style={{
-                                                background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)',
-                                                filter: 'blur(20px)',
-                                                zIndex: 0
-                                            }}></div>
-
-                                            {/* Image */}
-                                            <img
-                                                src={carImg}
-                                                alt="Carro"
-                                                className="relative rounded-3xl"
-                                                style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Scroll Indicator */}
-                            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
-                                <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
-                                <ChevronDown className="w-5 h-5 text-orange-400 animate-bounce mx-auto" />
-                            </div>
-                        </section>
-
-                        {/* Hero 3 - Verde com Caminhão */}
-                        <section className="relative w-full flex-shrink-0 flex items-center justify-center overflow-hidden bg-black pt-16 pb-16" style={{ minHeight: 'calc(100vh - 50px)' }}>
-                            {/* Background Image */}
-                            <div className="absolute inset-0 z-0">
-                                <img
-                                    src={heroes[2].backgroundImage}
-                                    alt="Negócio Automotivo"
-                                    className="w-full h-full object-cover opacity-35 transition-opacity duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-r from-green-950 via-green-950/70 to-green-950/40"></div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                                    {/* Left Side - Text - Takes 6 columns */}
-                                    <div className={`md:col-span-6 order-1 md:order-1 text-emerald-50`} style={{ minHeight: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-                                        <div style={{ height: '50px', display: 'flex', alignItems: 'flex-end', marginBottom: '12px' }}>
-                                            <div className="inline-block">
-                                                <div className={`px-4 py-2 rounded-full text-sm font-semibold border bg-purple-600/40 text-purple-200 border-purple-500/50`}>
-                                                    🎨 Películas & Envelopamento
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <h1 className={`leading-tight mb-6 font-black text-5xl sm:text-6xl lg:text-7xl`}>
-                                            Películas & Envelopamento<br /><span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Sempre Agendados.</span>
-                                        </h1>
-
-                                        {/* Mobile Image - positioned between title and paragraph */}
-                                        <div className="md:hidden flex justify-center">
-                                            <div className="relative w-full max-w-sm">
-                                                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-600/30 to-teal-600/30 rounded-3xl blur-3xl"></div>
-                                                <img
-                                                    src="/truck.png"
-                                                    alt="Caminhão"
-                                                    className="relative rounded-2xl shadow-2xl w-full h-auto"
-                                                    style={{ maxHeight: '400px', objectFit: 'contain' }}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <p className={`leading-relaxed text-xl text-purple-100`}>
-                                                Películas e envelopamento exigem agendamentos bem sincronizados. Com AutoClub Pro: clientes marcam, você gerencia equipe, não perde ninguém. Margem de 30%+ com agenda 95% preenchida. Lucro garantido.
-                                            </p>
-                                        </div>
-
-                                        {/* Value Props - Simples e Limpo */}
-                                        <div className="space-y-5 pt-6">
-                                            <div className="flex items-center gap-4">
-                                                <div className={`flex-shrink-0 p-2 rounded-lg bg-purple-600/40`}>
-                                                    <CheckCircle2 className={`h-6 w-6 text-purple-400`} />
-                                                </div>
-                                                <div>
-                                                    <p className={`font-bold text-purple-50`}>
-                                                        Agendamentos Automáticos
-                                                    </p>
-                                                    <p className={`text-sm text-purple-200`}>
-                                                        Cliente marca e recebe lembrete
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div className="flex items-center gap-4">
-                                                <div className={`flex-shrink-0 p-2 rounded-lg bg-purple-600/40`}>
-                                                    <CheckCircle2 className={`h-6 w-6 text-purple-400`} />
-                                                </div>
-                                                <div>
-                                                    <p className={`font-bold text-purple-50`}>
-                                                        Gestão de Equipe
-                                                    </p>
-                                                    <p className={`text-sm text-purple-200`}>
-                                                        Atribua técnicos, controle comissão
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* CTAs */}
-                                        <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                            <Button
-                                                size="lg"
-                                                className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800`}
-                                                onClick={() =>
-                                                    document
-                                                        .getElementById("proposal")
-                                                        ?.scrollIntoView({ behavior: "smooth" })
-                                                }
-                                            >
-                                                Ver Detalhes <ArrowRight className="ml-2 w-4 h-4" />
-                                            </Button>
-                                            <Button
-                                                size="lg"
-                                                className={`text-white px-8 py-6 font-bold shadow-lg rounded-lg bg-teal-600 hover:bg-teal-700`}
-                                                onClick={() =>
-                                                    window.open("https://wa.me/5532991075164", "_blank")
-                                                }
-                                            >
-                                                💬 WhatsApp
-                                            </Button>
-                                        </div>
-                                    </div>
-
-                                    {/* Right Side - Image - Takes 6 columns */}
-                                    <div className="hidden md:flex md:col-span-6 justify-end items-center order-2 md:order-2">
-                                        <div className="relative" style={{ width: '500px', height: '500px' }}>
-                                            {/* Light Background */}
-                                            <div className="absolute inset-0 rounded-3xl" style={{
-                                                background: 'radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.15) 40%, transparent 70%)',
-                                                filter: 'blur(20px)',
-                                                zIndex: 0
-                                            }}></div>
-
-                                            {/* Image */}
-                                            <img
-                                                src="/truck.png"
-                                                alt="Caminhão"
-                                                className="relative rounded-3xl"
-                                                style={{ width: '100%', height: '100%', objectFit: 'contain', zIndex: 1 }}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Scroll Indicator */}
-                            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-10 text-center pointer-events-none">
-                                <p className="text-white text-xs font-semibold mb-2">Veja como funciona</p>
-                                <ChevronDown className="w-5 h-5 text-emerald-400 animate-bounce mx-auto" />
-                            </div>
-                        </section>
+                {/* Hero Section */}
+                <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black pt-16 pb-16">
+                    {/* Background */}
+                    <div className="absolute inset-0 z-0">
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-950 via-slate-900 to-black"></div>
                     </div>
 
-                    {/* Carousel Navigation - Botões */}
-                    <button
-                        onClick={prevHero}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
-                    >
-                        <ChevronLeft className="w-6 h-6" />
-                    </button>
+                    {/* Content */}
+                    <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-150px)]">
+                            {/* Left: Text */}
+                            <div className="flex flex-col justify-center">
+                                <div className="mb-6">
+                                    <div className="inline-block px-4 py-2 rounded-full text-sm font-semibold border bg-blue-600/40 text-blue-200 border-blue-500/50 mb-4">
+                                        ✨ Sistema Personalizado para Seu Negócio
+                                    </div>
+                                </div>
 
-                    <button
-                        onClick={nextHero}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
-                    >
-                        <ChevronRight className="w-6 h-6" />
-                    </button>
+                                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+                                    Gestão de <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Serviços Automotivos</span> <br /> com Identidade Própria
+                                </h1>
 
-                    {/* Carousel Dots - Indicadores */}
-                    <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-                        {heroes.map((_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setCurrentHeroIndex(idx)}
-                                className={`w-2 h-2 rounded-full transition ${idx === currentHeroIndex ? "bg-white" : "bg-white/50"
-                                    }`}
-                            />
-                        ))}
+                                <p className="text-lg text-slate-300 mb-8 max-w-xl">
+                                    Sistema de agendamentos, vendas e gestão 100% personalizado com a identidade visual da sua marca. Não é genérico. É seu.
+                                </p>
+
+                                {/* Value Props */}
+                                <div className="space-y-4 mb-8">
+                                    <div className="flex items-center gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                        <span className="text-white">Implementação em 3 dias - Sistema rodando na sua empresa</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                        <span className="text-white">Suporte 24/7 por WhatsApp - Sempre ao seu lado</span>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                                        <span className="text-white">R$ 1.200 implementação + R$ 120/mês - Investimento que retorna em dias</span>
+                                    </div>
+                                </div>
+
+                                {/* CTAs */}
+                                <div className="flex flex-col sm:flex-row gap-4">
+                                    <Button 
+                                        size="lg" 
+                                        className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 font-bold"
+                                        onClick={() => document.getElementById("proposal")?.scrollIntoView({ behavior: "smooth" })}
+                                    >
+                                        Ver Proposta <ArrowRight className="ml-2 w-5 h-5" />
+                                    </Button>
+                                    <Button 
+                                        size="lg" 
+                                        className="bg-green-600 hover:bg-green-700 text-white px-8 py-6 font-bold"
+                                        onClick={() => window.open("https://wa.me/5532991075164")}
+                                    >
+                                        💬 WhatsApp
+                                    </Button>
+                                </div>
+                            </div>
+
+                            {/* Right: YouTube Video */}
+                            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                                <iframe
+                                    width="100%"
+                                    height="100%"
+                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
+                                    title="AutoClub Pro Demo"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="absolute inset-0"
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </section>
+
+                {/* Sistema Homologado + Personalização Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-4xl sm:text-5xl font-bold text-center text-white mb-4">
+                            Somos o Sistema Homologado<br />das Maiores Redes de Oficinas do Brasil
+                        </h2>
+                        <p className="text-center text-xl text-blue-200 mb-12 max-w-3xl mx-auto">
+                            Mas com uma diferença crucial: cada implementação tem a <span className="font-bold text-white">cara e identidade da sua empresa</span>. Não é um sistema genérico com a marca de outro. É personalizado 100% para você.
+                        </p>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[1, 2, 3].map((idx) => (
+                                <div key={idx} className="group relative">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-cyan-600/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                                    <div className="relative bg-slate-900/80 backdrop-blur border border-blue-500/30 rounded-2xl overflow-hidden h-64">
+                                        <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-700 flex items-center justify-center">
+                                            <div className="text-center">
+                                                <p className="text-slate-400 text-sm">Exemplo de Tela {idx}</p>
+                                                <p className="text-white text-xs mt-2">Com sua identidade visual</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {[
+                                {
+                                    title: "Cores e Logo da Sua Empresa",
+                                    desc: "Sistema com a identidade visual da sua marca, não genérico"
+                                },
+                                {
+                                    title: "Workflows Customizados",
+                                    desc: "Cada processo adaptado para a forma como você trabalha"
+                                },
+                                {
+                                    title: "White Label Completo",
+                                    desc: "Seus clientes veem o sistema com o nome e marca da sua empresa"
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="bg-blue-600/10 border border-blue-500/30 rounded-xl p-6">
+                                    <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
+                                    <p className="text-slate-300">{item.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+
 
                 {/* Problems Section - Reorganizado com novo design */}
                 <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-black dark:via-slate-950 dark:to-black">
@@ -1343,9 +1044,9 @@ const AutoClubPro = () => {
                                         <div className="mb-6">
                                             <p className="text-sm font-semibold text-blue-300 mb-4">Comece Agora Por Apenas</p>
                                             <p className="text-5xl font-black bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent">
-                                                R$ 349,00
+                                                R$ 1.200,00
                                             </p>
-                                            <p className="text-lg font-semibold text-white mt-2">Implementação + R$ 89/mês</p>
+                                            <p className="text-lg font-semibold text-white mt-2">Personalização + R$ 120/mês</p>
                                         </div>
                                     </div>
 
@@ -1355,11 +1056,11 @@ const AutoClubPro = () => {
                                         <div className="space-y-3">
                                             <div className="flex items-center gap-3 text-sm">
                                                 <div className="w-8 h-8 rounded-full bg-blue-500/30 flex items-center justify-center text-blue-300 font-bold text-xs">1</div>
-                                                <span className="text-gray-300">R$ 349,00 na implementação</span>
+                                                <span className="text-gray-300">R$ 1.200,00 na personalização do sistema</span>
                                             </div>
                                             <div className="flex items-center gap-3 text-sm">
                                                 <div className="w-8 h-8 rounded-full bg-green-500/30 flex items-center justify-center text-green-300 font-bold text-xs">2</div>
-                                                <span className="text-gray-300">R$ 89,00 mensais (cancelável)</span>
+                                                <span className="text-gray-300">R$ 120,00 mensais de suporte 24/7 (cancelável)</span>
                                             </div>
                                         </div>
                                         <p className="text-xs text-blue-300 mt-4 italic">
