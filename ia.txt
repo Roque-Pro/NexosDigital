@@ -1,11 +1,1 @@
-veja este site:
-https://ultracar.com.br/
-
-Quero que você copie para o site autoclub-pro toda a estilização, copy e artmanhas usadas oara performar bem no google, mas com algumas alterações e que tambem mantenha alguma coisas. Vamos la.
-
-- nao se preocupe e manter, a reforma sera mesmo estrutural e de conceito..pode retirar o slide de sections que tem no hero atualmente.
-- ao copiar o hero da pagina atual, a diferença é que em vez da imagem - quero um frame de video do youtube
-- Ainda na pagina a ser copiada, logo abaixo, na seção com titulo ( Somos o sistema homologado das maiores redes de oficinas do Brasil), quero que de enfase que o sistema é personalizado com a cara da empresa, fortalecendo a identidade e a marca - e que nao é sistema generico ou com a cara de outra empresa - e 3 imagem abaixo lado a lado ( que colocarei exemplos de tela)
-- quero que mantenha nossos videos demonstrativos - mas fique a vontade para reencaixa-los nessa nova copy
-- nao precisa copiar os valores..nossos valores são: 1.800 a implementação e 120 mensal de suporte - 24h 7 dias por semana --- 
-- Não temos teste gratis pq nosso sistema é personlizado ( nao precisa dizer - mas se quiser dizer - faça da melhor forma)
+troque isso que esta no inicio ... "✨ Sistema de Gestão Automotiva" pela imagem que esta em src/img com nome de logo-autocub... pra ela ficar melhor adapatada , precisa mudar a cor do fundo do hero para branco
