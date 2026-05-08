@@ -7,6 +7,10 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import logoClubeImg from "@/img/logo-autocub.png";
+import clienteImg from "@/img/cliente.png";
+import reparoVidrosImg from "@/img/Reparo de Vidros.png";
+import autoCenterImg from "@/img/Auto Center.png";
+import esteticaAutomotivaImg from "@/img/Estética Automotiva.png";
 import {
     CheckCircle2,
     TrendingUp,
@@ -140,18 +144,14 @@ const AutoClubPro = () => {
                                 </div>
                             </div>
 
-                            {/* Right: Video */}
-                            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
-                                <iframe
-                                    width="100%"
-                                    height="100%"
-                                    src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1"
-                                    title="AutoClub Pro Demo"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    className="absolute inset-0"
-                                ></iframe>
+                            {/* Right: Image */}
+                            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+                                <img 
+                                    src={clienteImg} 
+                                    alt="Cliente Satisfeito AutoClub Pro" 
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                             </div>
                         </div>
                     </div>
@@ -181,20 +181,22 @@ const AutoClubPro = () => {
 
                         {/* 3 Images Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                            {[1, 2, 3].map((idx) => (
-                                <div key={idx} className="group cursor-pointer">
-                                    <div className="relative h-64 bg-gradient-to-br from-gray-300 to-gray-400 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                                        <div className="w-full h-full flex items-center justify-center text-gray-500">
-                                            <div className="text-center">
-                                                <p className="text-sm font-semibold">Exemplo de Tela {idx}</p>
-                                                <p className="text-xs mt-1">Com sua identidade</p>
-                                            </div>
-                                        </div>
+                            {[
+                                { img: reparoVidrosImg, title: "Reparo de Vidros" },
+                                { img: autoCenterImg, title: "Auto Center" },
+                                { img: esteticaAutomotivaImg, title: "Estética Automotiva" }
+                            ].map((item, idx) => (
+                                <div key={idx} className="group cursor-pointer" onClick={() => setSelectedImage(item.img)}>
+                                    <div className="relative h-64 bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.title} 
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
                                     </div>
-                                    <p className="mt-4 font-semibold text-gray-900">
-                                        {idx === 1 && "Dashboard Personalizável"}
-                                        {idx === 2 && "Agendamentos com Sua Marca"}
-                                        {idx === 3 && "Relatórios com Seus Cores"}
+                                    <p className="mt-4 font-bold text-gray-900 text-lg">
+                                        {item.title}
                                     </p>
                                 </div>
                             ))}
