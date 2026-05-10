@@ -432,75 +432,133 @@ const AutoClubPro = () => {
                 </section>
 
                 {/* PREÇOS */}
-                <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-                            Investimento Acessível
-                        </h2>
-                        <p className="text-center text-gray-600 mb-16">
-                            Implementação + 3 meses de suporte grátis 24/7
-                        </p>
+                <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-blue-50">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+                                Investimento Estratégico
+                            </h2>
+                            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                                Estrutura profissional de elite com suporte contínuo para sua oficina dominar o mercado.
+                            </p>
+                        </div>
 
-                        <div className="bg-white rounded-2xl shadow-xl p-12 border-2 border-blue-600">
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                                {/* Left */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                            {/* Card 1: Setup/Implementation */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6 }}
+                                className="bg-white rounded-3xl shadow-xl border-2 border-slate-100 p-8 md:p-12 flex flex-col justify-between"
+                            >
                                 <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-8">O que está incluído</h3>
-                                    <ul className="space-y-4">
+                                    <div className="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-6">
+                                        Setup & Estrutura
+                                    </div>
+                                    <h3 className="text-3xl font-black text-gray-900 mb-2">Implementação de Elite</h3>
+                                    <p className="text-gray-600 mb-8 leading-relaxed">
+                                        Toda a base tecnológica e visual desenvolvida sob medida para sua empresa.
+                                    </p>
+                                    
+                                    <div className="mb-8">
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 2.650</p>
+                                        <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (em até 12x no cartão)</p>
+                                    </div>
+
+                                    <ul className="space-y-4 mb-10">
                                         {[
-                                            "Landing Page Profissional (Página de Vendas) da sua empresa",
-                                            "Personalização visual completa do sistema",
-                                            "Área de Clientes para agendamento",
-                                            "Gestão de clientes (CRM)",
-                                            "Controle de vendas e comissões",
-                                            "Gestão de estoque",
-                                            "Integração WhatsApp/Instagram/Facebook",
-                                            "Dashboard de analytics",
-                                            "3 meses de suporte grátis 24/7 via WhatsApp",
-                                            "Treinamento completo da equipe"
+                                            "Landing Page Profissional (Página de Vendas)",
+                                            "Personalização Visual 100% (Sua Marca)",
+                                            "Configuração Completa do Sistema CRM",
+                                            "Mapeamento e Cadastro de Estoque Inicial",
+                                            "Setup de Agendamentos Online via WhatsApp",
+                                            "Treinamento VIP para você e sua equipe",
+                                            "Integração com Instagram/Facebook/Meta",
+                                            "3 Meses de Suporte Premium Grátis"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
-                                                <CheckCircle2 className={`w-5 h-5 mt-0.5 flex-shrink-0 ${idx < 3 ? "text-blue-600 animate-pulse" : "text-green-600"}`} />
-                                                <span className={`text-gray-700 ${idx < 3 ? "font-bold text-blue-900" : ""}`}>{item}</span>
+                                                <div className="mt-1 bg-blue-50 rounded-full p-0.5">
+                                                    <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                                                </div>
+                                                <span className="text-gray-700 font-medium text-sm">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
                                 </div>
 
-                                {/* Right */}
-                                <div className="flex flex-col justify-between">
-                                    <div>
-                                        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Investimento Implementação</p>
-                                        <div className="mb-4">
-                                            <p className="text-6xl font-black text-gray-900 tracking-tighter">
-                                                R$ 2.650
-                                            </p>
-                                            <p className="text-blue-600 font-bold text-lg mt-1">
-                                                Em até 12x no cartão de crédito
-                                            </p>
-                                        </div>
-                                        <p className="text-gray-600 mb-8 leading-tight">Implementação completa + Sua Landing Page Personalizada</p>
+                                <Button 
+                                    size="lg"
+                                    className="w-full bg-slate-900 hover:bg-black text-white font-bold py-7 text-lg rounded-2xl transition-all shadow-lg"
+                                    onClick={() => window.open("https://wa.me/5532991075164")}
+                                >
+                                    Contratar Implementação
+                                </Button>
+                            </motion.div>
 
-                                        <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-2">Manutenção e Suporte</p>
-                                        <p className="text-4xl font-bold text-gray-900 mb-1">R$ 89<span className="text-lg font-normal text-gray-500">/mês</span></p>
-                                        <p className="text-gray-600 mb-8 italic">Suporte 24/7 (cancelável a qualquer momento)</p>
-
-                                        <div className="bg-blue-50 p-4 rounded-xl border border-blue-100 mb-8">
-                                            <p className="text-sm text-gray-700">
-                                                <span className="font-semibold">💡 Retorno Rápido:</span> Sua nova Landing Page + Sistema de Agendamentos costumam pagar o investimento em menos de 45 dias.
-                                            </p>
-                                        </div>
+                            {/* Card 2: Essential Plan (Monthly) */}
+                            <motion.div 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="bg-blue-600 rounded-3xl shadow-2xl border-4 border-blue-500 p-8 md:p-12 text-white flex flex-col justify-between transform lg:scale-105"
+                            >
+                                <div>
+                                    <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500 text-blue-50 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-400">
+                                        Manutenção & Evolução
+                                    </div>
+                                    <h3 className="text-3xl font-black mb-2">Plano Essencial</h3>
+                                    <p className="text-blue-100 mb-8 leading-relaxed">
+                                        A segurança e estabilidade que seu negócio precisa para nunca parar de crescer.
+                                    </p>
+                                    
+                                    <div className="mb-8">
+                                        <p className="text-5xl font-black tracking-tighter">R$ 89<span className="text-xl font-normal opacity-80">/mês</span></p>
+                                        <p className="text-blue-200 font-medium text-sm mt-2 italic">Suporte 24/7 incluso</p>
                                     </div>
 
+                                    <ul className="space-y-4 mb-10">
+                                        {[
+                                            "Suporte VIP 24/7 direto pelo WhatsApp",
+                                            "Hospedagem Profissional de Alta Performance",
+                                            "Manutenção Técnica e Atualizações de Segurança",
+                                            "Backups Diários de todos os seus dados",
+                                            "Consultoria Mensal de Processos",
+                                            "Garantia de 99.9% de Estabilidade Online",
+                                            "Dashboard de Analytics em Tempo Real",
+                                            "Relatórios de Performance Mensais"
+                                        ].map((item, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <div className="mt-1 bg-blue-500 rounded-full p-0.5 border border-blue-400">
+                                                    <CheckCircle2 className="w-4 h-4 text-white" />
+                                                </div>
+                                                <span className="text-blue-50 font-medium text-sm">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <div className="space-y-4">
                                     <Button 
                                         size="lg"
-                                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-black py-8 text-xl shadow-lg shadow-blue-200 transition-all hover:scale-[1.02]"
+                                        className="w-full bg-white hover:bg-blue-50 text-blue-600 font-black py-7 text-xl rounded-2xl transition-all shadow-xl shadow-blue-900/20 hover:scale-[1.02]"
                                         onClick={() => window.open("https://wa.me/5532991075164")}
                                     >
                                         Começar Agora
                                     </Button>
+                                    <p className="text-center text-xs text-blue-200 font-medium">
+                                        💡 Fale com nosso consultor no WhatsApp
+                                    </p>
                                 </div>
-                            </div>
+                            </motion.div>
+                        </div>
+
+                        {/* Return Box */}
+                        <div className="mt-16 bg-white/50 backdrop-blur-sm p-8 rounded-3xl border border-slate-200 text-center max-w-3xl mx-auto shadow-sm">
+                            <p className="text-gray-700 italic text-lg leading-relaxed">
+                                <span className="font-bold text-blue-600 underline">ROI Garantido:</span> Sua nova Landing Page + Sistema de Agendamentos costumam pagar todo o investimento em menos de 45 dias de operação.
+                            </p>
                         </div>
                     </div>
                 </section>
