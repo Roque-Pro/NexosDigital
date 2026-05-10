@@ -12,8 +12,18 @@ import {
     ArrowUp,
     Menu,
     X,
+    Server,
+    ShieldCheck,
+    MousePointer2,
+    BarChart3,
+    Cpu,
+    Database,
+    Layers,
+    Globe,
+    MessageSquare,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Landing = () => {
@@ -127,11 +137,11 @@ const Landing = () => {
                             </span>
                             Especialista em Escala Digital
                         </div>
-                        <h2 className="text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] tracking-tighter mb-8">
-                            Seu ecossistema de vendas com <span className="text-blue-600">Alta Performance.</span>
+                        <h2 className="text-5xl sm:text-6xl lg:text-8xl font-black leading-[0.95] tracking-tighter mb-8 italic">
+                            Transformamos <span className="text-blue-600">Código</span> em <span className="underline decoration-blue-600 underline-offset-8">Lucro Real.</span>
                         </h2>
                         <p className="text-xl text-slate-600 leading-relaxed max-w-xl mb-10">
-                            Engenharia de Software de elite unida à inteligência de <strong>Tráfego Pago</strong> e <strong>SEO Técnico</strong>. Desenvolvemos o sistema e a estratégia que fazem o AutoClub Pro dominar o mercado.
+                            Engenharia de Software de elite unida à inteligência de <strong>Tráfego Pago</strong> e <strong>SEO Técnico</strong>. Desenvolvemos o ecossistema digital que faz o AutoClub Pro dominar o mercado e escalar com previsibilidade.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Button 
@@ -139,7 +149,7 @@ const Landing = () => {
                                 size="lg"
                                 className="bg-blue-600 hover:bg-blue-700 text-white font-black h-16 px-10 text-lg rounded-2xl shadow-xl shadow-blue-100 transition-all hover:scale-105"
                             >
-                                Escalar meu Negócio <ArrowRight className="ml-2" />
+                                Analisar meu Projeto <ArrowRight className="ml-2" />
                             </Button>
                             <Button 
                                 onClick={() => document.getElementById("servicos")?.scrollIntoView({ behavior: "smooth" })}
@@ -181,6 +191,54 @@ const Landing = () => {
                         <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl -z-10" />
                         <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-slate-400/10 rounded-full blur-3xl -z-10" />
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Pillars Section */}
+            <section className="py-24 px-4 bg-white border-b border-slate-50">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="space-y-6 p-8 rounded-[2.5rem] hover:bg-slate-50 transition-colors group"
+                        >
+                            <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-100 group-hover:scale-110 transition-transform">
+                                <ShieldCheck className="w-7 h-7" />
+                            </div>
+                            <h3 className="text-3xl font-black tracking-tighter">Engenharia de Estabilidade</h3>
+                            <p className="text-slate-600 leading-relaxed">Não apenas "sites", mas infraestruturas robustas. Focamos em tempo de carregamento sub-segundo e disponibilidade 99.9% para que sua operação nunca pare.</p>
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="space-y-6 p-8 rounded-[2.5rem] hover:bg-slate-50 transition-colors group"
+                        >
+                            <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-100 group-hover:scale-110 transition-transform">
+                                <BarChart3 className="w-7 h-7" />
+                            </div>
+                            <h3 className="text-3xl font-black tracking-tighter">Marketing de Dados</h3>
+                            <p className="text-slate-600 leading-relaxed">Tráfego pago sem tracking é desperdício. Implementamos telemetria avançada para medir cada centavo investido e o retorno gerado (ROAS).</p>
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="space-y-6 p-8 rounded-[2.5rem] hover:bg-slate-50 transition-colors group"
+                        >
+                            <div className="w-14 h-14 rounded-2xl bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-100 group-hover:scale-110 transition-transform">
+                                <MousePointer2 className="w-7 h-7" />
+                            </div>
+                            <h3 className="text-3xl font-black tracking-tighter">Design Conversivo</h3>
+                            <p className="text-slate-600 leading-relaxed">A estética a serviço da venda. Criamos interfaces intuitivas que guiam o usuário pelo funil de vendas, maximizando a taxa de conversão do seu tráfego.</p>
+                        </motion.div>
+                    </div>
                 </div>
             </section>
 
@@ -232,6 +290,100 @@ const Landing = () => {
                 </div>
             </section>
 
+            {/* Methodology Section */}
+            <section className="py-24 bg-white px-4 overflow-hidden">
+                <div className="max-w-7xl mx-auto">
+                    <div className="flex flex-col lg:flex-row gap-16 items-center">
+                        <div className="flex-1">
+                            <h3 className="text-4xl sm:text-6xl font-black tracking-tighter mb-8 italic">Nossa <span className="text-blue-600">Metodologia.</span></h3>
+                            <div className="space-y-12">
+                                <div className="flex gap-6">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-black">01</div>
+                                    <div>
+                                        <h4 className="text-xl font-black mb-2 uppercase tracking-tighter">Diagnóstico & Estratégia</h4>
+                                        <p className="text-slate-600">Mapeamos seus processos e identificamos os canais com maior potencial de retorno imediato.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-black">02</div>
+                                    <div>
+                                        <h4 className="text-xl font-black mb-2 uppercase tracking-tighter">Engenharia & Implementação</h4>
+                                        <p className="text-slate-600">Desenvolvemos as ferramentas e configuramos as campanhas com foco total em performance técnica.</p>
+                                    </div>
+                                </div>
+                                <div className="flex gap-6">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-black">03</div>
+                                    <div>
+                                        <h4 className="text-xl font-black mb-2 uppercase tracking-tighter">Escala & Otimização</h4>
+                                        <p className="text-slate-600">Analisamos os dados em tempo real para escalar o que funciona e ajustar o que pode ser melhorado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex-1 relative">
+                            <div className="bg-slate-900 rounded-[3rem] p-8 sm:p-12 shadow-2xl text-white">
+                                <div className="flex items-center gap-4 mb-8">
+                                    <div className="w-3 h-3 rounded-full bg-red-500" />
+                                    <div className="w-3 h-3 rounded-full bg-yellow-500" />
+                                    <div className="w-3 h-3 rounded-full bg-green-500" />
+                                </div>
+                                <div className="space-y-6 font-mono text-sm sm:text-base">
+                                    <p className="text-blue-400"># Analisando métricas de performance...</p>
+                                    <p className="text-green-400">$ tech-nexos optimize --project="autoclub-pro"</p>
+                                    <p className="text-slate-400">>> Carregando dados estruturados...</p>
+                                    <p className="text-slate-400">>> Verificando Core Web Vitals...</p>
+                                    <p className="text-white font-bold">LCP: 0.8s (Excelente)</p>
+                                    <p className="text-white font-bold">ROAS: 4.8x (Escalando...)</p>
+                                    <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                        <motion.div 
+                                            initial={{ width: 0 }}
+                                            whileInView={{ width: "100%" }}
+                                            transition={{ duration: 2 }}
+                                            className="bg-blue-500 h-full"
+                                        />
+                                    </div>
+                                    <p className="text-blue-400 italic">// Sucesso: Ecossistema otimizado para lucro.</p>
+                                </div>
+                            </div>
+                            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-blue-100 rounded-full blur-[120px] opacity-50" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Tech Stack Section */}
+            <section className="py-24 bg-slate-50 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h3 className="text-3xl sm:text-5xl font-black tracking-tighter mb-4">Stack de <span className="text-blue-600">Elite.</span></h3>
+                        <p className="text-slate-600">As tecnologias que garantem sua vantagem competitiva.</p>
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                        {[
+                            { icon: Cpu, name: "React / Next.js", desc: "Frontend Ultra Rápido" },
+                            { icon: Server, name: "Node.js", desc: "Backend Escalável" },
+                            { icon: Database, name: "Supabase / SQL", desc: "Dados Seguros" },
+                            { icon: Layers, name: "Tailwind CSS", desc: "Design Moderno" },
+                            { icon: Globe, name: "Vercel / AWS", desc: "Cloud de Alta Performance" },
+                            { icon: MessageSquare, name: "WhatsApp API", desc: "Automação de Vendas" },
+                        ].map((tech, i) => (
+                            <motion.div 
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.05 }}
+                                className="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow text-center"
+                            >
+                                <tech.icon className="w-8 h-8 mx-auto mb-4 text-blue-600" />
+                                <p className="font-black text-sm mb-1">{tech.name}</p>
+                                <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest">{tech.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* CTA Final */}
             <section className="py-24 px-4 bg-blue-600 relative overflow-hidden">
                 <div className="max-w-4xl mx-auto text-center relative z-10 text-white">
@@ -248,6 +400,43 @@ const Landing = () => {
                 </div>
                 <div className="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 left-0 -ml-32 -mb-32 w-96 h-96 bg-black/10 rounded-full blur-3xl"></div>
+            </section>
+
+            {/* FAQ Section */}
+            <section id="faq" className="py-24 bg-white px-4">
+                <div className="max-w-3xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h3 className="text-3xl sm:text-5xl font-black tracking-tighter mb-4 italic">Dúvidas <span className="text-blue-600">Frequentes.</span></h3>
+                        <p className="text-slate-600">Transparência total desde o primeiro contato.</p>
+                    </div>
+
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        <AccordionItem value="item-1" className="border border-slate-200 rounded-3xl px-6 py-2 overflow-hidden bg-slate-50/50">
+                            <AccordionTrigger className="hover:no-underline font-black text-left text-slate-800">Como funciona o diagnóstico gratuito?</AccordionTrigger>
+                            <AccordionContent className="text-slate-600 leading-relaxed">
+                                Analisamos sua presença digital atual, identificamos gargalos técnicos e de marketing, e entregamos um plano de ação personalizado. Sem compromisso.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2" className="border border-slate-200 rounded-3xl px-6 py-2 overflow-hidden bg-slate-50/50">
+                            <AccordionTrigger className="hover:no-underline font-black text-left text-slate-800">Quanto tempo leva para ver resultados?</AccordionTrigger>
+                            <AccordionContent className="text-slate-600 leading-relaxed">
+                                Campanhas de tráfego pago geram leads em dias. Otimizações de SEO e performance técnica levam de 4 a 12 semanas para maturação completa no Google.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3" className="border border-slate-200 rounded-3xl px-6 py-2 overflow-hidden bg-slate-50/50">
+                            <AccordionTrigger className="hover:no-underline font-black text-left text-slate-800">Vocês atendem qualquer tipo de negócio?</AccordionTrigger>
+                            <AccordionContent className="text-slate-600 leading-relaxed">
+                                Focamos em empresas que buscam escala através de tecnologia e marketing de performance. Nosso expertise é maior em SaaS, E-commerce e Serviços de alto valor agregado.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-4" className="border border-slate-200 rounded-3xl px-6 py-2 overflow-hidden bg-slate-50/50">
+                            <AccordionTrigger className="hover:no-underline font-black text-left text-slate-800">O que é SEO Técnico?</AccordionTrigger>
+                            <AccordionContent className="text-slate-600 leading-relaxed">
+                                É a otimização da infraestrutura do site (velocidade, dados estruturados, indexação) para garantir que o Google entenda e priorize seu conteúdo nas buscas.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
             </section>
 
             {/* Footer Simple */}
