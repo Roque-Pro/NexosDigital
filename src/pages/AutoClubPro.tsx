@@ -587,7 +587,7 @@ const AutoClubPro = () => {
                                         {[
                                             "Tudo do Plano Essencial Inclusivo",
                                             "SEO Local: Topo das Buscas no Google",
-                                            "Gestão de Google Meu Negócio VIP",
+                                            "SEO Técnico e Arquitetura de Conversão",
                                             "Otimização Contínua de Conversão",
                                             "Relatórios Detalhados de Tráfego e SEO"
                                         ].map((item, idx) => (
