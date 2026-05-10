@@ -481,10 +481,7 @@ const AutoClubPro = () => {
                                             "Landing Page Profissional (Página de Vendas)",
                                             "Personalização Visual 100% (Sua Marca)",
                                             "Configuração Completa do Sistema CRM",
-                                            "Mapeamento e Cadastro de Estoque Inicial",
-                                            "Setup de Agendamentos Online via WhatsApp",
                                             "Treinamento VIP para você e sua equipe",
-                                            "Integração com Instagram/Facebook/Meta",
                                             "3 Meses de Suporte Premium Grátis"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
@@ -536,11 +533,8 @@ const AutoClubPro = () => {
                                             "Suporte VIP 24/7 direto pelo WhatsApp",
                                             "Hospedagem Profissional de Alta Performance",
                                             "Manutenção Técnica e Atualizações de Segurança",
-                                            "Backups Diários de todos os seus dados",
                                             "Consultoria Mensal de Processos",
-                                            "Garantia de 99.9% de Estabilidade Online",
-                                            "Dashboard de Analytics em Tempo Real",
-                                            "Relatórios de Performance Mensais"
+                                            "Garantia de 99.9% de Estabilidade Online"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
                                                 <div className="mt-1 bg-blue-500 rounded-full p-0.5 border border-blue-400">
