@@ -65,94 +65,165 @@ const AutoClubPro = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900">
+            <Navbar />
             <main>
                 {/* HERO SECTION */}
-                <section className="relative bg-white pt-20 pb-20 px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-6xl mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[600px]">
+                <section className="relative bg-white pt-24 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+                    {/* Background decoration */}
+                    <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[600px] h-[600px] bg-blue-50 rounded-full blur-3xl opacity-50 -z-10" />
+                    <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[400px] h-[400px] bg-slate-50 rounded-full blur-3xl opacity-50 -z-10" />
+
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[700px]">
                             {/* Left: Text */}
-                            <div>
-                                <div className="mb-12">
-                                    <img src={logoClubeImg} alt="AutoClub Pro" className="h-40 mb-8" />
-                                </div>
+                            <div className="relative z-10">
+                                <motion.div
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.5 }}
+                                    className="mb-8"
+                                >
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6">
+                                        <span className="relative flex h-2 w-2">
+                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
+                                        </span>
+                                        <span className="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Sistema 100% Personalizado</span>
+                                    </div>
+                                    <img src={logoClubeImg} alt="AutoClub Pro" className="h-28 md:h-32 mb-6" />
+                                </motion.div>
 
                                 <motion.h1
-                                    className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight text-gray-900"
+                                    className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] mb-8 tracking-tighter text-gray-900"
                                     initial={{ opacity: 0, y: 30 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.7, ease: "easeOut" }}
+                                    transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                                 >
-                                    Sua oficina ou auto center
+                                    Seu Sistema. Sua Marca.
                                     <br />
-                                    com a{" "}
-                                    <span className="relative inline-block">
-                                        <span className="text-blue-600">cara certa</span>
+                                    A <span className="relative inline-block">
+                                        <span className="text-blue-600">cara</span>
                                         <motion.span
-                                            className="absolute -bottom-2 left-0 h-1.5 rounded-full bg-blue-600"
+                                            className="absolute -bottom-2 left-0 h-2 rounded-full bg-blue-600/20"
                                             initial={{ width: 0 }}
                                             animate={{ width: "100%" }}
-                                            transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
+                                            transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                                         />
-                                    </span>
+                                    </span> da sua empresa.
                                 </motion.h1>
 
-                                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                                    Sistema de agendamentos, vendas e gestão com personalização visual 100% para sua oficina ou auto center. Não é genérico com logo de outro. É seu, do jeito que você trabalha.
-                                </p>
+                                <motion.p 
+                                    className="text-xl text-gray-600 mb-10 leading-relaxed max-w-xl"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.4, duration: 0.8 }}
+                                >
+                                    Pare de usar softwares genéricos que fazem propaganda para os outros. O AutoClub Pro é a plataforma de elite que carrega a <strong>SUA identidade visual</strong>, elevando o nível de profissionalismo e confiança do seu negócio.
+                                </motion.p>
 
-                                {/* Benefits */}
-                                <div className="space-y-4 mb-8">
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                                {/* Benefits Grid */}
+                                <motion.div 
+                                    className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.6, duration: 0.6 }}
+                                >
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
+                                            <Star className="w-6 h-6" />
+                                        </div>
                                         <div>
-                                            <p className="font-semibold text-gray-900">Implementado em 3 dias</p>
-                                            <p className="text-sm text-gray-600">Sistema rodando na sua empresa</p>
+                                            <p className="font-bold text-gray-900">Sua Marca em Foco</p>
+                                            <p className="text-sm text-gray-600">Personalização total com sua logo e cores.</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm">
+                                            <Zap className="w-6 h-6" />
+                                        </div>
                                         <div>
-                                            <p className="font-semibold text-gray-900">Personalização Visual 100%</p>
-                                            <p className="text-sm text-gray-600">Cores, logo e identidade visual da sua empresa</p>
+                                            <p className="font-bold text-gray-900">3 Dias para o Ar</p>
+                                            <p className="text-sm text-gray-600">Implementação recorde para você não parar.</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 flex-shrink-0 shadow-sm">
+                                            <BarChart3 className="w-6 h-6" />
+                                        </div>
                                         <div>
-                                            <p className="font-semibold text-gray-900">Suporte 24/7 por WhatsApp</p>
-                                            <p className="text-sm text-gray-600">Sempre ao seu lado quando precisar</p>
+                                            <p className="font-bold text-gray-900">Gestão de Elite</p>
+                                            <p className="text-sm text-gray-600">Controle total de agendamentos e estoque.</p>
                                         </div>
                                     </div>
-                                </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0 shadow-sm">
+                                            <Headphones className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Suporte VIP</p>
+                                            <p className="text-sm text-gray-600">Acompanhamento 24/7 direto pelo WhatsApp.</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
 
                                 {/* CTA */}
-                                <div className="flex flex-col sm:flex-row gap-4">
+                                <motion.div 
+                                    className="flex flex-col sm:flex-row gap-4"
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: 0.8, duration: 0.6 }}
+                                >
                                     <Button 
                                         size="lg"
-                                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-6"
+                                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-7 text-lg rounded-xl shadow-lg shadow-blue-200 transition-all hover:scale-105"
                                         onClick={() => document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" })}
                                     >
-                                        Ver Preço <ArrowRight className="ml-2 w-5 h-5" />
+                                        Ver Planos <ArrowRight className="ml-2 w-5 h-5" />
                                     </Button>
                                     <Button 
                                         size="lg"
-                                        className="bg-gray-200 hover:bg-gray-300 text-gray-900 font-bold px-8 py-6"
+                                        variant="outline"
+                                        className="border-2 border-gray-200 hover:bg-gray-50 text-gray-900 font-bold px-10 py-7 text-lg rounded-xl transition-all"
                                         onClick={() => window.open("https://wa.me/5532991075164")}
                                     >
-                                        💬 Conversar no WhatsApp
+                                        💬 Consultoria Grátis
                                     </Button>
-                                </div>
+                                </motion.div>
                             </div>
 
-                            {/* Right: Image */}
-                            <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                                <img 
-                                    src={clienteImg} 
-                                    alt="Cliente Satisfeito AutoClub Pro" 
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
-                            </div>
+                            {/* Right: Image / Visual */}
+                            <motion.div 
+                                className="relative"
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ delay: 0.5, duration: 1, ease: "easeOut" }}
+                            >
+                                <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-8 border-white group">
+                                    <img 
+                                        src={clienteImg} 
+                                        alt="Auto Center Profissional" 
+                                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 via-transparent to-transparent opacity-60" />
+                                    
+                                    {/* Floating elements */}
+                                    <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-white/50">
+                                        <div className="flex items-center gap-4">
+                                            <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                                                <TrendingUp className="w-6 h-6" />
+                                            </div>
+                                            <div>
+                                                <p className="text-xs font-bold text-blue-600 uppercase tracking-wider">Resultado Real</p>
+                                                <p className="text-gray-900 font-bold italic leading-tight">"O sistema mudou a percepção dos meus clientes sobre a minha oficina."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {/* Decorative elements */}
+                                <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl animate-pulse" />
+                                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-slate-600/10 rounded-full blur-3xl animate-pulse" />
+                            </motion.div>
                         </div>
                     </div>
                 </section>
@@ -224,14 +295,16 @@ const AutoClubPro = () => {
                 </section>
 
                 {/* PERSONALIZAÇÃO SECTION */}
-                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-slate-50">
+                <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-slate-50 relative overflow-hidden">
                     <div className="max-w-6xl mx-auto">
-                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-                            Identidade Própria: O Sistema é <span className="text-blue-600">SEU</span>
-                        </h2>
-                        <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg">
-                            Chega de usar sistemas genéricos que fazem propaganda para os outros. No AutoClub Pro, sua marca é a protagonista, não a nossa.
-                        </p>
+                        <div className="text-center mb-16">
+                            <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+                                White-Label Real: O Sistema é <span className="text-blue-600">100% SEU</span>
+                            </h2>
+                            <p className="text-gray-600 max-w-2xl mx-auto text-xl leading-relaxed">
+                                Chega de usar sistemas genéricos que fazem propaganda para os outros. No AutoClub Pro, sua marca é a única protagonista.
+                            </p>
+                        </div>
 
                         {/* 3 Images Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
