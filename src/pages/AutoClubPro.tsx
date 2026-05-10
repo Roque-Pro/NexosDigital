@@ -443,27 +443,37 @@ const AutoClubPro = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch relative">
+                            {/* Connecting Arrow (Desktop only) */}
+                            <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
+                                <div className="bg-white rounded-full p-4 shadow-xl border-2 border-slate-100 transform rotate-0 lg:rotate-0">
+                                    <ArrowRight className="w-8 h-8 text-blue-600 animate-pulse" />
+                                </div>
+                            </div>
+
                             {/* Card 1: Setup/Implementation */}
                             <motion.div 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
-                                className="bg-white rounded-3xl shadow-xl border-2 border-slate-100 p-8 md:p-12 flex flex-col justify-between"
+                                className="bg-white rounded-3xl shadow-xl border-2 border-slate-100 p-8 md:p-12 flex flex-col justify-between relative"
                             >
+                                <div className="absolute -top-4 -left-4 w-16 h-16 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg z-10">
+                                    01
+                                </div>
                                 <div>
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-6">
-                                        Setup & Estrutura
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold uppercase tracking-wider mb-6">
+                                        <Zap className="w-3 h-3" /> O PONTO DE PARTIDA
                                     </div>
                                     <h3 className="text-3xl font-black text-gray-900 mb-2">Implementação de Elite</h3>
                                     <p className="text-gray-600 mb-8 leading-relaxed">
-                                        Toda a base tecnológica e visual desenvolvida sob medida para sua empresa.
+                                        O primeiro passo para transformar sua oficina. Construímos toda a sua estrutura digital do zero.
                                     </p>
                                     
                                     <div className="mb-8">
                                         <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 2.650</p>
-                                        <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (em até 12x no cartão)</p>
+                                        <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
                                     <ul className="space-y-4 mb-10">
@@ -492,30 +502,33 @@ const AutoClubPro = () => {
                                     className="w-full bg-slate-900 hover:bg-black text-white font-bold py-7 text-lg rounded-2xl transition-all shadow-lg"
                                     onClick={() => window.open("https://wa.me/5532991075164")}
                                 >
-                                    Contratar Implementação
+                                    Começar pelo Passo 01
                                 </Button>
                             </motion.div>
 
                             {/* Card 2: Essential Plan (Monthly) */}
                             <motion.div 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
-                                className="bg-blue-600 rounded-3xl shadow-2xl border-4 border-blue-500 p-8 md:p-12 text-white flex flex-col justify-between transform lg:scale-105"
+                                className="bg-blue-600 rounded-3xl shadow-2xl border-4 border-blue-500 p-8 md:p-12 text-white flex flex-col justify-between transform lg:scale-105 relative"
                             >
+                                <div className="absolute -top-4 -right-4 w-16 h-16 bg-white text-blue-600 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg z-10">
+                                    02
+                                </div>
                                 <div>
-                                    <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500 text-blue-50 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-400">
-                                        Manutenção & Evolução
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500 text-blue-50 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-400">
+                                        <TrendingUp className="w-3 h-3" /> CRESCIMENTO CONTÍNUO
                                     </div>
                                     <h3 className="text-3xl font-black mb-2">Plano Essencial</h3>
                                     <p className="text-blue-100 mb-8 leading-relaxed">
-                                        A segurança e estabilidade que seu negócio precisa para nunca parar de crescer.
+                                        Após a estrutura pronta, mantemos seu negócio rodando com suporte VIP e evolução constante.
                                     </p>
                                     
                                     <div className="mb-8">
                                         <p className="text-5xl font-black tracking-tighter">R$ 89<span className="text-xl font-normal opacity-80">/mês</span></p>
-                                        <p className="text-blue-200 font-medium text-sm mt-2 italic">Suporte 24/7 incluso</p>
+                                        <p className="text-blue-200 font-medium text-sm mt-2 italic">Manutenção e Suporte após Setup</p>
                                     </div>
 
                                     <ul className="space-y-4 mb-10">
@@ -545,10 +558,10 @@ const AutoClubPro = () => {
                                         className="w-full bg-white hover:bg-blue-50 text-blue-600 font-black py-7 text-xl rounded-2xl transition-all shadow-xl shadow-blue-900/20 hover:scale-[1.02]"
                                         onClick={() => window.open("https://wa.me/5532991075164")}
                                     >
-                                        Começar Agora
+                                        Garantir meu Passo 02
                                     </Button>
                                     <p className="text-center text-xs text-blue-200 font-medium">
-                                        💡 Fale com nosso consultor no WhatsApp
+                                        💡 Mensalidade ativa apenas após a entrega do Passo 01
                                     </p>
                                 </div>
                             </motion.div>
