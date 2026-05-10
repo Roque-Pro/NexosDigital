@@ -65,7 +65,6 @@ const AutoClubPro = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900">
-            <Navbar />
             <main>
                 {/* HERO SECTION */}
                 <section className="relative bg-white pt-24 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -83,13 +82,6 @@ const AutoClubPro = () => {
                                     transition={{ duration: 0.5 }}
                                     className="mb-8"
                                 >
-                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6">
-                                        <span className="relative flex h-2 w-2">
-                                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600"></span>
-                                        </span>
-                                        <span className="text-[10px] font-bold text-blue-700 uppercase tracking-widest">Sistema 100% Personalizado</span>
-                                    </div>
                                     <img src={logoClubeImg} alt="AutoClub Pro" className="h-28 md:h-32 mb-6" />
                                 </motion.div>
 
