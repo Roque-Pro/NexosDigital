@@ -443,18 +443,11 @@ const AutoClubPro = () => {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch relative">
-                            {/* Connecting Arrow (Desktop only) */}
-                            <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-                                <div className="bg-white rounded-full p-4 shadow-xl border-2 border-slate-100 transform rotate-0 lg:rotate-0">
-                                    <ArrowRight className="w-8 h-8 text-blue-600 animate-pulse" />
-                                </div>
-                            </div>
-
-                            {/* Card 1: Setup/Implementation */}
+                        {/* Step 01: Implementation (Centered) */}
+                        <div className="max-w-2xl mx-auto mb-16 relative">
                             <motion.div 
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6 }}
                                 className="bg-white rounded-3xl shadow-xl border-2 border-slate-100 p-8 md:p-12 flex flex-col justify-between relative"
@@ -476,7 +469,7 @@ const AutoClubPro = () => {
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
-                                    <ul className="space-y-4 mb-10">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                                         {[
                                             "Landing Page Profissional (Página de Vendas)",
                                             "Personalização Visual 100% (Sua Marca)",
@@ -503,38 +496,100 @@ const AutoClubPro = () => {
                                 </Button>
                             </motion.div>
 
-                            {/* Card 2: Essential Plan (Monthly) */}
+                            {/* Connecting Arrow Down */}
+                            <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 z-20">
+                                <div className="bg-white rounded-full p-3 shadow-lg border-2 border-slate-100">
+                                    <ArrowRight className="w-6 h-6 text-blue-600 rotate-90" />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Step 02: Choice of Plans */}
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch pt-8">
+                            {/* Card 2: Essential Plan */}
                             <motion.div 
-                                initial={{ opacity: 0, x: 20 }}
+                                initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                className="bg-blue-600 rounded-3xl shadow-2xl border-4 border-blue-500 p-8 md:p-12 text-white flex flex-col justify-between transform lg:scale-105 relative"
+                                transition={{ duration: 0.6 }}
+                                className="bg-white rounded-3xl shadow-xl border-2 border-blue-100 p-8 md:p-12 flex flex-col justify-between relative"
                             >
-                                <div className="absolute -top-4 -right-4 w-16 h-16 bg-white text-blue-600 rounded-2xl flex items-center justify-center font-black text-xl shadow-lg z-10">
+                                <div className="absolute -top-4 -left-4 w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center font-black text-lg shadow-lg z-10">
                                     02
                                 </div>
                                 <div>
-                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500 text-blue-50 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-400">
-                                        <TrendingUp className="w-3 h-3" /> CRESCIMENTO CONTÍNUO
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold uppercase tracking-wider mb-6">
+                                        <TrendingUp className="w-3 h-3" /> MANUTENÇÃO ESSENCIAL
                                     </div>
-                                    <h3 className="text-3xl font-black mb-2">Plano Essencial</h3>
-                                    <p className="text-blue-100 mb-8 leading-relaxed">
-                                        Após a estrutura pronta, mantemos seu negócio rodando com suporte VIP e evolução constante.
+                                    <h3 className="text-3xl font-black text-gray-900 mb-2">Plano Essencial</h3>
+                                    <p className="text-gray-600 mb-8 leading-relaxed">
+                                        A segurança e estabilidade que seu negócio precisa para nunca parar de crescer.
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black tracking-tighter">R$ 89<span className="text-xl font-normal opacity-80">/mês</span></p>
-                                        <p className="text-blue-200 font-medium text-sm mt-2 italic">Manutenção e Suporte após Setup</p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 89<span className="text-xl font-normal text-gray-400">/mês</span></p>
+                                        <p className="text-slate-500 font-medium text-sm mt-2 italic">Suporte VIP direto no WhatsApp</p>
                                     </div>
 
                                     <ul className="space-y-4 mb-10">
                                         {[
                                             "Suporte VIP 24/7 direto pelo WhatsApp",
-                                            "Hospedagem Profissional de Alta Performance",
-                                            "Manutenção Técnica e Atualizações de Segurança",
+                                            "Hospedagem Profissional Inclusa",
+                                            "Manutenção Técnica e Segurança",
                                             "Consultoria Mensal de Processos",
-                                            "Garantia de 99.9% de Estabilidade Online"
+                                            "Garantia de 99.9% de Estabilidade"
+                                        ].map((item, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <div className="mt-1 bg-blue-50 rounded-full p-0.5">
+                                                    <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                                                </div>
+                                                <span className="text-gray-700 font-medium text-sm">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <Button 
+                                    size="lg"
+                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 text-lg rounded-2xl transition-all shadow-lg"
+                                    onClick={() => window.open("https://wa.me/5532991075164")}
+                                >
+                                    Escolher Plano Essencial
+                                </Button>
+                            </motion.div>
+
+                            {/* Card 3: Performance SEO Plan */}
+                            <motion.div 
+                                initial={{ opacity: 0, x: 20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                                className="bg-blue-900 rounded-3xl shadow-2xl border-4 border-blue-400 p-8 md:p-12 text-white flex flex-col justify-between transform lg:scale-105 relative"
+                            >
+                                <div className="absolute -top-4 -right-4 w-12 h-12 bg-white text-blue-900 rounded-xl flex items-center justify-center font-black text-lg shadow-lg z-10">
+                                    02
+                                </div>
+                                <div>
+                                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-800 text-blue-50 text-xs font-bold uppercase tracking-wider mb-6 border border-blue-700">
+                                        <Star className="w-3 h-3 fill-yellow-400 text-yellow-400" /> MÁXIMA PERFORMANCE
+                                    </div>
+                                    <h3 className="text-3xl font-black mb-2">Performance SEO</h3>
+                                    <p className="text-blue-100 mb-8 leading-relaxed">
+                                        Para oficinas que querem dominar as buscas e atrair clientes qualificados todos os dias.
+                                    </p>
+                                    
+                                    <div className="mb-8">
+                                        <p className="text-5xl font-black tracking-tighter">R$ 197<span className="text-xl font-normal opacity-80">/mês</span></p>
+                                        <p className="text-blue-200 font-medium text-sm mt-2 italic">Apareça no topo do Google</p>
+                                    </div>
+
+                                    <ul className="space-y-4 mb-10">
+                                        {[
+                                            "Tudo do Plano Essencial Inclusivo",
+                                            "SEO Local: Topo das Buscas no Google",
+                                            "Gestão de Google Meu Negócio VIP",
+                                            "Otimização Contínua de Conversão",
+                                            "Relatórios Detalhados de Tráfego e SEO"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
                                                 <div className="mt-1 bg-blue-500 rounded-full p-0.5 border border-blue-400">
@@ -549,13 +604,13 @@ const AutoClubPro = () => {
                                 <div className="space-y-4">
                                     <Button 
                                         size="lg"
-                                        className="w-full bg-white hover:bg-blue-50 text-blue-600 font-black py-7 text-xl rounded-2xl transition-all shadow-xl shadow-blue-900/20 hover:scale-[1.02]"
+                                        className="w-full bg-white hover:bg-blue-50 text-blue-900 font-black py-7 text-xl rounded-2xl transition-all shadow-xl shadow-blue-900/20 hover:scale-[1.02]"
                                         onClick={() => window.open("https://wa.me/5532991075164")}
                                     >
-                                        Garantir meu Passo 02
+                                        Garantir Performance SEO
                                     </Button>
                                     <p className="text-center text-xs text-blue-200 font-medium">
-                                        💡 Mensalidade ativa apenas após a entrega do Passo 01
+                                        🚀 O plano preferido das oficinas de sucesso
                                     </p>
                                 </div>
                             </motion.div>
