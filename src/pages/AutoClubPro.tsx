@@ -586,10 +586,10 @@ const AutoClubPro = () => {
                                     <ul className="space-y-4 mb-10">
                                         {[
                                             "Tudo do Plano Essencial Inclusivo",
-                                            "SEO Local: Topo das Buscas no Google",
-                                            "SEO Técnico e Arquitetura de Conversão",
-                                            "Otimização Contínua de Conversão",
-                                            "Relatórios Detalhados de Tráfego e SEO"
+                                            "Indexação Semântica de Elite (JSON-LD)",
+                                            "SEO Técnico: Meta-Tags e Head Premium",
+                                            "Arquitetura de Conversão de Alto Impacto",
+                                            "Relatórios de Autoridade e ROI Mensais"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
                                                 <div className="mt-1 bg-blue-500 rounded-full p-0.5 border border-blue-400">
