@@ -279,7 +279,7 @@ const PlanAuth = () => {
         )}
       </header>
 
-      <section className="relative overflow-hidden bg-[#06121f] text-white">
+      <section className="relative mt-[50px] overflow-hidden bg-[#06121f] text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,196,37,0.12),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.06),_transparent_30%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-0 lg:pt-10">
           <motion.div
@@ -303,8 +303,7 @@ const PlanAuth = () => {
 
               <h1 className="max-w-3xl text-4xl font-black leading-[1.08] sm:text-5xl lg:text-[4.2rem]">
                 Descubra onde sua empresa está{" "}
-                <span className="text-[#f6bf22]">perdendo clientes</span> (e dinheiro)
-                todos os dias.
+                <span className="text-[#f6bf22]">perdendo clientes e dinheiro</span>.
               </h1>
 
               <div className="my-8 h-1.5 w-20 rounded-full bg-[#f6bf22]" />
