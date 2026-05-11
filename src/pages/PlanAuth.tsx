@@ -469,8 +469,7 @@ const PlanAuth = () => {
             </div>
 
             <p
-              className="mt-8 text-center text-3xl text-[#1f4ea6]"
-              style={{ fontFamily: '"Brush Script MT", "Segoe Script", cursive' }}
+              className="mt-8 text-center text-2xl sm:text-3xl font-display font-medium text-[#1f4ea6] italic"
             >
               Menos achismo, mais resultado.
             </p>
@@ -483,7 +482,7 @@ const PlanAuth = () => {
             transition={{ duration: 0.65 }}
             className="rounded-[30px] bg-white p-6 shadow-[0_24px_50px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10"
           >
-            <h3 className="text-center text-3xl font-black text-[#0b1320]">
+            <h3 className="text-center text-2xl sm:text-3xl font-black text-[#0b1320]">
               Receber meu diagnóstico gratuito
             </h3>
 
@@ -604,21 +603,21 @@ const PlanAuth = () => {
         </div>
       </section>
 
-      <section className="bg-[#071524] px-5 py-8 text-white lg:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 lg:flex-row">
-          <div className="flex items-center gap-4 text-center lg:text-left">
-            <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full border border-[#f6bf22]">
-              <Rocket className="h-7 w-7 text-[#f6bf22]" />
+      <section className="bg-[#071524] px-5 py-12 text-white lg:px-10 lg:py-16">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 lg:flex-row">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+            <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border border-[#f6bf22]">
+              <Rocket className="h-8 w-8 text-[#f6bf22]" />
             </div>
-            <p className="max-w-xl text-2xl leading-snug text-white/92">
+            <p className="max-w-xl text-xl font-bold leading-tight text-white sm:text-2xl">
               Você pode estar deixando dinheiro na mesa sem perceber.{" "}
-              <span className="font-black text-[#f6bf22]">Descubra agora.</span>
+              <span className="text-[#f6bf22]">Descubra agora.</span>
             </p>
           </div>
 
           <ArrowRight className="hidden h-10 w-10 text-[#f6bf22] lg:block" />
 
-          <p className="max-w-xl text-center text-2xl leading-snug text-white/92 lg:text-left">
+          <p className="max-w-xl text-center text-xl font-medium leading-tight text-white/90 sm:text-2xl lg:text-left">
             Comece agora e veja o que sua empresa pode estar perdendo todos os dias.
           </p>
         </div>
