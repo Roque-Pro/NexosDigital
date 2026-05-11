@@ -96,27 +96,51 @@ const PlanAuth = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useSEO({
-    title: "Diagn贸stico Gratuito para descobrir onde sua empresa perde clientes",
+    title: "Diagn髎tico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     description:
-      "Em menos de 2 minutos, voc锚 recebe um diagn贸stico gratuito com oportunidades reais para atrair mais clientes e aumentar seu faturamento.",
+      "Receba um diagn髎tico gratuito e descubra onde sua empresa perde clientes, desperdi鏰 dinheiro e deixa oportunidades passarem. Resposta r醦ida, sem compromisso.",
     keywords: [
-      "diagn贸stico gratuito",
-      "diagn贸stico de vendas",
+      "diagn髎tico gratuito",
+      "diagn髎tico empresarial",
+      "diagn髎tico de vendas",
       "atrair clientes",
       "converter leads",
-      "automa莽茫o comercial",
+      "diagn髎tico de marketing",
+      "automa玢o comercial",
       "faturamento empresarial",
       "processo comercial",
       "gargalos de vendas",
+      "consultoria comercial",
+      "aumentar faturamento",
     ],
-    ogTitle: "Descubra onde sua empresa est谩 perdendo clientes",
+    ogTitle: "Diagn髎tico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     ogDescription:
-      "Receba um diagn贸stico gratuito e descubra os gargalos que travam o crescimento da sua empresa.",
+      "Identifique gargalos comerciais, falhas no atendimento, desperd韈ios e oportunidades de crescimento com um diagn髎tico gratuito.",
     ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-    twitterTitle: "Diagn贸stico gratuito para sua empresa",
+    twitterTitle: "Diagn髎tico gratuito para sua empresa",
     twitterDescription:
-      "Descubra oportunidades reais para atrair mais clientes e vender melhor.",
+      "Descubra onde sua empresa perde clientes e dinheiro e veja oportunidades reais de crescimento.",
     canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: "Diagn髎tico Gratuito TechNexos",
+      description:
+        "Diagn髎tico gratuito para identificar gargalos de capta玢o, atendimento, convers鉶 e crescimento comercial.",
+      provider: {
+        "@type": "ProfessionalService",
+        name: "TechNexos Digital",
+        url: "https://www.technexos.com.br",
+      },
+      areaServed: "BR",
+      url: "https://www.technexos.com.br/diagnostico-gratuito",
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "BRL",
+        availability: "https://schema.org/InStock",
+      },
+    },
   });
 
   const [diagnosticData, setDiagnosticData] = useState({
@@ -594,3 +618,4 @@ const PlanAuth = () => {
 };
 
 export default PlanAuth;
+
