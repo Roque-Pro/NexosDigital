@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -13,6 +14,9 @@ import {
   Target,
   TrendingUp,
   Workflow,
+  Code2,
+  Menu,
+  X,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -85,9 +89,11 @@ const businessTypes = [
 ];
 
 const PlanAuth = () => {
+  const navigate = useNavigate();
   const { loading } = useAuth();
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useSEO({
     title: "Diagnóstico Gratuito para descobrir onde sua empresa perde clientes",
@@ -183,6 +189,96 @@ const PlanAuth = () => {
 
   return (
     <div className="min-h-screen bg-white text-slate-900">
+      <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+          <button
+            onClick={() => navigate("/")}
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          >
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-200">
+              <Code2 className="h-6 w-6 text-white" />
+            </div>
+            <h1 className="text-xl font-black tracking-tighter">
+              TechNexos<span className="text-blue-600">Digital</span>
+            </h1>
+          </button>
+
+          <nav className="hidden items-center gap-8 md:flex">
+            <button
+              onClick={() => navigate("/")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              Página Principal
+            </button>
+            <button
+              onClick={() => navigate("/about-me")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              Especialista
+            </button>
+            <button
+              onClick={() => navigate("/autoclub-pro")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              AutoClub Pro
+            </button>
+            <Button
+              onClick={() => navigate("/diagnostico-gratuito")}
+              variant="outline"
+              className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+            >
+              Diagnóstico Gratuito
+            </Button>
+          </nav>
+
+          <button className="p-2 md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+            {mobileMenuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
+            <button
+              onClick={() => {
+                navigate("/");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Página Principal
+            </button>
+            <button
+              onClick={() => {
+                navigate("/about-me");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Especialista
+            </button>
+            <button
+              onClick={() => {
+                navigate("/autoclub-pro");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              AutoClub Pro
+            </button>
+            <Button
+              onClick={() => {
+                navigate("/diagnostico-gratuito");
+                setMobileMenuOpen(false);
+              }}
+              variant="outline"
+              className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+            >
+              Diagnóstico Gratuito
+            </Button>
+          </div>
+        )}
+      </header>
+
       <section className="relative overflow-hidden bg-[#06121f] text-white">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,196,37,0.12),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.06),_transparent_30%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-0 lg:pt-10">

@@ -148,14 +148,17 @@ const Landing = () => {
     <div className="min-h-screen overflow-hidden bg-white font-sans text-slate-900">
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-2">
+          <button
+            onClick={() => navigate("/")}
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
+          >
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-200">
               <Code2 className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-xl font-black tracking-tighter">
               TechNexos<span className="text-blue-600">Digital</span>
             </h1>
-          </div>
+          </button>
 
           <nav className="hidden items-center gap-8 md:flex">
             <button
@@ -192,12 +195,6 @@ const Landing = () => {
               className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
             >
               Diagnóstico Gratuito
-            </Button>
-            <Button
-              onClick={() => window.open("https://wa.me/5532991075164")}
-              className="rounded-full bg-blue-600 px-6 font-bold text-white hover:bg-blue-700"
-            >
-              Consultoria Grátis
             </Button>
           </nav>
 
@@ -244,12 +241,6 @@ const Landing = () => {
               className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
             >
               Diagnóstico Gratuito
-            </Button>
-            <Button
-              onClick={() => window.open("https://wa.me/5532991075164")}
-              className="w-full bg-blue-600 py-6 font-bold"
-            >
-              Falar no WhatsApp
             </Button>
           </div>
         )}

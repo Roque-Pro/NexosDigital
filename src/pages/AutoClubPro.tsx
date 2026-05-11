@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
@@ -22,12 +22,16 @@ import {
     Lock,
     Star,
     ArrowRight,
-    Calendar,
+    Menu,
+    X,
     Headphones,
+    Code2,
 } from "lucide-react";
 
 const AutoClubPro = () => {
+    const navigate = useNavigate();
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // SEO
     useSEO({
@@ -65,6 +69,95 @@ const AutoClubPro = () => {
 
     return (
         <div className="min-h-screen bg-white text-gray-900">
+            <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
+                <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+                    <button
+                        onClick={() => navigate("/")}
+                        className="flex items-center gap-2 transition-opacity hover:opacity-80"
+                    >
+                        <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-200">
+                            <Code2 className="h-6 w-6 text-white" />
+                        </div>
+                        <h1 className="text-xl font-black tracking-tighter">
+                            TechNexos<span className="text-blue-600">Digital</span>
+                        </h1>
+                    </button>
+
+                    <nav className="hidden items-center gap-8 md:flex">
+                        <button
+                            onClick={() => navigate("/")}
+                            className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+                        >
+                            Página Principal
+                        </button>
+                        <button
+                            onClick={() => navigate("/about-me")}
+                            className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+                        >
+                            Especialista
+                        </button>
+                        <button
+                            onClick={() => navigate("/autoclub-pro")}
+                            className="text-sm font-bold text-blue-600 transition-colors"
+                        >
+                            AutoClub Pro
+                        </button>
+                        <Button
+                            onClick={() => navigate("/diagnostico-gratuito")}
+                            variant="outline"
+                            className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+                        >
+                            Diagnóstico Gratuito
+                        </Button>
+                    </nav>
+
+                    <button className="p-2 md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+                        {mobileMenuOpen ? <X /> : <Menu />}
+                    </button>
+                </div>
+
+                {mobileMenuOpen && (
+                    <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
+                        <button
+                            onClick={() => {
+                                navigate("/");
+                                setMobileMenuOpen(false);
+                            }}
+                            className="block w-full p-2 text-left font-bold text-slate-700"
+                        >
+                            Página Principal
+                        </button>
+                        <button
+                            onClick={() => {
+                                navigate("/about-me");
+                                setMobileMenuOpen(false);
+                            }}
+                            className="block w-full p-2 text-left font-bold text-slate-700"
+                        >
+                            Especialista
+                        </button>
+                        <button
+                            onClick={() => {
+                                navigate("/autoclub-pro");
+                                setMobileMenuOpen(false);
+                            }}
+                            className="block w-full p-2 text-left font-bold text-blue-600"
+                        >
+                            AutoClub Pro
+                        </button>
+                        <Button
+                            onClick={() => {
+                                navigate("/diagnostico-gratuito");
+                                setMobileMenuOpen(false);
+                            }}
+                            variant="outline"
+                            className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+                        >
+                            Diagnóstico Gratuito
+                        </Button>
+                    </div>
+                )}
+            </header>
             <main>
                 {/* HERO SECTION */}
                 <section className="relative bg-white pt-24 pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
