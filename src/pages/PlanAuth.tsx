@@ -95,21 +95,6 @@ const PlanAuth = () => {
   const [submitting, setSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  useEffect(() => {
-    // Forçar a remoção de qualquer scroll horizontal vindo do body/html
-    document.documentElement.style.overflowX = 'hidden';
-    document.body.style.overflowX = 'hidden';
-    document.body.style.position = 'relative';
-    document.body.style.width = '100%';
-    
-    return () => {
-      document.documentElement.style.overflowX = '';
-      document.body.style.overflowX = '';
-      document.body.style.position = '';
-      document.body.style.width = '';
-    };
-  }, []);
-
   useSEO({
     title: "Diagn�stico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     description:
@@ -322,8 +307,8 @@ const PlanAuth = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,196,37,0.12),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.06),_transparent_30%)]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-0 lg:pt-10">
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.7 }}
             className="flex flex-col justify-between"
           >
@@ -382,8 +367,8 @@ const PlanAuth = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 36 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.85, delay: 0.15 }}
             className="relative flex items-end justify-center"
           >
@@ -400,8 +385,8 @@ const PlanAuth = () => {
       <section className="bg-white px-5 py-16 lg:px-10 lg:py-20">
         <div className="mx-auto max-w-7xl">
           <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-4xl text-center"
@@ -419,8 +404,8 @@ const PlanAuth = () => {
             {diagnosisPoints.map(({ icon: Icon, title, description }, index) => (
               <motion.div
                 key={title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.55, delay: index * 0.08 }}
                 className="relative rounded-[28px] border border-slate-200 bg-white px-6 pb-8 pt-7 text-center shadow-[0_16px_40px_rgba(15,23,42,0.06)]"
@@ -442,8 +427,8 @@ const PlanAuth = () => {
       <section id="diagnostic-form" className="bg-[#f4f6fb] px-5 py-16 lg:px-10 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
             className="pt-2"
@@ -482,8 +467,8 @@ const PlanAuth = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 24 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.65 }}
             className="rounded-[30px] bg-white p-6 shadow-[0_24px_50px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10"
