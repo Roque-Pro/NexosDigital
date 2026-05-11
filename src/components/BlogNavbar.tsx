@@ -69,14 +69,6 @@ export default function BlogNavbar() {
                         Sobre Mim
                     </Button>
                     <Button
-                        onClick={() => navigate("/blog")}
-                        variant="ghost"
-                        size="sm"
-                        className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
-                    >
-                        Blog
-                    </Button>
-                    <Button
                         onClick={() => window.open("https://wa.me/5532991075164", "_blank")}
                         variant="ghost"
                         size="sm"
@@ -137,17 +129,6 @@ export default function BlogNavbar() {
                                 className="justify-start text-gray-700 hover:text-purple-600 hover:bg-purple-50"
                             >
                                 Sobre Mim
-                            </Button>
-                            <Button
-                                onClick={() => {
-                                    navigate("/blog");
-                                    setMobileMenuOpen(false);
-                                }}
-                                variant="ghost"
-                                size="sm"
-                                className="justify-start text-gray-700 hover:text-purple-600 hover:bg-purple-50"
-                            >
-                                Blog
                             </Button>
                             <Button
                                 onClick={() => {
