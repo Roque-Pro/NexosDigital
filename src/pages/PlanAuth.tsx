@@ -212,7 +212,17 @@ const PlanAuth = () => {
   };
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900">
+    <div className="min-h-screen w-full bg-white text-slate-900">
+      <style>{`
+        * { box-sizing: border-box; }
+        html, body { 
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          max-width: 100vw;
+          overflow-x: hidden;
+        }
+      `}</style>
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <button
