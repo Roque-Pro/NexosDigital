@@ -173,6 +173,12 @@ const Landing = () => {
               Especialista
             </button>
             <button
+              onClick={() => navigate("/autoclub-pro")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              AutoClub Pro
+            </button>
+            <button
               onClick={() =>
                 document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" })
               }
@@ -180,6 +186,13 @@ const Landing = () => {
             >
               FAQ
             </button>
+            <Button
+              onClick={() => navigate("/diagnostico-gratuito")}
+              variant="outline"
+              className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+            >
+              Diagnóstico Gratuito
+            </Button>
             <Button
               onClick={() => window.open("https://wa.me/5532991075164")}
               className="rounded-full bg-blue-600 px-6 font-bold text-white hover:bg-blue-700"
@@ -213,6 +226,25 @@ const Landing = () => {
             >
               Especialista
             </button>
+            <button
+              onClick={() => {
+                navigate("/autoclub-pro");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              AutoClub Pro
+            </button>
+            <Button
+              onClick={() => {
+                navigate("/diagnostico-gratuito");
+                setMobileMenuOpen(false);
+              }}
+              variant="outline"
+              className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+            >
+              Diagnóstico Gratuito
+            </Button>
             <Button
               onClick={() => window.open("https://wa.me/5532991075164")}
               className="w-full bg-blue-600 py-6 font-bold"
@@ -230,14 +262,7 @@ const Landing = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-1.5 text-xs font-black uppercase tracking-widest text-blue-700">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-600" />
-              </span>
-              Especialista em Escala Digital
-            </div>
-            <h2 className="mb-8 text-5xl font-black italic leading-[0.95] tracking-tighter sm:text-6xl lg:text-8xl">
+            <h2 className="mb-8 text-4xl font-black leading-[1] tracking-tight sm:text-5xl lg:text-6xl">
               Transformamos <span className="text-blue-600">tecnologia</span> em{" "}
               <span className="underline decoration-blue-600 underline-offset-8">
                 crescimento real.
