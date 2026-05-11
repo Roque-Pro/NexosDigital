@@ -8,8 +8,8 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import logoClubeImg from "@/img/logo-autocub.png";
 import clienteImg from "@/img/cliente.png";
-import reparoVidrosImg from "@/img/Reparo de Vidros.png";
-import autoCenterImg from "@/img/Auto Center.png";
+import reparoVidrosImg from "@/img/reparo-de-vidros.png";
+import autoCenterImg from "@/img/auto-center.png";
 import esteticaAutomotivaImg from "@/img/Estética Automotiva.png";
 import {
     CheckCircle2,
@@ -22,6 +22,7 @@ import {
     Lock,
     Star,
     ArrowRight,
+    Calendar,
     Menu,
     X,
     Headphones,
