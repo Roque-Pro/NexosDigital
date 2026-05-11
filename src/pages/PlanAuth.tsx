@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -95,38 +95,53 @@ const PlanAuth = () => {
   const [submitting, setSubmitting] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    // ForÃ§ar a remoÃ§Ã£o de qualquer scroll horizontal vindo do body/html
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+    document.body.style.position = 'relative';
+    document.body.style.width = '100%';
+    
+    return () => {
+      document.documentElement.style.overflowX = '';
+      document.body.style.overflowX = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+    };
+  }, []);
+
   useSEO({
-    title: "Diagnóstico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
+    title: "Diagnï¿½stico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     description:
-      "Receba um diagnóstico gratuito e descubra onde sua empresa perde clientes, desperdiça dinheiro e deixa oportunidades passarem. Resposta rápida, sem compromisso.",
+      "Receba um diagnï¿½stico gratuito e descubra onde sua empresa perde clientes, desperdiï¿½a dinheiro e deixa oportunidades passarem. Resposta rï¿½pida, sem compromisso.",
     keywords: [
-      "diagnóstico gratuito",
-      "diagnóstico empresarial",
-      "diagnóstico de vendas",
+      "diagnï¿½stico gratuito",
+      "diagnï¿½stico empresarial",
+      "diagnï¿½stico de vendas",
       "atrair clientes",
       "converter leads",
-      "diagnóstico de marketing",
-      "automação comercial",
+      "diagnï¿½stico de marketing",
+      "automaï¿½ï¿½o comercial",
       "faturamento empresarial",
       "processo comercial",
       "gargalos de vendas",
       "consultoria comercial",
       "aumentar faturamento",
     ],
-    ogTitle: "Diagnóstico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
+    ogTitle: "Diagnï¿½stico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     ogDescription:
-      "Identifique gargalos comerciais, falhas no atendimento, desperdícios e oportunidades de crescimento com um diagnóstico gratuito.",
+      "Identifique gargalos comerciais, falhas no atendimento, desperdï¿½cios e oportunidades de crescimento com um diagnï¿½stico gratuito.",
     ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-    twitterTitle: "Diagnóstico gratuito para sua empresa",
+    twitterTitle: "Diagnï¿½stico gratuito para sua empresa",
     twitterDescription:
       "Descubra onde sua empresa perde clientes e dinheiro e veja oportunidades reais de crescimento.",
     canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
     schema: {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Diagnóstico Gratuito TechNexos",
+      name: "Diagnï¿½stico Gratuito TechNexos",
       description:
-        "Diagnóstico gratuito para identificar gargalos de captação, atendimento, conversão e crescimento comercial.",
+        "Diagnï¿½stico gratuito para identificar gargalos de captaï¿½ï¿½o, atendimento, conversï¿½o e crescimento comercial.",
       provider: {
         "@type": "ProfessionalService",
         name: "TechNexos Digital",
@@ -212,7 +227,7 @@ const PlanAuth = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-900">
+    <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900">
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <button
