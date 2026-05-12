@@ -163,16 +163,13 @@ const TrafficAndSEO = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative px-4 pb-20 pt-32 lg:pb-32 lg:pt-48 bg-[radial-gradient(circle_at_top_right,#fff7ed,transparent)]">
+      <section className="relative px-4 pb-20 pt-20 lg:pb-32 lg:pt-32 bg-[radial-gradient(circle_at_top_right,#fff7ed,transparent)]">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-1.5 text-sm font-bold text-orange-700">
-              <Sparkles className="h-4 w-4" /> Marketing de Performance Real
-            </div>
             <h2 className="mb-8 text-4xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
               Pare de gastar com anúncios. Comece a <span className="text-orange-600">lucrar</span>.
             </h2>
@@ -390,11 +387,11 @@ const TrafficAndSEO = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Qual o investimento mínimo para começar?
+                Qual o investimento ideal para ter retorno?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                Depende do seu mercado, mas recomendamos iniciar com pelo menos R$ 1.500/mês
-                em verba direta para as plataformas para que tenhamos dados suficientes para otimizar.
+                O investimento é personalizado conforme seu objetivo e mercado. O importante não é o valor de início, 
+                mas sim a estratégia por trás para garantir que cada real colocado traga o máximo de leads qualificados possíveis.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
