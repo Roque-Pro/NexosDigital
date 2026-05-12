@@ -40,42 +40,42 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 const strategicSteps = [
   {
     icon: SearchCheck,
-    title: "Diagnóstico técnico e comercial",
+    title: "Arquitetura e Planejamento",
     description:
-      "Mapeamos a operação, os canais de aquisição e os gargalos de conversão para priorizar o que gera impacto real no seu faturamento.",
+      "Mapeamos os requisitos técnicos, a jornada do usuário e as necessidades de negócio para desenhar uma solução robusta e escalável.",
   },
   {
     icon: Workflow,
-    title: "Estruturação do ecossistema",
+    title: "Desenvolvimento Ágil",
     description:
-      "Conectamos site, páginas, tracking, campanhas, CRM e automações para que marketing e vendas parem de trabalhar de forma fragmentada.",
+      "Implementamos o projeto em ciclos iterativos, garantindo código limpo, testes rigorosos e entrega contínua de valor.",
   },
   {
     icon: Settings2,
-    title: "Otimização contínua",
+    title: "Infraestrutura e Deploy",
     description:
-      "Depois da implantação, acompanhamos números, removemos atritos e refinamos a estrutura para sustentar crescimento com mais previsibilidade.",
+      "Configuramos ambientes de alta disponibilidade e monitoramento constante para que seu sistema esteja sempre online e performático.",
   },
 ];
 
 const deliveryBlocks = [
   {
     icon: BriefcaseBusiness,
-    title: "Projetos orientados a receita",
+    title: "Engenharia de Valor",
     description:
-      "Cada entrega nasce para resolver um objetivo concreto: gerar mais leads qualificados, vender mais ou reduzir desperdício operacional.",
+      "Desenvolvemos funcionalidades que resolvem gargalos reais do seu negócio, aumentando a eficiência e reduzindo custos operacionais.",
   },
   {
     icon: Gauge,
-    title: "Performance técnica como base",
+    title: "Performance Extrema",
     description:
-      "Sites rápidos, sistemas estáveis, rastreamento confiável e páginas desenhadas para suportar tráfego e conversão ao mesmo tempo.",
+      "Foco total em Core Web Vitals e tempos de resposta. Sua aplicação será rápida, fluida e proporcionará uma experiência superior.",
   },
   {
-    icon: LineChart,
-    title: "Crescimento medido em dados",
+    icon: ShieldCheck,
+    title: "Código de Longo Prazo",
     description:
-      "Você acompanha indicadores objetivos: origem dos leads, custo por aquisição, taxa de conversão, evolução orgânica e retorno sobre mídia.",
+      "Utilizamos as melhores práticas de mercado (Clean Code, Solid) para que o sistema seja fácil de manter e evoluir ao longo dos anos.",
   },
 ];
 
@@ -98,26 +98,24 @@ const Landing = () => {
 
   useSEO({
     title:
-      "TechNexos Digital | Desenvolvimento, tráfego pago e SEO para crescer com previsibilidade",
+      "TechNexos Digital | Engenharia de Software e Desenvolvimento Web de Performance",
     description:
-      "A TechNexos desenvolve sites, sistemas, operações de tráfego pago e SEO técnico para empresas que precisam gerar demanda, converter melhor e escalar com mais controle.",
+      "A TechNexos desenvolve sites, sistemas SaaS, landing pages e soluções tecnológicas sob medida para empresas que precisam de estabilidade, escala e alta performance.",
     keywords: [
       "desenvolvimento de sistemas",
       "desenvolvimento web",
       "criação de sites profissionais",
-      "tráfego pago",
-      "gestão de tráfego",
-      "SEO técnico",
-      "seo para empresas",
+      "engenharia de software",
+      "saas",
+      "sistemas sob medida",
       "landing page de alta conversão",
-      "automação comercial",
-      "marketing de performance",
-      "TechNexos Digital",
       "desenvolvimento react node",
+      "TechNexos Digital",
+      "soluções tecnológicas para empresas",
     ],
-    ogTitle: "TechNexos Digital | Sistemas, tráfego pago e SEO técnico",
+    ogTitle: "TechNexos Digital | Engenharia de Software & Web",
     ogDescription:
-      "Estruturamos sua presença digital para atrair demanda, melhorar conversão e transformar tecnologia em crescimento mensurável.",
+      "Transformamos desafios de negócio em soluções tecnológicas escaláveis e performáticas.",
     ogUrl: "https://www.technexos.com.br",
     canonicalUrl: "https://www.technexos.com.br",
     schema: {
@@ -176,6 +174,12 @@ const Landing = () => {
               Especialista
             </button>
             <button
+              onClick={() => navigate("/trafego-e-seo")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              Tráfego & SEO
+            </button>
+            <button
               onClick={() => navigate("/autoclub-pro")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
             >
@@ -225,6 +229,15 @@ const Landing = () => {
             </button>
             <button
               onClick={() => {
+                navigate("/trafego-e-seo");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Tráfego & SEO
+            </button>
+            <button
+              onClick={() => {
                 navigate("/autoclub-pro");
                 setMobileMenuOpen(false);
               }}
@@ -254,35 +267,30 @@ const Landing = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="mb-8 text-4xl font-black leading-[1] tracking-tight sm:text-5xl lg:text-6xl">
-              Transformamos <span className="text-blue-600">tecnologia</span> em{" "}
-              <span className="underline decoration-blue-600 underline-offset-8">
-                crescimento real.
-              </span>
+              Engenharia de <span className="text-blue-600">Software</span> & <span className="underline decoration-blue-600 underline-offset-8">Desenvolvimento Web.</span>
             </h2>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-slate-600">
-              A TechNexos une <strong>desenvolvimento web e sistemas</strong>,{" "}
-              <strong>tráfego pago</strong> e <strong>SEO técnico</strong> para empresas
-              que precisam vender mais com estrutura. Criamos operações digitais que
-              atraem demanda, convertem com mais eficiência e sustentam escala sem
-              improviso.
+              Construímos a espinha dorsal tecnológica do seu negócio. Do site institucional de alta performance a 
+              <strong> sistemas complexos (SaaS)</strong> e <strong>Landing Pages de conversão</strong>. 
+              Criamos ferramentas que resolvem problemas reais e escalam sua operação.
             </p>
             <div className="mb-10 grid max-w-2xl grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                <p className="text-sm font-black text-slate-900">Sites e sistemas</p>
+                <p className="text-sm font-black text-slate-900">Sites & Portais</p>
                 <p className="mt-1 text-sm text-slate-500">
-                  Projetos rápidos, estáveis e prontos para vender.
+                  Presença digital com velocidade e design premium.
                 </p>
               </div>
               <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                <p className="text-sm font-black text-slate-900">Tráfego com tracking</p>
+                <p className="text-sm font-black text-slate-900">Sistemas & SaaS</p>
                 <p className="mt-1 text-sm text-slate-500">
-                  Campanhas orientadas por dados e ROI.
+                  Arquitetura robusta para operações complexas.
                 </p>
               </div>
               <div className="rounded-3xl border border-slate-200 bg-white px-5 py-4 shadow-sm">
-                <p className="text-sm font-black text-slate-900">SEO técnico</p>
+                <p className="text-sm font-black text-slate-900">Landing Pages</p>
                 <p className="mt-1 text-sm text-slate-500">
-                  Autoridade orgânica com base sólida.
+                  Foco total em conversão e experiência do usuário.
                 </p>
               </div>
             </div>
@@ -418,70 +426,105 @@ const Landing = () => {
               <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-transform group-hover:scale-110">
                 <Code2 className="h-8 w-8" />
               </div>
-              <h4 className="mb-4 text-2xl font-black">Desenvolvimento Web & SaaS</h4>
+              <h4 className="mb-4 text-2xl font-black">Sistemas Sob Medida & SaaS</h4>
               <p className="mb-8 leading-relaxed text-slate-600">
-                Construímos sites institucionais, landing pages, painéis e sistemas sob
-                medida com foco em velocidade, estabilidade e experiência de conversão.
+                Desenvolvemos plataformas escaláveis, dashboards administrativos e softwares como serviço (SaaS)
+                utilizando tecnologias de ponta.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
                   <Check className="h-4 w-4 text-blue-600" /> Arquitetura de Software
                 </li>
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Dashboards Customizados
+                  <Check className="h-4 w-4 text-blue-600" /> Integrações via API
                 </li>
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Landing Pages para Captação
-                </li>
-              </ul>
-            </div>
-
-            <div className="group rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-xl transition-all hover:border-blue-300">
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-transform group-hover:scale-110">
-                <Zap className="h-8 w-8" />
-              </div>
-              <h4 className="mb-4 text-2xl font-black">Gestão de Tráfego Pago</h4>
-              <p className="mb-8 leading-relaxed text-slate-600">
-                Planejamos, configuramos e otimizamos campanhas no Google Ads e Meta Ads
-                para gerar demanda qualificada com leitura clara de custo, retorno e
-                escala.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Google Search de Elite
-                </li>
-                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Tracking de Conversão
-                </li>
-                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Estratégia de Escala e ROAS
+                  <Check className="h-4 w-4 text-blue-600" /> Segurança & Estabilidade
                 </li>
               </ul>
             </div>
 
             <div className="group rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-xl transition-all hover:border-blue-300">
               <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-transform group-hover:scale-110">
-                <TrendingUp className="h-8 w-8" />
+                <Globe className="h-8 w-8" />
               </div>
-              <h4 className="mb-4 text-2xl font-black">SEO Técnico & Orgânico</h4>
+              <h4 className="mb-4 text-2xl font-black">Sites Institucionais Premium</h4>
               <p className="mb-8 leading-relaxed text-slate-600">
-                Ajustamos estrutura, performance, dados semânticos e arquitetura de
-                conteúdo para aumentar relevância, indexação e geração de demanda
-                orgânica.
+                Sua empresa merece uma presença digital de elite. Criamos sites rápidos, 
+                otimizados para SEO e com design que transmite autoridade.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Indexação Semântica
+                  <Check className="h-4 w-4 text-blue-600" /> Design Exclusivo
                 </li>
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Meta-Tags Premium
+                  <Check className="h-4 w-4 text-blue-600" /> Performance Nota 100
                 </li>
                 <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
-                  <Check className="h-4 w-4 text-blue-600" /> Core Web Vitals e Schema
+                  <Check className="h-4 w-4 text-blue-600" /> Responsividade Total
+                </li>
+              </ul>
+            </div>
+
+            <div className="group rounded-[2.5rem] border border-slate-100 bg-white p-10 shadow-xl transition-all hover:border-blue-300">
+              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-transform group-hover:scale-110">
+                <MousePointer2 className="h-8 w-8" />
+              </div>
+              <h4 className="mb-4 text-2xl font-black">Landing Pages de Conversão</h4>
+              <p className="mb-8 leading-relaxed text-slate-600">
+                Páginas focadas em uma única ação: converter visitantes em clientes. 
+                Ideais para campanhas de tráfego pago e lançamentos.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
+                  <Check className="h-4 w-4 text-blue-600" /> Copywriting Persuasivo
+                </li>
+                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
+                  <Check className="h-4 w-4 text-blue-600" /> Testes A/B
+                </li>
+                <li className="flex items-center gap-2 text-sm font-bold text-slate-500">
+                  <Check className="h-4 w-4 text-blue-600" /> Tracking de Eventos
                 </li>
               </ul>
             </div>
           </div>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20 rounded-[3rem] bg-[linear-gradient(135deg,#f8fafc_0%,#eff6ff_100%)] p-8 lg:p-16 border border-blue-100 shadow-sm"
+          >
+            <div className="flex flex-col lg:flex-row items-center gap-12">
+              <div className="flex-1">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-orange-100 px-4 py-1.5 text-sm font-bold text-orange-700">
+                  <TrendingUp className="h-4 w-4" /> Multiplique seus Resultados
+                </div>
+                <h3 className="text-3xl font-black tracking-tighter sm:text-5xl mb-6">
+                  Seu site está pronto, mas <span className="text-blue-600">falta tráfego qualificado?</span>
+                </h3>
+                <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                  Não adianta ter uma ferrari tecnológica se ninguém a vê. Conheça nossa operação de 
+                  <strong> Marketing de Performance</strong> focada em <strong>Meta Ads</strong>, 
+                  <strong> Google Ads</strong> e <strong>SEO</strong> para lotar sua agenda.
+                </p>
+                <Button
+                  onClick={() => navigate("/trafego-e-seo")}
+                  size="lg"
+                  className="h-16 rounded-2xl bg-orange-600 px-10 text-lg font-black text-white hover:bg-orange-700 shadow-lg shadow-orange-100"
+                >
+                  Ver Estratégias de Tráfego & SEO <ArrowRight className="ml-2" />
+                </Button>
+              </div>
+              <div className="flex-1">
+                 <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" 
+                  className="rounded-[2rem] shadow-2xl"
+                  alt="Tráfego e SEO"
+                 />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -553,8 +596,8 @@ const Landing = () => {
                     Engenharia & Implementação
                   </h4>
                   <p className="text-slate-600">
-                    Desenvolvemos a estrutura digital, configuramos campanhas e implantamos
-                    rastreamento para transformar estratégia em operação.
+                    Desenvolvemos a estrutura digital, construímos o código e implantamos
+                    a infraestrutura necessária para transformar sua ideia em uma operação estável.
                   </p>
                 </div>
               </div>
@@ -564,11 +607,11 @@ const Landing = () => {
                 </div>
                 <div>
                   <h4 className="mb-2 text-xl font-black uppercase tracking-tighter">
-                    Escala & Otimização
+                    Escala & Manutenção
                   </h4>
                   <p className="text-slate-600">
-                    Analisamos dados em tempo real para escalar o que traz retorno e ajustar
-                    rapidamente o que limita sua conversão.
+                    Acompanhamos o crescimento, otimizamos performance e garantimos que a 
+                    tecnologia evolua junto com as necessidades do seu negócio.
                   </p>
                 </div>
               </div>
@@ -685,18 +728,17 @@ const Landing = () => {
         <div className="relative z-10 mx-auto max-w-4xl text-center text-white">
           <Sparkles className="mx-auto mb-8 h-12 w-12 text-blue-200" />
           <h3 className="mb-8 text-4xl font-black tracking-tighter sm:text-6xl">
-            Pronto para transformar tráfego, tecnologia e SEO em crescimento?
+            Pronto para construir sua próxima grande solução tecnológica?
           </h3>
           <p className="mx-auto mb-12 max-w-2xl text-xl italic text-blue-100">
-            Estruturamos a base técnica, a geração de demanda e a conversão para sua
-            empresa crescer com mais consistência.
+            Da concepção à infraestrutura, estamos prontos para transformar sua visão em um sistema robusto, rápido e escalável.
           </p>
           <Button
             onClick={() => window.open("https://wa.me/5532991075164")}
             size="lg"
             className="h-20 rounded-[2rem] bg-white px-16 text-xl font-black text-blue-600 shadow-2xl transition-all hover:scale-105 hover:bg-blue-50"
           >
-            Falar com o Especialista no WhatsApp
+            Iniciar meu Projeto de Desenvolvimento
           </Button>
         </div>
         <div className="absolute -mr-32 -mt-32 right-0 top-0 h-96 w-96 rounded-full bg-white/10 blur-3xl" />

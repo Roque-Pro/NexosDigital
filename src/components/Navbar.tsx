@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
+  { label: "Tráfego & SEO", href: "/trafego-e-seo", isLink: true },
   { label: "Sobre Mim", href: "/about-me", isLink: true },
   { label: "Metodologia", href: "#metodologia" },
   { label: "Resultados", href: "#resultados" },
@@ -15,6 +16,7 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
@@ -34,7 +36,7 @@ export default function Navbar() {
               href={link.href}
               {...(link.isLink && { onClick: (e) => {
                 e.preventDefault();
-                window.location.href = link.href;
+                navigate(link.href);
               }})}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
@@ -58,6 +60,22 @@ export default function Navbar() {
       {open && (
         <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="container flex flex-col gap-4 py-6">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={(e) => {
+                  if (link.isLink) {
+                    e.preventDefault();
+                    navigate(link.href);
+                  }
+                  setOpen(false);
+                }}
+                className="text-base font-bold text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
             <Button size="sm" className="glow-sm gap-2 w-fit" asChild>
               <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="h-4 w-4" /> WhatsApp

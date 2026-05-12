@@ -19,6 +19,7 @@ const BlogPost = lazy(() => import("./pages/BlogPost"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const AutoClubPro = lazy(() => import("./pages/AutoClubPro"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
+const TrafficAndSEO = lazy(() => import("./pages/TrafficAndSEO"));
 
 // Loading component
 const LoadingFallback = () => (
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/diagnostico-gratuito" element={<PlanAuth />} />
               <Route path="/autoclub-pro" element={<AutoClubPro />} />
               <Route path="/about-me" element={<AboutMe />} />
+              <Route path="/trafego-e-seo" element={<TrafficAndSEO />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route
