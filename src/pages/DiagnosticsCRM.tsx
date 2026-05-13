@@ -153,6 +153,10 @@ const DiagnosticsCRM = () => {
                     const newSlug = slugify(title, { lower: true, strict: true });
                     const now = new Date().toISOString();
 
+                    if (!session.user) {
+                        throw new Error("Usuário não autenticado para publicar posts.");
+                    }
+
                     const { error: insertError } = await supabase.from("blog_posts").insert({
                         title,
                         slug: newSlug,
@@ -167,14 +171,15 @@ const DiagnosticsCRM = () => {
                     });
 
                     if (insertError) {
-                        throw new Error(`Erro ao salvar post no Supabase: ${insertError.message}`);
+                        // Inclui uma dica sobre verificar o backend do Supabase
+                        throw new Error(`Erro ao salvar post no Supabase: ${insertError.message}. Verifique RLS e triggers de banco de dados.`);
                     }
                     toast({ title: "Sucesso", description: `Novo post "${title}" gerado e publicado!` });
                     return true;
                 } catch (error: any) {
                     console.error("Erro na geração e publicação de post:", error);
                     toast({
-                        title: "Erro na IA",
+                        title: "Erro na Automação",
                         description: error.message || "Falha ao gerar post automaticamente.",
                         variant: "destructive",
                     });
