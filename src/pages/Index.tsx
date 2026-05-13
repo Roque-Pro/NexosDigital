@@ -8,6 +8,7 @@ import AudienceSection from "@/components/AudienceSection";
 import WhyMeSection from "@/components/WhyMeSection";
 import FAQSection from "@/components/FAQSection";
 import VideoSection from "@/components/VideoSection";
+import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -28,6 +29,7 @@ const Index = () => {
          <WhyMeSection />
          <FAQSection />
          <VideoSection />
+         <BlogSection />
          <ContactSection />
        </main>
       <Footer />

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
+import BlogSection from "@/components/BlogSection";
 import logoClubeImg from "@/img/logo-autocub.png";
 import clienteImg from "@/img/cliente.png";
 import reparoVidrosImg from "@/img/reparo-de-vidros.png";
@@ -98,6 +99,12 @@ const AutoClubPro = () => {
                             Especialista
                         </button>
                         <button
+                            onClick={() => navigate("/blog")}
+                            className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+                        >
+                            Blog
+                        </button>
+                        <button
                             onClick={() => navigate("/autoclub-pro")}
                             className="text-sm font-bold text-blue-600 transition-colors"
                         >
@@ -136,6 +143,15 @@ const AutoClubPro = () => {
                             className="block w-full p-2 text-left font-bold text-slate-700"
                         >
                             Especialista
+                        </button>
+                        <button
+                            onClick={() => {
+                                navigate("/blog");
+                                setMobileMenuOpen(false);
+                            }}
+                            className="block w-full p-2 text-left font-bold text-slate-700"
+                        >
+                            Blog
                         </button>
                         <button
                             onClick={() => {
@@ -442,6 +458,8 @@ const AutoClubPro = () => {
 
                 {/* YouTube Videos */}
                 <YouTubeVideosSection />
+
+                <BlogSection />
 
                 {/* PROBLEMAS & SOLUÇÕES */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">

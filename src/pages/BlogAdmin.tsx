@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { ArrowLeft, Plus, Edit2, Trash2, Eye, Save } from "lucide-react";
+import { ArrowLeft, Plus, Edit2, Trash2, Eye, Save, Sparkles, FileText, Play, Square, Clock } from "lucide-react";
 import { BlogPost } from "@/types";
 
 const BlogAdmin = () => {
@@ -16,6 +16,11 @@ const BlogAdmin = () => {
     const [loading, setLoading] = useState(true);
     const [editingId, setEditingId] = useState<string | null>(null);
     const [showForm, setShowForm] = useState(false);
+
+    // Automation States
+    const [isAutoRunning, setIsAutoRunning] = useState(false);
+    const [intervalMinutes, setIntervalMinutes] = useState(90);
+    const [nextRun, setNextRun] = useState<Date | null>(null);
 
     const [formData, setFormData] = useState({
         title: "",
@@ -27,7 +32,105 @@ const BlogAdmin = () => {
 
     useEffect(() => {
         loadPosts();
+        
+        // Recover automation state
+        const savedAuto = localStorage.getItem("blog_automation_active") === "true";
+        const savedInterval = localStorage.getItem("blog_automation_interval");
+        if (savedAuto) setIsAutoRunning(true);
+        if (savedInterval) setIntervalMinutes(parseInt(savedInterval));
     }, []);
+
+    useEffect(() => {
+        let timer: NodeJS.Timeout;
+        if (isAutoRunning) {
+            const runAuto = async () => {
+                try {
+                    toast({ title: "IA", description: "Iniciando geração automática de post..." });
+                    const { data, error } = await supabase.functions.invoke('auto-generate-post');
+                    if (error) throw error;
+                    toast({ title: "Sucesso", description: "Post gerado automaticamente pela IA!" });
+                    loadPosts();
+                } catch (error: any) {
+                    console.error("Auto post error:", error);
+                    toast({ title: "Erro na IA", description: error.message, variant: "destructive" });
+                }
+                setNextRun(new Date(Date.now() + intervalMinutes * 60000));
+            };
+
+            if (!nextRun) {
+                setNextRun(new Date(Date.now() + intervalMinutes * 60000));
+            }
+
+            timer = setInterval(() => {
+                if (new Date() >= (nextRun || new Date())) {
+                    runAuto();
+                }
+            }, 60000);
+        }
+        return () => clearInterval(timer);
+    }, [isAutoRunning, intervalMinutes, nextRun]);
+
+    const toggleAutomation = () => {
+        const newState = !isAutoRunning;
+        setIsAutoRunning(newState);
+        localStorage.setItem("blog_automation_active", String(newState));
+        localStorage.setItem("blog_automation_interval", String(intervalMinutes));
+        if (newState) {
+            setNextRun(new Date(Date.now() + intervalMinutes * 60000));
+            toast({ title: "Automação Ativada", description: `Posts serão gerados a cada ${intervalMinutes} minutos.` });
+        }
+    };
+
+    const generateSitemap = async () => {
+        try {
+            const baseUrl = "https://www.technexos.com.br";
+            const staticPages = ["", "/diagnostico-gratuito", "/autoclub-pro", "/about-me", "/blog"];
+            const now = new Date().toISOString().split("T")[0];
+
+            let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+            sitemap += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+
+            staticPages.forEach((route) => {
+                sitemap += `  <url>\n`;
+                sitemap += `    <loc>${baseUrl}${route}</loc>\n`;
+                sitemap += `    <lastmod>${now}</lastmod>\n`;
+                sitemap += `    <changefreq>weekly</changefreq>\n`;
+                sitemap += `    <priority>${route === "" ? "1.0" : route === "/diagnostico-gratuito" ? "0.95" : route === "/autoclub-pro" ? "0.9" : route === "/about-me" ? "0.8" : "0.7"}</priority>\n`;
+                sitemap += `  </url>\n`;
+            });
+
+            const { data: blogPosts } = await supabase
+                .from("blog_posts")
+                .select("slug, updated_at")
+                .eq("published", true);
+
+            if (blogPosts) {
+                blogPosts.forEach((post) => {
+                    const postDate = new Date(post.updated_at || Date.now()).toISOString().split("T")[0];
+                    sitemap += `  <url>\n`;
+                    sitemap += `    <loc>${baseUrl}/blog/${post.slug}</loc>\n`;
+                    sitemap += `    <lastmod>${postDate}</lastmod>\n`;
+                    sitemap += `    <changefreq>monthly</changefreq>\n`;
+                    sitemap += `    <priority>0.6</priority>\n`;
+                    sitemap += `  </url>\n`;
+                });
+            }
+
+            sitemap += `</urlset>`;
+
+            const blob = new Blob([sitemap], { type: "application/xml" });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "sitemap.xml";
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            toast({ title: "Sitemap Gerado", description: "sitemap.xml baixado com sucesso." });
+        } catch (error) {
+            toast({ title: "Erro", description: "Falha ao gerar sitemap", variant: "destructive" });
+        }
+    };
 
     const loadPosts = async () => {
         try {
@@ -37,7 +140,7 @@ const BlogAdmin = () => {
                 .order("created_at", { ascending: false });
 
             if (error) throw error;
-            setPosts(data || []);
+            setPosts((data || []).filter((post) => post.slug !== "__blog-automation-settings__"));
         } catch (error: any) {
             toast({
                 title: "Erro",
@@ -197,20 +300,82 @@ const BlogAdmin = () => {
                             Blog Admin
                         </h1>
                     </div>
-                    <Button
-                        onClick={() => {
-                            resetForm();
-                            setShowForm(!showForm);
-                        }}
-                        className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold"
-                    >
-                        <Plus className="w-4 h-4 mr-2" />
-                        Novo Post
-                    </Button>
+                    <div className="flex gap-3">
+                        <Button
+                            onClick={generateSitemap}
+                            variant="outline"
+                            className="border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold"
+                        >
+                            <FileText className="w-4 h-4 mr-2" />
+                            Sitemap.txt
+                        </Button>
+                        <Button
+                            onClick={() => {
+                                resetForm();
+                                setShowForm(!showForm);
+                            }}
+                            data-testid="blog-new-post"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold"
+                        >
+                            <Plus className="w-4 h-4 mr-2" />
+                            Novo Post
+                        </Button>
+                    </div>
                 </div>
             </header>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                {/* AI Automation Control Panel */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="bg-slate-900 border-2 border-purple-500 rounded-2xl p-6 mb-12 shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+                >
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div className="flex items-center gap-4">
+                            <div className={`p-3 rounded-xl ${isAutoRunning ? 'bg-purple-600 animate-pulse' : 'bg-slate-800'} border border-purple-400`}>
+                                <Sparkles className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white">Automação Inteligente (Gemini)</h3>
+                                <p className="text-purple-300 text-sm">Postagens automáticas e estratégicas a cada intervalo.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-6">
+                            <div className="flex items-center gap-3 bg-slate-800 p-2 rounded-lg border border-purple-500/30">
+                                <Clock className="w-4 h-4 text-purple-400" />
+                                <div className="flex items-center gap-2">
+                                    <Input 
+                                        type="number" 
+                                        value={intervalMinutes}
+                                        onChange={(e) => setIntervalMinutes(parseInt(e.target.value) || 1)}
+                                        className="w-20 h-8 bg-slate-700 border-purple-500 text-white text-center"
+                                    />
+                                    <span className="text-purple-300 text-xs font-bold uppercase">minutos</span>
+                                </div>
+                            </div>
+
+                            <Button
+                                onClick={toggleAutomation}
+                                className={`h-12 px-8 font-black text-lg transition-all ${isAutoRunning ? 'bg-red-600 hover:bg-red-700' : 'bg-purple-600 hover:bg-purple-700'} shadow-lg`}
+                            >
+                                {isAutoRunning ? (
+                                    <><Square className="w-5 h-5 mr-2" /> Parar</>
+                                ) : (
+                                    <><Play className="w-5 h-5 mr-2" /> Iniciar</>
+                                )}
+                            </Button>
+                        </div>
+                    </div>
+                    {isAutoRunning && nextRun && (
+                        <div className="mt-4 text-center">
+                            <p className="text-xs text-purple-400 font-mono">
+                                Próxima geração em: {nextRun.toLocaleTimeString()}
+                            </p>
+                        </div>
+                    )}
+                </motion.div>
                 {/* Form */}
                 {showForm && (
                     <motion.div
@@ -239,6 +404,7 @@ const BlogAdmin = () => {
                             <div className="space-y-2">
                                 <Label className="font-semibold text-indigo-300">Slug *</Label>
                                 <Input
+                                    data-testid="blog-slug"
                                     placeholder="slug-do-post"
                                     value={formData.slug}
                                     onChange={(e) =>
@@ -258,6 +424,7 @@ const BlogAdmin = () => {
                                     Resumo (opcional)
                                 </Label>
                                 <textarea
+                                    data-testid="blog-excerpt"
                                     placeholder="Resumo do post"
                                     value={formData.excerpt}
                                     onChange={(e) =>
@@ -297,6 +464,7 @@ const BlogAdmin = () => {
                                 <input
                                     type="checkbox"
                                     id="published"
+                                    data-testid="blog-published"
                                     checked={formData.published}
                                     onChange={(e) =>
                                         setFormData({ ...formData, published: e.target.checked })
@@ -315,6 +483,7 @@ const BlogAdmin = () => {
                             <div className="flex gap-3 pt-4">
                                 <Button
                                     type="submit"
+                                    data-testid="blog-submit"
                                     className="bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white font-bold"
                                 >
                                     <Save className="w-4 h-4 mr-2" />

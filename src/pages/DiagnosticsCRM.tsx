@@ -5,7 +5,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import slugify from 'slugify';
 import { useToast } from "@/hooks/use-toast";
 import {
     Code2,
@@ -38,6 +37,18 @@ interface Diagnostic {
     created_at: string;
 }
 
+interface BlogAutomationSettings {
+    enabled: boolean;
+    interval_minutes: number;
+    next_run_at: string | null;
+    last_run_at: string | null;
+    last_success_at: string | null;
+    last_status: string;
+    last_error: string | null;
+    last_generated_slug: string | null;
+    publish_enabled: boolean;
+}
+
 const DiagnosticsCRM = () => {
     const { session } = useAuth();
     const { toast } = useToast();
@@ -52,190 +63,163 @@ const DiagnosticsCRM = () => {
     const [intervalMinutes, setIntervalMinutes] = useState(90);
     const [nextRun, setNextRun] = useState<Date | null>(null);
 
-    const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+    const [lastRunAt, setLastRunAt] = useState<Date | null>(null);
+    const [lastStatus, setLastStatus] = useState("idle");
+    const [lastError, setLastError] = useState<string | null>(null);
+    const [lastGeneratedSlug, setLastGeneratedSlug] = useState<string | null>(null);
+    const [automationSaving, setAutomationSaving] = useState(false);
 
     // Função para pegar hora atual de Brasília (UTC-3)
-    const getBrasiliaTime = () => {
-        const now = new Date();
-        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
-        return new Date(utc + (3600000 * -3));
-    };
 
     // Verificar autenticação
+    const applyAutomationSettings = (settings: BlogAutomationSettings) => {
+        setIsAutoRunning(settings.enabled);
+        setIntervalMinutes(settings.interval_minutes || 90);
+        setNextRun(settings.next_run_at ? new Date(settings.next_run_at) : null);
+        setLastRunAt(settings.last_run_at ? new Date(settings.last_run_at) : null);
+        setLastStatus(settings.last_status || "idle");
+        setLastError(settings.last_error || null);
+        setLastGeneratedSlug(settings.last_generated_slug || null);
+    };
+
+    const loadAutomationSettings = async () => {
+        try {
+            const { data, error } = await supabase
+                .from("blog_posts")
+                .select("html_content")
+                .eq("slug", "__blog-automation-settings__")
+                .maybeSingle();
+
+            if (error) throw error;
+
+            const rawSettings = data?.html_content ? JSON.parse(data.html_content) : null;
+
+            if (!rawSettings) {
+                applyAutomationSettings({
+                    enabled: false,
+                    interval_minutes: 90,
+                    next_run_at: null,
+                    last_run_at: null,
+                    last_success_at: null,
+                    last_status: "idle",
+                    last_error: null,
+                    last_generated_slug: null,
+                    publish_enabled: true,
+                });
+                return;
+            }
+
+            applyAutomationSettings(rawSettings as BlogAutomationSettings);
+        } catch (error: any) {
+            toast({
+                title: "Erro na automação",
+                description: error.message || "Não foi possível carregar o agendamento do blog.",
+                variant: "destructive",
+            });
+        }
+    };
+
     if (!session) {
         return <Navigate to="/auth" replace />;
     }
-
-    // Carregar diagnósticos
     useEffect(() => {
         fetchDiagnostics();
-        
-        // Recover automation state
-        const savedAuto = localStorage.getItem("blog_automation_active") === "true";
-        const savedInterval = localStorage.getItem("blog_automation_interval");
-        if (savedAuto) setIsAutoRunning(true);
-        if (savedInterval) setIntervalMinutes(parseInt(savedInterval));
+        loadAutomationSettings();
     }, []);
 
-    useEffect(() => {
-        let timer: NodeJS.Timeout;
-        if (isAutoRunning) {
-            const generateAndPublishBlogPost = async () => {
-                if (!GEMINI_API_KEY) {
-                    throw new Error("VITE_GEMINI_API_KEY não está definido nas variáveis de ambiente.");
-                }
+    const persistAutomationSettings = async (enabled: boolean, newIntervalMinutes = intervalMinutes) => {
+        setAutomationSaving(true);
 
-                const prompt = `Você é um especialista em marketing digital e SEO da TechNexos, uma empresa inovadora que oferece soluções de automação e tráfego pago. Sua tarefa é criar um post de blog de alta qualidade para atrair leads para nossos serviços.
-                
-                O post deve ser original, otimizado para SEO, envolvente e focado em um tópico relevante para o nosso público-alvo (empresários, profissionais de marketing, etc.), sempre destacando sutilmente como as soluções da TechNexos (automação, tráfego pago, SEO) podem resolver problemas e agregar valor.
-                
-                A estrutura do post deve ser em formato JSON, contendo os seguintes campos:
-                
-                {
-                  "title": "Título impactante do blog post (máximo 70 caracteres)",
-                  "excerpt": "Um breve resumo atraente (máximo 160 caracteres), otimizado para meta descrição.",
-                  "html_content": "Conteúdo completo do blog post em HTML, com parágrafos (p), cabeçalhos (h2, h3), listas (ul, ol), negritos (strong). Deve ter no mínimo 800 palavras e no máximo 1500 palavras. Inclua uma conclusão clara e um CTA sutil para os serviços da TechNexos. Evite menções diretas a 'TechNexos' dentro do conteúdo principal; em vez disso, descreva os *benefícios* de automação, tráfego e SEO que nossos serviços proporcionam. A introdução deve ser cativante e o conteúdo bem estruturado com subtítulos para facilitar a leitura. Use emojis de forma moderada e relevante. O HTML deve ser limpo e semanticamente correto.",
-                  "keywords": ["palavra-chave 1", "palavra-chave 2", "palavra-chave 3", "palavra-chave 4", "palavra-chave 5"] // 5 palavras-chave de SEO relevantes
-                }
-                
-                Exemplos de tópicos que você pode abordar:
-                - Como a automação de marketing pode dobrar suas vendas.
-                - O guia completo para tráfego pago no Google Ads e Facebook Ads.
-                - SEO para pequenas empresas: Dicas essenciais para dominar o Google.
-                - A importância da análise de dados para campanhas de marketing digital.
-                - Como construir um funil de vendas automatizado e eficiente.
-                
-                Escolha um tópico relevante e crie o conteúdo. Garanta que o JSON seja válido e completo.`;
+        const now = new Date();
+        const nextRunAt = enabled ? new Date(now.getTime() + newIntervalMinutes * 60000).toISOString() : null;
+        const nextStatus = enabled ? "scheduled" : "paused";
 
-                try {
-                    toast({ title: "IA", description: "Gerando conteúdo com Gemini..." });
-                    const response = await fetch(
-                        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${GEMINI_API_KEY}`,
-                        {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                            },
-                            body: JSON.stringify({
-                                contents: [{ parts: [{ text: prompt }] }],
-                            }),
-                        }
-                    );
-
-                    if (!response.ok) {
-                        const errorData = await response.json().catch(() => ({})); // Tenta ler o JSON, mas não falha se não for JSON
-                        console.error("Detalhes do erro da API Gemini:", errorData); // Adiciona este log
-                        throw new Error(`Erro na API Gemini: ${errorData.error?.message || response.statusText}`);
-                    }
-
-                    const data = await response.json();
-                    const generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-
-                    if (!generatedText) {
-                        throw new Error("A IA não retornou conteúdo.");
-                    }
-
-                    // Tentar extrair o JSON do texto. A IA pode envolver o JSON em markdown.
-                    const jsonMatch = generatedText.match(/```json\n([\s\S]*?)\n```/);
-                    let blogPostData;
-                    if (jsonMatch && jsonMatch[1]) {
-                        blogPostData = JSON.parse(jsonMatch[1]);
-                    } else {
-                        blogPostData = JSON.parse(generatedText); // Tentar parsing direto se não houver markdown
-                    }
-
-                    const { title, excerpt, html_content, keywords } = blogPostData;
-
-                    if (!title || !excerpt || !html_content) {
-                        throw new Error("O conteúdo gerado pela IA está incompleto (faltam título, resumo ou HTML).");
-                    }
-
-                    const newSlug = slugify(title, { lower: true, strict: true });
-                    const now = new Date().toISOString();
-
-                    if (!session.user) {
-                        throw new Error("Usuário não autenticado para publicar posts.");
-                    }
-
-                    const { error: insertError } = await supabase.from("blog_posts").insert({
-                        title,
-                        slug: newSlug,
-                        excerpt,
-                        html_content,
-                        keywords: keywords || [],
-                        published: true,
-                        created_at: now,
-                        updated_at: now,
-                        author_id: session.user.id,
-                        author_name: session.user.user_metadata.full_name || "Admin",
-                    });
-
-                    if (insertError) {
-                        // Inclui uma dica sobre verificar o backend do Supabase
-                        throw new Error(`Erro ao salvar post no Supabase: ${insertError.message}. Verifique RLS e triggers de banco de dados.`);
-                    }
-                    toast({ title: "Sucesso", description: `Novo post "${title}" gerado e publicado!` });
-                    return true;
-                } catch (error: any) {
-                    console.error("Erro na geração e publicação de post:", error);
-                    toast({
-                        title: "Erro na Automação",
-                        description: error.message || "Falha ao gerar post automaticamente.",
-                        variant: "destructive",
-                    });
-                    return false;
-                }
+        try {
+            const settingsPayload = {
+                enabled,
+                interval_minutes: newIntervalMinutes,
+                next_run_at: nextRunAt,
+                last_run_at: lastRunAt ? lastRunAt.toISOString() : null,
+                last_success_at: null,
+                last_status: nextStatus,
+                last_error: enabled ? null : lastError,
+                last_generated_slug: lastGeneratedSlug,
+                publish_enabled: true,
             };
 
-            const runAuto = async () => {
-                const success = await generateAndPublishBlogPost();
-                if (success) {
-                    // Refetch blog posts to update sitemap generation if needed, or just acknowledge successful publish
-                    // For now, just schedule next run.
-                }
-                
-                // Agendar próxima execução (Brasília Time)
-                const next = getBrasiliaTime();
-                next.setMinutes(next.getMinutes() + intervalMinutes);
-                setNextRun(next);
-            };
+            const { data: settingsPost, error: settingsLookupError } = await supabase
+                .from("blog_posts")
+                .select("id")
+                .eq("slug", "__blog-automation-settings__")
+                .maybeSingle();
 
-            if (!nextRun) {
-                const initialNext = getBrasiliaTime();
-                initialNext.setMinutes(initialNext.getMinutes() + intervalMinutes);
-                setNextRun(initialNext);
+            if (settingsLookupError) throw settingsLookupError;
+
+            const { error } = settingsPost
+                ? await supabase
+                    .from("blog_posts")
+                    .update({
+                        title: "Configura??o interna da automa??o",
+                        excerpt: "Registro interno do agendamento do blog",
+                        html_content: JSON.stringify(settingsPayload),
+                        published: false,
+                        updated_at: now.toISOString(),
+                    })
+                    .eq("id", settingsPost.id)
+                : await supabase.from("blog_posts").insert({
+                    title: "Configura??o interna da automa??o",
+                    slug: "__blog-automation-settings__",
+                    excerpt: "Registro interno do agendamento do blog",
+                    html_content: JSON.stringify(settingsPayload),
+                    published: false,
+                    created_at: now.toISOString(),
+                    updated_at: now.toISOString(),
+                });
+
+            if (error) throw error;
+
+            setIsAutoRunning(enabled);
+            setIntervalMinutes(newIntervalMinutes);
+            setNextRun(nextRunAt ? new Date(nextRunAt) : null);
+            setLastStatus(nextStatus);
+            if (enabled) {
+                setLastError(null);
             }
 
-            timer = setInterval(() => {
-                const nowBR = getBrasiliaTime();
-                if (nextRun && nowBR >= nextRun) {
-                    runAuto();
-                }
-            }, 30000); // Check every 30s
+            toast({
+                title: enabled ? "Automa??o agendada" : "Automa??o pausada",
+                description: enabled
+                    ? `A publica??o autom?tica ficou agendada para rodar a cada ${newIntervalMinutes} minutos.`
+                    : "O agendamento autom?tico foi pausado.",
+            });
+        } catch (error: any) {
+            toast({
+                title: "Erro na automa??o",
+                description: error.message || "N?o foi poss?vel salvar a automa??o do blog.",
+                variant: "destructive",
+            });
+        } finally {
+            setAutomationSaving(false);
         }
-        return () => clearInterval(timer);
-    }, [isAutoRunning, intervalMinutes, nextRun, session, toast, GEMINI_API_KEY]);
+    };
 
-    const toggleAutomation = () => {
-        const newState = !isAutoRunning;
-        setIsAutoRunning(newState);
-        localStorage.setItem("blog_automation_active", String(newState));
-        localStorage.setItem("blog_automation_interval", String(intervalMinutes));
-        
-        if (newState) {
-            const next = getBrasiliaTime();
-            next.setMinutes(next.getMinutes() + intervalMinutes);
-            setNextRun(next);
-            toast({ title: "Automação Ativada", description: `Posts serão gerados a cada ${intervalMinutes} minutos (Fuso Brasília).` });
-        } else {
-            setNextRun(null);
+    const toggleAutomation = async () => {
+        await persistAutomationSettings(!isAutoRunning);
+    };
+
+    const handleIntervalChange = async (value: string) => {
+        const parsedValue = Math.max(1, parseInt(value, 10) || 1);
+        setIntervalMinutes(parsedValue);
+
+        if (isAutoRunning) {
+            await persistAutomationSettings(true, parsedValue);
         }
     };
 
     const generateSitemap = async () => {
         try {
             const baseUrl = "https://www.technexos.com.br";
-            const staticPages = ["", "/about-me", "/autoclub-pro", "/trafego-e-seo", "/blog"];
+            const staticPages = ["", "/diagnostico-gratuito", "/autoclub-pro", "/about-me", "/blog"];
             const now = new Date().toISOString().split('T')[0];
             
             let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -569,7 +553,7 @@ const DiagnosticsCRM = () => {
                                     <Input 
                                         type="number" 
                                         value={intervalMinutes}
-                                        onChange={(e) => setIntervalMinutes(parseInt(e.target.value) || 1)}
+                                        onChange={(e) => void handleIntervalChange(e.target.value)}
                                         className="w-20 h-8 bg-slate-700 border-purple-500 text-white text-center"
                                     />
                                     <span className="text-purple-300 text-xs font-bold uppercase">minutos</span>
@@ -577,7 +561,8 @@ const DiagnosticsCRM = () => {
                             </div>
 
                             <Button
-                                onClick={toggleAutomation}
+                                onClick={() => void toggleAutomation()}
+                                disabled={automationSaving}
                                 className={`h-12 px-8 font-black text-lg transition-all ${isAutoRunning ? 'bg-red-600 hover:bg-red-700' : 'bg-purple-600 hover:bg-purple-700'} shadow-lg`}
                             >
                                 {isAutoRunning ? (

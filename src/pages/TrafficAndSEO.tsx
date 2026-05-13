@@ -30,6 +30,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const TrafficAndSEO = () => {
@@ -103,6 +104,12 @@ const TrafficAndSEO = () => {
               Tráfego Pago
             </button>
             <button
+              onClick={() => navigate("/blog")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
+            >
+              Blog
+            </button>
+            <button
               onClick={() =>
                 document.getElementById("organico")?.scrollIntoView({ behavior: "smooth" })
               }
@@ -142,6 +149,15 @@ const TrafficAndSEO = () => {
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
               Tráfego Pago
+            </button>
+            <button
+              onClick={() => {
+                navigate("/blog");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Blog
             </button>
             <button
               onClick={() => {
@@ -370,6 +386,8 @@ const TrafficAndSEO = () => {
             </div>
          </div>
       </section>
+
+      <BlogSection />
 
       {/* FAQ Section */}
       <section className="bg-white px-4 py-24">

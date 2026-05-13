@@ -35,6 +35,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const strategicSteps = [
@@ -186,6 +187,12 @@ const Landing = () => {
               AutoClub Pro
             </button>
             <button
+              onClick={() => navigate("/blog")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+            >
+              Blog
+            </button>
+            <button
               onClick={() =>
                 document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" })
               }
@@ -244,6 +251,15 @@ const Landing = () => {
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
               AutoClub Pro
+            </button>
+            <button
+              onClick={() => {
+                navigate("/blog");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Blog
             </button>
             <Button
               onClick={() => {
@@ -744,6 +760,8 @@ const Landing = () => {
         <div className="absolute -mr-32 -mt-32 right-0 top-0 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
         <div className="absolute -mb-32 -ml-32 bottom-0 left-0 h-96 w-96 rounded-full bg-black/10 blur-3xl" />
       </section>
+
+      <BlogSection />
 
       <section id="faq" className="bg-white px-4 py-24">
         <div className="mx-auto max-w-3xl">
