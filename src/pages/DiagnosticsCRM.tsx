@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import slugify from 'slugify';
 import { useToast } from "@/hooks/use-toast";
 import {
     Code2,
@@ -51,6 +52,8 @@ const DiagnosticsCRM = () => {
     const [intervalMinutes, setIntervalMinutes] = useState(90);
     const [nextRun, setNextRun] = useState<Date | null>(null);
 
+    const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
     // Função para pegar hora atual de Brasília (UTC-3)
     const getBrasiliaTime = () => {
         const now = new Date();
@@ -77,22 +80,112 @@ const DiagnosticsCRM = () => {
     useEffect(() => {
         let timer: NodeJS.Timeout;
         if (isAutoRunning) {
-            const runAuto = async () => {
+            const generateAndPublishBlogPost = async () => {
+                if (!GEMINI_API_KEY) {
+                    throw new Error("VITE_GEMINI_API_KEY não está definido nas variáveis de ambiente.");
+                }
+
+                const prompt = `Você é um especialista em marketing digital e SEO da TechNexos, uma empresa inovadora que oferece soluções de automação e tráfego pago. Sua tarefa é criar um post de blog de alta qualidade para atrair leads para nossos serviços.
+                
+                O post deve ser original, otimizado para SEO, envolvente e focado em um tópico relevante para o nosso público-alvo (empresários, profissionais de marketing, etc.), sempre destacando sutilmente como as soluções da TechNexos (automação, tráfego pago, SEO) podem resolver problemas e agregar valor.
+                
+                A estrutura do post deve ser em formato JSON, contendo os seguintes campos:
+                
+                {
+                  "title": "Título impactante do blog post (máximo 70 caracteres)",
+                  "excerpt": "Um breve resumo atraente (máximo 160 caracteres), otimizado para meta descrição.",
+                  "html_content": "Conteúdo completo do blog post em HTML, com parágrafos (p), cabeçalhos (h2, h3), listas (ul, ol), negritos (strong). Deve ter no mínimo 800 palavras e no máximo 1500 palavras. Inclua uma conclusão clara e um CTA sutil para os serviços da TechNexos. Evite menções diretas a 'TechNexos' dentro do conteúdo principal; em vez disso, descreva os *benefícios* de automação, tráfego e SEO que nossos serviços proporcionam. A introdução deve ser cativante e o conteúdo bem estruturado com subtítulos para facilitar a leitura. Use emojis de forma moderada e relevante. O HTML deve ser limpo e semanticamente correto.",
+                  "keywords": ["palavra-chave 1", "palavra-chave 2", "palavra-chave 3", "palavra-chave 4", "palavra-chave 5"] // 5 palavras-chave de SEO relevantes
+                }
+                
+                Exemplos de tópicos que você pode abordar:
+                - Como a automação de marketing pode dobrar suas vendas.
+                - O guia completo para tráfego pago no Google Ads e Facebook Ads.
+                - SEO para pequenas empresas: Dicas essenciais para dominar o Google.
+                - A importância da análise de dados para campanhas de marketing digital.
+                - Como construir um funil de vendas automatizado e eficiente.
+                
+                Escolha um tópico relevante e crie o conteúdo. Garanta que o JSON seja válido e completo.`;
+
                 try {
-                    toast({ title: "IA", description: "Iniciando geração automática de post..." });
-                    // Forçar chamada direta se necessário, mas invoke deve funcionar após o fix de CORS
-                    const { data, error } = await supabase.functions.invoke('auto-generate-post');
-                    
-                    if (error) throw error;
-                    
-                    toast({ title: "Sucesso", description: "Post gerado automaticamente pela IA!" });
-                } catch (error: any) {
-                    console.error("Auto post error:", error);
-                    toast({ 
-                        title: "Erro na IA", 
-                        description: "Falha na comunicação com a IA. Verifique se a Function está publicada.", 
-                        variant: "destructive" 
+                    toast({ title: "IA", description: "Gerando conteúdo com Gemini..." });
+                    const response = await fetch(
+                        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`,
+                        {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                                contents: [{ parts: [{ text: prompt }] }],
+                            }),
+                        }
+                    );
+
+                    if (!response.ok) {
+                        const errorData = await response.json();
+                        throw new Error(`Erro na API Gemini: ${errorData.error.message || response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    const generatedText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                    if (!generatedText) {
+                        throw new Error("A IA não retornou conteúdo.");
+                    }
+
+                    // Tentar extrair o JSON do texto. A IA pode envolver o JSON em markdown.
+                    const jsonMatch = generatedText.match(/```json\n([\s\S]*?)\n```/);
+                    let blogPostData;
+                    if (jsonMatch && jsonMatch[1]) {
+                        blogPostData = JSON.parse(jsonMatch[1]);
+                    } else {
+                        blogPostData = JSON.parse(generatedText); // Tentar parsing direto se não houver markdown
+                    }
+
+                    const { title, excerpt, html_content, keywords } = blogPostData;
+
+                    if (!title || !excerpt || !html_content) {
+                        throw new Error("O conteúdo gerado pela IA está incompleto (faltam título, resumo ou HTML).");
+                    }
+
+                    const newSlug = slugify(title, { lower: true, strict: true });
+                    const now = new Date().toISOString();
+
+                    const { error: insertError } = await supabase.from("blog_posts").insert({
+                        title,
+                        slug: newSlug,
+                        excerpt,
+                        html_content,
+                        keywords: keywords || [],
+                        published: true,
+                        created_at: now,
+                        updated_at: now,
+                        author_id: session.user.id,
+                        author_name: session.user.user_metadata.full_name || "Admin",
                     });
+
+                    if (insertError) {
+                        throw new Error(`Erro ao salvar post no Supabase: ${insertError.message}`);
+                    }
+                    toast({ title: "Sucesso", description: `Novo post "${title}" gerado e publicado!` });
+                    return true;
+                } catch (error: any) {
+                    console.error("Erro na geração e publicação de post:", error);
+                    toast({
+                        title: "Erro na IA",
+                        description: error.message || "Falha ao gerar post automaticamente.",
+                        variant: "destructive",
+                    });
+                    return false;
+                }
+            };
+
+            const runAuto = async () => {
+                const success = await generateAndPublishBlogPost();
+                if (success) {
+                    // Refetch blog posts to update sitemap generation if needed, or just acknowledge successful publish
+                    // For now, just schedule next run.
                 }
                 
                 // Agendar próxima execução (Brasília Time)
@@ -115,7 +208,7 @@ const DiagnosticsCRM = () => {
             }, 30000); // Check every 30s
         }
         return () => clearInterval(timer);
-    }, [isAutoRunning, intervalMinutes, nextRun]);
+    }, [isAutoRunning, intervalMinutes, nextRun, session, toast, GEMINI_API_KEY]);
 
     const toggleAutomation = () => {
         const newState = !isAutoRunning;
