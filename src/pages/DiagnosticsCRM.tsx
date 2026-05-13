@@ -16,6 +16,11 @@ import {
     LogOut,
     BookOpen,
     Clapperboard,
+    Sparkles,
+    FileText,
+    Play,
+    Square,
+    Clock,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -41,6 +46,18 @@ const DiagnosticsCRM = () => {
     const [filterStatus, setFilterStatus] = useState("all");
     const [expandedId, setExpandedId] = useState<string | null>(null);
 
+    // Automation States
+    const [isAutoRunning, setIsAutoRunning] = useState(false);
+    const [intervalMinutes, setIntervalMinutes] = useState(90);
+    const [nextRun, setNextRun] = useState<Date | null>(null);
+
+    // Função para pegar hora atual de Brasília (UTC-3)
+    const getBrasiliaTime = () => {
+        const now = new Date();
+        const utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        return new Date(utc + (3600000 * -3));
+    };
+
     // Verificar autenticação
     if (!session) {
         return <Navigate to="/auth" replace />;
@@ -49,7 +66,125 @@ const DiagnosticsCRM = () => {
     // Carregar diagnósticos
     useEffect(() => {
         fetchDiagnostics();
+        
+        // Recover automation state
+        const savedAuto = localStorage.getItem("blog_automation_active") === "true";
+        const savedInterval = localStorage.getItem("blog_automation_interval");
+        if (savedAuto) setIsAutoRunning(true);
+        if (savedInterval) setIntervalMinutes(parseInt(savedInterval));
     }, []);
+
+    useEffect(() => {
+        let timer: NodeJS.Timeout;
+        if (isAutoRunning) {
+            const runAuto = async () => {
+                try {
+                    toast({ title: "IA", description: "Iniciando geração automática de post..." });
+                    // Forçar chamada direta se necessário, mas invoke deve funcionar após o fix de CORS
+                    const { data, error } = await supabase.functions.invoke('auto-generate-post');
+                    
+                    if (error) throw error;
+                    
+                    toast({ title: "Sucesso", description: "Post gerado automaticamente pela IA!" });
+                } catch (error: any) {
+                    console.error("Auto post error:", error);
+                    toast({ 
+                        title: "Erro na IA", 
+                        description: "Falha na comunicação com a IA. Verifique se a Function está publicada.", 
+                        variant: "destructive" 
+                    });
+                }
+                
+                // Agendar próxima execução (Brasília Time)
+                const next = getBrasiliaTime();
+                next.setMinutes(next.getMinutes() + intervalMinutes);
+                setNextRun(next);
+            };
+
+            if (!nextRun) {
+                const initialNext = getBrasiliaTime();
+                initialNext.setMinutes(initialNext.getMinutes() + intervalMinutes);
+                setNextRun(initialNext);
+            }
+
+            timer = setInterval(() => {
+                const nowBR = getBrasiliaTime();
+                if (nextRun && nowBR >= nextRun) {
+                    runAuto();
+                }
+            }, 30000); // Check every 30s
+        }
+        return () => clearInterval(timer);
+    }, [isAutoRunning, intervalMinutes, nextRun]);
+
+    const toggleAutomation = () => {
+        const newState = !isAutoRunning;
+        setIsAutoRunning(newState);
+        localStorage.setItem("blog_automation_active", String(newState));
+        localStorage.setItem("blog_automation_interval", String(intervalMinutes));
+        
+        if (newState) {
+            const next = getBrasiliaTime();
+            next.setMinutes(next.getMinutes() + intervalMinutes);
+            setNextRun(next);
+            toast({ title: "Automação Ativada", description: `Posts serão gerados a cada ${intervalMinutes} minutos (Fuso Brasília).` });
+        } else {
+            setNextRun(null);
+        }
+    };
+
+    const generateSitemap = async () => {
+        try {
+            const baseUrl = "https://www.technexos.com.br";
+            const staticPages = ["", "/about-me", "/autoclub-pro", "/trafego-e-seo", "/blog"];
+            const now = new Date().toISOString().split('T')[0];
+            
+            let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+            xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+            
+            // Static Pages
+            staticPages.forEach(route => {
+                xml += `  <url>\n`;
+                xml += `    <loc>${baseUrl}${route}</loc>\n`;
+                xml += `    <lastmod>${now}</lastmod>\n`;
+                xml += `    <changefreq>weekly</changefreq>\n`;
+                xml += `    <priority>${route === "" ? "1.0" : "0.8"}</priority>\n`;
+                xml += `  </url>\n`;
+            });
+            
+            // Dynamic Blog Posts
+            const { data: blogPosts } = await supabase
+                .from("blog_posts")
+                .select("slug, updated_at")
+                .eq("published", true);
+            
+            if (blogPosts) {
+                blogPosts.forEach(post => {
+                    const postDate = new Date(post.updated_at || Date.now()).toISOString().split('T')[0];
+                    xml += `  <url>\n`;
+                    xml += `    <loc>${baseUrl}/blog/${post.slug}</loc>\n`;
+                    xml += `    <lastmod>${postDate}</lastmod>\n`;
+                    xml += `    <changefreq>monthly</changefreq>\n`;
+                    xml += `    <priority>0.6</priority>\n`;
+                    xml += `  </url>\n`;
+                });
+            }
+            
+            xml += `</urlset>`;
+
+            const blob = new Blob([xml], { type: "application/xml" });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "sitemap.xml";
+            a.click();
+            window.URL.revokeObjectURL(url);
+            
+            toast({ title: "Sitemap XML Gerado", description: "sitemap.xml pronto para o Google Search Console." });
+        } catch (error) {
+            toast({ title: "Erro", description: "Falha ao gerar sitemap XML", variant: "destructive" });
+        }
+    };
 
     const fetchDiagnostics = async () => {
         setLoading(true);
@@ -284,6 +419,14 @@ const DiagnosticsCRM = () => {
                             Reels
                         </Button>
                         <Button
+                            onClick={generateSitemap}
+                            variant="outline"
+                            className="border-indigo-500 text-indigo-400 hover:bg-indigo-500/10 font-bold"
+                        >
+                            <FileText className="w-4 h-4 mr-2" />
+                            Sitemap
+                        </Button>
+                        <Button
                             onClick={exportCSV}
                             className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm"
                         >
@@ -303,6 +446,58 @@ const DiagnosticsCRM = () => {
 
             {/* Conteúdo */}
             <div className="max-w-7xl mx-auto p-6">
+                {/* AI Automation Control Panel */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    className="bg-slate-900 border-2 border-purple-500 rounded-2xl p-6 mb-8 shadow-[0_0_20px_rgba(168,85,247,0.2)]"
+                >
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div className="flex items-center gap-4">
+                            <div className={`p-3 rounded-xl ${isAutoRunning ? 'bg-purple-600 animate-pulse' : 'bg-slate-800'} border border-purple-400`}>
+                                <Sparkles className="w-6 h-6 text-white" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold text-white">Automação Inteligente (Gemini)</h3>
+                                <p className="text-purple-300 text-sm">Postagens automáticas e estratégicas a cada intervalo.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-6">
+                            <div className="flex items-center gap-3 bg-slate-800 p-2 rounded-lg border border-purple-500/30">
+                                <Clock className="w-4 h-4 text-purple-400" />
+                                <div className="flex items-center gap-2">
+                                    <Input 
+                                        type="number" 
+                                        value={intervalMinutes}
+                                        onChange={(e) => setIntervalMinutes(parseInt(e.target.value) || 1)}
+                                        className="w-20 h-8 bg-slate-700 border-purple-500 text-white text-center"
+                                    />
+                                    <span className="text-purple-300 text-xs font-bold uppercase">minutos</span>
+                                </div>
+                            </div>
+
+                            <Button
+                                onClick={toggleAutomation}
+                                className={`h-12 px-8 font-black text-lg transition-all ${isAutoRunning ? 'bg-red-600 hover:bg-red-700' : 'bg-purple-600 hover:bg-purple-700'} shadow-lg`}
+                            >
+                                {isAutoRunning ? (
+                                    <><Square className="w-5 h-5 mr-2" /> Parar</>
+                                ) : (
+                                    <><Play className="w-5 h-5 mr-2" /> Iniciar</>
+                                )}
+                            </Button>
+                        </div>
+                    </div>
+                    {isAutoRunning && nextRun && (
+                        <div className="mt-4 text-center">
+                            <p className="text-xs text-purple-400 font-mono">
+                                Próxima geração em: {nextRun.toLocaleTimeString()}
+                            </p>
+                        </div>
+                    )}
+                </motion.div>
+
                 {/* Stats */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
