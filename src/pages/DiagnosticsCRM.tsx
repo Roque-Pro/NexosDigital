@@ -123,8 +123,9 @@ const DiagnosticsCRM = () => {
                     );
 
                     if (!response.ok) {
-                        const errorData = await response.json();
-                        throw new Error(`Erro na API Gemini: ${errorData.error.message || response.statusText}`);
+                        const errorData = await response.json().catch(() => ({})); // Tenta ler o JSON, mas não falha se não for JSON
+                        console.error("Detalhes do erro da API Gemini:", errorData); // Adiciona este log
+                        throw new Error(`Erro na API Gemini: ${errorData.error?.message || response.statusText}`);
                     }
 
                     const data = await response.json();
