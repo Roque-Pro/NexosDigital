@@ -1,52 +1,10 @@
-Cron Jobs
-Easily monitor and manage your cron jobs.
-
-Disabling this feature will prevent all cron jobs from being executed. New cron jobs will still be created, updated, and deleted on each production deployment, but they will not run until the feature is reactivated.
-
-Enabled
-
-Learn more about Cron Jobs
-Get Started with Cron Jobs on Vercel
-Next.js (App Router)
-Next.js (Pages Router)
-Vercel CLI
-SvelteKit
-Remix
-Nuxt
-SolidStart
-1
-
-Add a Serverless Function to your project
-
-app/api/cron/route.js
-
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  return NextResponse.json({ ok: true });
-}
-2
-
-Add a cron job to your vercel.json
-
-vercel.json
-
-{
-  "crons": [{
-    "path": "/api/cron",
-    "schedule": "0 10 * * *"
-  }]
-}
-3
-
-Add a secret to your project
-
-Prevent unauthorized access by adding the CRON_SECRET environment variable to your project and check incoming requests. Vercel will add it to all cron job invocations as part of the Authorization header, allowing you to specify any value you'd like for authorization.
-
-
-const authHeader = req.headers.get('Authorization');
-const cronSecret = process.env.CRON_SECRET;
-
-if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
-  return res.status(401).end('Unauthorized');
-}
+Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-Bjljgy5g.js:195 Error loading blog posts: Object
+i @ index-Bjljgy5g.js:195Understand this error
+10The resource <URL> was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
+rctrqntkfacxlweezbfu.supabase.co/rest/v1/blog_posts?select=*&published=eq.true&order=created_at.desc&limit=3:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+index-Bjljgy5g.js:195 Error loading blog posts: Object
+i @ index-Bjljgy5g.js:195Understand this error
+rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
