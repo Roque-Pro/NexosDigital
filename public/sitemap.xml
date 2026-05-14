@@ -1,43 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.technexos.com.br/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <loc>https://www.technexos.com.br</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/diagnostico-gratuito</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.8</priority>
   </url>
-
-    <url>
-    <loc>https://www.technexos.com.br/trafego-e-seo</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  
   <url>
     <loc>https://www.technexos.com.br/autoclub-pro</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/about-me</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  
   <url>
     <loc>https://www.technexos.com.br/blog</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/especialistas-comearam-a-identificar-um-novo-padro-entre-empresas-que-esto-crescendo-no-digital</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-declnio-invisvel-por-que-estruturas-digitais-obsoletas-esto-silenciando-empresas-no-mercado-brasileiro</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/especialistas-observam-um-novo-comportamento-digital-entre-empresas-que-esto-crescendo-mais-rpido</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-movimento-silencioso-que-est-fazendo-empresas-desaparecerem-do-google</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-comportamento-digital-que-est-fazendo-empresas-sumirem-sem-que-elas-percebam</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/empresas-esto-perdendo-espao-no-mercado-sem-perceber-e-especialistas-relacionam-isso-estrutura-digital</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/empresrios-comearam-a-perceber-um-problema-digital-que-antes-parecia-invisvel</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
