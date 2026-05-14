@@ -51,24 +51,22 @@ const TrafficAndSEO = () => {
   };
 
   useSEO({
-    title: "Tráfego Pago, Google Ads e SEO | TechNexos Digital",
-    description: "Multiplique seu faturamento com tráfego pago (Meta Ads, Google Ads) e SEO estratégico. Atraímos leads qualificados e transformamos cliques em lucro real.",
+    title: "Gestão de Tráfego Pago e SEO de Alta Performance | TechNexos",
+    description: "Pare de queimar dinheiro com anúncios que não vendem. Estratégias validadas de Google Ads, Meta Ads e SEO para escalar seu faturamento com previsibilidade.",
     keywords: [
-      "tráfego pago",
-      "google ads",
-      "meta ads",
-      "facebook ads",
-      "instagram ads",
-      "gestão de tráfego",
-      "seo",
-      "seo orgânico",
-      "ranking google",
-      "marketing de performance",
-      "geração de leads",
+      "gestão de tráfego pago",
+      "especialista google ads",
+      "anúncios instagram",
+      "anúncios facebook",
+      "agência de performance",
+      "seo técnico",
+      "posicionamento google",
       "vendas online",
+      "roi",
+      "geração de leads qualificados",
     ],
-    ogTitle: "Acelere suas Vendas com Tráfego e SEO | TechNexos",
-    ogDescription: "Não é apenas tráfego, é lucro. Estratégias de Meta Ads, Google Ads e SEO para empresas que buscam escala e previsibilidade.",
+    ogTitle: "TechNexos: Tráfego Pago e SEO Focado em Lucro Real",
+    ogDescription: "Não entregamos cliques, entregamos depósitos na sua conta. Conheça nossa metodologia de escala para empresas.",
     ogUrl: "https://www.technexos.com.br/trafego-e-seo",
   });
 
@@ -93,7 +91,7 @@ const TrafficAndSEO = () => {
               onClick={() => navigate("/")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              Desenvolvimento
+              Tecnologia
             </button>
             <button
               onClick={() =>
@@ -101,13 +99,7 @@ const TrafficAndSEO = () => {
               }
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              Tráfego Pago
-            </button>
-            <button
-              onClick={() => navigate("/blog")}
-              className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
-            >
-              Blog
+              Anúncios Pagos
             </button>
             <button
               onClick={() =>
@@ -115,13 +107,19 @@ const TrafficAndSEO = () => {
               }
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              SEO & Orgânico
+              SEO & Ranking
+            </button>
+            <button
+              onClick={() => navigate("/blog")}
+              className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
+            >
+              Insights
             </button>
             <Button
               onClick={() => window.open("https://wa.me/5532991075164")}
               className="rounded-full bg-orange-600 font-bold text-white hover:bg-orange-700"
             >
-              Falar com Especialista
+              Análise Gratuita
             </Button>
           </nav>
 
@@ -139,7 +137,7 @@ const TrafficAndSEO = () => {
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              Desenvolvimento
+              Início
             </button>
             <button
               onClick={() => {
@@ -152,27 +150,18 @@ const TrafficAndSEO = () => {
             </button>
             <button
               onClick={() => {
-                navigate("/blog");
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full p-2 text-left font-bold text-slate-700"
-            >
-              Blog
-            </button>
-            <button
-              onClick={() => {
                 document.getElementById("organico")?.scrollIntoView({ behavior: "smooth" });
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              SEO & Orgânico
+              SEO Orgânico
             </button>
             <Button
               onClick={() => window.open("https://wa.me/5532991075164")}
               className="w-full bg-orange-600 py-6 font-bold text-white hover:bg-orange-700"
             >
-              Falar no WhatsApp
+              Quero Vender Mais
             </Button>
           </div>
         )}
@@ -187,12 +176,11 @@ const TrafficAndSEO = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="mb-8 text-4xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
-              Pare de gastar com anúncios. Comece a <span className="text-orange-600">lucrar</span>.
+              Anúncios não devem ser custo. Devem ser <span className="text-orange-600">lucro</span>.
             </h2>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-slate-600">
-              Transformamos cliques em clientes qualificados. Unimos <strong>Google Ads</strong>, 
-              <strong> Meta Ads</strong> e <strong>SEO Técnico</strong> para criar uma máquina de vendas
-              previsível para o seu negócio.
+              Chega de métricas de vaidade. Nós construímos máquinas de vendas usando <strong>Google Ads</strong>, 
+              <strong> Meta Ads</strong> e <strong>SEO Técnico</strong> para atrair quem realmente tem o cartão na mão para comprar de você.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
@@ -200,12 +188,12 @@ const TrafficAndSEO = () => {
                 size="lg"
                 className="h-20 rounded-2xl bg-orange-600 px-10 text-xl font-black text-white shadow-xl shadow-orange-100 transition-all hover:scale-105 hover:bg-orange-700"
               >
-                Quero Escalar Minhas Vendas <ArrowRight className="ml-2" />
+                Ativar Minha Escala Agora <ArrowRight className="ml-2" />
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-4 text-sm font-bold text-slate-400">
-              <Check className="text-green-500" /> Sem contratos de fidelidade abusivos
-              <Check className="text-green-500" /> Foco total em ROI
+              <Check className="text-green-500" /> Dashboards em Tempo Real
+              <Check className="text-green-500" /> Foco 100% em ROI e ROAS
             </div>
           </motion.div>
 
@@ -218,7 +206,7 @@ const TrafficAndSEO = () => {
             <div className="relative z-10 overflow-hidden rounded-[3rem] border-8 border-white shadow-[0_32px_64px_rgba(0,0,0,0.1)]">
               <img
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                alt="Dashboards de Performance"
+                alt="Dashboards de Performance e Lucro"
                 className="h-auto w-full transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-orange-900/40 via-transparent to-transparent opacity-60" />
@@ -237,41 +225,41 @@ const TrafficAndSEO = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="rounded-[2rem] bg-orange-50 p-6 shadow-sm border border-orange-100">
                    <Target className="h-10 w-10 text-orange-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">Público Certo</h4>
-                   <p className="text-sm text-slate-600">Apareça exatamente para quem já quer comprar seu produto.</p>
+                   <h4 className="font-black text-lg mb-2">Público de Intenção</h4>
+                   <p className="text-sm text-slate-600">Não desperdiçamos verba. Aparecemos para quem já está buscando sua solução.</p>
                 </div>
                 <div className="rounded-[2rem] bg-blue-50 p-6 shadow-sm border border-blue-100">
                    <MousePointer2 className="h-10 w-10 text-blue-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">Cliques Baratos</h4>
-                   <p className="text-sm text-slate-600">Otimização contínua para reduzir seu custo por lead.</p>
+                   <h4 className="font-black text-lg mb-2">CPL Otimizado</h4>
+                   <p className="text-sm text-slate-600">Trabalhamos para reduzir seu custo por lead e aumentar sua margem.</p>
                 </div>
                 <div className="rounded-[2rem] bg-green-50 p-6 shadow-sm border border-green-100 col-span-2">
                    <BarChart3 className="h-10 w-10 text-green-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">Escala Previsível</h4>
-                   <p className="text-sm text-slate-600">Sabe exatamente quanto colocar e quanto vai voltar de faturamento.</p>
+                   <h4 className="font-black text-lg mb-2">Escala com Previsibilidade</h4>
+                   <p className="text-sm text-slate-600">Criamos um funil onde você sabe exatamente quanto investir para bater suas metas.</p>
                 </div>
               </div>
             </div>
             <div className="flex-1 order-1 lg:order-2">
               <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                Tráfego Pago que <span className="text-orange-600">Domina</span> o Mercado.
+                Tráfego que <span className="text-orange-600">atropela</span> a concorrência.
               </h3>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Não fazemos "postzinho" impulsionado. Criamos estratégias de <strong>mídia de elite</strong>
-                no Google e Meta para capturar a intenção de compra e gerar demanda imediata.
+                Esqueça o "impulsionar botão". Nossa gestão de mídia é baseada em dados, psicologia de vendas e 
+                testes A/B constantes para garantir que seu anúncio seja impossível de ignorar.
               </p>
               <ul className="space-y-4 mb-10">
                 <li className="flex items-start gap-3">
                   <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Google Ads (Rede de Pesquisa, Display e Youtube)</p>
+                  <p className="font-bold text-slate-700">Google Ads: Domine a primeira página e o Youtube.</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Meta Ads (Facebook e Instagram de alta conversão)</p>
+                  <p className="font-bold text-slate-700">Meta Ads: Transforme o feed em um canal de vendas direto.</p>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Remarketing Persuasivo (Não deixe o cliente fugir)</p>
+                  <p className="font-bold text-slate-700">Remarketing: Persiga o cliente até que ele finalize a compra.</p>
                 </li>
               </ul>
               <Button
@@ -279,7 +267,7 @@ const TrafficAndSEO = () => {
                 size="lg"
                 className="h-16 rounded-2xl bg-slate-900 px-10 text-lg font-black text-white hover:bg-slate-800"
               >
-                Dominar o Google e Meta
+                Quero Consultoria de Tráfego
               </Button>
             </div>
           </div>
@@ -292,11 +280,11 @@ const TrafficAndSEO = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             <div className="flex-1">
               <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                Ouro <span className="text-orange-600">Orgânico</span>: Onde seus concorrentes não chegam.
+                SEO: O <span className="text-orange-600">Ativo</span> que nunca para de render.
               </h3>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Anúncios param quando o dinheiro acaba. O <strong>SEO</strong> constrói um ativo que cresce 
-                todos os meses, trazendo clientes sem que você pague por cada clique.
+                Anúncios são aluguel; SEO é casa própria. Construímos autoridade para o seu domínio, 
+                garantindo que você receba tráfego qualificado 24h por dia, sem pagar por clique.
               </p>
               <div className="space-y-6">
                  <div className="flex gap-4">
@@ -304,8 +292,8 @@ const TrafficAndSEO = () => {
                        <SearchCheck className="h-6 w-6" />
                     </div>
                     <div>
-                       <h5 className="font-black text-xl mb-1">SEO Técnico de Elite</h5>
-                       <p className="text-slate-500">Ajustamos o código para que o Google ame o seu site.</p>
+                       <h5 className="font-black text-xl mb-1">Engenharia de Ranking</h5>
+                       <p className="text-slate-500">Otimização de código e velocidade para o Google priorizar você.</p>
                     </div>
                  </div>
                  <div className="flex gap-4">
@@ -313,8 +301,8 @@ const TrafficAndSEO = () => {
                        <Rocket className="h-6 w-6" />
                     </div>
                     <div>
-                       <h5 className="font-black text-xl mb-1">Posicionamento Estratégico</h5>
-                       <p className="text-slate-500">Esteja na frente de quem busca pelo seu serviço agora.</p>
+                       <h5 className="font-black text-xl mb-1">Autoridade de Marca</h5>
+                       <p className="text-slate-500">Seja a resposta número 1 para as dúvidas do seu cliente.</p>
                     </div>
                  </div>
               </div>
@@ -324,7 +312,7 @@ const TrafficAndSEO = () => {
                 variant="outline"
                 className="mt-10 h-16 rounded-2xl border-2 border-orange-600 text-orange-600 px-10 text-lg font-black hover:bg-orange-50"
               >
-                Quero aparecer no Google
+                Dominar o Orgânico
               </Button>
             </div>
             <div className="flex-1">
@@ -332,13 +320,13 @@ const TrafficAndSEO = () => {
                 <div className="rounded-[3rem] overflow-hidden shadow-2xl">
                    <img 
                     src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074&auto=format&fit=crop" 
-                    alt="SEO e Estratégia" 
+                    alt="Estratégia de SEO e Crescimento" 
                     className="w-full h-auto"
                    />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-white p-8 rounded-3xl shadow-xl border border-slate-100 max-w-xs">
-                   <p className="text-4xl font-black text-orange-600 mb-2">+150%</p>
-                   <p className="font-bold text-slate-700">Aumento médio de visitas orgânicas em 6 meses.</p>
+                   <p className="text-4xl font-black text-orange-600 mb-2">TOP 1</p>
+                   <p className="font-bold text-slate-700">Estratégias para posicionar sua empresa no topo das buscas.</p>
                 </div>
               </div>
             </div>
@@ -352,11 +340,11 @@ const TrafficAndSEO = () => {
             <div className="bg-slate-900 rounded-[4rem] p-8 lg:p-20 text-white relative">
                <div className="relative z-10 max-w-3xl">
                   <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                    Chega de <span className="text-orange-400">fumaça</span>. Veja os números.
+                    Gestão baseada em <span className="text-orange-400">Lucro</span>, não em cliques.
                   </h3>
                   <p className="text-xl text-slate-300 mb-12 leading-relaxed">
-                    Você terá acesso a um dashboard em tempo real para ver quanto investiu e quanto
-                    voltou. Transparência total, sem termos técnicos complicados.
+                    Você nunca mais ficará no escuro. Entregamos transparência total através de dashboards 
+                    que mostram o que realmente importa: quanto entrou de dinheiro para cada real investido.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                      <div className="text-center md:text-left">
@@ -365,11 +353,11 @@ const TrafficAndSEO = () => {
                      </div>
                      <div className="text-center md:text-left">
                         <p className="text-orange-400 font-black text-4xl mb-2">CPL</p>
-                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Custo por Lead Qualificado</p>
+                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Leads Qualificados</p>
                      </div>
                      <div className="text-center md:text-left">
-                        <p className="text-orange-400 font-black text-4xl mb-2">ROAS</p>
-                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Retorno sobre Gasto em Anúncio</p>
+                        <p className="text-orange-400 font-black text-4xl mb-2">CAC</p>
+                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Custo de Aquisição</p>
                      </div>
                   </div>
                   <Button
@@ -377,7 +365,7 @@ const TrafficAndSEO = () => {
                     size="lg"
                     className="h-20 rounded-2xl bg-orange-500 px-12 text-xl font-black text-white hover:bg-orange-600 shadow-xl shadow-orange-900/20"
                   >
-                    Falar com quem entende de lucro
+                    Quero Ver Meus Números Crescerem
                   </Button>
                </div>
                <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 opacity-20">
@@ -394,9 +382,9 @@ const TrafficAndSEO = () => {
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 text-center">
             <h3 className="mb-4 text-3xl font-black italic tracking-tighter sm:text-5xl">
-              Perguntas <span className="text-orange-600">Diretas.</span>
+              Respostas <span className="text-orange-600">Honestas.</span>
             </h3>
-            <p className="text-slate-600">O que você realmente quer saber sobre tráfego.</p>
+            <p className="text-slate-600">Tudo o que você precisa saber antes de escalar seu negócio.</p>
           </div>
 
           <Accordion type="single" collapsible className="w-full space-y-4">
@@ -405,11 +393,11 @@ const TrafficAndSEO = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Qual o investimento ideal para ter retorno?
+                Quanto eu preciso investir em anúncios?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                O investimento é personalizado conforme seu objetivo e mercado. O importante não é o valor de início, 
-                mas sim a estratégia por trás para garantir que cada real colocado traga o máximo de leads qualificados possíveis.
+                Não existe valor fixo, mas sim valor estratégico. Recomendamos começar com uma verba que permita testes 
+                estatísticos reais. Nosso foco é escalar esse valor conforme o ROI se torna positivo e previsível.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -417,11 +405,11 @@ const TrafficAndSEO = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                O resultado é imediato?
+                Em quanto tempo vejo o retorno?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                No tráfego pago (Google/Meta), os leads começam a chegar nas primeiras 48h. 
-                O SEO é um jogo de médio prazo (3 a 6 meses) para dominância absoluta.
+                O tráfego pago traz resultados imediatos (leads em até 48h). O SEO é um investimento de construção 
+                de longo prazo que explode sua autoridade orgânica entre 3 a 8 meses.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -429,12 +417,11 @@ const TrafficAndSEO = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Vocês garantem vendas?
+                Por que não contratar um "gestor de cliques" qualquer?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                Garantimos tráfego qualificado e leads prontos para comprar. A venda final
-                depende do seu time comercial e da qualidade do seu produto/serviço, mas nós
-                ajudamos a otimizar todo esse processo.
+                Porque cliques não pagam contas. Nós somos uma agência de performance que entende de negócio, 
+                estratégia de vendas e tecnologia. Nós focamos na sua última linha: o lucro líquido.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -452,7 +439,7 @@ const TrafficAndSEO = () => {
             </p>
           </div>
           <p className="text-sm text-slate-400">
-            © 2026 TechNexos Performance. Tráfego, SEO & Lucratividade.
+            © 2026 TechNexos Performance. Estratégia, Dados & Escala.
           </p>
         </div>
       </footer>
