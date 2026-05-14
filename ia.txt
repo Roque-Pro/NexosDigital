@@ -139,3 +139,4 @@
 21:55:58.799 Build Completed in /vercel/output [29s]
 21:55:58.909 Deploying outputs...
 21:56:03.835 Deployment completed
+# Alteração proposta em 2026-05-13 para forçar novo deploy.
