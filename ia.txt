@@ -1,142 +1,52 @@
-21:55:27.696 Running build in Washington, D.C., USA (East) – iad1
-21:55:27.696 Build machine configuration: 2 cores, 8 GB
-21:55:27.707 Cloning github.com/Roque-Pro/NexosDigital (Branch: main, Commit: ff919b0)
-21:55:27.708 Skipping build cache, deployment was triggered without cache.
-21:55:28.264 Cloning completed: 557.000ms
-21:55:28.603 Running "vercel build"
-21:55:28.641 Vercel CLI 53.3.2
-21:55:29.728 Installing dependencies...
-21:55:37.962 npm warn deprecated whatwg-encoding@2.0.0: Use @exodus/bytes instead for a more spec-conformant and faster implementation
-21:55:39.401 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
-21:55:39.424 npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
-21:55:46.630 
-21:55:46.631 added 602 packages in 17s
-21:55:46.631 
-21:55:46.632 110 packages are looking for funding
-21:55:46.632   run `npm fund` for details
-21:55:46.934 
-21:55:46.935 > vite_react_shadcn_ts@0.0.0 build
-21:55:46.935 > vite build && tsx scripts/prebuild-og-tags.ts
-21:55:46.935 
-21:55:47.228 vite v5.4.19 building for production...
-21:55:47.506 transforming...
-21:55:47.545 Browserslist: browsers data (caniuse-lite) is 11 months old. Please run:
-21:55:47.545   npx update-browserslist-db@latest
-21:55:47.546   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-21:55:48.639 [vite:css] @import must precede all other statements (besides @charset or empty @layer)
-21:55:48.640 3  |  @tailwind utilities;
-21:55:48.640 4  |  
-21:55:48.640 5  |  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-21:55:48.640    |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-21:55:48.640 6  |  
-21:55:48.640 7  |  @layer base {
-21:55:52.643 ✓ 2143 modules transformed.
-21:55:53.196 rendering chunks...
-21:55:53.395 computing gzip size...
-21:55:53.427 dist/index.html                                              9.55 kB │ gzip:  2.63 kB
-21:55:53.428 dist/assets/diagnostico-hero-man-ibi3Ib3-.jpg               28.43 kB
-21:55:53.429 dist/assets/reparo-de-vidros-BFbHY56n.png                  217.13 kB
-21:55:53.429 dist/assets/auto-center-om0sPFXj.png                       229.26 kB
-21:55:53.429 dist/assets/Estética Automotiva-ChGwuTQf.png               233.82 kB
-21:55:53.429 dist/assets/logo-autocub-DhDaPllT.png                      441.91 kB
-21:55:53.430 dist/assets/roque-rafael-proenca-consultor-DKU0nPiO.png  1,604.58 kB
-21:55:53.430 dist/assets/cliente-CKr10rBo.png                         2,537.79 kB
-21:55:53.430 dist/assets/index-z1qfuqem.css                             121.10 kB │ gzip: 19.13 kB
-21:55:53.431 dist/assets/vendor-forms-DJ7aeftp.js                         0.04 kB │ gzip:  0.06 kB
-21:55:53.431 dist/assets/play-CaJkhFJV.js                                 0.30 kB │ gzip:  0.25 kB
-21:55:53.431 dist/assets/arrow-left-C7AV90Yu.js                           0.33 kB │ gzip:  0.26 kB
-21:55:53.431 dist/assets/search-B98CmZC4.js                               0.34 kB │ gzip:  0.27 kB
-21:55:53.432 dist/assets/circle-check-7skOaWlr.js                         0.34 kB │ gzip:  0.27 kB
-21:55:53.432 dist/assets/lock-BH-FOHG7.js                                 0.38 kB │ gzip:  0.29 kB
-21:55:53.432 dist/assets/download-B2SBZHm_.js                             0.43 kB │ gzip:  0.32 kB
-21:55:53.432 dist/assets/zap-B7dUsgrU.js                                  0.43 kB │ gzip:  0.31 kB
-21:55:53.432 dist/assets/linkedin-k4WX-QFE.js                             0.46 kB │ gzip:  0.33 kB
-21:55:53.432 dist/assets/users-Bx_LLXf-.js                                0.47 kB │ gzip:  0.32 kB
-21:55:53.433 dist/assets/trash-2-BxjCjkIh.js                              0.53 kB │ gzip:  0.35 kB
-21:55:53.433 dist/assets/NotFound-D-Mh5Ssh.js                             0.71 kB │ gzip:  0.41 kB
-21:55:53.433 dist/assets/target-DZzOAs8v.js                               0.97 kB │ gzip:  0.48 kB
-21:55:53.433 dist/assets/label-Desq1vQx.js                                1.15 kB │ gzip:  0.60 kB
-21:55:53.433 dist/assets/Auth-cdI99vTy.js                                 4.02 kB │ gzip:  1.63 kB
-21:55:53.433 dist/assets/BlogNavbar-OgC2miJM.js                           4.16 kB │ gzip:  1.12 kB
-21:55:53.434 dist/assets/Blog-CTpEQ8eP.js                                 5.09 kB │ gzip:  2.01 kB
-21:55:53.434 dist/assets/BlogAdmin-Ip-_zCS_.js                            9.87 kB │ gzip:  3.02 kB
-21:55:53.434 dist/assets/InstagramReelsAdmin-B0qy8qua.js                 10.36 kB │ gzip:  3.84 kB
-21:55:53.434 dist/assets/DiagnosticsCRM-C1d94OI2.js                      13.25 kB │ gzip:  3.83 kB
-21:55:53.434 dist/assets/TrafficAndSEO-T164qFP5.js                       17.46 kB │ gzip:  4.83 kB
-21:55:53.434 dist/assets/BlogPost-CSjFXsH6.js                            18.22 kB │ gzip:  6.10 kB
-21:55:53.434 dist/assets/PlanAuth-J6kA1ybq.js                            18.99 kB │ gzip:  5.72 kB
-21:55:53.435 dist/assets/AboutMe-CEvnSu3H.js                             19.32 kB │ gzip:  4.51 kB
-21:55:53.435 dist/assets/vendor-router-CVtk_1j7.js                       20.80 kB │ gzip:  7.70 kB
-21:55:53.436 dist/assets/vendor-query-B2sHYHfM.js                        26.59 kB │ gzip:  8.15 kB
-21:55:53.436 dist/assets/AutoClubPro-BkxF7two.js                         35.73 kB │ gzip:  9.42 kB
-21:55:53.436 dist/assets/vendor-ui-D4oqJbYJ.js                           41.09 kB │ gzip: 15.32 kB
-21:55:53.437 dist/assets/vendor-animation-sJKBXy08.js                   125.59 kB │ gzip: 41.73 kB
-21:55:53.437 dist/assets/vendor-core-v0pbKegz.js                        141.28 kB │ gzip: 45.44 kB
-21:55:53.437 dist/assets/index-DkpnwkMp.js                              309.43 kB │ gzip: 85.60 kB
-21:55:53.437 ✓ built in 6.18s
-21:55:53.469 
-21:55:53.469 ✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
-21:55:53.470 dist//vercel/path0/assets/Auth-cdI99vTy.js.gz                  3.95kb / gzip: 1.60kb
-21:55:53.471 dist//vercel/path0/assets/Blog-CTpEQ8eP.js.gz                  4.98kb / gzip: 1.96kb
-21:55:53.475 dist//vercel/path0/assets/AutoClubPro-BkxF7two.js.gz           35.10kb / gzip: 9.16kb
-21:55:53.475 dist//vercel/path0/assets/BlogAdmin-Ip-_zCS_.js.gz             9.65kb / gzip: 2.95kb
-21:55:53.475 dist//vercel/path0/assets/BlogNavbar-OgC2miJM.js.gz            4.06kb / gzip: 1.09kb
-21:55:53.475 dist//vercel/path0/assets/DiagnosticsCRM-C1d94OI2.js.gz        12.96kb / gzip: 3.74kb
-21:55:53.476 dist//vercel/path0/assets/TrafficAndSEO-T164qFP5.js.gz         17.14kb / gzip: 4.71kb
-21:55:53.476 dist//vercel/path0/assets/label-Desq1vQx.js.gz                 1.12kb / gzip: 0.59kb
-21:55:53.476 dist//vercel/path0/assets/BlogPost-CSjFXsH6.js.gz              17.84kb / gzip: 5.95kb
-21:55:53.476 dist//vercel/path0/assets/vendor-query-B2sHYHfM.js.gz          25.97kb / gzip: 7.95kb
-21:55:53.476 dist//vercel/path0/assets/vendor-router-CVtk_1j7.js.gz         20.31kb / gzip: 7.52kb
-21:55:53.476 dist//vercel/path0/index.html.gz                               9.39kb / gzip: 2.56kb
-21:55:53.476 dist//vercel/path0/assets/vendor-ui-D4oqJbYJ.js.gz             40.12kb / gzip: 14.95kb
-21:55:53.476 dist//vercel/path0/assets/PlanAuth-J6kA1ybq.js.gz              18.64kb / gzip: 5.58kb
-21:55:53.476 dist//vercel/path0/assets/index-z1qfuqem.css.gz                118.26kb / gzip: 18.51kb
-21:55:53.477 dist//vercel/path0/assets/AboutMe-CEvnSu3H.js.gz               19.10kb / gzip: 4.38kb
-21:55:53.477 dist//vercel/path0/assets/vendor-core-v0pbKegz.js.gz           137.97kb / gzip: 44.31kb
-21:55:53.477 dist//vercel/path0/assets/InstagramReelsAdmin-B0qy8qua.js.gz   10.20kb / gzip: 3.74kb
-21:55:53.477 dist//vercel/path0/assets/vendor-animation-sJKBXy08.js.gz      122.65kb / gzip: 40.64kb
-21:55:53.477 dist//vercel/path0/assets/index-DkpnwkMp.js.gz                 302.38kb / gzip: 83.41kb
-21:55:53.477 
-21:55:53.477 
-21:55:53.886 🔨 Iniciando pré-renderização de posts...
-21:55:55.388 📝 Encontrados 32 posts publicados
-21:55:55.389 ✅ o-que-est-fazendo-tantos-homens-procurarem-solues-naturais-para-energia-e-resistncia
-21:55:55.390 ✅ o-que-est-fazendo-tantas-pessoas-recuperarem-o-controle-do-corpo-sem-dietas-extremas
-21:55:55.390 ✅ o-que-est-fazendo-tantas-pessoas-procurarem-formas-naturais-de-recuperar-energia-e-secar-mais-rpido
-21:55:55.390 ✅ o-que-esta-por-tras-da-dificuldade-de-emagrecer-mesmo-tentando-de-tudo
-21:55:55.391 ✅ o-ingrediente-verde-que-esta-chamando-atencao-de-quem-busca-mais-energia-e-menos-inchaco
-21:55:55.392 ✅ o-inchaco-que-muita-gente-ignora-os-habitos-modernos-que-podem-estar-fazendo-seu-corpo-reter-mais-liquido
-21:55:55.392 ✅ o-luto-da-vitalidade-por-que-homens-modernos-estao-perdendo-o-brilho-nos-olhos
-21:55:55.392 ✅ a-crise-da-termogenese-por-que-o-metabolismo-moderno-esta-entrando-em-modo-de-hibernacao
-21:55:55.393 ✅ o-peso-invisivel-por-que-o-seu-corpo-se-transformou-em-uma-reserva-de-inchaco
-21:55:55.393 ✅ o-ingrediente-verde-que-est-chamando-ateno-de-quem-busca-mais-energia-e-menos-inchao
-21:55:55.394 ✅ o-que-est-por-trs-do-aumento-da-falta-de-energia-e-desnimo-masculino
-21:55:55.394 ✅ o-que-esta-por-tras-da-dificuldade-de-emagrecer-mesmo-fazendo-dieta
-21:55:55.394 ✅ o-desconforto-que-muita-gente-ignora-pode-estar-ligado-a-saude-masculina
-21:55:55.395 ✅ os-sinais-silenciosos-que-podem-estar-reduzindo-sua-queima-calorica-sem-voce-perceber
-21:55:55.395 ✅ o-que-esta-por-tras-da-vontade-incontrolavel-de-comer-especialistas-observam-um-padrao-cada-vez-mais-comum
-21:55:55.396 ✅ o-enigma-da-inflamacao-invisivel-por-que-seu-corpo-parece-maior-do-que-realmente-e
-21:55:55.396 ✅ o-enigma-da-termogenese-por-que-seu-corpo-parou-de-queimar-calorias
-21:55:55.397 ✅ mounjax-a-ceincia-oculta-por-tras-da-modulacao-metabolica-eficacia-real-ou-apenas-marketing
-21:55:55.397 ✅ a-sindrome-da-bateria-vazia-por-que-os-homens-estao-perdendo-o-fogo-interno-antes-dos-40
-21:55:55.397 ✅ mounjax-funciona-mesmo-a-investigao-completa-sobre-o-suplemento-que-est-chamando-ateno-em-2026
-21:55:55.398 ✅ mounjax-funciona-mesmo-o-que-descobrimos-sobre-o-suplemento-que-est-chamando-ateno-em-2026
-21:55:55.399 ✅ durazul-funciona-mesmo-o-que-descobrimos-sobre-o-produto-que-est-viralizando-na-internet
-21:55:55.399 ✅ durazul-funciona-a-verdade-sobre-o-produto-masculino-que-viralizou-na-internet
-21:55:55.400 ✅ durazul-funciona-mesmo-a-investigao-completa-sobre-o-produto-masculino-que-viralizou-em-2026
-21:55:55.401 ✅ mounjax-funciona-mesmo-a-investigao-completa-sobre-o-suplemento-de-emagrecimento-que-explodiu-na-internet
-21:55:55.401 ✅ o-mtodo-que-est-ajudando-pessoas-a-controlar-a-fome-sem-dietas-extremas
-21:55:55.402 ✅ o-que-est-fazendo-homens-recuperarem-a-confiana-depois-dos-40
-21:55:55.402 ✅ o-ingrediente-verde-que-est-chamando-ateno-de-quem-busca-mais-energia-e-controle-do-corpo
-21:55:55.403 ✅ o-mtodo-natural-que-est-chamando-ateno-de-quem-quer-secar-sem-dietas-extremas
-21:55:55.403 ✅ o-que-est-fazendo-homens-acima-dos-40-buscarem-uma-nova-alternativa-natural
-21:55:55.413 ✅ o-que-est-fazendo-tanta-gente-buscar-uma-alternativa-natural-para-controlar-a-fome
-21:55:55.413 ✅ o-fenmeno-do-silenciamento-metablico-por-que-o-corpo-para-de-lutar-contra-a-balana
-21:55:55.413 ✨ Pré-renderização concluída!
-21:55:55.716 Using TypeScript 5.8.3 (local user-provided)
-21:55:58.033 Using TypeScript 5.8.3 (local user-provided)
-21:55:58.624 Using TypeScript 5.8.3 (local user-provided)
-21:55:58.799 Build Completed in /vercel/output [29s]
-21:55:58.909 Deploying outputs...
-21:56:03.835 Deployment completed
-# Alteração proposta em 2026-05-13 para forçar novo deploy.
+Cron Jobs
+Easily monitor and manage your cron jobs.
+
+Disabling this feature will prevent all cron jobs from being executed. New cron jobs will still be created, updated, and deleted on each production deployment, but they will not run until the feature is reactivated.
+
+Enabled
+
+Learn more about Cron Jobs
+Get Started with Cron Jobs on Vercel
+Next.js (App Router)
+Next.js (Pages Router)
+Vercel CLI
+SvelteKit
+Remix
+Nuxt
+SolidStart
+1
+
+Add a Serverless Function to your project
+
+app/api/cron/route.js
+
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+  return NextResponse.json({ ok: true });
+}
+2
+
+Add a cron job to your vercel.json
+
+vercel.json
+
+{
+  "crons": [{
+    "path": "/api/cron",
+    "schedule": "0 10 * * *"
+  }]
+}
+3
+
+Add a secret to your project
+
+Prevent unauthorized access by adding the CRON_SECRET environment variable to your project and check incoming requests. Vercel will add it to all cron job invocations as part of the Authorization header, allowing you to specify any value you'd like for authorization.
+
+
+const authHeader = req.headers.get('Authorization');
+const cronSecret = process.env.CRON_SECRET;
+
+if (!cronSecret || authHeader !== `Bearer ${cronSecret}`) {
+  return res.status(401).end('Unauthorized');
+}
