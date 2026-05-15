@@ -2,33 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.technexos.com.br</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/diagnostico-gratuito</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/autoclub-pro</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/about-me</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/blog</loc>
-    <lastmod>2026-05-14</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/empresas-esto-perdendo-espao-no-mercado-sem-perceber-e-especialistas-relacionam-isso-estrutura-digital</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-comportamento-digital-que-est-fazendo-empresas-sumirem-sem-que-elas-percebam</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-declnio-invisvel-por-que-estruturas-digitais-obsoletas-esto-silenciando-empresas-no-mercado-brasileiro</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/blog/especialistas-comearam-a-identificar-um-novo-padro-entre-empresas-que-esto-crescendo-no-digital</loc>
@@ -37,7 +55,13 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.technexos.com.br/blog/o-declnio-invisvel-por-que-estruturas-digitais-obsoletas-esto-silenciando-empresas-no-mercado-brasileiro</loc>
+    <loc>https://www.technexos.com.br/blog/a-eroso-silenciosa-por-que-o-faturamento-de-empresas-consolidadas-est-desabando-no-cenrio-digital-de-2026</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/empresrios-comearam-a-perceber-um-problema-digital-que-antes-parecia-invisvel</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -55,20 +79,44 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.technexos.com.br/blog/o-comportamento-digital-que-est-fazendo-empresas-sumirem-sem-que-elas-percebam</loc>
+    <loc>https://www.technexos.com.br/blog/o-abismo-algortmico-por-que-negcios-de-sucesso-esto-perdendo-clientes-de-forma-invisvel-em-2026</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.technexos.com.br/blog/empresas-esto-perdendo-espao-no-mercado-sem-perceber-e-especialistas-relacionam-isso-estrutura-digital</loc>
+    <loc>https://www.technexos.com.br/blog/o-abismo-digital-por-que-empresas-consolidadas-esto-sumindo-do-radar-dos-consumidores-em-2026</loc>
     <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.technexos.com.br/blog/empresrios-comearam-a-perceber-um-problema-digital-que-antes-parecia-invisvel</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.technexos.com.br/blog/o-erro-silencioso-por-que-empresas-consolidadas-esto-sumindo-do-google-sem-notar-a-queda-no-trfego</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/especialistas-esto-observando-um-novo-tipo-de-empresa-invisvel-e-isso-est-mudando-o-mercado-local</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-padro-digital-que-est-fazendo-empresas-desaparecerem-das-buscas-locais-sem-que-percebam</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/empresas-esto-perdendo-espao-online-em-silncio-e-quase-ningum-est-observando-o-novo-comportamento-digital</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/especialistas-esto-observando-um-padro-silencioso-empresas-estruturadas-offline-esto-perdendo-espao-no-ambiente-digital</loc>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
