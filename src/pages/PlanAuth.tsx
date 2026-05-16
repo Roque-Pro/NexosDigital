@@ -96,37 +96,37 @@ const PlanAuth = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useSEO({
-    title: "Diagn�stico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
+    title: "Diagnóstico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     description:
-      "Receba um diagn�stico gratuito e descubra onde sua empresa perde clientes, desperdi�a dinheiro e deixa oportunidades passarem. Resposta r�pida, sem compromisso.",
+      "Receba um diagnóstico gratuito e descubra onde sua empresa perde clientes, desperdiça dinheiro e deixa oportunidades passarem. Resposta rápida, sem compromisso.",
     keywords: [
-      "diagn�stico gratuito",
-      "diagn�stico empresarial",
-      "diagn�stico de vendas",
+      "diagnóstico gratuito",
+      "diagnóstico empresarial",
+      "diagnóstico de vendas",
       "atrair clientes",
       "converter leads",
-      "diagn�stico de marketing",
-      "automa��o comercial",
+      "diagnóstico de marketing",
+      "automação comercial",
       "faturamento empresarial",
       "processo comercial",
       "gargalos de vendas",
       "consultoria comercial",
       "aumentar faturamento",
     ],
-    ogTitle: "Diagn�stico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
+    ogTitle: "Diagnóstico Gratuito | Descubra onde sua empresa perde clientes e dinheiro",
     ogDescription:
-      "Identifique gargalos comerciais, falhas no atendimento, desperd�cios e oportunidades de crescimento com um diagn�stico gratuito.",
+      "Identifique gargalos comerciais, falhas no atendimento, desperdícios e oportunidades de crescimento com um diagnóstico gratuito.",
     ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-    twitterTitle: "Diagn�stico gratuito para sua empresa",
+    twitterTitle: "Diagnóstico gratuito para sua empresa",
     twitterDescription:
       "Descubra onde sua empresa perde clientes e dinheiro e veja oportunidades reais de crescimento.",
     canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
     schema: {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Diagn�stico Gratuito TechNexos",
+      name: "Diagnóstico Gratuito TechNexos",
       description:
-        "Diagn�stico gratuito para identificar gargalos de capta��o, atendimento, convers�o e crescimento comercial.",
+        "Diagnóstico gratuito para identificar gargalos de captação, atendimento, conversão e crescimento comercial.",
       provider: {
         "@type": "ProfessionalService",
         name: "TechNexos Digital",
@@ -212,7 +212,7 @@ const PlanAuth = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white text-slate-900">
+    <div className="min-h-screen w-full overflow-x-hidden bg-white text-slate-900">
       <style>{`
         * { box-sizing: border-box; }
         html, body { 
@@ -223,6 +223,7 @@ const PlanAuth = () => {
           overflow-x: hidden;
         }
       `}</style>
+      
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <button
@@ -232,35 +233,16 @@ const PlanAuth = () => {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-600 shadow-lg shadow-blue-200">
               <Code2 className="h-6 w-6 text-white" />
             </div>
-            <h1 className="text-xl font-black tracking-tighter">
+            <h1 className="text-lg font-black tracking-tighter sm:text-xl">
               TechNexos<span className="text-blue-600">Digital</span>
             </h1>
           </button>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <button
-              onClick={() => navigate("/")}
-              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
-            >
-              Página Principal
-            </button>
-            <button
-              onClick={() => navigate("/about-me")}
-              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
-            >
-              Especialista
-            </button>
-            <button
-              onClick={() => navigate("/autoclub-pro")}
-              className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
-            >
-              AutoClub Pro
-            </button>
-            <Button
-              onClick={() => navigate("/diagnostico-gratuito")}
-              variant="outline"
-              className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
-            >
+            <button onClick={() => navigate("/")} className="text-sm font-bold text-slate-600 hover:text-blue-600">Página Principal</button>
+            <button onClick={() => navigate("/about-me")} className="text-sm font-bold text-slate-600 hover:text-blue-600">Especialista</button>
+            <button onClick={() => navigate("/autoclub-pro")} className="text-sm font-bold text-slate-600 hover:text-blue-600">AutoClub Pro</button>
+            <Button onClick={() => navigate("/diagnostico-gratuito")} variant="outline" className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700">
               Diagnóstico Gratuito
             </Button>
           </nav>
@@ -272,359 +254,161 @@ const PlanAuth = () => {
 
         {mobileMenuOpen && (
           <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
-            <button
-              onClick={() => {
-                navigate("/");
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full p-2 text-left font-bold text-slate-700"
-            >
-              Página Principal
-            </button>
-            <button
-              onClick={() => {
-                navigate("/about-me");
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full p-2 text-left font-bold text-slate-700"
-            >
-              Especialista
-            </button>
-            <button
-              onClick={() => {
-                navigate("/autoclub-pro");
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full p-2 text-left font-bold text-slate-700"
-            >
-              AutoClub Pro
-            </button>
-            <Button
-              onClick={() => {
-                navigate("/diagnostico-gratuito");
-                setMobileMenuOpen(false);
-              }}
-              variant="outline"
-              className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
-            >
+            <button onClick={() => { navigate("/"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">Página Principal</button>
+            <button onClick={() => { navigate("/about-me"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">Especialista</button>
+            <button onClick={() => { navigate("/autoclub-pro"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">AutoClub Pro</button>
+            <Button onClick={() => { navigate("/diagnostico-gratuito"); setMobileMenuOpen(false); }} variant="outline" className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700">
               Diagnóstico Gratuito
             </Button>
           </div>
         )}
       </header>
 
-      <section className="relative mt-[50px] overflow-hidden bg-[#06121f] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,196,37,0.12),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(255,255,255,0.06),_transparent_30%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pb-0 lg:pt-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7 }}
-            className="flex flex-col justify-between"
-          >
-            <div>
-              <div className="mb-10">
-                <div className="flex items-center gap-2">
-                  <span className="text-[2.25rem] font-black tracking-tight text-white sm:text-[3.25rem]">
-                    TechNexos
-                  </span>
-                  <Search className="h-8 w-8 text-[#f6bf22] sm:h-10 sm:w-10" />
-                </div>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80 sm:text-sm">
-                  Automação • Tráfego • Resultados
-                </p>
+      <section className="relative mt-[60px] overflow-hidden bg-[#06121f] text-white">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,196,37,0.12),_transparent_30%)]" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 pb-12 pt-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:pt-10">
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex flex-col justify-center">
+            <div className="mb-6 sm:mb-10">
+              <div className="flex items-center gap-2">
+                <span className="text-3xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">TechNexos</span>
+                <Search className="h-6 w-6 text-[#f6bf22] sm:h-10 sm:w-10" />
               </div>
-
-              <h1 className="max-w-3xl text-4xl font-black leading-[1.08] sm:text-5xl lg:text-[4.2rem]">
-                Descubra onde sua empresa está{" "}
-                <span className="text-[#f6bf22]">perdendo clientes e dinheiro</span>.
-              </h1>
-
-              <div className="my-8 h-1.5 w-20 rounded-full bg-[#f6bf22]" />
-
-              <p className="max-w-2xl text-lg leading-relaxed text-white/88 sm:text-2xl">
-                Em menos de 2 minutos, você recebe um{" "}
-                <span className="font-bold text-[#f6bf22]">diagnóstico gratuito</span> com
-                oportunidades reais para atrair mais clientes e aumentar seu faturamento.
-              </p>
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:text-sm">Automação • Tráfego • Resultados</p>
             </div>
 
-            <div className="mt-10 rounded-[28px] border border-white/20 bg-white/4 p-4 backdrop-blur-sm sm:p-5">
-              <div className="grid gap-4 sm:grid-cols-3">
+            <h1 className="text-3xl font-black leading-tight sm:text-5xl lg:text-[4.2rem]">
+              Descubra onde sua empresa está <span className="text-[#f6bf22]">perdendo clientes e dinheiro</span>.
+            </h1>
+
+            <div className="my-6 h-1.5 w-16 rounded-full bg-[#f6bf22] sm:my-8 sm:w-20" />
+
+            <p className="max-w-2xl text-lg leading-relaxed text-white/90 sm:text-2xl">
+              Em menos de 2 minutos, você recebe um <span className="font-bold text-[#f6bf22]">diagnóstico gratuito</span> com oportunidades reais para vender mais.
+            </p>
+
+            <div className="mt-8 rounded-[24px] border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
+              <div className="grid gap-3 sm:grid-cols-3">
                 {highlights.map(({ icon: Icon, title, description }) => (
-                  <div
-                    key={title}
-                    className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#071524]/70 px-4 py-4"
-                  >
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-white/30">
-                      <Icon className="h-7 w-7 text-white" />
+                  <div key={title} className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#071524]/70 p-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/20">
+                      <Icon className="h-5 w-5 text-[#f6bf22]" />
                     </div>
                     <div>
-                      <p className="text-lg font-bold">{title}</p>
-                      <p className="text-sm leading-snug text-white/78">{description}</p>
+                      <p className="text-sm font-bold">{title}</p>
+                      <p className="text-[11px] text-white/70 leading-tight">{description}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <Button
-              onClick={scrollToForm}
-              className="mt-8 h-14 w-full max-w-md rounded-xl bg-[#f6bf22] text-base font-black text-[#08111d] hover:bg-[#ffd24d] lg:hidden"
-            >
+            <Button onClick={scrollToForm} className="mt-8 h-14 w-full rounded-xl bg-[#f6bf22] text-base font-black text-[#08111d] hover:bg-[#ffd24d] lg:hidden">
               Receber diagnóstico gratuito
             </Button>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.85, delay: 0.15 }}
-            className="relative flex items-end justify-center"
-          >
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#06121f] to-transparent lg:hidden" />
-            <img
-              src={diagnosticoHeroMan}
-              alt="Homem analisando dados no computador"
-              className="relative z-10 max-h-[690px] w-full max-w-[560px] rounded-[32px] object-cover object-center shadow-[0_30px_80px_rgba(0,0,0,0.45)] lg:rounded-none lg:shadow-none"
-            />
+          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="relative flex items-center justify-center">
+            <img src={diagnosticoHeroMan} alt="Diagnóstico" className="relative z-10 w-full max-w-lg rounded-[24px] object-cover shadow-2xl lg:rounded-none lg:shadow-none" />
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-white px-5 py-16 lg:px-10 lg:py-20">
+      <section className="bg-white px-4 py-16 lg:px-10">
         <div className="mx-auto max-w-7xl">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
-          >
-            <h2 className="text-3xl font-black leading-tight text-[#0b1320] sm:text-[3rem]">
-              Seu diagnóstico analisa{" "}
-              <span className="text-[#1a64d6]">5 pontos-chave</span>
-            </h2>
-            <p className="mt-3 text-xl text-slate-700 sm:text-[2rem] sm:leading-tight">
-              que podem estar travando o crescimento da sua empresa:
-            </p>
-          </motion.div>
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-5xl">Seu diagnóstico analisa <span className="text-[#1a64d6]">5 pontos-chave</span></h2>
+            <p className="mt-4 text-lg text-slate-700 sm:text-2xl">que podem estar travando o crescimento da sua empresa:</p>
+          </div>
 
-          <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {diagnosisPoints.map(({ icon: Icon, title, description }, index) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.55, delay: index * 0.08 }}
-                className="relative rounded-[28px] border border-slate-200 bg-white px-6 pb-8 pt-7 text-center shadow-[0_16px_40px_rgba(15,23,42,0.06)]"
-              >
-                <div className="mx-auto mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-[#1a64d6] text-sm font-black text-white">
-                  {(index + 1).toString().padStart(2, "0")}
+              <motion.div key={title} className="relative rounded-[24px] border border-slate-100 bg-white p-6 text-center shadow-lg">
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#1a64d6] text-sm font-bold text-white">{index + 1}</div>
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-50">
+                  <Icon className="h-8 w-8 text-[#071524]" />
                 </div>
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-[24px] bg-slate-50">
-                  <Icon className="h-11 w-11 text-[#071524]" />
-                </div>
-                <h3 className="text-xl font-black leading-snug text-[#0b1320]">{title}</h3>
-                <p className="mt-4 text-base leading-7 text-slate-600">{description}</p>
+                <h3 className="text-lg font-bold leading-tight text-[#0b1320]">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="diagnostic-form" className="bg-[#f4f6fb] px-5 py-16 lg:px-10 lg:py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-            className="pt-2"
-          >
-            <div className="max-w-xl border-l-4 border-[#f6bf22] pl-6">
-              <h2 className="text-4xl font-black leading-tight text-[#0b1320]">
-                Vamos descobrir juntos?
-              </h2>
-              <p className="mt-5 text-xl leading-9 text-slate-700">
-                Preencha os dados ao lado e receba seu diagnóstico personalizado com
-                insights práticos para sua empresa{" "}
-                <span className="font-black text-[#0b1320]">
-                  vender mais e crescer de verdade.
-                </span>
+      <section id="diagnostic-form" className="bg-[#f4f6fb] px-4 py-16 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="space-y-6">
+            <div className="border-l-4 border-[#f6bf22] pl-6">
+              <h2 className="text-3xl font-black text-[#0b1320] sm:text-4xl">Vamos descobrir juntos?</h2>
+              <p className="mt-4 text-lg text-slate-700 sm:text-xl leading-relaxed">
+                Preencha os dados e receba seu diagnóstico personalizado com insights práticos para sua empresa <span className="font-bold text-[#0b1320]">vender mais e crescer.</span>
               </p>
             </div>
-
-            <div className="mt-10 rounded-[26px] bg-white p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)]">
+            <div className="rounded-[20px] bg-white p-5 shadow-sm sm:p-6">
               <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#08111d]">
-                  <Gift className="h-8 w-8 text-[#f6bf22]" />
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#08111d]">
+                  <Gift className="h-6 w-6 text-[#f6bf22]" />
                 </div>
-                <p className="text-lg leading-8 text-slate-700">
-                  Seu diagnóstico é 100% gratuito e feito sob medida para a realidade
-                  do seu negócio.
-                </p>
+                <p className="text-sm font-medium text-slate-700 sm:text-base">Diagnóstico 100% gratuito e feito sob medida para seu negócio.</p>
               </div>
             </div>
+            <p className="text-center text-xl font-bold italic text-[#1f4ea6] sm:text-2xl">Menos achismo, mais resultado.</p>
+          </div>
 
-            <p
-              className="mt-8 text-center text-2xl sm:text-3xl font-display font-medium text-[#1f4ea6] italic"
-            >
-              Menos achismo, mais resultado.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-            className="rounded-[30px] bg-white p-6 shadow-[0_24px_50px_rgba(15,23,42,0.08)] sm:p-8 lg:p-10"
-          >
-            <h3 className="text-center text-2xl sm:text-3xl font-black text-[#0b1320]">
-              Receber meu diagnóstico gratuito
-            </h3>
-
-            <form onSubmit={handleDiagnosticSubmit} className="mt-8 space-y-5">
-              <div className="space-y-2">
-                <Label htmlFor="diagnosticName" className="text-base font-black text-[#0b1320]">
-                  Nome completo
-                </Label>
-                <Input
-                  id="diagnosticName"
-                  value={diagnosticData.diagnosticName}
-                  onChange={(e) =>
-                    setDiagnosticData({ ...diagnosticData, diagnosticName: e.target.value })
-                  }
-                  placeholder="Digite seu nome"
-                  required
-                  className="h-14 rounded-xl border-slate-300 bg-white text-base text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#1a64d6]"
-                />
+          <motion.div className="rounded-[24px] bg-white p-5 shadow-xl sm:p-10">
+            <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Receber meu diagnóstico gratuito</h3>
+            <form onSubmit={handleDiagnosticSubmit} className="mt-8 space-y-4">
+              <div className="space-y-1.5">
+                <Label htmlFor="diagnosticName" className="font-bold">Nome completo</Label>
+                <Input id="diagnosticName" value={diagnosticData.diagnosticName} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticName: e.target.value })} placeholder="Digite seu nome" required className="h-12" />
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="diagnosticPhone" className="text-base font-black text-[#0b1320]">
-                  Seu WhatsApp
-                </Label>
-                <Input
-                  id="diagnosticPhone"
-                  value={diagnosticData.diagnosticPhone}
-                  onChange={(e) =>
-                    setDiagnosticData({ ...diagnosticData, diagnosticPhone: e.target.value })
-                  }
-                  placeholder="(00) 00000-0000"
-                  required
-                  className="h-14 rounded-xl border-slate-300 bg-white text-base text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#1a64d6]"
-                />
+              <div className="space-y-1.5">
+                <Label htmlFor="diagnosticPhone" className="font-bold">Seu WhatsApp</Label>
+                <Input id="diagnosticPhone" value={diagnosticData.diagnosticPhone} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticPhone: e.target.value })} placeholder="(00) 00000-0000" required className="h-12" />
               </div>
-
-              <div className="space-y-2">
-                <Label
-                  htmlFor="diagnosticCompany"
-                  className="text-base font-black text-[#0b1320]"
-                >
-                  Nome da empresa
-                </Label>
-                <Input
-                  id="diagnosticCompany"
-                  value={diagnosticData.diagnosticCompany}
-                  onChange={(e) =>
-                    setDiagnosticData({
-                      ...diagnosticData,
-                      diagnosticCompany: e.target.value,
-                    })
-                  }
-                  placeholder="Ex.: Nome da sua empresa"
-                  className="h-14 rounded-xl border-slate-300 bg-white text-base text-slate-900 placeholder:text-slate-400 focus-visible:ring-[#1a64d6]"
-                />
+              <div className="space-y-1.5">
+                <Label htmlFor="diagnosticCompany" className="font-bold">Nome da empresa</Label>
+                <Input id="diagnosticCompany" value={diagnosticData.diagnosticCompany} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticCompany: e.target.value })} placeholder="Ex.: Sua Empresa" className="h-12" />
               </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="diagnosticArea" className="text-base font-black text-[#0b1320]">
-                  Qual o seu tipo de negócio?
-                </Label>
-                <select
-                  id="diagnosticArea"
-                  value={diagnosticData.diagnosticArea}
-                  onChange={(e) =>
-                    setDiagnosticData({ ...diagnosticData, diagnosticArea: e.target.value })
-                  }
-                  required
-                  className="flex h-14 w-full rounded-xl border border-slate-300 bg-white px-4 text-base text-slate-900 outline-none transition focus:border-[#1a64d6]"
-                >
+              <div className="space-y-1.5">
+                <Label htmlFor="diagnosticArea" className="font-bold">Tipo de negócio</Label>
+                <select id="diagnosticArea" value={diagnosticData.diagnosticArea} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticArea: e.target.value })} required className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none">
                   {businessTypes.map((option) => (
-                    <option key={option.value || "placeholder"} value={option.value}>
-                      {option.label}
-                    </option>
+                    <option key={option.value} value={option.value}>{option.label}</option>
                   ))}
                 </select>
               </div>
-
-              <div className="space-y-2">
-                <Label
-                  htmlFor="diagnosticDescription"
-                  className="text-base font-black text-[#0b1320]"
-                >
-                  Qual sua principal dificuldade hoje?
-                </Label>
-                <textarea
-                  id="diagnosticDescription"
-                  value={diagnosticData.diagnosticDescription}
-                  onChange={(e) =>
-                    setDiagnosticData({
-                      ...diagnosticData,
-                      diagnosticDescription: e.target.value,
-                    })
-                  }
-                  placeholder="Ex.: Poucos clientes, vendas baixas, processos desorganizados..."
-                  required
-                  className="min-h-28 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#1a64d6]"
-                />
+              <div className="space-y-1.5">
+                <Label htmlFor="diagnosticDescription" className="font-bold">Principal dificuldade</Label>
+                <textarea id="diagnosticDescription" value={diagnosticData.diagnosticDescription} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticDescription: e.target.value })} placeholder="Ex.: Poucos clientes..." required className="min-h-24 w-full rounded-md border border-input p-3 text-sm outline-none focus:ring-1 focus:ring-blue-500" />
               </div>
-
-              <Button
-                type="submit"
-                disabled={submitting}
-                className="mt-2 flex h-16 w-full items-center justify-center gap-3 rounded-xl bg-[#f6bf22] text-lg font-black text-[#08111d] hover:bg-[#ffd24d]"
-              >
-                <Lock className="h-5 w-5" />
-                {submitting
-                  ? "Enviando diagnóstico..."
-                  : "RECEBER DIAGNÓSTICO GRATUITO"}
+              <Button type="submit" disabled={submitting} className="w-full h-14 bg-[#f6bf22] font-black text-[#08111d] hover:bg-[#ffd24d]">
+                {submitting ? "Enviando..." : "RECEBER DIAGNÓSTICO GRATUITO"}
               </Button>
-
-              <div className="flex items-center justify-center gap-2 pt-1 text-sm text-slate-500">
+              <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 sm:text-xs">
                 <ShieldCheck className="h-4 w-4" />
-                <span>Seus dados estão protegidos. Não enviamos spam.</span>
+                <span>Dados protegidos. Não enviamos spam.</span>
               </div>
             </form>
           </motion.div>
         </div>
       </section>
 
-      <section className="bg-[#071524] px-5 py-12 text-white lg:px-10 lg:py-16">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 lg:flex-row">
+      <footer className="bg-[#071524] px-4 py-12 text-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 lg:flex-row">
           <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
-            <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border border-[#f6bf22]">
-              <Rocket className="h-8 w-8 text-[#f6bf22]" />
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-[#f6bf22]">
+              <Rocket className="h-6 w-6 text-[#f6bf22]" />
             </div>
-            <p className="max-w-xl text-xl font-bold leading-tight text-white sm:text-2xl">
-              Você pode estar deixando dinheiro na mesa sem perceber.{" "}
-              <span className="text-[#f6bf22]">Descubra agora.</span>
+            <p className="max-w-md text-lg font-bold sm:text-xl">
+              Você pode estar deixando dinheiro na mesa. <span className="text-[#f6bf22]">Descubra agora.</span>
             </p>
           </div>
-
-          <ArrowRight className="hidden h-10 w-10 text-[#f6bf22] lg:block" />
-
-          <p className="max-w-xl text-center text-xl font-medium leading-tight text-white/90 sm:text-2xl lg:text-left">
-            Comece agora e veja o que sua empresa pode estar perdendo todos os dias.
-          </p>
+          <p className="max-w-xs text-center text-sm text-white/70 lg:text-left">Comece agora e veja o que sua empresa pode estar perdendo todos os dias.</p>
         </div>
-      </section>
+      </footer>
     </div>
   );
 };
 
 export default PlanAuth;
-

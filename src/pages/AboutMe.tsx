@@ -16,13 +16,7 @@ const AboutMe = () => {
       <section className="relative py-20 overflow-hidden" style={{ paddingTop: "6rem" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-purple-500/5 via-transparent to-transparent" />
         <div className="container relative z-10 max-w-3xl mx-auto text-center">
-          <h2 className="text-5xl font-bold mb-6 leading-tight text-gray-900">
-            Transformando Ideias em{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
-              Soluções de IA
-            </span>{" "}
-            que Escalam
-          </h2>
+         
           <p className="text-xl text-gray-700 leading-relaxed">
             Especialista em arquitetura de soluções empresariais, automação
             inteligente e transformação digital.
