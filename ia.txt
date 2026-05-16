@@ -1,10 +1,50 @@
-Failed to load resource: the server responded with a status of 401 ()Understand this error
-index-Bjljgy5g.js:195 Error loading blog posts: Object
-i @ index-Bjljgy5g.js:195Understand this error
-10The resource <URL> was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
-rctrqntkfacxlweezbfu.supabase.co/rest/v1/blog_posts?select=*&published=eq.true&order=created_at.desc&limit=3:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
-index-Bjljgy5g.js:195 Error loading blog posts: Object
-i @ index-Bjljgy5g.js:195Understand this error
-rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
-rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
-rctrqntkfacxlweezbfu.supabase.co/auth/v1/token?grant_type=password:1  Failed to load resource: the server responded with a status of 401 ()Understand this error
+Failed to load resource: net::ERR_BLOCKED_BY_CLIENTUnderstand this error
+adsbygoogle.js:1  Failed to load resource: net::ERR_BLOCKED_BY_CLIENTUnderstand this error
+js:1  Failed to load resource: net::ERR_BLOCKED_BY_CLIENTUnderstand this error
+chunk-WERSD76P.js?v=d0f1a7eb:21551 Download the React DevTools for a better development experience: https://reactjs.org/link/react-devtools
+react-router-dom.js?v=d0f1a7eb:4393 ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+warnOnce @ react-router-dom.js?v=d0f1a7eb:4393Understand this warning
+react-router-dom.js?v=d0f1a7eb:4393 ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+warnOnce @ react-router-dom.js?v=d0f1a7eb:4393Understand this warning
+performanceMonitor.ts:20 Performance Metrics: Object
+2AutoClubPro.tsx:460 Uncaught ReferenceError: AutoClubProFeatures is not defined
+    at AutoClubPro (AutoClubPro.tsx:460:18)
+    at renderWithHooks (chunk-WERSD76P.js?v=d0f1a7eb:11548:26)
+    at updateFunctionComponent (chunk-WERSD76P.js?v=d0f1a7eb:14582:28)
+    at mountLazyComponent (chunk-WERSD76P.js?v=d0f1a7eb:14833:23)
+    at beginWork (chunk-WERSD76P.js?v=d0f1a7eb:15918:22)
+    at HTMLUnknownElement.callCallback2 (chunk-WERSD76P.js?v=d0f1a7eb:3674:22)
+    at Object.invokeGuardedCallbackDev (chunk-WERSD76P.js?v=d0f1a7eb:3699:24)
+    at invokeGuardedCallback (chunk-WERSD76P.js?v=d0f1a7eb:3733:39)
+    at beginWork$1 (chunk-WERSD76P.js?v=d0f1a7eb:19765:15)
+    at performUnitOfWork (chunk-WERSD76P.js?v=d0f1a7eb:19198:20)Understand this error
+chunk-WERSD76P.js?v=d0f1a7eb:14032 The above error occurred in the <AutoClubPro> component:
+
+    at AutoClubPro (http://localhost:8080/src/pages/AutoClubPro.tsx:39:22)
+    at RenderedRoute (http://localhost:8080/node_modules/.vite/deps/react-router-dom.js?v=d0f1a7eb:4088:5)
+    at Routes (http://localhost:8080/node_modules/.vite/deps/react-router-dom.js?v=d0f1a7eb:4558:5)
+    at Suspense
+    at AuthProvider (http://localhost:8080/src/hooks/useAuth.tsx:32:32)
+    at Router (http://localhost:8080/node_modules/.vite/deps/react-router-dom.js?v=d0f1a7eb:4501:15)
+    at BrowserRouter (http://localhost:8080/node_modules/.vite/deps/react-router-dom.js?v=d0f1a7eb:5247:5)
+    at Provider (http://localhost:8080/node_modules/.vite/deps/chunk-VDDSE22U.js?v=d0f1a7eb:35:15)
+    at TooltipProvider (http://localhost:8080/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=d0f1a7eb:2268:5)
+    at QueryClientProvider (http://localhost:8080/node_modules/.vite/deps/@tanstack_react-query.js?v=d0f1a7eb:2934:3)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries.
+logCapturedError @ chunk-WERSD76P.js?v=d0f1a7eb:14032Understand this error
+chunk-WERSD76P.js?v=d0f1a7eb:19413 Uncaught ReferenceError: AutoClubProFeatures is not defined
+    at AutoClubPro (AutoClubPro.tsx:460:18)
+    at renderWithHooks (chunk-WERSD76P.js?v=d0f1a7eb:11548:26)
+    at updateFunctionComponent (chunk-WERSD76P.js?v=d0f1a7eb:14582:28)
+    at mountLazyComponent (chunk-WERSD76P.js?v=d0f1a7eb:14833:23)
+    at beginWork (chunk-WERSD76P.js?v=d0f1a7eb:15918:22)
+    at beginWork$1 (chunk-WERSD76P.js?v=d0f1a7eb:19753:22)
+    at performUnitOfWork (chunk-WERSD76P.js?v=d0f1a7eb:19198:20)
+    at workLoopSync (chunk-WERSD76P.js?v=d0f1a7eb:19137:13)
+    at renderRootSync (chunk-WERSD76P.js?v=d0f1a7eb:19116:15)
+    at recoverFromConcurrentError (chunk-WERSD76P.js?v=d0f1a7eb:18736:28)Understand this error
+autoclub-pro:1 The resource http://localhost:8080/oficina.webp was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.Understand this warning
+autoclub-pro:1 The resource http://localhost:8080/src/img/roque-rafael-proenca-consultor.png was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.
