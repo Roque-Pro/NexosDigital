@@ -581,7 +581,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 2.650</p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 4.780</p>
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
