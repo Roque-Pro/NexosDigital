@@ -202,17 +202,16 @@ const AutoClubPro = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                                 >
-                                    Seu Sistema. Sua Marca.
-                                    <br />
-                                    A <span className="relative inline-block">
-                                        <span className="text-blue-600">cara</span>
+                                    O Sistema de Gestão <br />
+                                    <span className="relative inline-block">
+                                        <span className="text-blue-600">Automotiva</span>
                                         <motion.span
                                             className="absolute -bottom-2 left-0 h-2 rounded-full bg-blue-600/20"
                                             initial={{ width: 0 }}
                                             animate={{ width: "100%" }}
                                             transition={{ delay: 1, duration: 0.8, ease: "easeOut" }}
                                         />
-                                    </span> da sua empresa.
+                                    </span> com a sua marca.
                                 </motion.h1>
 
                                 <motion.p 
@@ -221,10 +220,10 @@ const AutoClubPro = () => {
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
                                 >
-                                    Pare de usar softwares genéricos que fazem propaganda para os outros. O AutoClub Pro é a plataforma de elite que carrega a <strong>SUA identidade visual</strong>, elevando o nível de profissionalismo e confiança do seu negócio.
+                                    Pare de usar softwares genéricos. O AutoClub Pro é a solução de elite para <strong>Vidros, Som, Estética e Centros Automotivos</strong> que carrega a sua identidade visual e profissionaliza sua operação.
                                 </motion.p>
 
-                                {/* Benefits Grid */}
+                                {/* Benefits Grid - NICHOS */}
                                 <motion.div 
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12"
                                     initial={{ opacity: 0, y: 20 }}
@@ -232,39 +231,39 @@ const AutoClubPro = () => {
                                     transition={{ delay: 0.6, duration: 0.6 }}
                                 >
                                     <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                            <Zap className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Vidros Automotivos</p>
+                                            <p className="text-sm text-gray-600">Gestão completa de estoque e serviços de vidraçaria.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
+                                            <Headphones className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="font-bold text-gray-900">Som & Acessórios</p>
+                                            <p className="text-sm text-gray-600">Controle de instalações e comissões de equipe.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
                                             <Star className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">Sua Marca em Foco</p>
-                                            <p className="text-sm text-gray-600">Personalização total com sua logo e cores.</p>
+                                            <p className="font-bold text-gray-900">Estética Automotiva</p>
+                                            <p className="text-sm text-gray-600">Agendamentos VIP e detalhamento de serviços.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center text-green-600 flex-shrink-0 shadow-sm">
-                                            <Zap className="w-6 h-6" />
+                                        <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
+                                            <Car className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">3 Dias para o Ar</p>
-                                            <p className="text-sm text-gray-600">Implementação recorde para você não parar.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 flex-shrink-0 shadow-sm">
-                                            <BarChart3 className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <p className="font-bold text-gray-900">Gestão de Elite</p>
-                                            <p className="text-sm text-gray-600">Controle total de agendamentos e estoque.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center text-orange-600 flex-shrink-0 shadow-sm">
-                                            <Headphones className="w-6 h-6" />
-                                        </div>
-                                        <div>
-                                            <p className="font-bold text-gray-900">Suporte VIP</p>
-                                            <p className="text-sm text-gray-600">Acompanhamento 24/7 direto pelo WhatsApp.</p>
+                                            <p className="font-bold text-gray-900">Pneus & Mecânica</p>
+                                            <p className="text-sm text-gray-600">Check-list digital e histórico completo por placa.</p>
                                         </div>
                                     </div>
                                 </motion.div>
