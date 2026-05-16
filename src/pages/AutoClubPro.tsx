@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import BlogSection from "@/components/BlogSection";
+import AutoClubProFeatures from "@/components/AutoClubProFeatures";
 import logoClubeImg from "@/img/logo-autocub.png";
 import clienteImg from "@/img/cliente.png";
 import reparoVidrosImg from "@/img/reparo-de-vidros.png";
@@ -455,6 +456,9 @@ const AutoClubPro = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* DETAILED FEATURES SECTION */}
+                <AutoClubProFeatures />
 
                 {/* YouTube Videos */}
                 <YouTubeVideosSection />
