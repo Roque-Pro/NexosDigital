@@ -40,14 +40,33 @@ const BlogAdmin = () => {
         if (savedInterval) setIntervalMinutes(parseInt(savedInterval));
     }, []);
 
+    // Chamada direta via Fetch para desviar de interceptores globais/RPC fantasmas
     useEffect(() => {
         let timer: NodeJS.Timeout;
         if (isAutoRunning) {
             const runAuto = async () => {
                 try {
                     toast({ title: "IA", description: "Iniciando geração automática de post..." });
-                    const { data, error } = await supabase.functions.invoke('auto-generate-post');
-                    if (error) throw error;
+                    
+                    // Extrai com segurança as credenciais de conexão do cliente Supabase
+                    const supabaseUrl = (supabase as any).supabaseUrl;
+                    const anonKey = (supabase as any).supabaseKey;
+
+                    // Requisição limpa para a Edge Function
+                    const response = await fetch(`${supabaseUrl}/functions/v1/auto-generate-post`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${anonKey}`,
+                            'apikey': anonKey
+                        }
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json().catch(() => ({}));
+                        throw new Error(errorData.error || `Erro HTTP: ${response.status}`);
+                    }
+
                     toast({ title: "Sucesso", description: "Post gerado automaticamente pela IA!" });
                     loadPosts();
                 } catch (error: any) {
@@ -376,6 +395,7 @@ const BlogAdmin = () => {
                         </div>
                     )}
                 </motion.div>
+
                 {/* Form */}
                 {showForm && (
                     <motion.div
