@@ -97,7 +97,7 @@ Substituir naturalmente por:
 - administradores
 
 NICHO DO SITE:
-O site oferece contextos relacionados a:
+O site offers contextos relacionados a:
 - desenvolvimento web profissional
 - criação de sistemas personalizados
 - SEO
@@ -266,7 +266,7 @@ ESTRUTURA DO CONTEÚDO:
 - Dividir corretamente em:
   - H2
   - H3
-- Inserir blocos ricos em SEO.
+- Inserir blocks ricos em SEO.
 - Explicar:
   - problemas
   - causas
@@ -409,17 +409,22 @@ O JSON deve conter exatamente estas 3 chaves string:
 
     let finalHtml = html_content;
     const imageIds = [
-      "photo-1486312338219-ce68d2c6f44d", 
       "photo-1517245386807-bb43f82c33c4", 
       "photo-1563986768609-322da13575f3"
     ];
 
-    // INJEÇÃO COMPORTAMENTAL SEGURA: Envolvemos as imagens em uma div estrutural com clear:both e display:block
+    // ATUALIZAÇÃO: Injeta o link estático renderizável do Google Drive na primeira posição
     for (let i = 1; i <= 3; i++) {
-      const imgId = imageIds[i - 1];
+      let currentSrc = "";
+      if (i === 1) {
+        currentSrc = "[https://lh3.googleusercontent.com/d/1mppVczp7n3FijFebMml5Inl3PnFdHHkC](https://lh3.googleusercontent.com/d/1mppVczp7n3FijFebMml5Inl3PnFdHHkC)";
+      } else {
+        currentSrc = `https://images.unsplash.com/${imageIds[i - 2]}?q=80&w=1200&auto=format&fit=crop`;
+      }
+
       const validImageUrl = `
         <div style="display: block; clear: both; width: 100%; margin: 30px 0; position: relative; float: none;">
-          <img src="https://images.unsplash.com/${imgId}?q=80&w=1200&auto=format&fit=crop" alt="Visual Editorial Premium" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 12px;" />
+          <img src="${currentSrc}" alt="Visual Editorial Premium" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 12px;" />
         </div>
       `;
       
@@ -428,20 +433,25 @@ O JSON deve conter exatamente estas 3 chaves string:
       }
     }
 
-    // REGEX DE LIMPEZA CONTRA SOBREPOSIÇÃO: Remove possíveis tags img flutuantes e as reorganiza no fluxo correto
+    // REGEX DE LIMPEZA CONTRA SOBREPOSIÇÃO ATUALIZADO
     const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*>/gi;
     let imgCounter = 0;
     
     finalHtml = finalHtml.replace(imgRegex, (match, src) => {
-      if (src.includes("photo-1486312338219") || src.includes("photo-1517245386") || src.includes("photo-1563986768")) {
+      if (src.includes("1mppVczp7n3FijFebMml5Inl3PnFdHHkC") || src.includes("photo-1517245386") || src.includes("photo-1563986768")) {
         return match;
       }
       if (imgCounter < 3) {
-        const imgId = imageIds[imgCounter];
+        let currentSrc = "";
+        if (imgCounter === 0) {
+          currentSrc = "[https://lh3.googleusercontent.com/d/1mppVczp7n3FijFebMml5Inl3PnFdHHkC](https://lh3.googleusercontent.com/d/1mppVczp7n3FijFebMml5Inl3PnFdHHkC)";
+        } else {
+          currentSrc = `https://images.unsplash.com/${imageIds[imgCounter - 1]}?q=80&w=1200&auto=format&fit=crop`;
+        }
         imgCounter++;
         return `
           <div style="display: block; clear: both; width: 100%; margin: 30px 0; position: relative; float: none;">
-            <img src="[https://images.unsplash.com/$](https://images.unsplash.com/$){imgId}?q=80&w=1200&auto=format&fit=crop" alt="Visual Editorial Premium" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 12px;" />
+            <img src="${currentSrc}" alt="Visual Editorial Premium" style="width: 100%; max-width: 100%; height: auto; display: block; border-radius: 12px;" />
           </div>
         `;
       }
