@@ -359,28 +359,61 @@ const PlanAuth = () => {
             <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Receber meu diagnóstico gratuito</h3>
             <form onSubmit={handleDiagnosticSubmit} className="mt-8 space-y-4">
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticName" className="font-bold">Nome completo</Label>
-                <Input id="diagnosticName" value={diagnosticData.diagnosticName} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticName: e.target.value })} placeholder="Digite seu nome" required className="h-12" />
+                <Label htmlFor="diagnosticName" className="font-bold text-slate-700">Nome completo</Label>
+                <Input 
+                  id="diagnosticName" 
+                  value={diagnosticData.diagnosticName} 
+                  onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticName: e.target.value })} 
+                  placeholder="Digite seu nome" 
+                  required 
+                  className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
+                />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticPhone" className="font-bold">Seu WhatsApp</Label>
-                <Input id="diagnosticPhone" value={diagnosticData.diagnosticPhone} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticPhone: e.target.value })} placeholder="(00) 00000-0000" required className="h-12" />
+                <Label htmlFor="diagnosticPhone" className="font-bold text-slate-700">Seu WhatsApp</Label>
+                <Input 
+                  id="diagnosticPhone" 
+                  value={diagnosticData.diagnosticPhone} 
+                  onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticPhone: e.target.value })} 
+                  placeholder="(00) 00000-0000" 
+                  required 
+                  className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
+                />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticCompany" className="font-bold">Nome da empresa</Label>
-                <Input id="diagnosticCompany" value={diagnosticData.diagnosticCompany} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticCompany: e.target.value })} placeholder="Ex.: Sua Empresa" className="h-12" />
+                <Label htmlFor="diagnosticCompany" className="font-bold text-slate-700">Nome da empresa</Label>
+                <Input 
+                  id="diagnosticCompany" 
+                  value={diagnosticData.diagnosticCompany} 
+                  onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticCompany: e.target.value })} 
+                  placeholder="Ex.: Sua Empresa" 
+                  className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-blue-500 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
+                />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticArea" className="font-bold">Tipo de negócio</Label>
-                <select id="diagnosticArea" value={diagnosticData.diagnosticArea} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticArea: e.target.value })} required className="flex h-12 w-full rounded-md border border-input bg-background px-3 py-2 text-sm outline-none">
+                <Label htmlFor="diagnosticArea" className="font-bold text-slate-700">Tipo de negócio</Label>
+                <select 
+                  id="diagnosticArea" 
+                  value={diagnosticData.diagnosticArea} 
+                  onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticArea: e.target.value })} 
+                  required 
+                  className="flex h-12 w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-900 outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all"
+                >
                   {businessTypes.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
+                    <option key={option.value} value={option.value} className="bg-white text-slate-900">{option.label}</option>
                   ))}
                 </select>
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticDescription" className="font-bold">Principal dificuldade</Label>
-                <textarea id="diagnosticDescription" value={diagnosticData.diagnosticDescription} onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticDescription: e.target.value })} placeholder="Ex.: Poucos clientes..." required className="min-h-24 w-full rounded-md border border-input p-3 text-sm outline-none focus:ring-1 focus:ring-blue-500" />
+                <Label htmlFor="diagnosticDescription" className="font-bold text-slate-700">Principal dificuldade</Label>
+                <textarea 
+                  id="diagnosticDescription" 
+                  value={diagnosticData.diagnosticDescription} 
+                  onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticDescription: e.target.value })} 
+                  placeholder="Ex.: Poucos clientes..." 
+                  required 
+                  className="min-h-24 w-full rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-900 outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
+                />
               </div>
               <Button type="submit" disabled={submitting} className="w-full h-14 bg-[#f6bf22] font-black text-[#08111d] hover:bg-[#ffd24d]">
                 {submitting ? "Enviando..." : "RECEBER DIAGNÓSTICO GRATUITO"}
