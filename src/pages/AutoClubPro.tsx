@@ -25,6 +25,7 @@ import {
     Star,
     ArrowRight,
     Calendar,
+    Car,
     Menu,
     X,
     Headphones,
