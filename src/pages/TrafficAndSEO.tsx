@@ -259,11 +259,11 @@ const PaidTraffic = () => {
             </div>
             <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
               <div className="h-16 w-16 rounded-2xl bg-orange-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                <GanttChartSquare className="h-8 w-8" />
+                <Search className="h-8 w-8" />
               </div>
-              <h4 className="text-2xl font-black mb-4">Escala de Verba</h4>
+              <h4 className="text-2xl font-black mb-4">Google Ads Search</h4>
               <p className="text-slate-600 leading-relaxed">
-                Metodologia de <strong>Escala Horizontal e Vertical</strong> sem quebrar o aprendizado do algoritmo. Aumentamos seu investimento com segurança e ROI.
+                Dominamos a intenção de compra. Através do <strong>Google Ads</strong>, colocamos sua empresa na frente de quem está digitando exatamente o que você vende, no momento exato da decisão.
               </p>
             </div>
           </div>
@@ -361,10 +361,9 @@ const PaidTraffic = () => {
               <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row gap-12 items-center">
                 <div className="flex-1">
                   <div className="inline-block px-4 py-1 rounded-full bg-red-600/20 text-red-400 text-sm font-bold mb-6">Rede de Pneus & Manutenção</div>
-                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Domínio Geográfico e Escala Nacional</h4>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Domínio do Google Ads com Escala Nacional</h4>
                   <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                    Escalamos a "Tração Pneus" usando <strong>Google Performance Max</strong> integrado com o inventário da loja. 
-                    Anúncios que aparecem exatamente quando o cliente pesquisa pelo modelo específico do pneu.
+                    Escalamos a "Tração Pneus" exclusivamente através do <strong>Google Ads</strong>. Utilizamos campanhas de Performance Max e Search integradas ao inventário, garantindo o topo absoluto para pesquisas de alta intenção.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                     <div>
