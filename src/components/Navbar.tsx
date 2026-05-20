@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
+import { NavLink } from "@/components/NavLink";
 
 const links = [
   { label: "Serviços", href: "#servicos" },
@@ -32,17 +33,24 @@ export default function Navbar() {
         {/* Desktop */}
         <div className="hidden items-center gap-6 md:flex">
           {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              {...(link.isLink && { onClick: (e) => {
-                e.preventDefault();
-                navigate(link.href);
-              }})}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
+            link.isLink ? (
+              <NavLink
+                key={link.label}
+                to={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                activeClassName="text-primary font-bold"
+              >
+                {link.label}
+              </NavLink>
+            ) : (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </a>
+            )
           ))}
           <Button size="sm" className="glow-sm gap-2" asChild>
             <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
@@ -62,20 +70,26 @@ export default function Navbar() {
         <div className="border-t border-border/50 bg-background/95 backdrop-blur-xl md:hidden">
           <div className="container flex flex-col gap-4 py-6">
             {links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={(e) => {
-                  if (link.isLink) {
-                    e.preventDefault();
-                    navigate(link.href);
-                  }
-                  setOpen(false);
-                }}
-                className="text-base font-bold text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
+              link.isLink ? (
+                <NavLink
+                  key={link.label}
+                  to={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base font-bold text-foreground transition-colors"
+                  activeClassName="text-primary"
+                >
+                  {link.label}
+                </NavLink>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base font-bold text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <Button size="sm" className="glow-sm gap-2 w-fit" asChild>
               <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">

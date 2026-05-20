@@ -175,10 +175,10 @@ const Landing = () => {
               Especialista
             </button>
             <button
-              onClick={() => navigate("/trafego-e-seo")}
+              onClick={() => navigate("/trafego-pago")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
             >
-              Tráfego & SEO
+              Tráfego Pago
             </button>
             <button
               onClick={() => navigate("/autoclub-pro")}
@@ -236,12 +236,12 @@ const Landing = () => {
             </button>
             <button
               onClick={() => {
-                navigate("/trafego-e-seo");
+                navigate("/trafego-pago");
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              Tráfego & SEO
+              Tráfego Pago
             </button>
             <button
               onClick={() => {
@@ -525,11 +525,11 @@ const Landing = () => {
                   <strong> Google Ads</strong> e <strong>SEO</strong> para lotar sua agenda.
                 </p>
                 <Button
-                  onClick={() => navigate("/trafego-e-seo")}
+                  onClick={() => navigate("/trafego-pago")}
                   size="lg"
                   className="h-16 rounded-2xl bg-orange-600 px-10 text-lg font-black text-white hover:bg-orange-700 shadow-lg shadow-orange-100"
                 >
-                  Ver Estratégias de Tráfego & SEO <ArrowRight className="ml-2" />
+                  Ver Estratégias de Tráfego Pago <ArrowRight className="ml-2" />
                 </Button>
               </div>
               <div className="flex-1">

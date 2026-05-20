@@ -61,12 +61,12 @@ export default function BlogNavbar() {
                     </Button>
 
                     <Button
-                        onClick={() => navigate("/trafego-e-seo")}
+                        onClick={() => navigate("/trafego-pago")}
                         variant="ghost"
                         size="sm"
                         className="hidden md:inline-flex text-gray-700 hover:text-purple-600 text-sm"
                     >
-                        Tráfego & SEO
+                        Tráfego Pago
                     </Button>
 
                     <Button
@@ -139,14 +139,14 @@ export default function BlogNavbar() {
                             </Button>
                             <Button
                                 onClick={() => {
-                                    navigate("/trafego-e-seo");
+                                    navigate("/trafego-pago");
                                     setMobileMenuOpen(false);
                                 }}
                                 variant="ghost"
                                 size="sm"
                                 className="justify-start text-gray-700 hover:text-purple-600 hover:bg-purple-50"
                             >
-                                Tráfego & SEO
+                                Tráfego Pago
                             </Button>
                             <Button
                                 onClick={() => {
