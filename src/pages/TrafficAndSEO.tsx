@@ -22,6 +22,15 @@ import {
   SearchCheck,
   Rocket,
   LineChart,
+  Eye,
+  Focus,
+  GanttChartSquare,
+  Globe2,
+  History,
+  LayoutDashboard,
+  Megaphone,
+  ShieldCheck,
+  Trophy,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,7 +42,7 @@ import {
 import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
-const TrafficAndSEO = () => {
+const PaidTraffic = () => {
   const navigate = useNavigate();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -51,23 +60,24 @@ const TrafficAndSEO = () => {
   };
 
   useSEO({
-    title: "Gestão de Tráfego Pago e SEO de Alta Performance | TechNexos",
-    description: "Pare de queimar dinheiro com anúncios que não vendem. Estratégias validadas de Google Ads, Meta Ads e SEO para escalar seu faturamento com previsibilidade.",
+    title: "Gestão de Tráfego Pago de Elite | Meta Ads & Google Ads | TechNexos",
+    description: "Pare de queimar dinheiro com anúncios amadores. Aplicamos engenharia de dados e copy agressiva para escalar seu faturamento com previsibilidade total.",
     keywords: [
       "gestão de tráfego pago",
-      "especialista google ads",
-      "anúncios instagram",
-      "anúncios facebook",
+      "especialista meta ads",
+      "anúncios instagram profissional",
+      "anúncios facebook para empresas",
       "agência de performance",
-      "seo técnico",
-      "posicionamento google",
+      "escala de vendas",
+      "roas alto",
       "vendas online",
       "roi",
       "geração de leads qualificados",
+      "gestor de trafego pago profissional"
     ],
-    ogTitle: "TechNexos: Tráfego Pago e SEO Focado em Lucro Real",
-    ogDescription: "Não entregamos cliques, entregamos depósitos na sua conta. Conheça nossa metodologia de escala para empresas.",
-    ogUrl: "https://www.technexos.com.br/trafego-e-seo",
+    ogTitle: "TechNexos: Tráfego Pago Focado em Lucro Real e Escala Agressiva",
+    ogDescription: "Não entregamos cliques, entregamos depósitos na sua conta. Nossa metodologia de tráfego pago é desenhada para dominar o mercado.",
+    ogUrl: "https://www.technexos.com.br/trafego-pago",
   });
 
   return (
@@ -99,15 +109,15 @@ const TrafficAndSEO = () => {
               }
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              Anúncios Pagos
+              Estratégias
             </button>
             <button
               onClick={() =>
-                document.getElementById("organico")?.scrollIntoView({ behavior: "smooth" })
+                document.getElementById("casos")?.scrollIntoView({ behavior: "smooth" })
               }
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              SEO & Ranking
+              Casos de Sucesso
             </button>
             <button
               onClick={() => navigate("/blog")}
@@ -119,7 +129,7 @@ const TrafficAndSEO = () => {
               onClick={() => window.open("https://wa.me/5532991075164")}
               className="rounded-full bg-orange-600 font-bold text-white hover:bg-orange-700"
             >
-              Análise Gratuita
+              Análise de Conta Gratuita
             </Button>
           </nav>
 
@@ -150,12 +160,12 @@ const TrafficAndSEO = () => {
             </button>
             <button
               onClick={() => {
-                document.getElementById("organico")?.scrollIntoView({ behavior: "smooth" });
+                document.getElementById("casos")?.scrollIntoView({ behavior: "smooth" });
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              SEO Orgânico
+              Casos de Sucesso
             </button>
             <Button
               onClick={() => window.open("https://wa.me/5532991075164")}
@@ -176,11 +186,10 @@ const TrafficAndSEO = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="mb-8 text-4xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
-              Anúncios não devem ser custo. Devem ser <span className="text-orange-600">lucro</span>.
+              Sua empresa não precisa de curtidas. Ela precisa de <span className="text-orange-600">Lucro Real</span>.
             </h2>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-slate-600">
-              Chega de métricas de vaidade. Nós construímos máquinas de vendas usando <strong>Google Ads</strong>, 
-              <strong> Meta Ads</strong> e <strong>SEO Técnico</strong> para atrair quem realmente tem o cartão na mão para comprar de você.
+              Pare de "tentar" anunciar. Aplicamos engenharia de dados no <strong>Meta Ads</strong> e <strong>Google Ads</strong> para escalar seu faturamento com previsibilidade matemática.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
@@ -192,8 +201,8 @@ const TrafficAndSEO = () => {
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-4 text-sm font-bold text-slate-400">
-              <Check className="text-green-500" /> Dashboards em Tempo Real
-              <Check className="text-green-500" /> Foco 100% em ROI e ROAS
+              <Check className="text-green-500" /> API de Conversão (CAPI) Configurada
+              <Check className="text-green-500" /> Foco 100% em ROAS e ROI
             </div>
           </motion.div>
 
@@ -217,116 +226,167 @@ const TrafficAndSEO = () => {
         </div>
       </section>
 
-      {/* Section 1: Tráfego Pago */}
+      {/* Section 1: Metodologia de Performance */}
       <section id="pago" className="px-4 py-24 bg-white">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="flex-1 order-2 lg:order-1">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="rounded-[2rem] bg-orange-50 p-6 shadow-sm border border-orange-100">
-                   <Target className="h-10 w-10 text-orange-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">Público de Intenção</h4>
-                   <p className="text-sm text-slate-600">Não desperdiçamos verba. Aparecemos para quem já está buscando sua solução.</p>
-                </div>
-                <div className="rounded-[2rem] bg-blue-50 p-6 shadow-sm border border-blue-100">
-                   <MousePointer2 className="h-10 w-10 text-blue-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">CPL Otimizado</h4>
-                   <p className="text-sm text-slate-600">Trabalhamos para reduzir seu custo por lead e aumentar sua margem.</p>
-                </div>
-                <div className="rounded-[2rem] bg-green-50 p-6 shadow-sm border border-green-100 col-span-2">
-                   <BarChart3 className="h-10 w-10 text-green-600 mb-4" />
-                   <h4 className="font-black text-lg mb-2">Escala com Previsibilidade</h4>
-                   <p className="text-sm text-slate-600">Criamos um funil onde você sabe exatamente quanto investir para bater suas metas.</p>
-                </div>
+          <div className="mb-16 text-center">
+            <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-4">
+              Engenharia de <span className="text-orange-600">Alta Performance</span>
+            </h3>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Não somos "postadores de anúncios". Somos especialistas em extrair o máximo de lucro de cada real investido no Meta e Google.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+              <div className="h-16 w-16 rounded-2xl bg-orange-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                <Globe2 className="h-8 w-8" />
               </div>
-            </div>
-            <div className="flex-1 order-1 lg:order-2">
-              <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                Tráfego que <span className="text-orange-600">atropela</span> a concorrência.
-              </h3>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Esqueça o "impulsionar botão". Nossa gestão de mídia é baseada em dados, psicologia de vendas e 
-                testes A/B constantes para garantir que seu anúncio seja impossível de ignorar.
+              <h4 className="text-2xl font-black mb-4">Meta Ads CAPI</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Implementamos a <strong>API de Conversão</strong> para ignorar bloqueios do iOS14 e enviar dados direto do servidor. Isso reduz seu CPL em até 30% instantaneamente.
               </p>
-              <ul className="space-y-4 mb-10">
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Google Ads: Domine a primeira página e o Youtube.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Meta Ads: Transforme o feed em um canal de vendas direto.</p>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="mt-1 h-6 w-6 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0 font-bold">✓</div>
-                  <p className="font-bold text-slate-700">Remarketing: Persiga o cliente até que ele finalize a compra.</p>
-                </li>
-              </ul>
-              <Button
-                onClick={() => window.open("https://wa.me/5532991075164")}
-                size="lg"
-                className="h-16 rounded-2xl bg-slate-900 px-10 text-lg font-black text-white hover:bg-slate-800"
-              >
-                Quero Consultoria de Tráfego
-              </Button>
+            </div>
+            <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+              <div className="h-16 w-16 rounded-2xl bg-slate-900 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                <Focus className="h-8 w-8" />
+              </div>
+              <h4 className="text-2xl font-black mb-4">Públicos LTV</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Usamos modelagem de <strong>Lifetime Value</strong> para encontrar clientes que não apenas compram uma vez, mas que sustentam seu negócio a longo prazo.
+              </p>
+            </div>
+            <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
+              <div className="h-16 w-16 rounded-2xl bg-orange-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                <GanttChartSquare className="h-8 w-8" />
+              </div>
+              <h4 className="text-2xl font-black mb-4">Escala de Verba</h4>
+              <p className="text-slate-600 leading-relaxed">
+                Metodologia de <strong>Escala Horizontal e Vertical</strong> sem quebrar o aprendizado do algoritmo. Aumentamos seu investimento com segurança e ROI.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 2: SEO & Orgânico */}
-      <section id="organico" className="px-4 py-24 bg-slate-50">
+      {/* Section 2: Casos de Sucesso */}
+      <section id="casos" className="px-4 py-24 bg-slate-900 text-white overflow-hidden">
         <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <div className="flex-1">
-              <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                SEO: O <span className="text-orange-600">Ativo</span> que nunca para de render.
-              </h3>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Anúncios são aluguel; SEO é casa própria. Construímos autoridade para o seu domínio, 
-                garantindo que você receba tráfego qualificado 24h por dia, sem pagar por clique.
-              </p>
-              <div className="space-y-6">
-                 <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-orange-600 flex-shrink-0">
-                       <SearchCheck className="h-6 w-6" />
+          <div className="mb-16">
+            <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-4">
+              Resultados <span className="text-orange-400">Inquestionáveis</span>.
+            </h3>
+            <p className="text-xl text-slate-400">
+              O que acontece quando você une estratégia agressiva e tecnologia de ponta.
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {/* Case 1 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-blue-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row gap-12 items-center">
+                <div className="flex-1">
+                  <div className="inline-block px-4 py-1 rounded-full bg-orange-600/20 text-orange-400 text-sm font-bold mb-6">Auto Center Premium</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Redução de 73% no Custo por Lead</h4>
+                  <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                    A "Elite Automotive" sofria com leads caros (R$ 42,00) e desqualificados. Aplicamos um funil de 
+                    <strong> Vídeo-Retenção</strong> no Meta Ads filtrando apenas quem assistiu 75% do conteúdo técnico.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div>
+                      <p className="text-3xl font-black text-orange-400">R$ 11,20</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Novo CPL Médio</p>
                     </div>
                     <div>
-                       <h5 className="font-black text-xl mb-1">Engenharia de Ranking</h5>
-                       <p className="text-slate-500">Otimização de código e velocidade para o Google priorizar você.</p>
+                      <p className="text-3xl font-black text-orange-400">+420%</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Leads Qualificados</p>
                     </div>
-                 </div>
-                 <div className="flex gap-4">
-                    <div className="h-12 w-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-orange-600 flex-shrink-0">
-                       <Rocket className="h-6 w-6" />
+                    <div className="hidden sm:block">
+                      <p className="text-3xl font-black text-orange-400">92%</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Taxa de Agendamento</p>
                     </div>
-                    <div>
-                       <h5 className="font-black text-xl mb-1">Autoridade de Marca</h5>
-                       <p className="text-slate-500">Seja a resposta número 1 para as dúvidas do seu cliente.</p>
-                    </div>
-                 </div>
-              </div>
-              <Button
-                onClick={() => window.open("https://wa.me/5532991075164")}
-                size="lg"
-                variant="outline"
-                className="mt-10 h-16 rounded-2xl border-2 border-orange-600 text-orange-600 px-10 text-lg font-black hover:bg-orange-50"
-              >
-                Dominar o Orgânico
-              </Button>
-            </div>
-            <div className="flex-1">
-              <div className="relative">
-                <div className="rounded-[3rem] overflow-hidden shadow-2xl">
-                   <img 
-                    src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?q=80&w=2074&auto=format&fit=crop" 
-                    alt="Estratégia de SEO e Crescimento" 
-                    className="w-full h-auto"
-                   />
+                  </div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-white p-8 rounded-3xl shadow-xl border border-slate-100 max-w-xs">
-                   <p className="text-4xl font-black text-orange-600 mb-2">TOP 1</p>
-                   <p className="font-bold text-slate-700">Estratégias para posicionar sua empresa no topo das buscas.</p>
+                <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Carro de Luxo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Case 2 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row-reverse gap-12 items-center">
+                <div className="flex-1">
+                  <div className="inline-block px-4 py-1 rounded-full bg-green-600/20 text-green-400 text-sm font-bold mb-6">Estética Automotiva & Detalhamento</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">ROAS de 9.4x com Públicos LTV</h4>
+                  <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                    Para o "Studio Gloss", abandonamos o botão 'impulsionar'. Criamos uma campanha de 
+                    <strong> Dynamic Creative Optimization (DCO)</strong> que testou 45 variações de criativos simultaneamente.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div>
+                      <p className="text-3xl font-black text-green-400">9.4x</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Retorno sobre Anúncio</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-black text-green-400">R$ 45k</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Fat. em 30 dias</p>
+                    </div>
+                    <div className="hidden sm:block">
+                      <p className="text-3xl font-black text-green-400">0.12%</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Custo por Clique</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1601362840469-51e4d8d59085?q=80&w=2070&auto=format&fit=crop" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Polimento Automotivo"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Case 3 */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+              <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row gap-12 items-center">
+                <div className="flex-1">
+                  <div className="inline-block px-4 py-1 rounded-full bg-red-600/20 text-red-400 text-sm font-bold mb-6">Rede de Pneus & Manutenção</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Domínio Geográfico e Escala Nacional</h4>
+                  <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                    Escalamos a "Tração Pneus" usando <strong>Google Performance Max</strong> integrado com o inventário da loja. 
+                    Anúncios que aparecem exatamente quando o cliente pesquisa pelo modelo específico do pneu.
+                  </p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div>
+                      <p className="text-3xl font-black text-red-400">1.2k</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Vendas Trackeadas</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-black text-red-400">-40%</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Custo de Aquisição</p>
+                    </div>
+                    <div className="hidden sm:block">
+                      <p className="text-3xl font-black text-red-400">Top 1</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Leilão Google Ads</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    alt="Pneus novos"
+                  />
                 </div>
               </div>
             </div>
@@ -408,8 +468,7 @@ const TrafficAndSEO = () => {
                 Em quanto tempo vejo o retorno?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                O tráfego pago traz resultados imediatos (leads em até 48h). O SEO é um investimento de construção 
-                de longo prazo que explode sua autoridade orgânica entre 3 a 8 meses.
+                O tráfego pago traz resultados extremamente rápidos. Em muitos casos, começamos a gerar leads qualificados em menos de 48h após o início das campanhas. O lucro real vem com a otimização contínua nas primeiras semanas.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -460,4 +519,4 @@ const TrafficAndSEO = () => {
   );
 };
 
-export default TrafficAndSEO;
+export default PaidTraffic;
