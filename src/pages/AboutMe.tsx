@@ -26,10 +26,6 @@ const AboutMe = () => {
         
         <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 text-sm font-medium text-blue-700 bg-blue-50 border border-blue-100 rounded-full">
-              <Sparkles className="w-4 h-4" />
-              <span>Consultoria em Tecnologia & Estratégia Digital</span>
-            </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-tight">
               Transformando Ideias em <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Sistemas Lucrativos</span>
             </h1>
