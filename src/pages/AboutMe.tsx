@@ -269,7 +269,7 @@ const AboutMe = () => {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Button size="lg" variant="secondary" className="h-16 px-10 text-xl font-bold rounded-full shadow-xl hover:scale-105 transition-transform" asChild>
                   <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
-                    Falar com o Consultor
+                    Fale comigo
                   </a>
                 </Button>
                 <div className="text-sm text-blue-200">
