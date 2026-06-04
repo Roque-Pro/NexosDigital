@@ -40,7 +40,7 @@ const AutoClubPro = () => {
     // SEO
     useSEO({
         title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
-        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 1.870 implementação + R$ 89/mês. 3 meses de suporte grátis.",
+        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 1.258 implementação + R$ 89/mês. 3 meses de suporte grátis.",
         keywords: [
             "autoclub pro",
             "sistema gestão automotivo",
@@ -64,9 +64,9 @@ const AutoClubPro = () => {
             "url": "https://www.technexos.com.br/autoclub-pro",
             "offers": {
                 "@type": "Offer",
-                "price": "1870",
+                "price": "1258",
                 "priceCurrency": "BRL",
-                "description": "AutoClub Pro - R$ 1.870 implementação + R$ 89/mês",
+                "description": "AutoClub Pro - R$ 1.258 implementação + R$ 89/mês",
             }
         }
     });
@@ -581,7 +581,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 4.780</p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 1.258</p>
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
