@@ -3,7 +3,7 @@ import {
   loadAutomationSettings,
   runBlogAutomation,
   updateAutomationAfterRun,
-} from "../automation/blog-automation";
+} from "../automation/blog-automation.js";
 
 const isAuthorizedCronRequest = (req: VercelRequest) => {
   const expectedSecret = process.env.CRON_SECRET;

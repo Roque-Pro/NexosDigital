@@ -1,4 +1,4 @@
-import { runBlogAutomation } from "../automation/blog-automation";
+import { runBlogAutomation } from "../automation/blog-automation.js";
 
 const result = await runBlogAutomation({
   force: true,

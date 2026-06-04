@@ -9,7 +9,11 @@
   ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/blog/:slug",
+      "destination": "/api/blog?slug=:slug"
+    },
+    {
+      "source": "/((?!api/|og-image-).*)",
       "destination": "/index.html"
     }
   ],

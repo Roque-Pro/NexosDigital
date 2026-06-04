@@ -75,7 +75,7 @@ const Blog = () => {
             className="text-5xl sm:text-6xl md:text-7xl font-display font-black text-gray-900 mb-6 leading-tight"
           >
             Blog TechNexos{" "}
-            <span className="bg-gradient-to-r from-purple-500 to-purple-700 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">
               Consultoria
             </span>
           </motion.h1>
@@ -94,7 +94,7 @@ const Blog = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-12 h-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mx-auto"
+            className="w-12 h-1 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full mx-auto"
           />
         </div>
       </section>
@@ -113,7 +113,7 @@ const Blog = () => {
               </p>
               <Button
                 onClick={() => navigate("/")}
-                className="bg-purple-600 hover:bg-purple-700 text-white font-bold"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold"
               >
                 Voltar para Home
               </Button>
@@ -132,9 +132,9 @@ const Blog = () => {
                    onClick={() => navigate(`/blog/${post.slug}`)}
                    className="group cursor-pointer"
                  >
-                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-300 h-full flex flex-col">
+                   <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-blue-300 h-full flex flex-col">
                      {/* Image with fallback */}
-                     <div className="w-full h-48 bg-gradient-to-br from-purple-200 via-pink-200 to-purple-300 group-hover:from-purple-300 group-hover:via-pink-300 group-hover:to-purple-400 transition-all duration-300 overflow-hidden">
+                     <div className="w-full h-48 bg-gradient-to-br from-blue-200 via-blue-100 to-blue-300 group-hover:from-blue-300 group-hover:via-blue-200 group-hover:to-blue-400 transition-all duration-300 overflow-hidden">
                        {imageUrl ? (
                          <img 
                            src={imageUrl} 
@@ -152,7 +152,7 @@ const Blog = () => {
                       </p>
 
                       {/* Title */}
-                      <h3 className="text-xl font-display font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors line-clamp-3">
+                      <h3 className="text-xl font-display font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-3">
                         {post.title}
                       </h3>
 
@@ -170,7 +170,7 @@ const Blog = () => {
                       </p>
 
                       {/* CTA */}
-                      <div className="flex items-center gap-2 text-purple-600 font-semibold group-hover:gap-3 transition-all">
+                      <div className="flex items-center gap-2 text-blue-600 font-semibold group-hover:gap-3 transition-all">
                         Ler mais
                         <ArrowRight className="w-4 h-4" />
                       </div>
@@ -186,7 +186,7 @@ const Blog = () => {
 
       {/* Bottom CTA */}
       {posts.length > 0 && (
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600 to-pink-600">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -195,17 +195,17 @@ const Blog = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl sm:text-5xl font-display font-black text-white mb-6">
-                Pronto para transformar sua empresa?
+                Sua Oficina com Gestão Profissional
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Descubra como a automação e a tecnologia certa podem revolucionar
-                seus processos.
+                Conheça o <strong>AutoClub Pro</strong> e tenha um sistema completo com a sua marca.
+                Aumente sua produtividade e organize sua empresa hoje mesmo.
               </p>
               <Button
-                onClick={() => navigate("/diagnostico-gratuito")}
-                className="bg-white text-purple-600 hover:bg-white/90 font-bold px-8 py-6 text-lg"
+                onClick={() => navigate("/autoclub-pro")}
+                className="bg-white text-blue-600 hover:bg-white/90 font-bold px-8 py-6 text-lg"
               >
-                Solicitar Diagnóstico Gratuito
+                Conhecer o AutoClub Pro
               </Button>
             </motion.div>
           </div>

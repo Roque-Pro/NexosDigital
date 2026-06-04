@@ -9,6 +9,7 @@ import { BlogPost } from "@/types";
 import ShareBlogPost from "@/components/ShareBlogPost";
 import StrategicBacklinks from "@/components/StrategicBacklinks";
 import BlogNavbar from "@/components/BlogNavbar";
+import BlogSection from "@/components/BlogSection";
 import { injectOpenGraphTags, fetchBlogMetadata } from "@/lib/og-tags";
 import { injectBlogSchema } from "@/lib/seo-optimization";
 
@@ -191,7 +192,7 @@ const BlogPostPage = () => {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                     <Button
                         onClick={() => navigate("/")}
-                        className="bg-purple-600 hover:bg-purple-700 text-white mb-8"
+                        className="bg-blue-600 hover:bg-blue-700 text-white mb-8"
                     >
                         <ArrowLeft className="w-4 h-4 mr-2" />
                         Voltar para Home
@@ -244,13 +245,13 @@ const BlogPostPage = () => {
 
                 {/* Excerpt */}
                 {post.excerpt && (
-                    <p className="text-xl text-gray-700 mb-8 leading-relaxed border-l-4 border-purple-600 pl-6">
+                    <p className="text-xl text-gray-700 mb-8 leading-relaxed border-l-4 border-blue-600 pl-6">
                         {post.excerpt}
                     </p>
                 )}
 
                 {/* Divider */}
-                <div className="w-12 h-1 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full mb-12" />
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-indigo-500 rounded-full mb-12" />
 
                 {/* HTML Content */}
                 <div
@@ -258,12 +259,12 @@ const BlogPostPage = () => {
                 prose-headings:font-display prose-headings:font-bold prose-headings:text-gray-900
                 prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-h5:text-lg
                 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:text-base
-                prose-a:text-purple-600 prose-a:underline hover:prose-a:text-purple-700
+                prose-a:text-blue-600 prose-a:underline hover:prose-a:text-blue-700
                 prose-strong:font-bold prose-strong:text-gray-900
                 prose-em:text-gray-700 prose-em:italic
                 prose-code:bg-gray-100 prose-code:text-gray-900 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-code:border prose-code:border-gray-300
                 prose-pre:bg-gray-900 prose-pre:text-white prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-auto prose-pre:border prose-pre:border-gray-700
-                prose-blockquote:border-l-4 prose-blockquote:border-purple-600 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-4 prose-blockquote:border prose-blockquote:border-gray-300
+                prose-blockquote:border-l-4 prose-blockquote:border-blue-600 prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-4 prose-blockquote:border prose-blockquote:border-gray-300
                 prose-ul:list-disc prose-ul:ml-6 prose-ul:mb-6
                 prose-ol:list-decimal prose-ol:ml-6 prose-ol:mb-6
                 prose-li:text-gray-700 prose-li:mb-2
@@ -282,21 +283,24 @@ const BlogPostPage = () => {
                 <StrategicBacklinks postSlug={post.slug} />
             </motion.div>
 
+            {/* Latest Posts */}
+            <BlogSection />
+
             {/* Footer CTA */}
-            <div className="mt-16 bg-gradient-to-r from-purple-600 to-pink-600 py-12 border-t border-purple-300">
+            <div className="mt-16 bg-gradient-to-r from-blue-600 to-indigo-700 py-12 border-t border-blue-300">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-display font-bold text-white mb-4">
-                        Gostou? Vamos conversar!
+                        Sua Oficina no Próximo Nível
                     </h2>
                     <p className="text-white/90 mb-8 max-w-2xl mx-auto">
-                        Quer transformar sua empresa com tecnologia? Solicite seu diagnóstico
-                        estratégico gratuito.
+                        Pare de usar sistemas genéricos. Conheça o <strong>AutoClub Pro</strong>, o sistema de gestão automotiva 
+                        totalmente personalizado com a sua marca e cores.
                     </p>
                     <Button
-                        onClick={() => window.location.href = "/diagnostico-gratuito"}
-                        className="bg-white text-purple-600 hover:bg-white/90 font-bold px-8 py-6 text-lg"
+                        onClick={() => window.location.href = "/autoclub-pro"}
+                        className="bg-white text-blue-600 hover:bg-white/90 font-bold px-8 py-6 text-lg"
                     >
-                        Solicitar Diagnóstico Gratuito
+                        Conhecer o AutoClub Pro
                     </Button>
                 </div>
             </div>

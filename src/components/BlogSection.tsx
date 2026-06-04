@@ -46,7 +46,7 @@ export default function BlogSection() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-black text-gray-900 mb-6 tracking-tight">
-              Últimas do <span className="text-primary">Blog</span>
+              Últimas do <span className="text-blue-600">Blog</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               Insights e estratégias exclusivas sobre tecnologia, IA e performance digital para acelerar o seu negócio.
@@ -54,7 +54,7 @@ export default function BlogSection() {
           </div>
           <Button 
             variant="outline" 
-            className="group gap-2 border-primary/20 hover:border-primary text-primary font-bold px-6 h-12 rounded-xl bg-white shadow-sm"
+            className="group gap-2 border-blue-600/20 hover:border-blue-600 text-blue-600 font-bold px-6 h-12 rounded-xl bg-white shadow-sm"
             onClick={() => navigate("/blog")}
           >
             Ver todos os posts
@@ -91,10 +91,10 @@ export default function BlogSection() {
                 </div>
 
                 <div className="p-6 flex flex-col flex-1">
-                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-3">
+                  <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-3">
                     {new Date(post.created_at).toLocaleDateString("pt-BR")}
                   </p>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                   {post.excerpt && (
@@ -102,7 +102,7 @@ export default function BlogSection() {
                       {post.excerpt}
                     </p>
                   )}
-                  <div className="flex items-center gap-2 text-primary font-bold text-sm">
+                  <div className="flex items-center gap-2 text-blue-600 font-bold text-sm">
                     Ler artigo completo
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </div>
