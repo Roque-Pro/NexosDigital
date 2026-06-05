@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.technexos.com.br</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/diagnostico-gratuito</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/autoclub-pro</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/about-me</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.technexos.com.br/blog</loc>
-    <lastmod>2026-05-17</lastmod>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -289,6 +289,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.technexos.com.br/blog/o-gargalo-invisvel-por-que-sua-equipe-de-reparos-produz-menos-do-que-poderia-e-como-corrigir-isso-agora</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.technexos.com.br/blog/alem-do-exercicio-como-a-fisioterapia-reinventa-sua-operacao-na-era-digital</loc>
     <lastmod>2026-05-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -369,6 +375,96 @@
   <url>
     <loc>https://www.technexos.com.br/blog/o-que-esta-mudando-silenciosamente-nas-oficinas-e-auto-centers-em-2026</loc>
     <lastmod>2026-05-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-revolucao-silenciosa-como-clinicas-de-fisioterapia-estao-redesenhando-a-experiencia-do-paciente-e-a-captacao-digital</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/clinicas-de-fisioterapia-os-sinais-silenciosos-de-uma-gestao-desconectada-na-era-digital</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-consulta-silenciosa-como-clinicas-e-centros-medicos-podem-estar-perdendo-pacientes-sem-perceber-a-revolucao-digital</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/rastreabilidade-automotiva-como-a-consulta-de-histrico-por-placa-transformou-a-gesto-de-frotas-e-o-mercado-de-seminovos</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/como-organizar-agendamentos-em-um-centro-automotivo-e-evitar-gargalos-que-afetam-a-produtividade</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-segredo-dos-centros-automotivos-que-dobram-o-faturamento-sem-abrir-mais-uma-baia</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-planilha-que-custa-caro-por-que-controlar-comisses-manualmente-ainda-destri-equipes-de-vendas-em-2025</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-anatomia-da-deciso-o-guia-definitivo-para-escolher-o-sistema-de-gesto-do-seu-centro-automotivo</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-abismo-digital-das-oficinas-por-que-a-escolha-do-seu-prximo-sistema-vai-determinar-sua-sobrevivncia</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-custo-invisvel-das-faltas-como-o-setor-automotivo-est-combatendo-o-no-show-com-tecnologia</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-crise-invisvel-nos-ptios-o-que-os-donos-de-centros-automotivos-esto-ignorando-ao-escolherem-tecnologia</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-desordem-silenciosa-por-que-oficinas-perdem-dinheiro-com-ordens-de-servio-mal-gerenciadas</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-cdigo-da-fidelidade-por-que-algumas-oficinas-retm-clientes-enquanto-outras-lutam-para-sobreviver</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/a-radiografia-dos-custos-o-investimento-real-para-digitalizar-um-auto-center-e-sair-da-gesto-no-escuro</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.technexos.com.br/blog/o-labirinto-da-gesto-o-que-os-donos-de-centros-automotivos-ignoram-ao-escolherem-tecnologia</loc>
+    <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
