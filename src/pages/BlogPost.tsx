@@ -119,9 +119,8 @@ const BlogPostPage = () => {
         }
         canonical.setAttribute("href", postUrl);
 
-        // Cache buster para redes sociais
-        const cacheTime = new Date().getTime();
-        updateMetaTag("property", "og:url", `${postUrl}?v=${cacheTime}`);
+        // Meta URL
+        updateMetaTag("property", "og:url", postUrl);
     };
 
     const updateMetaTag = (

@@ -7,9 +7,28 @@ import { useToast } from "@/hooks/use-toast";
 import { ArrowRight } from "lucide-react";
 import { BlogPost } from "@/types";
 import BlogNavbar from "@/components/BlogNavbar";
+import { useSEO } from "@/hooks/useSEO";
 
 const Blog = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Blog TechNexos | Estratégias de Tecnologia, IA e Tráfego Pago",
+    description: "Explore artigos técnicos, tendências de mercado e estratégias de crescimento digital. Onde tecnologia e business se encontram para gerar resultados.",
+    keywords: [
+      "blog tecnologia",
+      "artigos automação",
+      "estratégias tráfego pago",
+      "tendências IA 2026",
+      "marketing de performance",
+      "TechNexos Blog",
+      "transformação digital"
+    ],
+    ogTitle: "Blog TechNexos | Insights de Tecnologia & Performance",
+    ogDescription: "Aprenda como escalar seu negócio com as melhores práticas de tecnologia.",
+    ogUrl: "https://www.technexos.com.br/blog",
+    canonicalUrl: "https://www.technexos.com.br/blog"
+  });
   const { toast } = useToast();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);

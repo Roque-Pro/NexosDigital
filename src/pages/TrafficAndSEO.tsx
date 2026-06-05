@@ -78,6 +78,7 @@ const PaidTraffic = () => {
     ogTitle: "TechNexos: Tráfego Pago Focado em Lucro Real e Escala Agressiva",
     ogDescription: "Não entregamos cliques, entregamos depósitos na sua conta. Nossa metodologia de tráfego pago é desenhada para dominar o mercado.",
     ogUrl: "https://www.technexos.com.br/trafego-pago",
+    canonicalUrl: "https://www.technexos.com.br/trafego-pago",
   });
 
   return (

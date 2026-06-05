@@ -1,3 +1,4 @@
+import { useSEO } from "@/hooks/useSEO";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
@@ -15,6 +16,25 @@ import WhatsAppFloat from "@/components/WhatsAppFloat";
 import AutoClubProDetailedSection from "@/components/AutoClubProDetailedSection";
 
 const Index = () => {
+  useSEO({
+    title: "TechNexos Digital | Engenharia de Software e Estratégia de Performance",
+    description: "Especialista em desenvolvimento de sistemas, automação, tráfego pago e SEO técnico. Transformamos tecnologia em lucro real para seu negócio.",
+    keywords: [
+      "desenvolvimento de sistemas",
+      "gestão de tráfego pago",
+      "automação comercial",
+      "SEO técnico",
+      "consultoria de tecnologia",
+      "TechNexos Digital",
+      "criação de sistemas",
+      "marketing de performance"
+    ],
+    ogTitle: "TechNexos Digital | Tecnologia & Performance",
+    ogDescription: "Soluções tecnológicas sob medida para escalar seu faturamento.",
+    ogUrl: "https://www.technexos.com.br",
+    canonicalUrl: "https://www.technexos.com.br"
+  });
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />

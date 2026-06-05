@@ -5,9 +5,29 @@ import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 import BlogNavbar from "@/components/BlogNavbar";
 import BlogSection from "@/components/BlogSection";
 import { useEffect } from "react";
+import { useSEO } from "@/hooks/useSEO";
 
 const AboutMe = () => {
   const navigate = useNavigate();
+
+  useSEO({
+    title: "Especialista em Engenharia de Software | Roque Rafael Proença | TechNexos",
+    description: "Conheça Roque Rafael Proença, Arquiteto de Soluções com 15+ anos de experiência transformando desafios técnicos em sistemas lucrativos e escaláveis.",
+    keywords: [
+      "Roque Rafael Proença",
+      "Arquiteto de Soluções",
+      "Consultor Tecnológico",
+      "Engenheiro de Software",
+      "Especialista em Sistemas",
+      "TechNexos",
+      "desenvolvimento de software",
+      "estratégia digital"
+    ],
+    ogTitle: "Roque Rafael Proença | Arquiteto de Soluções & Estrategista Digital",
+    ogDescription: "Mais de 15 anos transformando ideias em sistemas robustos e lucrativos.",
+    ogUrl: "https://www.technexos.com.br/about-me",
+    canonicalUrl: "https://www.technexos.com.br/about-me"
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
