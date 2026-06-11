@@ -1,112 +1,19 @@
-14:48:48.295 Running build in Washington, D.C., USA (East) – iad1
-14:48:48.296 Build machine configuration: 2 cores, 8 GB
-14:48:48.409 Cloning github.com/Roque-Pro/NexosDigital (Branch: main, Commit: 86488a2)
-14:48:49.041 Cloning completed: 631.000ms
-14:48:50.690 Restored build cache from previous deployment (3CrUkeySk3zEiNtfWZL9QiVgpoUX)
-14:48:50.877 Running "vercel build"
-14:48:50.894 Vercel CLI 54.9.0
-14:48:51.562 Installing dependencies...
-14:48:52.711 
-14:48:52.712 up to date in 1s
-14:48:52.712 
-14:48:52.713 113 packages are looking for funding
-14:48:52.713   run `npm fund` for details
-14:48:52.844 
-14:48:52.845 > vite_react_shadcn_ts@0.0.0 build
-14:48:52.845 > vite build && tsx scripts/prebuild-og-tags.ts
-14:48:52.845 
-14:48:53.178 vite v5.4.19 building for production...
-14:48:53.256 transforming...
-14:48:53.564 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
-14:48:53.565   npx update-browserslist-db@latest
-14:48:53.565   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-14:48:54.545 [vite:css] @import must precede all other statements (besides @charset or empty @layer)
-14:48:54.546 3  |  @tailwind utilities;
-14:48:54.546 4  |  
-14:48:54.547 5  |  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-14:48:54.547    |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-14:48:54.547 6  |  
-14:48:54.547 7  |  @layer base {
-14:48:58.480 ✓ 2145 modules transformed.
-14:48:58.949 rendering chunks...
-14:48:59.189 computing gzip size...
-14:48:59.223 dist/index.html                                             10.06 kB │ gzip:  2.70 kB
-14:48:59.224 dist/assets/diagnostico-hero-man-ibi3Ib3-.jpg               28.43 kB
-14:48:59.224 dist/assets/reparo-de-vidros-BFbHY56n.png                  217.13 kB
-14:48:59.224 dist/assets/auto-center-om0sPFXj.png                       229.26 kB
-14:48:59.224 dist/assets/Estética Automotiva-ChGwuTQf.png               233.82 kB
-14:48:59.224 dist/assets/logo-autocub-DhDaPllT.png                      441.91 kB
-14:48:59.224 dist/assets/roque-rafael-proenca-consultor-DKU0nPiO.png  1,604.58 kB
-14:48:59.224 dist/assets/cliente-CKr10rBo.png                         2,537.79 kB
-14:48:59.224 dist/assets/index-HrlyiUb0.css                             124.24 kB │ gzip: 19.40 kB
-14:48:59.225 dist/assets/vendor-forms-DJ7aeftp.js                         0.04 kB │ gzip:  0.06 kB
-14:48:59.225 dist/assets/play-Ii5MlJtm.js                                 0.30 kB │ gzip:  0.25 kB
-14:48:59.225 dist/assets/arrow-left-CObVlEtN.js                           0.33 kB │ gzip:  0.27 kB
-14:48:59.225 dist/assets/search-3Pb1kuo0.js                               0.34 kB │ gzip:  0.27 kB
-14:48:59.225 dist/assets/circle-check-BCHB7xgA.js                         0.34 kB │ gzip:  0.27 kB
-14:48:59.225 dist/assets/lock-CoScM5tv.js                                 0.38 kB │ gzip:  0.30 kB
-14:48:59.230 dist/assets/download-C1jqQk2q.js                             0.43 kB │ gzip:  0.32 kB
-14:48:59.230 dist/assets/zap-D3Ydqp0T.js                                  0.43 kB │ gzip:  0.31 kB
-14:48:59.230 dist/assets/linkedin-DESdiNo3.js                             0.46 kB │ gzip:  0.34 kB
-14:48:59.230 dist/assets/users-Crr8sSsn.js                                0.47 kB │ gzip:  0.33 kB
-14:48:59.231 dist/assets/NotFound-D-Mh5Ssh.js                             0.71 kB │ gzip:  0.41 kB
-14:48:59.231 dist/assets/trash-2-BdXOiMTY.js                              0.79 kB │ gzip:  0.41 kB
-14:48:59.231 dist/assets/file-text-gQLgT71C.js                            0.80 kB │ gzip:  0.39 kB
-14:48:59.231 dist/assets/target-DzYXNVY0.js                               0.97 kB │ gzip:  0.48 kB
-14:48:59.231 dist/assets/label-BjjDoi4j.js                                1.15 kB │ gzip:  0.61 kB
-14:48:59.232 dist/assets/Auth-CediS30l.js                                 4.02 kB │ gzip:  1.63 kB
-14:48:59.234 dist/assets/BlogNavbar-Cd0I4V3t.js                           4.47 kB │ gzip:  1.14 kB
-14:48:59.234 dist/assets/Blog-BhKqjQ0h.js                                 5.09 kB │ gzip:  2.01 kB
-14:48:59.235 dist/assets/InstagramReelsAdmin-DmV6kjfn.js                 10.36 kB │ gzip:  3.84 kB
-14:48:59.235 dist/assets/AboutMe-CskTIvXH.js                             14.01 kB │ gzip:  4.48 kB
-14:48:59.235 dist/assets/BlogAdmin-vDEEUfia.js                           14.73 kB │ gzip:  4.68 kB
-14:48:59.235 dist/assets/PlanAuth-CkCzdWpN.js                            17.69 kB │ gzip:  5.23 kB
-14:48:59.235 dist/assets/BlogPost-Djoa2Z06.js                            18.22 kB │ gzip:  6.10 kB
-14:48:59.235 dist/assets/DiagnosticsCRM-DshJvnsG.js                      18.59 kB │ gzip:  5.46 kB
-14:48:59.236 dist/assets/vendor-router-CVtk_1j7.js                       20.80 kB │ gzip:  7.70 kB
-14:48:59.236 dist/assets/TrafficAndSEO-CxAwYRWH.js                       22.47 kB │ gzip:  5.75 kB
-14:48:59.236 dist/assets/vendor-query-B2sHYHfM.js                        26.59 kB │ gzip:  8.15 kB
-14:48:59.237 dist/assets/vendor-ui-D4oqJbYJ.js                           41.09 kB │ gzip: 15.32 kB
-14:48:59.237 dist/assets/AutoClubPro-DMR5vR1E.js                         43.60 kB │ gzip: 11.32 kB
-14:48:59.237 dist/assets/vendor-animation-sJKBXy08.js                   125.59 kB │ gzip: 41.73 kB
-14:48:59.237 dist/assets/vendor-core-v0pbKegz.js                        141.28 kB │ gzip: 45.44 kB
-14:48:59.238 dist/assets/index-Cj_QoJ7W.js                              312.97 kB │ gzip: 86.29 kB
-14:48:59.238 ✓ built in 6.02s
-14:48:59.265 
-14:48:59.266 ✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
-14:48:59.266 dist//vercel/path0/assets/AboutMe-CskTIvXH.js.gz               13.77kb / gzip: 4.36kb
-14:48:59.267 dist//vercel/path0/assets/Auth-CediS30l.js.gz                  3.95kb / gzip: 1.59kb
-14:48:59.267 dist//vercel/path0/assets/Blog-BhKqjQ0h.js.gz                  4.98kb / gzip: 1.96kb
-14:48:59.267 dist//vercel/path0/assets/BlogAdmin-vDEEUfia.js.gz             14.40kb / gzip: 4.57kb
-14:48:59.267 dist//vercel/path0/assets/BlogNavbar-Cd0I4V3t.js.gz            4.37kb / gzip: 1.11kb
-14:48:59.267 dist//vercel/path0/assets/AutoClubPro-DMR5vR1E.js.gz           42.83kb / gzip: 11.01kb
-14:48:59.267 dist//vercel/path0/assets/DiagnosticsCRM-DshJvnsG.js.gz        18.19kb / gzip: 5.33kb
-14:48:59.267 dist//vercel/path0/assets/InstagramReelsAdmin-DmV6kjfn.js.gz   10.20kb / gzip: 3.74kb
-14:48:59.267 dist//vercel/path0/assets/BlogPost-Djoa2Z06.js.gz              17.84kb / gzip: 5.95kb
-14:48:59.267 dist//vercel/path0/assets/PlanAuth-CkCzdWpN.js.gz              17.35kb / gzip: 5.11kb
-14:48:59.267 dist//vercel/path0/assets/TrafficAndSEO-CxAwYRWH.js.gz         22.04kb / gzip: 5.59kb
-14:48:59.267 dist//vercel/path0/assets/label-BjjDoi4j.js.gz                 1.12kb / gzip: 0.59kb
-14:48:59.267 dist//vercel/path0/assets/vendor-query-B2sHYHfM.js.gz          25.97kb / gzip: 7.95kb
-14:48:59.267 dist//vercel/path0/assets/vendor-router-CVtk_1j7.js.gz         20.31kb / gzip: 7.52kb
-14:48:59.267 dist//vercel/path0/index.html.gz                               9.89kb / gzip: 2.63kb
-14:48:59.267 dist//vercel/path0/assets/vendor-ui-D4oqJbYJ.js.gz             40.12kb / gzip: 14.95kb
-14:48:59.267 dist//vercel/path0/assets/vendor-core-v0pbKegz.js.gz           137.97kb / gzip: 44.31kb
-14:48:59.267 dist//vercel/path0/assets/vendor-animation-sJKBXy08.js.gz      122.65kb / gzip: 40.64kb
-14:48:59.267 dist//vercel/path0/assets/index-HrlyiUb0.css.gz                121.33kb / gzip: 18.75kb
-14:48:59.267 dist//vercel/path0/assets/index-Cj_QoJ7W.js.gz                 305.84kb / gzip: 84.08kb
-14:48:59.267 
-14:48:59.267 
-14:48:59.667 ⚠️  SUPABASE_ANON_KEY não definida - pulando pré-renderização
-14:48:59.923 Using TypeScript 5.8.3 (local user-provided)
-14:49:02.033 api/blog-automation-run.ts(6,8): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../automation/blog-automation.js'?
-14:49:02.033 
-14:49:07.634 Using TypeScript 5.8.3 (local user-provided)
-14:49:08.371 Using TypeScript 5.8.3 (local user-provided)
-14:49:08.837 Using TypeScript 5.8.3 (local user-provided)
-14:49:09.220 Build Completed in /vercel/output [18s]
-14:49:09.361 Deploying outputs...
-14:49:23.749 Deployment completed
-14:49:23.868 Creating build cache...
-14:49:48.577 Created build cache: 25s
-14:49:48.577 Uploading build cache [198.00 MB]
-14:49:50.868 Build cache uploaded: 2.298s
+[plugin:vite:import-analysis] Failed to resolve import "./img/footer.jpg" from "src/main.jsx". Does the file exist?
+C:/Users/User/Desktop/jobs/marilia/src/main.jsx:37:24
+37 |  } from "lucide-react";
+38 |  import "./styles.css";
+39 |  import footerImage from "./img/footer.jpg";
+   |                           ^
+40 |  import logoImage from "./img/logo_marilia_ribeiro.png";
+41 |  import teamImage from "./img/equipe_files/557790628_17979067271914537_3661210486792536014_n.jpg";
+    at TransformPluginContext._formatLog (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:29079:43)
+    at TransformPluginContext.error (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:29076:14)
+    at normalizeUrl (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:27199:18)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:27257:32
+    at async Promise.all (index 5)
+    at async TransformPluginContext.transform (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:27225:4)
+    at async EnvironmentPluginContainer.transform (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:28877:14)
+    at async loadAndTransform (file:///C:/Users/User/Desktop/jobs/marilia/node_modules/vite/dist/node/chunks/config.js:22746:26)
+Click outside, press Esc key, or fix the code to dismiss.
+You can also disable this overlay by setting server.hmr.overlay to false in vite.config.js.
