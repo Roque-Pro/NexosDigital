@@ -60,8 +60,7 @@ const TotvsConsultancy = () => {
   }, []);
 
   const cases = [
-// ... (rest of the component) ...
-
+    {
       title: "Automação de Workflow de Compras",
       system: "Fluig",
       description: "Redução de 70% no tempo de aprovação de pedidos através da implementação de um fluxo BPM inteligente com integrações automáticas.",
