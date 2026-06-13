@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown, Car, Users, Scale, Activity, Wrench, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
@@ -17,11 +17,11 @@ const links = [
     label: "Soluções", 
     isDropdown: true,
     subLinks: [
-      { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
-      { label: "Autônomos", href: "/autonomos", isExternal: false },
-      { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true },
-      { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
-      { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
+      { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false, icon: <Car className="w-4 h-4" /> },
+      { label: "Autônomos", href: "/autonomos", isExternal: false, icon: <Users className="w-4 h-4" /> },
+      { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true, icon: <Scale className="w-4 h-4" /> },
+      { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true, icon: <Activity className="w-4 h-4" /> },
+      { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true, icon: <Wrench className="w-4 h-4" /> },
     ]
   },
   { label: "Tráfego Pago", href: "/trafego-pago", isLink: true },
@@ -53,18 +53,25 @@ export default function Navbar() {
           {links.map((link) => (
             link.isDropdown ? (
               <DropdownMenu key={link.label}>
-                <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors outline-none">
-                  {link.label} <ChevronDown className="h-4 w-4" />
+                <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-all outline-none group">
+                  {link.label} <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-48">
+                <DropdownMenuContent align="start" className="w-56 p-2 rounded-2xl shadow-2xl border-primary/10 animate-in fade-in zoom-in-95 duration-200">
+                  <div className="mb-2 px-2 py-1.5 text-[10px] font-black text-muted-foreground uppercase tracking-widest">Nossas Verticais</div>
                   {link.subLinks?.map((sub) => (
-                    <DropdownMenuItem key={sub.label} asChild>
+                    <DropdownMenuItem key={sub.label} asChild className="rounded-xl focus:bg-primary/5 focus:text-primary transition-colors cursor-pointer mb-1 last:mb-0">
                       {sub.isExternal ? (
-                        <a href={sub.href} target="_blank" rel="noopener noreferrer" className="w-full cursor-pointer">
+                        <a href={sub.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            {sub.icon}
+                          </div>
                           {sub.label}
                         </a>
                       ) : (
-                        <Link to={sub.href} className="w-full cursor-pointer">
+                        <Link to={sub.href} className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            {sub.icon}
+                          </div>
                           {sub.label}
                         </Link>
                       )}
@@ -91,11 +98,17 @@ export default function Navbar() {
               </a>
             )
           ))}
-          <Button size="sm" className="glow-sm gap-2" asChild>
-            <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
-              <MessageCircle className="h-4 w-4" /> WhatsApp
-            </a>
-          </Button>
+          
+          <div className="flex items-center gap-2">
+            <Button variant="outline" size="sm" className="rounded-full border-primary/20 bg-primary/5 font-bold text-primary hover:bg-primary hover:text-white transition-all gap-2" onClick={() => navigate("/diagnostico-gratuito")}>
+              <Sparkles className="w-4 h-4" /> Diagnóstico Gratuito
+            </Button>
+            <Button size="sm" className="glow-sm gap-2 rounded-full" asChild>
+              <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="h-4 w-4" /> WhatsApp
+              </a>
+            </Button>
+          </div>
         </div>
 
         {/* Mobile toggle */}
@@ -114,7 +127,7 @@ export default function Navbar() {
                   <span className="text-base font-bold text-muted-foreground uppercase text-[10px] tracking-widest">
                     {link.label}
                   </span>
-                  <div className="flex flex-col gap-3 pl-4 border-l border-primary/20">
+                  <div className="grid grid-cols-1 gap-2 pl-2">
                     {link.subLinks?.map((sub) => (
                       sub.isExternal ? (
                         <a
@@ -123,8 +136,11 @@ export default function Navbar() {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={() => setOpen(false)}
-                          className="text-base font-bold text-foreground transition-colors"
+                          className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border/50 text-base font-bold text-foreground transition-colors"
                         >
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            {sub.icon}
+                          </div>
                           {sub.label}
                         </a>
                       ) : (
@@ -132,8 +148,11 @@ export default function Navbar() {
                           key={sub.label}
                           to={sub.href}
                           onClick={() => setOpen(false)}
-                          className="text-base font-bold text-foreground transition-colors"
+                          className="flex items-center gap-3 p-3 rounded-xl bg-muted/50 border border-border/50 text-base font-bold text-foreground transition-colors"
                         >
+                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            {sub.icon}
+                          </div>
                           {sub.label}
                         </Link>
                       )
@@ -161,11 +180,16 @@ export default function Navbar() {
                 </a>
               )
             ))}
-            <Button size="sm" className="glow-sm gap-2 w-fit" asChild>
-              <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
-                <MessageCircle className="h-4 w-4" /> WhatsApp
-              </a>
-            </Button>
+            <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
+              <Button className="glow-sm gap-2 w-full rounded-xl py-6 text-lg font-bold" onClick={() => { navigate("/diagnostico-gratuito"); setOpen(false); }}>
+                <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+              </Button>
+              <Button variant="outline" className="gap-2 w-full rounded-xl py-6 text-lg font-bold" asChild>
+                <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="w-5 h-5 text-green-500" /> WhatsApp
+                </a>
+              </Button>
+            </div>
           </div>
         </div>
       )}

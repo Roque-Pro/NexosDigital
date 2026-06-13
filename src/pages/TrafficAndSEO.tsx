@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
 import {
@@ -31,6 +31,11 @@ import {
   Megaphone,
   ShieldCheck,
   Trophy,
+  ChevronDown,
+  Car,
+  Scale,
+  Activity,
+  Wrench,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -39,6 +44,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
@@ -46,6 +57,14 @@ const PaidTraffic = () => {
   const navigate = useNavigate();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const solutions = [
+    { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false, icon: <Car className="w-4 h-4" /> },
+    { label: "Autônomos", href: "/autonomos", isExternal: false, icon: <Users className="w-4 h-4" /> },
+    { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true, icon: <Scale className="w-4 h-4" /> },
+    { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true, icon: <Activity className="w-4 h-4" /> },
+    { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true, icon: <Wrench className="w-4 h-4" /> },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -60,8 +79,8 @@ const PaidTraffic = () => {
   };
 
   useSEO({
-    title: "Gestão de Tráfego Pago de Elite | Meta Ads & Google Ads | TechNexos",
-    description: "Pare de queimar dinheiro com anúncios amadores. Aplicamos engenharia de dados e copy agressiva para escalar seu faturamento com previsibilidade total.",
+    title: "Gestão de Tráfego Pago & SEO de Performance | TechNexos Digital",
+    description: "Escale seu faturamento com anúncios agressivos no Meta Ads e Google Ads. Gestão de tráfego pago baseada em dados, ROAS alto e lucro real para sua empresa.",
     keywords: [
       "gestão de tráfego pago",
       "especialista meta ads",
@@ -73,12 +92,28 @@ const PaidTraffic = () => {
       "vendas online",
       "roi",
       "geração de leads qualificados",
-      "gestor de trafego pago profissional"
+      "gestor de trafego pago profissional",
+      "seo técnico",
+      "marketing de dados",
+      "performance digital"
     ],
-    ogTitle: "TechNexos: Tráfego Pago Focado em Lucro Real e Escala Agressiva",
-    ogDescription: "Não entregamos cliques, entregamos depósitos na sua conta. Nossa metodologia de tráfego pago é desenhada para dominar o mercado.",
+    ogTitle: "TechNexos Digital: Tráfego Pago & SEO de Alta Performance",
+    ogDescription: "Não entregamos cliques, entregamos depósitos. Estratégias de tráfego pago desenhadas para lucro e escala.",
     ogUrl: "https://www.technexos.com.br/trafego-pago",
+    twitterTitle: "Gestão de Tráfego Pago & Escala Digital | TechNexos",
+    twitterDescription: "Foco total em ROI e previsibilidade matemática para o seu faturamento.",
     canonicalUrl: "https://www.technexos.com.br/trafego-pago",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "AdvertisingAgency",
+      "name": "TechNexos Performance",
+      "description": "Agência de marketing de performance especializada em tráfego pago e escala de vendas.",
+      "url": "https://www.technexos.com.br/trafego-pago",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR"
+      }
+    }
   });
 
   return (
@@ -105,13 +140,40 @@ const PaidTraffic = () => {
               Tecnologia
             </button>
             <button
-              onClick={() =>
-                document.getElementById("pago")?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => navigate("/about-me")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              Estratégias
+              Especialista
             </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-sm font-bold text-orange-600 transition-colors hover:text-orange-700 outline-none group">
+                  Soluções <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-56 p-2 rounded-2xl shadow-2xl border-orange-50 animate-in fade-in zoom-in-95 duration-200">
+                <div className="mb-2 px-2 py-1.5 text-[10px] font-black text-muted-foreground uppercase tracking-widest text-orange-400">Produtos & Serviços</div>
+                {solutions.map((sub) => (
+                  <DropdownMenuItem key={sub.label} asChild className="rounded-xl focus:bg-orange-50 focus:text-orange-600 transition-colors cursor-pointer mb-1 last:mb-0">
+                    {sub.isExternal ? (
+                      <a href={sub.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                        <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+                          {sub.icon}
+                        </div>
+                        {sub.label}
+                      </a>
+                    ) : (
+                      <Link to={sub.href} className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                        <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+                          {sub.icon}
+                        </div>
+                        {sub.label}
+                      </Link>
+                    )}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <button
               onClick={() =>
                 document.getElementById("casos")?.scrollIntoView({ behavior: "smooth" })
@@ -124,13 +186,14 @@ const PaidTraffic = () => {
               onClick={() => navigate("/blog")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-orange-600"
             >
-              Insights
+              Blog
             </button>
             <Button
-              onClick={() => window.open("https://wa.me/5532991075164")}
-              className="rounded-full bg-orange-600 font-bold text-white hover:bg-orange-700"
+              onClick={() => navigate("/diagnostico-gratuito")}
+              variant="outline"
+              className="rounded-full border-orange-200 bg-orange-50 px-6 font-bold text-orange-700 hover:bg-orange-600 hover:text-white gap-2 transition-all"
             >
-              Análise de Conta Gratuita
+              <Sparkles className="w-4 h-4" /> Diagnóstico Gratuito
             </Button>
           </nav>
 
@@ -140,7 +203,7 @@ const PaidTraffic = () => {
         </div>
 
         {mobileMenuOpen && (
-          <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
+          <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden max-h-[85vh] overflow-y-auto">
             <button
               onClick={() => {
                 navigate("/");
@@ -152,13 +215,50 @@ const PaidTraffic = () => {
             </button>
             <button
               onClick={() => {
-                document.getElementById("pago")?.scrollIntoView({ behavior: "smooth" });
+                navigate("/about-me");
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              Tráfego Pago
+              Especialista
             </button>
+
+            {/* Mobile Solutions */}
+            <div className="flex flex-col gap-1 py-2 border-y border-slate-50">
+              <span className="px-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Soluções</span>
+              {solutions.map((sub) => (
+                sub.isExternal ? (
+                  <a
+                    key={sub.label}
+                    href={sub.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-orange-50 border border-orange-100 text-base font-bold text-slate-700 hover:text-orange-600 transition-colors"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+                      {sub.icon}
+                    </div>
+                    {sub.label}
+                  </a>
+                ) : (
+                  <button
+                    key={sub.label}
+                    onClick={() => {
+                      navigate(sub.href);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="flex items-center gap-3 p-3 rounded-xl bg-orange-50 border border-orange-100 text-base font-bold text-slate-700 hover:text-orange-600 transition-colors text-left w-full"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-600">
+                      {sub.icon}
+                    </div>
+                    {sub.label}
+                  </button>
+                )
+              ))}
+            </div>
+
             <button
               onClick={() => {
                 document.getElementById("casos")?.scrollIntoView({ behavior: "smooth" });
@@ -168,12 +268,36 @@ const PaidTraffic = () => {
             >
               Casos de Sucesso
             </button>
-            <Button
-              onClick={() => window.open("https://wa.me/5532991075164")}
-              className="w-full bg-orange-600 py-6 font-bold text-white hover:bg-orange-700"
+            <button
+              onClick={() => {
+                navigate("/blog");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              Quero Vender Mais
-            </Button>
+              Blog
+            </button>
+            <div className="flex flex-col gap-2 pt-2">
+              <Button
+                onClick={() => {
+                  navigate("/diagnostico-gratuito");
+                  setMobileMenuOpen(false);
+                }}
+                variant="outline"
+                className="w-full border-orange-200 bg-orange-50 py-6 font-bold text-orange-700 hover:bg-orange-100 gap-2"
+              >
+                <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+              </Button>
+              <Button
+                onClick={() => {
+                  window.open("https://wa.me/5532991075164");
+                  setMobileMenuOpen(false);
+                }}
+                className="w-full bg-orange-600 py-6 font-bold text-white hover:bg-orange-700 rounded-xl"
+              >
+                Ativar Escala WhatsApp
+              </Button>
+            </div>
           </div>
         )}
       </header>

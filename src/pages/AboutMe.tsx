@@ -11,8 +11,8 @@ const AboutMe = () => {
   const navigate = useNavigate();
 
   useSEO({
-    title: "Especialista em Engenharia de Software | Roque Rafael Proença | TechNexos",
-    description: "Conheça Roque Rafael Proença, Arquiteto de Soluções com 15+ anos de experiência transformando desafios técnicos em sistemas lucrativos e escaláveis.",
+    title: "Roque Rafael Proença | Arquiteto de Soluções & Estrategista Digital | TechNexos",
+    description: "Especialista em Engenharia de Software com 15+ anos de experiência. Transformando desafios complexos em sistemas robustos, escaláveis e lucrativos.",
     keywords: [
       "Roque Rafael Proença",
       "Arquiteto de Soluções",
@@ -21,12 +21,29 @@ const AboutMe = () => {
       "Especialista em Sistemas",
       "TechNexos",
       "desenvolvimento de software",
-      "estratégia digital"
+      "estratégia digital",
+      "especialista react",
+      "consultoria tech brasil",
+      "mvp ágil"
     ],
-    ogTitle: "Roque Rafael Proença | Arquiteto de Soluções & Estrategista Digital",
-    ogDescription: "Mais de 15 anos transformando ideias em sistemas robustos e lucrativos.",
+    ogTitle: "Roque Rafael Proença | Arquiteto de Soluções & Consultor Tech",
+    ogDescription: "Mais de 15 anos transformando ideias em sistemas de alta performance.",
     ogUrl: "https://www.technexos.com.br/about-me",
-    canonicalUrl: "https://www.technexos.com.br/about-me"
+    twitterTitle: "Roque Rafael Proença | Especialista em Engenharia de Software",
+    twitterDescription: "Foco em resultados reais, lucro e escalabilidade para o seu negócio digital.",
+    canonicalUrl: "https://www.technexos.com.br/about-me",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Roque Rafael Proença",
+      "jobTitle": "Arquiteto de Soluções",
+      "description": "Consultor Tecnológico e Arquiteto de Soluções com foco em ROI e performance.",
+      "url": "https://www.technexos.com.br/about-me",
+      "sameAs": [
+        "https://www.instagram.com/technexosdigital/",
+        "https://github.com/Roque-Pro"
+      ]
+    }
   });
 
   useEffect(() => {

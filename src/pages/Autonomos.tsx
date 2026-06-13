@@ -31,8 +31,32 @@ const Autonomos = () => {
       "CRM para consultores",
       "blog para psicólogos",
       "presença digital autônomos",
-      "marketing para profissionais liberais"
+      "marketing para profissionais liberais",
+      "página de vendas rápida",
+      "automação para freelancers",
+      "autoridade digital profissional"
     ],
+    ogTitle: "Transformação Digital para Autônomos em 24h | TechNexos",
+    ogDescription: "Página Profissional + Blog + CRM em tempo recorde. Construa sua autoridade hoje.",
+    ogUrl: "https://www.technexos.com.br/autonomos",
+    twitterTitle: "Soluções Digitais para Profissionais Liberais",
+    twitterDescription: "Sua estrutura completa de vendas e gestão pronta em apenas um dia.",
+    canonicalUrl: "https://www.technexos.com.br/autonomos",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Ecossistema Digital para Autônomos",
+      "description": "Criação de landing page, blog e CRM para profissionais liberais.",
+      "provider": {
+        "@type": "Organization",
+        "name": "TechNexos Digital"
+      },
+      "areaServed": "BR",
+      "offers": {
+        "@type": "Offer",
+        "description": "Entrega em 24 horas"
+      }
+    }
   });
 
   useEffect(() => {

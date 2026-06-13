@@ -21,7 +21,7 @@ import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 const TotvsConsultancy = () => {
   useSEO({
     title: "Consultoria TOTVS Fluig & RM | Especialista Roque Rafael Proença",
-    description: "Consultoria especializada em TOTVS Fluig e RM. Automação de processos, Fórmulas Visuais, suporte técnico e desenvolvimento customizado para sua empresa.",
+    description: "Consultoria técnica especializada em TOTVS Fluig e RM. Automação de processos (BPM), Fórmulas Visuais, suporte estratégico e desenvolvimento sob medida para o seu ERP.",
     keywords: [
       "Consultoria TOTVS",
       "TOTVS Fluig",
@@ -29,8 +29,30 @@ const TotvsConsultancy = () => {
       "Fórmulas Visuais RM",
       "BPM Fluig",
       "Automação de Processos",
-      "Roque Rafael Proença"
+      "Roque Rafael Proença",
+      "especialista totvs",
+      "suporte rm totvs",
+      "desenvolvimento fluig",
+      "integração erp totvs"
     ],
+    ogTitle: "Consultoria Especialista TOTVS Fluig & RM | Roque Pro",
+    ogDescription: "Potencialize seu ERP com Fórmulas Visuais, BPM e suporte estratégico de alto nível.",
+    ogUrl: "https://www.technexos.com.br/consultoria-totvs",
+    twitterTitle: "Consultoria Especialista TOTVS Fluig & RM",
+    twitterDescription: "Transformando o ecossistema TOTVS em vantagem competitiva para sua empresa.",
+    canonicalUrl: "https://www.technexos.com.br/consultoria-totvs",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ConsultingService",
+      "name": "Consultoria TOTVS Fluig & RM",
+      "description": "Serviços especializados em customização e suporte para sistemas TOTVS.",
+      "provider": {
+        "@type": "Person",
+        "name": "Roque Rafael Proença"
+      },
+      "areaServed": "BR",
+      "serviceType": "ERP Consulting"
+    }
   });
 
   useEffect(() => {
@@ -38,7 +60,8 @@ const TotvsConsultancy = () => {
   }, []);
 
   const cases = [
-    {
+// ... (rest of the component) ...
+
       title: "Automação de Workflow de Compras",
       system: "Fluig",
       description: "Redução de 70% no tempo de aprovação de pedidos através da implementação de um fluxo BPM inteligente com integrações automáticas.",

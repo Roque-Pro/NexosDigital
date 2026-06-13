@@ -37,6 +37,10 @@ import {
     Headphones,
     Code2,
     ChevronDown,
+    Sparkles,
+    Scale,
+    Activity,
+    Wrench,
 } from "lucide-react";
 
 const AutoClubPro = () => {
@@ -45,11 +49,11 @@ const AutoClubPro = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const solutions = [
-        { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
-        { label: "Autônomos", href: "/autonomos", isExternal: false },
-        { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true },
-        { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
-        { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
+        { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false, icon: <Car className="w-4 h-4" /> },
+        { label: "Autônomos", href: "/autonomos", isExternal: false, icon: <Users className="w-4 h-4" /> },
+        { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true, icon: <Scale className="w-4 h-4" /> },
+        { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true, icon: <Activity className="w-4 h-4" /> },
+        { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true, icon: <Wrench className="w-4 h-4" /> },
     ];
 
     // SEO
@@ -107,7 +111,7 @@ const AutoClubPro = () => {
                             onClick={() => navigate("/")}
                             className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
                         >
-                            Página Principal
+                            Início
                         </button>
                         <button
                             onClick={() => navigate("/about-me")}
@@ -117,19 +121,26 @@ const AutoClubPro = () => {
                         </button>
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
-                                <button className="flex items-center gap-1 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700 outline-none">
-                                    Soluções <ChevronDown className="h-4 w-4" />
+                                <button className="flex items-center gap-1 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700 outline-none group">
+                                    Soluções <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]:rotate-180" />
                                 </button>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent align="start" className="w-48">
+                            <DropdownMenuContent align="start" className="w-56 p-2 rounded-2xl shadow-2xl border-blue-50 animate-in fade-in zoom-in-95 duration-200">
+                                <div className="mb-2 px-2 py-1.5 text-[10px] font-black text-muted-foreground uppercase tracking-widest text-blue-400">Produtos & Serviços</div>
                                 {solutions.map((sub) => (
-                                    <DropdownMenuItem key={sub.label} asChild>
+                                    <DropdownMenuItem key={sub.label} asChild className="rounded-xl focus:bg-blue-50 focus:text-blue-600 transition-colors cursor-pointer mb-1 last:mb-0">
                                         {sub.isExternal ? (
-                                            <a href={sub.href} target="_blank" rel="noopener noreferrer" className="w-full cursor-pointer font-medium">
+                                            <a href={sub.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                                                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                                                    {sub.icon}
+                                                </div>
                                                 {sub.label}
                                             </a>
                                         ) : (
-                                            <Link to={sub.href} className="w-full cursor-pointer font-medium">
+                                            <Link to={sub.href} className="flex items-center gap-3 w-full p-2 font-bold text-sm">
+                                                <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                                                    {sub.icon}
+                                                </div>
                                                 {sub.label}
                                             </Link>
                                         )}
@@ -141,7 +152,7 @@ const AutoClubPro = () => {
                             onClick={() => navigate("/consultoria-totvs")}
                             className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
                         >
-                            Consultoria TOTVS
+                            TOTVS
                         </button>
                         <button
                             onClick={() => navigate("/blog")}
@@ -152,9 +163,9 @@ const AutoClubPro = () => {
                         <Button
                             onClick={() => navigate("/diagnostico-gratuito")}
                             variant="outline"
-                            className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
+                            className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-600 hover:text-white gap-2 transition-all"
                         >
-                            Diagnóstico Gratuito
+                            <Sparkles className="w-4 h-4" /> Diagnóstico Gratuito
                         </Button>
                     </nav>
 
@@ -164,7 +175,7 @@ const AutoClubPro = () => {
                 </div>
 
                 {mobileMenuOpen && (
-                    <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
+                    <div className="absolute w-full space-y-4 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden max-h-[85vh] overflow-y-auto">
                         <button
                             onClick={() => {
                                 navigate("/");
@@ -172,7 +183,7 @@ const AutoClubPro = () => {
                             }}
                             className="block w-full p-2 text-left font-bold text-slate-700"
                         >
-                            Página Principal
+                            Início
                         </button>
                         <button
                             onClick={() => {
@@ -195,8 +206,11 @@ const AutoClubPro = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => setMobileMenuOpen(false)}
-                                        className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-700 hover:text-blue-600 transition-colors"
                                     >
+                                        <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                                            {sub.icon}
+                                        </div>
                                         {sub.label}
                                     </a>
                                 ) : (
@@ -206,8 +220,11 @@ const AutoClubPro = () => {
                                             navigate(sub.href);
                                             setMobileMenuOpen(false);
                                         }}
-                                        className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                                        className="flex items-center gap-3 p-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-700 hover:text-blue-600 transition-colors text-left w-full"
                                     >
+                                        <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600">
+                                            {sub.icon}
+                                        </div>
                                         {sub.label}
                                     </button>
                                 )
@@ -221,7 +238,7 @@ const AutoClubPro = () => {
                             }}
                             className="block w-full p-2 text-left font-bold text-slate-700"
                         >
-                            Consultoria TOTVS
+                            TOTVS
                         </button>
                         <button
                             onClick={() => {
@@ -232,16 +249,27 @@ const AutoClubPro = () => {
                         >
                             Blog
                         </button>
-                        <Button
-                            onClick={() => {
-                                navigate("/diagnostico-gratuito");
-                                setMobileMenuOpen(false);
-                            }}
-                            variant="outline"
-                            className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800"
-                        >
-                            Diagnóstico Gratuito
-                        </Button>
+                        <div className="flex flex-col gap-2 pt-2">
+                            <Button
+                                onClick={() => {
+                                    navigate("/diagnostico-gratuito");
+                                    setMobileMenuOpen(false);
+                                }}
+                                variant="outline"
+                                className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 gap-2"
+                            >
+                                <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+                            </Button>
+                            <Button
+                                onClick={() => {
+                                    window.open("https://wa.me/5532991075164");
+                                    setMobileMenuOpen(false);
+                                }}
+                                className="w-full bg-blue-600 py-6 font-bold text-white hover:bg-blue-700 rounded-xl"
+                            >
+                                Contato WhatsApp
+                            </Button>
+                        </div>
                     </div>
                 )}
             </header>
