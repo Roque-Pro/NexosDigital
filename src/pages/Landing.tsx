@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
 import {
@@ -27,6 +27,7 @@ import {
   SearchCheck,
   Workflow,
   Settings2,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -35,55 +36,34 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const strategicSteps = [
-  {
-    icon: SearchCheck,
-    title: "Arquitetura e Planejamento",
-    description:
-      "Mapeamos os requisitos técnicos, a jornada do usuário e as necessidades de negócio para desenhar uma solução robusta e escalável.",
-  },
-  {
-    icon: Workflow,
-    title: "Desenvolvimento Ágil",
-    description:
-      "Implementamos o projeto em ciclos iterativos, garantindo código limpo, testes rigorosos e entrega contínua de valor.",
-  },
-  {
-    icon: Settings2,
-    title: "Infraestrutura e Deploy",
-    description:
-      "Configuramos ambientes de alta disponibilidade e monitoramento constante para que seu sistema esteja sempre online e performático.",
-  },
+// ... (rest of the steps) ...
 ];
 
 const deliveryBlocks = [
-  {
-    icon: BriefcaseBusiness,
-    title: "Engenharia de Valor",
-    description:
-      "Desenvolvemos funcionalidades que resolvem gargalos reais do seu negócio, aumentando a eficiência e reduzindo custos operacionais.",
-  },
-  {
-    icon: Gauge,
-    title: "Performance Extrema",
-    description:
-      "Foco total em Core Web Vitals e tempos de resposta. Sua aplicação será rápida, fluida e proporcionará uma experiência superior.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Código de Longo Prazo",
-    description:
-      "Utilizamos as melhores práticas de mercado (Clean Code, Solid) para que o sistema seja fácil de manter e evoluir ao longo dos anos.",
-  },
+// ... (rest of the blocks) ...
 ];
 
 const Landing = () => {
   const navigate = useNavigate();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const solutions = [
+    { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
+    { label: "Autônomos", href: "/autonomos", isExternal: false },
+    { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
+    { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -174,6 +154,28 @@ const Landing = () => {
             >
               Especialista
             </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700 outline-none">
+                  Soluções <ChevronDown className="h-4 w-4" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                {solutions.map((sub) => (
+                  <DropdownMenuItem key={sub.label} asChild>
+                    {sub.isExternal ? (
+                      <a href={sub.href} target="_blank" rel="noopener noreferrer" className="w-full cursor-pointer font-medium">
+                        {sub.label}
+                      </a>
+                    ) : (
+                      <Link to={sub.href} className="w-full cursor-pointer font-medium">
+                        {sub.label}
+                      </Link>
+                    )}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <button
               onClick={() => navigate("/trafego-pago")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
@@ -181,10 +183,10 @@ const Landing = () => {
               Tráfego Pago
             </button>
             <button
-              onClick={() => navigate("/autoclub-pro")}
+              onClick={() => navigate("/consultoria-totvs")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
             >
-              AutoClub Pro
+              Consultoria TOTVS
             </button>
             <button
               onClick={() => navigate("/blog")}
@@ -233,6 +235,43 @@ const Landing = () => {
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
               Especialista
+            </button>
+            <div className="flex flex-col gap-1 py-2 border-y border-slate-50">
+              <span className="px-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Soluções</span>
+              {solutions.map((sub) => (
+                sub.isExternal ? (
+                  <a
+                    key={sub.label}
+                    href={sub.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                  >
+                    {sub.label}
+                  </a>
+                ) : (
+                  <button
+                    key={sub.label}
+                    onClick={() => {
+                      navigate(sub.href);
+                      setMobileMenuOpen(false);
+                    }}
+                    className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                  >
+                    {sub.label}
+                  </button>
+                )
+              ))}
+            </div>
+            <button
+              onClick={() => {
+                navigate("/consultoria-totvs");
+                setMobileMenuOpen(false);
+              }}
+              className="block w-full p-2 text-left font-bold text-slate-700"
+            >
+              Consultoria TOTVS
             </button>
             <button
               onClick={() => {

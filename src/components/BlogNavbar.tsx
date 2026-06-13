@@ -1,12 +1,25 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Code2, Menu, X } from "lucide-react";
+import { Code2, Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function BlogNavbar() {
     const navigate = useNavigate();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+    const solutions = [
+        { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
+        { label: "Autônomos", href: "/autonomos", isExternal: false },
+        { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
+        { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
+    ];
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-blue-200/30 bg-white/80">
@@ -31,21 +44,14 @@ export default function BlogNavbar() {
                     </div>
                 </div>
 
-                {/* Center Buttons - Mobile */}
+                {/* Center Buttons - Mobile (Simplified for better fit) */}
                 <div className="flex items-center gap-1 md:hidden">
-                    <Button
-                        onClick={() => navigate("/autoclub-pro")}
-                        size="sm"
-                        className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-2 py-1.5"
-                    >
-                        <span>AutoClub Pro</span>
-                    </Button>
                     <Button
                         onClick={() => navigate("/auth")}
                         size="sm"
                         className="border-2 border-blue-600 bg-white text-blue-600 hover:bg-blue-50 font-bold text-xs px-2 py-1.5 rounded transition-all"
                     >
-                        <span>Login</span>
+                        <span>Acesso</span>
                     </Button>
                 </div>
 
@@ -68,6 +74,43 @@ export default function BlogNavbar() {
                     >
                         Tráfego Pago
                     </Button>
+
+                    <Button
+                        onClick={() => navigate("/consultoria-totvs")}
+                        variant="ghost"
+                        size="sm"
+                        className="hidden md:inline-flex text-gray-700 hover:text-blue-600 text-sm font-bold text-blue-600"
+                    >
+                        Consultoria TOTVS
+                    </Button>
+
+                    {/* Solutions Dropdown */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button
+                                variant="ghost"
+                                size="sm"
+                                className="hidden md:inline-flex text-gray-700 hover:text-blue-600 text-sm gap-1 outline-none font-bold"
+                            >
+                                Soluções <ChevronDown className="h-4 w-4" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end" className="w-48">
+                            {solutions.map((sub) => (
+                                <DropdownMenuItem key={sub.label} asChild>
+                                    {sub.isExternal ? (
+                                        <a href={sub.href} target="_blank" rel="noopener noreferrer" className="w-full cursor-pointer font-medium">
+                                            {sub.label}
+                                        </a>
+                                    ) : (
+                                        <Link to={sub.href} className="w-full cursor-pointer font-medium">
+                                            {sub.label}
+                                        </Link>
+                                    )}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
 
                     <Button
                         onClick={() => navigate("/about-me")}
@@ -93,22 +136,6 @@ export default function BlogNavbar() {
                         className="hidden sm:inline-flex text-gray-700 hover:text-blue-600 text-sm"
                     >
                         Contato
-                    </Button>
-
-                    {/* Desktop Buttons */}
-                    <Button
-                        onClick={() => navigate("/autoclub-pro")}
-                        size="sm"
-                        className="hidden md:inline-flex bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm px-2 sm:px-3 py-1.5 sm:py-2"
-                    >
-                        <span>AutoClub Pro</span>
-                    </Button>
-                    <Button
-                        onClick={() => navigate("/auth")}
-                        size="sm"
-                        className="hidden md:inline-flex border-2 border-blue-600 bg-white text-blue-600 hover:bg-blue-50 font-bold text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded transition-all"
-                    >
-                        <span>Acesso</span>
                     </Button>
 
                     {/* Mobile Menu Toggle */}
@@ -148,6 +175,48 @@ export default function BlogNavbar() {
                             >
                                 Tráfego Pago
                             </Button>
+                            <Button
+                                onClick={() => {
+                                    navigate("/consultoria-totvs");
+                                    setMobileMenuOpen(false);
+                                }}
+                                variant="ghost"
+                                size="sm"
+                                className="justify-start text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-bold text-blue-600"
+                            >
+                                Consultoria TOTVS
+                            </Button>
+
+                            {/* Mobile Solutions */}
+                            <div className="flex flex-col gap-1 py-2 border-y border-gray-50">
+                                <span className="px-3 text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Soluções</span>
+                                {solutions.map((sub) => (
+                                    sub.isExternal ? (
+                                        <a
+                                            key={sub.label}
+                                            href={sub.href}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className="flex items-center px-3 py-2 text-sm font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg"
+                                        >
+                                            {sub.label}
+                                        </a>
+                                    ) : (
+                                        <button
+                                            key={sub.label}
+                                            onClick={() => {
+                                                navigate(sub.href);
+                                                setMobileMenuOpen(false);
+                                            }}
+                                            className="flex items-center px-3 py-2 text-sm font-bold text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg text-left"
+                                        >
+                                            {sub.label}
+                                        </button>
+                                    )
+                                ))}
+                            </div>
+
                             <Button
                                 onClick={() => {
                                     navigate("/about-me");

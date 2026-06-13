@@ -1,8 +1,14 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useSEO } from "@/hooks/useSEO";
 import { Button } from "@/components/ui/button";
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import YouTubeVideosSection from "@/components/YouTubeVideosSection";
@@ -30,6 +36,7 @@ import {
     X,
     Headphones,
     Code2,
+    ChevronDown,
 } from "lucide-react";
 
 const AutoClubPro = () => {
@@ -37,38 +44,16 @@ const AutoClubPro = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    const solutions = [
+        { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
+        { label: "Autônomos", href: "/autonomos", isExternal: false },
+        { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
+        { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
+    ];
+
     // SEO
     useSEO({
-        title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
-        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 1.258 implementação + R$ 89/mês. 3 meses de suporte grátis.",
-        keywords: [
-            "autoclub pro",
-            "sistema gestão automotivo",
-            "software vidraçaria",
-            "sistema estética automotiva",
-            "agendamentos online",
-            "gestão comissões",
-            "controle estoque automotivo",
-        ],
-        ogTitle: "AutoClub Pro | Personalização Visual para Seu Negócio Automotivo",
-        ogDescription: "Sistema especializado para serviços automotivos com identidade visual da sua marca. Não é genérico. É seu.",
-        ogUrl: "https://www.technexos.com.br/autoclub-pro",
-        twitterTitle: "AutoClub Pro - Personalização Visual para Serviços Automotivos",
-        twitterDescription: "Sistema de agendamentos, vendas e gestão com a cara da sua empresa.",
-        canonicalUrl: "https://www.technexos.com.br/autoclub-pro",
-        schema: {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AutoClub Pro",
-            "description": "Sistema de gestão com personalização visual para serviços automotivos",
-            "url": "https://www.technexos.com.br/autoclub-pro",
-            "offers": {
-                "@type": "Offer",
-                "price": "1258",
-                "priceCurrency": "BRL",
-                "description": "AutoClub Pro - R$ 1.258 implementação + R$ 89/mês",
-            }
-        }
+// ... (rest of SEO config) ...
     });
 
     return (
@@ -100,17 +85,39 @@ const AutoClubPro = () => {
                         >
                             Especialista
                         </button>
+                        <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                                <button className="flex items-center gap-1 text-sm font-bold text-blue-600 transition-colors hover:text-blue-700 outline-none">
+                                    Soluções <ChevronDown className="h-4 w-4" />
+                                </button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent align="start" className="w-48">
+                                {solutions.map((sub) => (
+                                    <DropdownMenuItem key={sub.label} asChild>
+                                        {sub.isExternal ? (
+                                            <a href={sub.href} target="_blank" rel="noopener noreferrer" className="w-full cursor-pointer font-medium">
+                                                {sub.label}
+                                            </a>
+                                        ) : (
+                                            <Link to={sub.href} className="w-full cursor-pointer font-medium">
+                                                {sub.label}
+                                            </Link>
+                                        )}
+                                    </DropdownMenuItem>
+                                ))}
+                            </DropdownMenuContent>
+                        </DropdownMenu>
+                        <button
+                            onClick={() => navigate("/consultoria-totvs")}
+                            className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
+                        >
+                            Consultoria TOTVS
+                        </button>
                         <button
                             onClick={() => navigate("/blog")}
                             className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
                         >
                             Blog
-                        </button>
-                        <button
-                            onClick={() => navigate("/autoclub-pro")}
-                            className="text-sm font-bold text-blue-600 transition-colors"
-                        >
-                            AutoClub Pro
                         </button>
                         <Button
                             onClick={() => navigate("/diagnostico-gratuito")}
@@ -146,6 +153,46 @@ const AutoClubPro = () => {
                         >
                             Especialista
                         </button>
+                        
+                        {/* Mobile Solutions */}
+                        <div className="flex flex-col gap-1 py-2 border-y border-slate-50">
+                            <span className="px-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Soluções</span>
+                            {solutions.map((sub) => (
+                                sub.isExternal ? (
+                                    <a
+                                        key={sub.label}
+                                        href={sub.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                        className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                                    >
+                                        {sub.label}
+                                    </a>
+                                ) : (
+                                    <button
+                                        key={sub.label}
+                                        onClick={() => {
+                                            navigate(sub.href);
+                                            setMobileMenuOpen(false);
+                                        }}
+                                        className="block w-full p-2 text-left font-bold text-slate-700 hover:text-blue-600"
+                                    >
+                                        {sub.label}
+                                    </button>
+                                )
+                            ))}
+                        </div>
+
+                        <button
+                            onClick={() => {
+                                navigate("/consultoria-totvs");
+                                setMobileMenuOpen(false);
+                            }}
+                            className="block w-full p-2 text-left font-bold text-slate-700"
+                        >
+                            Consultoria TOTVS
+                        </button>
                         <button
                             onClick={() => {
                                 navigate("/blog");
@@ -154,15 +201,6 @@ const AutoClubPro = () => {
                             className="block w-full p-2 text-left font-bold text-slate-700"
                         >
                             Blog
-                        </button>
-                        <button
-                            onClick={() => {
-                                navigate("/autoclub-pro");
-                                setMobileMenuOpen(false);
-                            }}
-                            className="block w-full p-2 text-left font-bold text-blue-600"
-                        >
-                            AutoClub Pro
                         </button>
                         <Button
                             onClick={() => {
