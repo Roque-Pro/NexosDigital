@@ -47,13 +47,43 @@ const AutoClubPro = () => {
     const solutions = [
         { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
         { label: "Autônomos", href: "/autonomos", isExternal: false },
+        { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true },
         { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
         { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
     ];
 
     // SEO
     useSEO({
-// ... (rest of SEO config) ...
+        title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
+        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 1.258 implementação + R$ 89/mês. 3 meses de suporte grátis.",
+        keywords: [
+            "autoclub pro",
+            "sistema gestão automotivo",
+            "software vidraçaria",
+            "sistema estética automotiva",
+            "agendamentos online",
+            "gestão comissões",
+            "controle estoque automotivo",
+        ],
+        ogTitle: "AutoClub Pro | Personalização Visual para Seu Negócio Automotivo",
+        ogDescription: "Sistema especializado para serviços automotivos com identidade visual da sua marca. Não é genérico. É seu.",
+        ogUrl: "https://www.technexos.com.br/autoclub-pro",
+        twitterTitle: "AutoClub Pro - Personalização Visual para Serviços Automotivos",
+        twitterDescription: "Sistema de agendamentos, vendas e gestão com a cara da sua empresa.",
+        canonicalUrl: "https://www.technexos.com.br/autoclub-pro",
+        schema: {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "AutoClub Pro",
+            "description": "Sistema de gestão com personalização visual para serviços automotivos",
+            "url": "https://www.technexos.com.br/autoclub-pro",
+            "offers": {
+                "@type": "Offer",
+                "price": "1258",
+                "priceCurrency": "BRL",
+                "description": "AutoClub Pro - R$ 1.258 implementação + R$ 89/mês",
+            }
+        }
     });
 
     return (

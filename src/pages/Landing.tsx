@@ -46,11 +46,45 @@ import BlogSection from "@/components/BlogSection";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const strategicSteps = [
-// ... (rest of the steps) ...
+  {
+    icon: SearchCheck,
+    title: "Arquitetura e Planejamento",
+    description:
+      "Mapeamos os requisitos técnicos, a jornada do usuário e as necessidades de negócio para desenhar uma solução robusta e escalável.",
+  },
+  {
+    icon: Workflow,
+    title: "Desenvolvimento Ágil",
+    description:
+      "Implementamos o projeto em ciclos iterativos, garantindo código limpo, testes rigorosos e entrega contínua de valor.",
+  },
+  {
+    icon: Settings2,
+    title: "Infraestrutura e Deploy",
+    description:
+      "Configuramos ambientes de alta disponibilidade e monitoramento constante para que seu sistema esteja sempre online e performático.",
+  },
 ];
 
 const deliveryBlocks = [
-// ... (rest of the blocks) ...
+  {
+    icon: BriefcaseBusiness,
+    title: "Engenharia de Valor",
+    description:
+      "Desenvolvemos funcionalidades que resolvem gargalos reais do seu negócio, aumentando a eficiência e reduzindo custos operacionais.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance Extrema",
+    description:
+      "Foco total em Core Web Vitals e tempos de resposta. Sua aplicação será rápida, fluida e proporcionará uma experiência superior.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Código de Longo Prazo",
+    description:
+      "Utilizamos as melhores práticas de mercado (Clean Code, Solid) para que o sistema seja fácil de manter e evoluir ao longo dos anos.",
+  },
 ];
 
 const Landing = () => {
@@ -61,6 +95,7 @@ const Landing = () => {
   const solutions = [
     { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
     { label: "Autônomos", href: "/autonomos", isExternal: false },
+    { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true },
     { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
     { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
   ];
@@ -236,6 +271,8 @@ const Landing = () => {
             >
               Especialista
             </button>
+            
+            {/* Mobile Solutions */}
             <div className="flex flex-col gap-1 py-2 border-y border-slate-50">
               <span className="px-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Soluções</span>
               {solutions.map((sub) => (
@@ -264,15 +301,7 @@ const Landing = () => {
                 )
               ))}
             </div>
-            <button
-              onClick={() => {
-                navigate("/consultoria-totvs");
-                setMobileMenuOpen(false);
-              }}
-              className="block w-full p-2 text-left font-bold text-slate-700"
-            >
-              Consultoria TOTVS
-            </button>
+
             <button
               onClick={() => {
                 navigate("/trafego-pago");
@@ -284,12 +313,12 @@ const Landing = () => {
             </button>
             <button
               onClick={() => {
-                navigate("/autoclub-pro");
+                navigate("/consultoria-totvs");
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              AutoClub Pro
+              Consultoria TOTVS
             </button>
             <button
               onClick={() => {

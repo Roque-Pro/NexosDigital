@@ -17,6 +17,7 @@ export default function BlogNavbar() {
     const solutions = [
         { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false },
         { label: "Autônomos", href: "/autonomos", isExternal: false },
+        { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true },
         { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true },
         { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true },
     ];
