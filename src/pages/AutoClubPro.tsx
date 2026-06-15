@@ -731,8 +731,6 @@ const AutoClubPro = () => {
                 {/* YouTube Videos */}
                 <YouTubeVideosSection />
 
-                <BlogSection />
-
                 {/* PROBLEMAS & SOLUÇÕES */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
                     <div className="max-w-6xl mx-auto">
@@ -1027,6 +1025,8 @@ const AutoClubPro = () => {
                         </Button>
                     </div>
                 </section>
+
+                <BlogSection />
             </main>
 
             <Footer />
