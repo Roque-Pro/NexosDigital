@@ -246,7 +246,7 @@ const Landing = () => {
               variant="outline"
               className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800 gap-2"
             >
-              <Sparkles className="w-4 h-4" /> Diagnóstico Gratuito
+              <Sparkles className="w-4 h-4" /> + Clientes?
             </Button>
           </nav>
 
@@ -348,7 +348,7 @@ const Landing = () => {
                 variant="outline"
                 className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700 hover:bg-blue-100 hover:text-blue-800 gap-2"
               >
-                <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+                <Sparkles className="w-5 h-5" /> + Clientes?
               </Button>
               <Button
                 onClick={() => {
@@ -867,12 +867,10 @@ const Landing = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Como funciona o diagnóstico gratuito?
+                Como funciona a análise de captação?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                Analisamos sua presença digital atual, identificamos gargalos técnicos e
-                comerciais, e entregamos uma direção prática do que precisa ser corrigido,
-                priorizado ou escalado.
+                Analisamos sua presença digital e o perfil do seu público-alvo para estruturar uma máquina de leads via tráfego pago. Entregamos uma direção prática de como lotar sua agenda com clientes qualificados.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem

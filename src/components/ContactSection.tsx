@@ -29,7 +29,7 @@ export default function ContactSection() {
       <div className="container relative max-w-xl" ref={ref}>
         <div className={`text-center mb-12 ${isVisible ? "animate-fade-up" : "opacity-0"}`}>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Vamos <span className="text-primary">conversar?</span></h2>
-          <p className="mt-4 text-muted-foreground">Solicite um diagnóstico gratuito e descubra como um sistema sob medida pode transformar seu negócio.</p>
+          <p className="mt-4 text-muted-foreground">Solicite uma análise de captação e descubra como podemos lotar sua agenda com leads qualificados todos os dias.</p>
         </div>
 
         <form onSubmit={handleSubmit} className={`space-y-4 ${isVisible ? "animate-fade-up" : "opacity-0"}`} style={{ animationDelay: "200ms" }}>

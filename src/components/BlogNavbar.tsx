@@ -128,7 +128,7 @@ export default function BlogNavbar() {
                         size="sm"
                         className="hidden lg:inline-flex rounded-full border-blue-200 bg-blue-50 font-bold text-blue-600 hover:bg-blue-600 hover:text-white transition-all gap-2"
                     >
-                        <Sparkles className="w-4 h-4" /> Diagnóstico
+                        <Sparkles className="w-4 h-4" /> + Clientes?
                     </Button>
 
                     <Button
@@ -255,7 +255,7 @@ export default function BlogNavbar() {
                                     }}
                                     className="bg-blue-50 text-blue-600 hover:bg-blue-100 font-bold border border-blue-200 py-6 rounded-xl text-base gap-2"
                                 >
-                                    <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+                                    <Sparkles className="w-5 h-5" /> + Clientes?
                                 </Button>
                                 <Button
                                     onClick={() => {

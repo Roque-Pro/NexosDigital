@@ -40,7 +40,7 @@ export default function HeroSection() {
           <div className="mt-12 flex flex-col sm:flex-row items-center gap-4">
             <Button size="lg" className="glow-md text-base gap-2 px-8 h-14 text-white font-semibold" asChild>
               <a href="#contato">
-                Solicitar Diagnóstico Gratuito <ArrowRight className="h-5 w-5" />
+                Receber Leads Qualificados <ArrowRight className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="outline" size="lg" className="text-base gap-2 px-8 h-14 font-semibold border-border/60 hover:border-primary/50" asChild>

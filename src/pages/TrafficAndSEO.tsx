@@ -193,7 +193,7 @@ const PaidTraffic = () => {
               variant="outline"
               className="rounded-full border-orange-200 bg-orange-50 px-6 font-bold text-orange-700 hover:bg-orange-600 hover:text-white gap-2 transition-all"
             >
-              <Sparkles className="w-4 h-4" /> Diagnóstico Gratuito
+              <Sparkles className="w-4 h-4" /> + Clientes?
             </Button>
           </nav>
 
@@ -286,7 +286,7 @@ const PaidTraffic = () => {
                 variant="outline"
                 className="w-full border-orange-200 bg-orange-50 py-6 font-bold text-orange-700 hover:bg-orange-100 gap-2"
               >
-                <Sparkles className="w-5 h-5" /> Diagnóstico Gratuito
+                <Sparkles className="w-5 h-5" /> + Clientes?
               </Button>
               <Button
                 onClick={() => {
