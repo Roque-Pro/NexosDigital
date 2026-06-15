@@ -1,125 +1,111 @@
-12:28:03.445 Running build in Washington, D.C., USA (East) – iad1
-12:28:03.446 Build machine configuration: 2 cores, 8 GB
-12:28:03.580 Cloning github.com/Roque-Pro/NexosDigital (Branch: main, Commit: 3eb7761)
-12:28:04.603 Cloning completed: 1.022s
-12:28:05.356 Restored build cache from previous deployment (Gcsnz8Y3dz4SVkDbHPQJEtxQahYi)
-12:28:05.677 Running "vercel build"
-12:28:05.707 Vercel CLI 54.12.2
-12:28:09.060 Installing dependencies...
-12:28:10.198 
-12:28:10.199 up to date in 1s
-12:28:10.199 
-12:28:10.199 113 packages are looking for funding
-12:28:10.199   run `npm fund` for details
-12:28:10.347 
-12:28:10.348 > vite_react_shadcn_ts@0.0.0 build
-12:28:10.348 > vite build && tsx scripts/prebuild-og-tags.ts && tsx scripts/generate-sitemap.ts
-12:28:10.348 
-12:28:11.014 vite v5.4.19 building for production...
-12:28:11.098 transforming...
-12:28:11.410 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
-12:28:11.410   npx update-browserslist-db@latest
-12:28:11.411   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-12:28:12.759 ✓ 38 modules transformed.
-12:28:13.316 
-12:28:13.317 ✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
-12:28:13.318 dist//vercel/path0/blog/a-anatomia-da-deciso-o-guia-definitivo-para-escolher-o-sistema-de-gesto-do-seu-centro-automotivo/index.html.gz                                             12.23kb / gzip: 3.11kb
-12:28:13.319 dist//vercel/path0/blog/a-balanca-silenciosa-da-justica-digital-como-escritorios-juridicos-modernos-podem-estar-afastando-clientes-sem-perceber/index.html.gz                      12.16kb / gzip: 3.08kb
-12:28:13.319 dist//vercel/path0/blog/a-consulta-silenciosa-como-clinicas-e-centros-medicos-podem-estar-perdendo-pacientes-sem-perceber-a-revolucao-digital/index.html.gz                        12.30kb / gzip: 3.12kb
-12:28:13.319 dist//vercel/path0/blog/a-crise-invisvel-nos-ptios-o-que-os-donos-de-centros-automotivos-esto-ignorando-ao-escolherem-tecnologia/index.html.gz                                     12.29kb / gzip: 3.12kb
-12:28:13.319 dist//vercel/path0/blog/a-eroso-silenciosa-por-que-o-faturamento-de-empresas-consolidadas-est-desabando-no-cenrio-digital-de-2026/index.html.gz                                    11.86kb / gzip: 3.00kb
-12:28:13.320 dist//vercel/path0/blog/a-radiografia-dos-custos-o-investimento-real-para-digitalizar-um-auto-center-e-sair-da-gesto-no-escuro/index.html.gz                                       11.88kb / gzip: 3.02kb
-12:28:13.320 dist//vercel/path0/blog/a-revolucao-oculta-da-odontologia-como-o-comportamento-digital-reconfigura-a-gestao-de-clinicas-e-a-retencao-de-pacientes/index.html.gz                    12.22kb / gzip: 3.05kb
-12:28:13.320 dist//vercel/path0/blog/a-revolucao-silenciosa-como-clinicas-de-fisioterapia-estao-redesenhando-a-experiencia-do-paciente-e-a-captacao-digital/index.html.gz                       12.28kb / gzip: 3.10kb
-12:28:13.320 dist//vercel/path0/blog/a-revolucao-silenciosa-que-redefine-o-futuro-das-clinicas-de-saude-o-que-voce-nao-ve-mas-seus-pacientes-ja-esperam/index.html.gz                           12.12kb / gzip: 3.09kb
-12:28:13.321 dist//vercel/path0/blog/alem-da-reabilitacao-como-a-gestao-digital-redefine-o-sucesso-na-fisioterapia-moderna/index.html.gz                                                        12.06kb / gzip: 3.07kb
-12:28:13.321 dist//vercel/path0/blog/a-virada-operacional-o-que-poucas-clinicas-de-fisioterapia-perceberam-sobre-o-novo-comportamento-do-paciente/index.html.gz                                 11.90kb / gzip: 3.02kb
-12:28:13.322 dist//vercel/path0/blog/alem-da-reabilitacao-os-sinais-inevitaveis-da-transformacao-digital-na-fisioterapia/index.html.gz                                                          11.95kb / gzip: 3.04kb
-12:28:13.322 dist//vercel/path0/blog/alem-do-exercicio-como-a-fisioterapia-reinventa-sua-operacao-na-era-digital/index.html.gz                                                                  11.94kb / gzip: 3.05kb
-12:28:13.322 dist//vercel/path0/blog/alem-da-terapia-os-erros-ocultos-que-custam-pacientes-e-lucro-as-clinicas-de-fisioterapia-no-digital/index.html.gz                                         12.14kb / gzip: 3.04kb
-12:28:13.323 dist//vercel/path0/blog/a-revolucao-silenciosa-como-centros-medicos-modernos-reconfiguram-a-experiencia-do-paciente-digital/index.html.gz                                          11.89kb / gzip: 3.03kb
-12:28:13.323 dist//vercel/path0/blog/a-planilha-que-custa-caro-por-que-controlar-comisses-manualmente-ainda-destri-equipes-de-vendas-em-2025/index.html.gz                                      12.00kb / gzip: 3.06kb
-12:28:13.323 dist//vercel/path0/blog/decifrando-a-nova-jornada-do-paciente-odontologico-onde-a-tecnologia-encontra-a-confianca/index.html.gz                                                    12.22kb / gzip: 3.08kb
-12:28:13.324 dist//vercel/path0/blog/como-organizar-agendamentos-em-um-centro-automotivo-e-evitar-gargalos-que-afetam-a-produtividade/index.html.gz                                             11.71kb / gzip: 3.00kb
-12:28:13.324 dist//vercel/path0/blog/a-metamorfose-silenciosa-como-clinicas-de-fisioterapia-estao-sendo-redefinidas-pela-onda-digital-e-o-que-poucos-notaram/index.html.gz                      12.17kb / gzip: 3.09kb
-12:28:13.324 dist//vercel/path0/blog/a-desordem-silenciosa-por-que-oficinas-perdem-dinheiro-com-ordens-de-servio-mal-gerenciadas/index.html.gz                                                  12.24kb / gzip: 3.09kb
-12:28:13.324 dist//vercel/path0/blog/as-imobiliarias-que-crescem-no-google-estao-fazendo-algo-que-quase-ninguem-percebeu/index.html.gz                                                          12.12kb / gzip: 3.08kb
-12:28:13.325 dist//vercel/path0/blog/desvendando-a-revolucao-oculta-os-pilares-digitais-que-redefinem-o-futuro-das-clinicas-de-fisioterapia/index.html.gz                                       12.22kb / gzip: 3.09kb
-12:28:13.325 dist//vercel/path0/blog/empresrios-comearam-a-perceber-um-problema-digital-que-antes-parecia-invisvel/index.html.gz                                                                12.41kb / gzip: 3.11kb
-12:28:13.325 dist//vercel/path0/blog/diagnostico-digital-o-que-as-clinicas-de-fisioterapia-ignoram-no-novo-comportamento-do-paciente/index.html.gz                                              11.92kb / gzip: 3.04kb
-12:28:13.325 dist//vercel/path0/blog/empresas-esto-perdendo-espao-online-em-silncio-e-quase-ningum-est-observando-o-novo-comportamento-digital/index.html.gz                                    11.99kb / gzip: 3.06kb
-12:28:13.325 dist//vercel/path0/blog/especialistas-comearam-a-identificar-um-novo-padro-entre-empresas-que-esto-crescendo-no-digital/index.html.gz                                              12.01kb / gzip: 3.03kb
-12:28:13.326 dist//vercel/path0/blog/especialistas-observam-um-novo-comportamento-digital-entre-empresas-que-esto-crescendo-mais-rpido/index.html.gz                                            11.73kb / gzip: 2.98kb
-12:28:13.326 dist//vercel/path0/blog/especialistas-esto-observando-um-novo-tipo-de-empresa-invisvel-e-isso-est-mudando-o-mercado-local/index.html.gz                                            12.33kb / gzip: 3.12kb
-12:28:13.326 dist//vercel/path0/blog/o-abismo-digital-por-que-empresas-consolidadas-esto-sumindo-do-radar-dos-consumidores-em-2026/index.html.gz                                                11.77kb / gzip: 3.00kb
-12:28:13.326 dist//vercel/path0/blog/o-abismo-algortmico-por-que-negcios-de-sucesso-esto-perdendo-clientes-de-forma-invisvel-em-2026/index.html.gz                                              11.38kb / gzip: 2.95kb
-12:28:13.327 dist//vercel/path0/blog/o-abismo-digital-das-oficinas-por-que-a-escolha-do-seu-prximo-sistema-vai-determinar-sua-sobrevivncia/index.html.gz                                        12.28kb / gzip: 3.11kb
-12:28:13.327 dist//vercel/path0/blog/o-cdigo-da-fidelidade-por-que-algumas-oficinas-retm-clientes-enquanto-outras-lutam-para-sobreviver/index.html.gz                                           12.13kb / gzip: 3.09kb
-12:28:13.327 dist//vercel/path0/blog/especialistas-esto-observando-um-padro-silencioso-empresas-estruturadas-offline-esto-perdendo-espao-no-ambiente-digital/index.html.gz                      11.88kb / gzip: 3.01kb
-12:28:13.327 dist//vercel/path0/blog/o-comportamento-digital-que-est-fazendo-empresas-sumirem-sem-que-elas-percebam/index.html.gz                                                               11.75kb / gzip: 3.00kb
-12:28:13.328 dist//vercel/path0/blog/clinicas-de-fisioterapia-os-sinais-silenciosos-de-uma-gestao-desconectada-na-era-digital/index.html.gz                                                     12.02kb / gzip: 3.05kb
-12:28:13.328 dist//vercel/path0/blog/o-despertar-silencioso-como-a-fisioterapia-esta-reinventando-a-experiencia-do-paciente-com-tecnologia/index.html.gz                                        12.01kb / gzip: 3.03kb
-12:28:13.328 dist//vercel/path0/blog/empresas-esto-perdendo-espao-no-mercado-sem-perceber-e-especialistas-relacionam-isso-estrutura-digital/index.html.gz                                       11.86kb / gzip: 3.03kb
-12:28:13.328 dist//vercel/path0/blog/o-efeito-silencioso-da-desconexao-digital-como-clinicas-de-fisioterapia-perdem-pacientes-e-potencial-de-mercado-no-pos-pandemia/index.html.gz              12.13kb / gzip: 3.07kb
-12:28:13.328 dist//vercel/path0/blog/o-declnio-invisvel-por-que-estruturas-digitais-obsoletas-esto-silenciando-empresas-no-mercado-brasileiro/index.html.gz                                     12.23kb / gzip: 3.13kb
-12:28:13.329 dist//vercel/path0/blog/o-erro-operacional-que-est-fazendo-auto-centers-perderem-clientes-antes-mesmo-do-primeiro-atendimento/index.html.gz                                        11.88kb / gzip: 3.01kb
-12:28:13.329 dist//vercel/path0/blog/o-fim-da-agenda-de-papel-sinais-de-que-sua-clinica-odontologica-precisa-de-uma-virada-digital-urgente/index.html.gz                                        12.04kb / gzip: 3.06kb
-12:28:13.329 dist//vercel/path0/blog/o-gargalo-invisvel-por-que-sua-equipe-de-reparos-produz-menos-do-que-poderia-e-como-corrigir-isso-agora/index.html.gz                                      11.78kb / gzip: 3.03kb
-12:28:13.329 dist//vercel/path0/blog/o-labirinto-da-gesto-o-que-os-donos-de-centros-automotivos-ignoram-ao-escolherem-tecnologia/index.html.gz                                                  12.41kb / gzip: 3.13kb
-12:28:13.329 dist//vercel/path0/blog/o-movimento-digital-que-est-mudando-silenciosamente-as-clnicas-odontolgicas-regionais/index.html.gz                                                        11.79kb / gzip: 2.98kb
-12:28:13.330 dist//vercel/path0/blog/o-movimento-silencioso-que-est-fazendo-empresas-desaparecerem-do-google/index.html.gz                                                                      11.80kb / gzip: 3.02kb
-12:28:13.330 dist//vercel/path0/blog/o-eco-do-silencio-como-clinicas-de-fisioterapia-estao-perdendo-pacientes-no-digital-e-quais-os-proximos-passos/index.html.gz                               12.28kb / gzip: 3.11kb
-12:28:13.330 dist//vercel/path0/blog/alem-do-papel-os-sinais-silenciosos-de-transformacao-digital-que-escritorios-juridicos-nao-podem-ignorar/index.html.gz                                     12.15kb / gzip: 3.09kb
-12:28:13.330 dist//vercel/path0/blog/o-erro-silencioso-por-que-empresas-consolidadas-esto-sumindo-do-google-sem-notar-a-queda-no-trfego/index.html.gz                                           11.83kb / gzip: 3.01kb
-12:28:13.331 dist//vercel/path0/blog/o-ponto-cego-da-gestao-como-clinicas-de-fisioterapia-estao-silenciosamente-perdendo-pacientes-no-digital/index.html.gz                                     12.06kb / gzip: 3.05kb
-12:28:13.331 dist//vercel/path0/blog/o-ponto-cego-da-gestao-como-clinicas-de-fisioterapia-ignoram-dados-e-perdem-oportunidades-na-era-digital/index.html.gz                                     12.08kb / gzip: 3.06kb
-12:28:13.331 dist//vercel/path0/blog/o-ponto-cego-digital-por-que-muitas-clinicas-de-fisioterapia-ignoram-a-otimizacao-que-atrai-e-retem-pacientes/index.html.gz                                12.27kb / gzip: 3.11kb
-12:28:13.331 dist//vercel/path0/blog/o-que-est-mudando-silenciosamente-nas-clnicas-veterinrias-mais-digitais-do-brasil/index.html.gz                                                            12.25kb / gzip: 3.09kb
-12:28:13.331 dist//vercel/path0/blog/o-que-esta-mudando-silenciosamente-nas-oficinas-e-auto-centers-em-2026/index.html.gz                                                                       12.19kb / gzip: 3.05kb
-12:28:13.332 dist//vercel/path0/blog/o-que-poucos-veem-como-a-rotina-digital-silenciosamente-afasta-pacientes-de-clinicas-de-fisioterapia/index.html.gz                                         11.94kb / gzip: 3.04kb
-12:28:13.332 dist//vercel/path0/blog/o-radar-da-transformacao-sinais-inovadores-que-redefinem-o-sucesso-das-clinicas-odontologicas/index.html.gz                                                12.16kb / gzip: 3.09kb
-12:28:13.332 dist//vercel/path0/blog/o-segredo-dos-centros-automotivos-que-dobram-o-faturamento-sem-abrir-mais-uma-baia/index.html.gz                                                           11.58kb / gzip: 2.99kb
-12:28:13.332 dist//vercel/path0/blog/o-silencio-da-transformacao-como-clinicas-de-fisioterapia-estao-redesenhando-o-cuidado-na-era-digital/index.html.gz                                        11.93kb / gzip: 3.04kb
-12:28:13.332 dist//vercel/path0/blog/o-silencio-digital-dos-consultorios-como-pequenas-clinicas-odontologicas-perdem-pacientes-na-era-da-conexao-imediata/index.html.gz                         12.50kb / gzip: 3.16kb
-12:28:13.332 dist//vercel/path0/blog/o-silencio-digital-nas-clinicas-de-fisioterapia-sinais-de-uma-transformacao-inevitavel/index.html.gz                                                       11.95kb / gzip: 3.04kb
-12:28:13.332 dist//vercel/path0/blog/o-custo-invisvel-das-faltas-como-o-setor-automotivo-est-combatendo-o-no-show-com-tecnologia/index.html.gz                                                  11.87kb / gzip: 3.03kb
-12:28:13.333 dist//vercel/path0/blog/o-padro-digital-que-est-fazendo-clnicas-e-oficinas-crescerem-mesmo-sem-aumentar-equipes/index.html.gz                                                      11.86kb / gzip: 3.03kb
-12:28:13.333 dist//vercel/path0/blog/o-sinais-silenciosos-que-poucas-clinicas-percebem-como-a-transformacao-digital-reconfigura-o-comportamento-do-paciente/index.html.gz                       12.13kb / gzip: 3.07kb
-12:28:13.333 dist//vercel/path0/blog/o-padro-digital-que-est-fazendo-empresas-desaparecerem-das-buscas-locais-sem-que-percebam/index.html.gz                                                    11.72kb / gzip: 2.99kb
-12:28:13.333 dist//vercel/path0/blog/o-silencio-dos-sinais-como-clinicas-de-fisioterapia-despercebem-a-revolucao-que-redefine-o-cuidado-ao-paciente/index.html.gz                               12.29kb / gzip: 3.09kb
-12:28:13.333 dist//vercel/path0/blog/o-sinal-silencioso-a-inovacao-oculta-que-redefine-o-futuro-das-distribuidoras-regionais/index.html.gz                                                      12.26kb / gzip: 3.10kb
-12:28:13.333 dist//vercel/path0/blog/os-restaurantes-que-estao-crescendo-mais-rapido-nao-dependem-mais-apenas-do-delivery/index.html.gz                                                         11.70kb / gzip: 3.00kb
-12:28:13.333 dist//vercel/path0/blog/os-sinais-silenciosos-como-clinicas-odontologicas-estao-redefinindo-a-experiencia-do-paciente-na-era-digital/index.html.gz                                 12.03kb / gzip: 3.05kb
-12:28:13.333 dist//vercel/path0/blog/os-sinais-silenciosos-como-clinicas-estao-perdendo-pacientes-na-era-da-transformacao-digital/index.html.gz                                                 11.91kb / gzip: 3.04kb
-12:28:13.334 dist//vercel/path0/blog/os-sinais-silenciosos-de-uma-clinica-obsoleta-como-a-saude-digital-redefine-a-experiencia-do-paciente/index.html.gz                                        11.95kb / gzip: 3.06kb
-12:28:13.334 dist//vercel/path0/blog/os-sinais-silenciosos-de-uma-fisioterapia-obsoleta-o-que-poucos-gestores-de-clinicas-perceberam/index.html.gz                                              12.09kb / gzip: 3.08kb
-12:28:13.334 dist//vercel/path0/blog/rastreabilidade-automotiva-como-a-consulta-de-histrico-por-placa-transformou-a-gesto-de-frotas-e-o-mercado-de-seminovos/index.html.gz                      12.12kb / gzip: 3.08kb
-12:28:13.334 dist//vercel/path0/blog/o-silencioso-desaparecimento-das-imobiliarias-invisiveis-no-google-comecou-antes-de-muita-gente-perceber/index.html.gz                                     11.94kb / gzip: 3.02kb
-12:28:13.334 dist//vercel/path0/blog/o-silencio-dos-consultorios-como-a-transformacao-digital-oculta-esta-redefinindo-a-experiencia-odontologica-e-a-sobrevivencia-das-clinicas/index.html.gz   12.50kb / gzip: 3.14kb
-12:28:13.334 
-12:28:13.335 
-12:28:13.335 x Build failed in 2.28s
-12:28:13.335 error during build:
-12:28:13.335 [vite:esbuild] Transform failed with 1 error:
-12:28:13.335 /vercel/path0/src/pages/TotvsConsultancy.tsx:65:11: ERROR: Expected "]" but found ":"
-12:28:13.335 file: /vercel/path0/src/pages/TotvsConsultancy.tsx:65:11
-12:28:13.336 
-12:28:13.336 Expected "]" but found ":"
-12:28:13.336 63 |  // ... (rest of the component) ...
-12:28:13.336 64 |  
-12:28:13.336 65 |        title: "Automação de Workflow de Compras",
-12:28:13.336    |             ^
-12:28:13.336 66 |        system: "Fluig",
-12:28:13.337 67 |        description: "Redução de 70% no tempo de aprovação de pedidos através da implementação de um fluxo BPM inteligente com integrações automáticas.",
-12:28:13.337 
-12:28:13.346     at failureErrorWithLog (/vercel/path0/node_modules/esbuild/lib/main.js:1472:15)
-12:28:13.346     at /vercel/path0/node_modules/esbuild/lib/main.js:755:50
-12:28:13.346     at responseCallbacks.<computed> (/vercel/path0/node_modules/esbuild/lib/main.js:622:9)
-12:28:13.346     at handleIncomingPacket (/vercel/path0/node_modules/esbuild/lib/main.js:677:12)
-12:28:13.347     at Socket.readFromStdout (/vercel/path0/node_modules/esbuild/lib/main.js:600:7)
-12:28:13.347     at Socket.emit (node:events:509:28)
-12:28:13.347     at addChunk (node:internal/streams/readable:563:12)
-12:28:13.347     at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
-12:28:13.347     at Readable.push (node:internal/streams/readable:394:5)
-12:28:13.347     at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
-12:28:13.370 Error: Command "npm run build" exited with 1
+22:26:20.589 Running build in Washington, D.C., USA (East) – iad1
+22:26:20.590 Build machine configuration: 2 cores, 8 GB
+22:26:20.720 Cloning github.com/Roque-Pro/NexosDigital (Branch: main, Commit: df5ab6c)
+22:26:21.621 Cloning completed: 900.000ms
+22:26:22.395 Restored build cache from previous deployment (Bmfbq4pJWgLChfQuUBWoC2REGsdr)
+22:26:22.592 Running "vercel build"
+22:26:22.612 Vercel CLI 54.12.2
+22:26:23.334 Installing dependencies...
+22:26:24.432 
+22:26:24.432 up to date in 983ms
+22:26:24.433 
+22:26:24.433 113 packages are looking for funding
+22:26:24.434   run `npm fund` for details
+22:26:24.591 
+22:26:24.592 > vite_react_shadcn_ts@0.0.0 build
+22:26:24.592 > vite build && tsx scripts/prebuild-og-tags.ts && tsx scripts/generate-sitemap.ts
+22:26:24.592 
+22:26:24.932 vite v5.4.19 building for production...
+22:26:25.011 transforming...
+22:26:25.316 Browserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+22:26:25.317   npx update-browserslist-db@latest
+22:26:25.317   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+22:26:28.482 ✓ 1725 modules transformed.
+22:26:28.687 
+22:26:28.688 ✨ [vite-plugin-compression]:algorithm=gzip - compressed file successfully: 
+22:26:28.689 dist//vercel/path0/blog/a-anatomia-da-deciso-o-guia-definitivo-para-escolher-o-sistema-de-gesto-do-seu-centro-automotivo/index.html.gz                                             11.16kb / gzip: 2.89kb
+22:26:28.689 dist//vercel/path0/blog/a-balanca-silenciosa-da-justica-digital-como-escritorios-juridicos-modernos-podem-estar-afastando-clientes-sem-perceber/index.html.gz                      11.08kb / gzip: 2.88kb
+22:26:28.690 dist//vercel/path0/blog/a-consulta-silenciosa-como-clinicas-e-centros-medicos-podem-estar-perdendo-pacientes-sem-perceber-a-revolucao-digital/index.html.gz                        11.23kb / gzip: 2.90kb
+22:26:28.691 dist//vercel/path0/blog/a-crise-invisvel-nos-ptios-o-que-os-donos-de-centros-automotivos-esto-ignorando-ao-escolherem-tecnologia/index.html.gz                                     11.22kb / gzip: 2.91kb
+22:26:28.691 dist//vercel/path0/blog/a-desordem-silenciosa-por-que-oficinas-perdem-dinheiro-com-ordens-de-servio-mal-gerenciadas/index.html.gz                                                  11.17kb / gzip: 2.87kb
+22:26:28.691 dist//vercel/path0/blog/a-eroso-silenciosa-por-que-o-faturamento-de-empresas-consolidadas-est-desabando-no-cenrio-digital-de-2026/index.html.gz                                    10.79kb / gzip: 2.79kb
+22:26:28.692 dist//vercel/path0/blog/a-metamorfose-silenciosa-como-clinicas-de-fisioterapia-estao-sendo-redefinidas-pela-onda-digital-e-o-que-poucos-notaram/index.html.gz                      11.10kb / gzip: 2.88kb
+22:26:28.692 dist//vercel/path0/blog/a-planilha-que-custa-caro-por-que-controlar-comisses-manualmente-ainda-destri-equipes-de-vendas-em-2025/index.html.gz                                      10.93kb / gzip: 2.85kb
+22:26:28.693 dist//vercel/path0/blog/a-radiografia-dos-custos-o-investimento-real-para-digitalizar-um-auto-center-e-sair-da-gesto-no-escuro/index.html.gz                                       10.81kb / gzip: 2.81kb
+22:26:28.693 dist//vercel/path0/blog/a-revolucao-oculta-da-odontologia-como-o-comportamento-digital-reconfigura-a-gestao-de-clinicas-e-a-retencao-de-pacientes/index.html.gz                    11.15kb / gzip: 2.84kb
+22:26:28.693 dist//vercel/path0/blog/a-revolucao-silenciosa-como-centros-medicos-modernos-reconfiguram-a-experiencia-do-paciente-digital/index.html.gz                                          10.82kb / gzip: 2.81kb
+22:26:28.694 dist//vercel/path0/blog/a-revolucao-silenciosa-como-clinicas-de-fisioterapia-estao-redesenhando-a-experiencia-do-paciente-e-a-captacao-digital/index.html.gz                       11.21kb / gzip: 2.89kb
+22:26:28.694 dist//vercel/path0/blog/a-virada-operacional-o-que-poucas-clinicas-de-fisioterapia-perceberam-sobre-o-novo-comportamento-do-paciente/index.html.gz                                 10.83kb / gzip: 2.81kb
+22:26:28.695 dist//vercel/path0/blog/alem-da-reabilitacao-como-a-gestao-digital-redefine-o-sucesso-na-fisioterapia-moderna/index.html.gz                                                        10.99kb / gzip: 2.86kb
+22:26:28.695 dist//vercel/path0/blog/alem-da-reabilitacao-os-sinais-inevitaveis-da-transformacao-digital-na-fisioterapia/index.html.gz                                                          10.87kb / gzip: 2.83kb
+22:26:28.695 dist//vercel/path0/blog/alem-da-terapia-os-erros-ocultos-que-custam-pacientes-e-lucro-as-clinicas-de-fisioterapia-no-digital/index.html.gz                                         11.07kb / gzip: 2.83kb
+22:26:28.695 dist//vercel/path0/blog/alem-do-exercicio-como-a-fisioterapia-reinventa-sua-operacao-na-era-digital/index.html.gz                                                                  10.87kb / gzip: 2.84kb
+22:26:28.696 dist//vercel/path0/blog/alem-do-papel-os-sinais-silenciosos-de-transformacao-digital-que-escritorios-juridicos-nao-podem-ignorar/index.html.gz                                     11.08kb / gzip: 2.88kb
+22:26:28.696 dist//vercel/path0/blog/as-imobiliarias-que-crescem-no-google-estao-fazendo-algo-que-quase-ninguem-percebeu/index.html.gz                                                          11.04kb / gzip: 2.86kb
+22:26:28.698 dist//vercel/path0/blog/como-organizar-agendamentos-em-um-centro-automotivo-e-evitar-gargalos-que-afetam-a-produtividade/index.html.gz                                             10.63kb / gzip: 2.78kb
+22:26:28.699 dist//vercel/path0/blog/decifrando-a-nova-jornada-do-paciente-odontologico-onde-a-tecnologia-encontra-a-confianca/index.html.gz                                                    11.15kb / gzip: 2.87kb
+22:26:28.699 dist//vercel/path0/blog/desvendando-a-revolucao-oculta-os-pilares-digitais-que-redefinem-o-futuro-das-clinicas-de-fisioterapia/index.html.gz                                       11.14kb / gzip: 2.88kb
+22:26:28.699 dist//vercel/path0/blog/diagnostico-digital-o-que-as-clinicas-de-fisioterapia-ignoram-no-novo-comportamento-do-paciente/index.html.gz                                              10.85kb / gzip: 2.83kb
+22:26:28.699 dist//vercel/path0/blog/empresas-esto-perdendo-espao-no-mercado-sem-perceber-e-especialistas-relacionam-isso-estrutura-digital/index.html.gz                                       10.79kb / gzip: 2.82kb
+22:26:28.699 dist//vercel/path0/blog/empresas-esto-perdendo-espao-online-em-silncio-e-quase-ningum-est-observando-o-novo-comportamento-digital/index.html.gz                                    10.91kb / gzip: 2.84kb
+22:26:28.700 dist//vercel/path0/blog/empresrios-comearam-a-perceber-um-problema-digital-que-antes-parecia-invisvel/index.html.gz                                                                11.34kb / gzip: 2.90kb
+22:26:28.700 dist//vercel/path0/blog/especialistas-comearam-a-identificar-um-novo-padro-entre-empresas-que-esto-crescendo-no-digital/index.html.gz                                              10.94kb / gzip: 2.83kb
+22:26:28.700 dist//vercel/path0/blog/especialistas-esto-observando-um-novo-tipo-de-empresa-invisvel-e-isso-est-mudando-o-mercado-local/index.html.gz                                            11.26kb / gzip: 2.91kb
+22:26:28.700 dist//vercel/path0/blog/especialistas-esto-observando-um-padro-silencioso-empresas-estruturadas-offline-esto-perdendo-espao-no-ambiente-digital/index.html.gz                      10.80kb / gzip: 2.80kb
+22:26:28.700 dist//vercel/path0/blog/especialistas-observam-um-novo-comportamento-digital-entre-empresas-que-esto-crescendo-mais-rpido/index.html.gz                                            10.66kb / gzip: 2.77kb
+22:26:28.700 dist//vercel/path0/blog/clinicas-de-fisioterapia-os-sinais-silenciosos-de-uma-gestao-desconectada-na-era-digital/index.html.gz                                                     10.95kb / gzip: 2.84kb
+22:26:28.701 dist//vercel/path0/blog/a-revolucao-silenciosa-que-redefine-o-futuro-das-clinicas-de-saude-o-que-voce-nao-ve-mas-seus-pacientes-ja-esperam/index.html.gz                           11.05kb / gzip: 2.88kb
+22:26:28.701 dist//vercel/path0/blog/o-abismo-digital-das-oficinas-por-que-a-escolha-do-seu-prximo-sistema-vai-determinar-sua-sobrevivncia/index.html.gz                                        11.21kb / gzip: 2.89kb
+22:26:28.701 dist//vercel/path0/blog/o-abismo-digital-por-que-empresas-consolidadas-esto-sumindo-do-radar-dos-consumidores-em-2026/index.html.gz                                                10.70kb / gzip: 2.79kb
+22:26:28.701 dist//vercel/path0/blog/o-cdigo-da-fidelidade-por-que-algumas-oficinas-retm-clientes-enquanto-outras-lutam-para-sobreviver/index.html.gz                                           11.06kb / gzip: 2.88kb
+22:26:28.701 dist//vercel/path0/blog/o-comportamento-digital-que-est-fazendo-empresas-sumirem-sem-que-elas-percebam/index.html.gz                                                               10.68kb / gzip: 2.79kb
+22:26:28.702 dist//vercel/path0/blog/o-custo-invisvel-das-faltas-como-o-setor-automotivo-est-combatendo-o-no-show-com-tecnologia/index.html.gz                                                  10.80kb / gzip: 2.82kb
+22:26:28.702 dist//vercel/path0/blog/o-declnio-invisvel-por-que-estruturas-digitais-obsoletas-esto-silenciando-empresas-no-mercado-brasileiro/index.html.gz                                     11.15kb / gzip: 2.92kb
+22:26:28.702 dist//vercel/path0/blog/o-despertar-silencioso-como-a-fisioterapia-esta-reinventando-a-experiencia-do-paciente-com-tecnologia/index.html.gz                                        10.94kb / gzip: 2.82kb
+22:26:28.702 dist//vercel/path0/blog/o-eco-do-silencio-como-clinicas-de-fisioterapia-estao-perdendo-pacientes-no-digital-e-quais-os-proximos-passos/index.html.gz                               11.20kb / gzip: 2.90kb
+22:26:28.702 dist//vercel/path0/blog/o-efeito-silencioso-da-desconexao-digital-como-clinicas-de-fisioterapia-perdem-pacientes-e-potencial-de-mercado-no-pos-pandemia/index.html.gz              11.05kb / gzip: 2.86kb
+22:26:28.703 dist//vercel/path0/blog/o-erro-operacional-que-est-fazendo-auto-centers-perderem-clientes-antes-mesmo-do-primeiro-atendimento/index.html.gz                                        10.81kb / gzip: 2.80kb
+22:26:28.703 dist//vercel/path0/blog/o-erro-silencioso-por-que-empresas-consolidadas-esto-sumindo-do-google-sem-notar-a-queda-no-trfego/index.html.gz                                           10.75kb / gzip: 2.80kb
+22:26:28.703 dist//vercel/path0/blog/o-fim-da-agenda-de-papel-sinais-de-que-sua-clinica-odontologica-precisa-de-uma-virada-digital-urgente/index.html.gz                                        10.97kb / gzip: 2.86kb
+22:26:28.703 dist//vercel/path0/blog/o-gargalo-invisvel-por-que-sua-equipe-de-reparos-produz-menos-do-que-poderia-e-como-corrigir-isso-agora/index.html.gz                                      10.70kb / gzip: 2.82kb
+22:26:28.703 dist//vercel/path0/blog/o-labirinto-da-gesto-o-que-os-donos-de-centros-automotivos-ignoram-ao-escolherem-tecnologia/index.html.gz                                                  11.34kb / gzip: 2.91kb
+22:26:28.703 dist//vercel/path0/blog/o-movimento-digital-que-est-mudando-silenciosamente-as-clnicas-odontolgicas-regionais/index.html.gz                                                        10.72kb / gzip: 2.77kb
+22:26:28.703 dist//vercel/path0/blog/o-movimento-silencioso-que-est-fazendo-empresas-desaparecerem-do-google/index.html.gz                                                                      10.73kb / gzip: 2.81kb
+22:26:28.703 dist//vercel/path0/blog/o-padro-digital-que-est-fazendo-clnicas-e-oficinas-crescerem-mesmo-sem-aumentar-equipes/index.html.gz                                                      10.79kb / gzip: 2.81kb
+22:26:28.703 dist//vercel/path0/blog/o-padro-digital-que-est-fazendo-empresas-desaparecerem-das-buscas-locais-sem-que-percebam/index.html.gz                                                    10.65kb / gzip: 2.77kb
+22:26:28.703 dist//vercel/path0/blog/o-ponto-cego-da-gestao-como-clinicas-de-fisioterapia-estao-silenciosamente-perdendo-pacientes-no-digital/index.html.gz                                     10.99kb / gzip: 2.84kb
+22:26:28.703 dist//vercel/path0/blog/o-ponto-cego-da-gestao-como-clinicas-de-fisioterapia-ignoram-dados-e-perdem-oportunidades-na-era-digital/index.html.gz                                     11.00kb / gzip: 2.86kb
+22:26:28.704 dist//vercel/path0/blog/o-ponto-cego-digital-por-que-muitas-clinicas-de-fisioterapia-ignoram-a-otimizacao-que-atrai-e-retem-pacientes/index.html.gz                                11.20kb / gzip: 2.90kb
+22:26:28.704 dist//vercel/path0/blog/o-que-est-mudando-silenciosamente-nas-clnicas-veterinrias-mais-digitais-do-brasil/index.html.gz                                                            11.18kb / gzip: 2.88kb
+22:26:28.704 dist//vercel/path0/blog/o-que-esta-mudando-silenciosamente-nas-oficinas-e-auto-centers-em-2026/index.html.gz                                                                       11.12kb / gzip: 2.84kb
+22:26:28.704 dist//vercel/path0/blog/o-que-poucos-veem-como-a-rotina-digital-silenciosamente-afasta-pacientes-de-clinicas-de-fisioterapia/index.html.gz                                         10.87kb / gzip: 2.83kb
+22:26:28.704 dist//vercel/path0/blog/o-radar-da-transformacao-sinais-inovadores-que-redefinem-o-sucesso-das-clinicas-odontologicas/index.html.gz                                                11.09kb / gzip: 2.88kb
+22:26:28.704 dist//vercel/path0/blog/o-segredo-dos-centros-automotivos-que-dobram-o-faturamento-sem-abrir-mais-uma-baia/index.html.gz                                                           10.51kb / gzip: 2.77kb
+22:26:28.704 dist//vercel/path0/blog/o-abismo-algortmico-por-que-negcios-de-sucesso-esto-perdendo-clientes-de-forma-invisvel-em-2026/index.html.gz                                              10.31kb / gzip: 2.73kb
+22:26:28.704 dist//vercel/path0/blog/o-silencio-digital-nas-clinicas-de-fisioterapia-sinais-de-uma-transformacao-inevitavel/index.html.gz                                                       10.88kb / gzip: 2.83kb
+22:26:28.704 dist//vercel/path0/blog/o-silencio-dos-consultorios-como-a-transformacao-digital-oculta-esta-redefinindo-a-experiencia-odontologica-e-a-sobrevivencia-das-clinicas/index.html.gz   11.43kb / gzip: 2.93kb
+22:26:28.704 dist//vercel/path0/blog/o-silencio-dos-sinais-como-clinicas-de-fisioterapia-despercebem-a-revolucao-que-redefine-o-cuidado-ao-paciente/index.html.gz                               11.21kb / gzip: 2.88kb
+22:26:28.704 dist//vercel/path0/blog/o-silencioso-desaparecimento-das-imobiliarias-invisiveis-no-google-comecou-antes-de-muita-gente-perceber/index.html.gz                                     10.87kb / gzip: 2.81kb
+22:26:28.704 dist//vercel/path0/blog/o-sinais-silenciosos-que-poucas-clinicas-percebem-como-a-transformacao-digital-reconfigura-o-comportamento-do-paciente/index.html.gz                       11.06kb / gzip: 2.86kb
+22:26:28.704 dist//vercel/path0/blog/os-restaurantes-que-estao-crescendo-mais-rapido-nao-dependem-mais-apenas-do-delivery/index.html.gz                                                         10.62kb / gzip: 2.78kb
+22:26:28.704 dist//vercel/path0/blog/o-sinal-silencioso-a-inovacao-oculta-que-redefine-o-futuro-das-distribuidoras-regionais/index.html.gz                                                      11.18kb / gzip: 2.89kb
+22:26:28.704 dist//vercel/path0/blog/os-sinais-silenciosos-como-clinicas-odontologicas-estao-redefinindo-a-experiencia-do-paciente-na-era-digital/index.html.gz                                 10.96kb / gzip: 2.84kb
+22:26:28.704 dist//vercel/path0/blog/os-sinais-silenciosos-como-clinicas-estao-perdendo-pacientes-na-era-da-transformacao-digital/index.html.gz                                                 10.84kb / gzip: 2.83kb
+22:26:28.704 dist//vercel/path0/blog/os-sinais-silenciosos-de-uma-clinica-obsoleta-como-a-saude-digital-redefine-a-experiencia-do-paciente/index.html.gz                                        10.88kb / gzip: 2.85kb
+22:26:28.704 dist//vercel/path0/blog/os-sinais-silenciosos-de-uma-fisioterapia-obsoleta-o-que-poucos-gestores-de-clinicas-perceberam/index.html.gz                                              11.01kb / gzip: 2.87kb
+22:26:28.704 dist//vercel/path0/blog/rastreabilidade-automotiva-como-a-consulta-de-histrico-por-placa-transformou-a-gesto-de-frotas-e-o-mercado-de-seminovos/index.html.gz                      11.04kb / gzip: 2.87kb
+22:26:28.704 dist//vercel/path0/blog/o-silencio-da-transformacao-como-clinicas-de-fisioterapia-estao-redesenhando-o-cuidado-na-era-digital/index.html.gz                                        10.86kb / gzip: 2.83kb
+22:26:28.704 dist//vercel/path0/blog/o-silencio-digital-dos-consultorios-como-pequenas-clinicas-odontologicas-perdem-pacientes-na-era-da-conexao-imediata/index.html.gz                         11.43kb / gzip: 2.94kb
+22:26:28.704 
+22:26:28.704 
+22:26:28.705 x Build failed in 3.75s
+22:26:28.705 error during build:
+22:26:28.705 [vite:asset] Could not load /vercel/path0/src/img/hero.png (imported by src/pages/AutoClubPro.tsx): ENOENT: no such file or directory, open '/vercel/path0/src/img/hero.png'
+22:26:28.706     at async open (node:internal/fs/promises:640:25)
+22:26:28.706     at async Object.readFile (node:internal/fs/promises:1287:14)
+22:26:28.706     at async fileToBuiltUrl (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:20428:19)
+22:26:28.706     at async Object.load (file:///vercel/path0/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:20328:17)
+22:26:28.706     at async PluginDriver.hookFirstAndGetPlugin (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20630:28)
+22:26:28.706     at async file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:19750:33
+22:26:28.706     at async Queue.work (file:///vercel/path0/node_modules/rollup/dist/es/shared/node-entry.js:20840:32)
+22:26:28.737 Error: Command "npm run build" exited with 1

@@ -785,7 +785,7 @@ const AutoClubPro = () => {
                                     <div className="space-y-4">
                                         <div>
                                             <span className="text-[10px] font-bold uppercase tracking-widest text-red-500 block mb-1">Situação Atual</span>
-                                            <p className="text-gray-500 text-sm leading-relaxed">
+                                            <p className="text-gray-600 font-bold text-base leading-relaxed">
                                                 {item.problem}
                                             </p>
                                         </div>
@@ -858,13 +858,14 @@ const AutoClubPro = () => {
                                             "Personalização Visual 100% (Sua Marca)",
                                             "Configuração Completa do Sistema CRM",
                                             "Treinamento VIP para você e sua equipe",
-                                            "3 Meses de Suporte Premium Grátis"
+                                            "3 Meses de Suporte Premium Grátis",
+                                            "Implementação Presencial"
                                         ].map((item, idx) => (
                                             <li key={idx} className="flex items-start gap-3">
                                                 <div className="mt-1 bg-blue-50 rounded-full p-0.5">
                                                     <CheckCircle2 className="w-4 h-4 text-blue-600" />
                                                 </div>
-                                                <span className="text-gray-700 font-medium text-sm">{item}</span>
+                                                <span className={`text-gray-700 text-sm ${item === "Implementação Presencial" ? "font-bold" : "font-medium"}`}>{item}</span>
                                             </li>
                                         ))}
                                     </ul>
