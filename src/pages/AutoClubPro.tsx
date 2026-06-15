@@ -852,20 +852,36 @@ const AutoClubPro = () => {
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
-                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3 mb-10">
                                         {[
+                                            "Implementação Presencial",
                                             "Landing Page Profissional (Página de Vendas)",
                                             "Personalização Visual 100% (Sua Marca)",
                                             "Configuração Completa do Sistema CRM",
                                             "Treinamento VIP para você e sua equipe",
                                             "3 Meses de Suporte Premium Grátis",
-                                            "Implementação Presencial"
                                         ].map((item, idx) => (
-                                            <li key={idx} className="flex items-start gap-3">
-                                                <div className="mt-1 bg-blue-50 rounded-full p-0.5">
-                                                    <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                                            <li 
+                                                key={idx} 
+                                                className={`flex items-center gap-3 p-2.5 rounded-2xl transition-all ${
+                                                    item === "Implementação Presencial" 
+                                                    ? "bg-blue-50 border-2 border-blue-200 md:col-span-2 shadow-sm ring-4 ring-blue-600/5" 
+                                                    : ""
+                                                }`}
+                                            >
+                                                <div className={`rounded-full p-1 ${
+                                                    item === "Implementação Presencial" ? "bg-blue-600 text-white" : "bg-blue-50 text-blue-600"
+                                                }`}>
+                                                    <CheckCircle2 className="w-4 h-4" />
                                                 </div>
-                                                <span className={`text-gray-700 text-sm ${item === "Implementação Presencial" ? "font-bold" : "font-medium"}`}>{item}</span>
+                                                <span className={`text-sm ${
+                                                    item === "Implementação Presencial" ? "text-blue-900 font-black text-base" : "text-gray-700 font-medium"
+                                                }`}>
+                                                    {item}
+                                                </span>
+                                                {item === "Implementação Presencial" && (
+                                                    <span className="ml-auto bg-blue-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider animate-pulse">Especial</span>
+                                                )}
                                             </li>
                                         ))}
                                     </ul>
