@@ -15,6 +15,7 @@ import YouTubeVideosSection from "@/components/YouTubeVideosSection";
 import BlogSection from "@/components/BlogSection";
 import AutoClubProFeatures from "@/components/AutoClubProFeatures";
 import logoClubeImg from "@/img/logo-autocub.png";
+import heroImg from "@/img/hero.png";
 import clienteImg from "@/img/cliente.png";
 import reparoVidrosImg from "@/img/reparo-de-vidros.png";
 import autoCenterImg from "@/img/auto-center.png";
@@ -405,7 +406,7 @@ const AutoClubPro = () => {
                             >
                                 <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-8 border-white group">
                                     <img 
-                                        src={clienteImg} 
+                                        src={heroImg} 
                                         alt="Auto Center Profissional" 
                                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                                     />
