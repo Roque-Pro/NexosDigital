@@ -41,6 +41,12 @@ import {
     Scale,
     Activity,
     Wrench,
+    Layout,
+    Database,
+    ShieldCheck,
+    Smartphone,
+    MapPin,
+    Handshake,
 } from "lucide-react";
 
 const AutoClubPro = () => {
@@ -59,7 +65,7 @@ const AutoClubPro = () => {
     // SEO
     useSEO({
         title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
-        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 1.258 implementação + R$ 89/mês. 3 meses de suporte grátis.",
+        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 2.300 implementação + R$ 219/mês. 3 meses de suporte grátis.",
         keywords: [
             "autoclub pro",
             "sistema gestão automotivo",
@@ -83,9 +89,9 @@ const AutoClubPro = () => {
             "url": "https://www.technexos.com.br/autoclub-pro",
             "offers": {
                 "@type": "Offer",
-                "price": "1258",
+                "price": "2300",
                 "priceCurrency": "BRL",
-                "description": "AutoClub Pro - R$ 1.258 implementação + R$ 89/mês",
+                "description": "AutoClub Pro - R$ 2.300 implementação + R$ 219/mês",
             }
         }
     });
@@ -493,6 +499,87 @@ const AutoClubPro = () => {
                     </div>
                 </section>
 
+                {/* SALES MACHINE & ECOSYSTEM SECTION */}
+                <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 overflow-hidden">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                            >
+                                <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-8 leading-tight tracking-tight">
+                                    Máquina de Vendas Completa: <br />
+                                    <span className="text-blue-600">De Landing Page a Área do Cliente</span>
+                                </h2>
+                                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                                    Não entregamos apenas um sistema de gestão. Entregamos um <strong>ecossistema de crescimento</strong> projetado para atrair, converter e fidelizar seus clientes de forma automática.
+                                </p>
+
+                                <div className="space-y-6">
+                                    {[
+                                        {
+                                            icon: <Layout className="w-6 h-6" />,
+                                            title: "Landing Page de Alta Conversão",
+                                            desc: "Uma página profissional com sua marca que captura leads qualificados 24h por dia."
+                                        },
+                                        {
+                                            icon: <Database className="w-6 h-6" />,
+                                            title: "CRM Inteligente Integrado",
+                                            desc: "Cada lead capturado cai direto no seu funil de vendas para você nunca perder um negócio."
+                                        },
+                                        {
+                                            icon: <Users className="w-6 h-6" />,
+                                            title: "Área do Cliente Exclusiva",
+                                            desc: "Portal onde seu cliente acompanha o status do serviço, fotos e histórico completo do veículo."
+                                        },
+                                        {
+                                            icon: <BarChart3 className="w-6 h-6" />,
+                                            title: "Dashboard de Gestão Estratégica",
+                                            desc: "Visão 360º da sua empresa com indicadores reais para você tomar as melhores decisões."
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="flex gap-4">
+                                            <div className="w-12 h-12 rounded-xl bg-blue-600 text-white flex items-center justify-center flex-shrink-0 shadow-lg shadow-blue-200">
+                                                {item.icon}
+                                            </div>
+                                            <div>
+                                                <h3 className="font-bold text-gray-900 text-lg">{item.title}</h3>
+                                                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="relative"
+                            >
+                                <div className="bg-white p-4 rounded-[2.5rem] shadow-2xl border border-slate-100 relative z-10">
+                                    <div className="aspect-video rounded-2xl bg-slate-900 overflow-hidden flex items-center justify-center relative group">
+                                        {/* Simulating a dashboard/UI view */}
+                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
+                                        <Smartphone className="w-24 h-24 text-white opacity-20 group-hover:scale-110 transition-transform duration-500" />
+                                        <div className="absolute bottom-6 left-6 right-6">
+                                            <div className="h-2 w-24 bg-blue-500 rounded-full mb-3" />
+                                            <div className="h-4 w-48 bg-white rounded-full opacity-40 mb-2" />
+                                            <div className="h-4 w-32 bg-white rounded-full opacity-20" />
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Decorative Blobs */}
+                                <div className="absolute -top-12 -right-12 w-64 h-64 bg-blue-200 rounded-full blur-3xl opacity-30 -z-10 animate-pulse" />
+                                <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-purple-200 rounded-full blur-3xl opacity-30 -z-10 animate-pulse" />
+                            </motion.div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* PERSONALIZAÇÃO SECTION */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-slate-50 relative overflow-hidden">
                     <div className="max-w-6xl mx-auto">
@@ -549,6 +636,93 @@ const AutoClubPro = () => {
                                     <p className="text-gray-600 text-sm">{item.desc}</p>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                </section>
+
+                {/* IN-PERSON IMPLEMENTATION SECTION */}
+                <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden relative">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="lg:w-1/2"
+                            >
+                                <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-8 leading-tight tracking-tight">
+                                    Implementação Presencial (RJ, MG, SP): <br />
+                                    <span className="text-blue-600">Segurança e Confiança no Olho no Olho</span>
+                                </h2>
+                                <p className="text-xl text-gray-600 mb-10 leading-relaxed">
+                                    Diferente de sistemas genéricos que você baixa e tenta aprender sozinho, nós acreditamos no <strong>contato humano</strong>. Nossa implementação é presencial (disponível para <strong>Rio de Janeiro, Minas Gerais e São Paulo</strong>) para garantir que sua empresa mude de nível com total segurança.
+                                </p>
+
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                                    {[
+                                        {
+                                            icon: <MapPin className="w-6 h-6" />,
+                                            title: "Setup Mão na Massa",
+                                            desc: "Configuramos tudo no seu ambiente de trabalho, garantindo que o sistema se adapte à sua realidade."
+                                        },
+                                        {
+                                            icon: <Users className="w-6 h-6" />,
+                                            title: "Treinamento Local",
+                                            desc: "Capacitamos sua equipe presencialmente, resolvendo dúvidas e eliminando barreiras no uso do sistema."
+                                        },
+                                        {
+                                            icon: <ShieldCheck className="w-6 h-6" />,
+                                            title: "Segurança Garantida",
+                                            desc: "Acompanhamento assistido que gera a confiança que um negócio sério como o seu merece."
+                                        },
+                                        {
+                                            icon: <Handshake className="w-6 h-6" />,
+                                            title: "Consultoria Estratégica",
+                                            desc: "Analisamos seus processos presencialmente para otimizar cada etapa do atendimento ao pós-venda."
+                                        }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="space-y-3">
+                                            <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center">
+                                                {item.icon}
+                                            </div>
+                                            <h3 className="font-bold text-gray-900">{item.title}</h3>
+                                            <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className="lg:w-1/2 relative"
+                            >
+                                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-slate-50 relative z-10">
+                                    <img 
+                                        src={clienteImg} 
+                                        alt="Implementação Presencial" 
+                                        className="w-full h-auto grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                                    />
+                                    <div className="absolute inset-0 bg-blue-600/10 mix-blend-multiply" />
+                                    
+                                    <div className="absolute top-6 left-6 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 flex items-center gap-3">
+                                        <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white shadow-lg">
+                                            <CheckCircle2 className="w-6 h-6" />
+                                        </div>
+                                        <div>
+                                            <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Status</p>
+                                            <p className="text-gray-900 font-bold text-sm">Implementação Local</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {/* Decorative elements */}
+                                <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600/5 rounded-full blur-3xl" />
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -677,7 +851,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 1.258</p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 2.300</p>
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
                                     </div>
 
@@ -739,7 +913,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 89<span className="text-xl font-normal text-gray-400">/mês</span></p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 219<span className="text-xl font-normal text-gray-400">/mês</span></p>
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Suporte VIP direto no WhatsApp</p>
                                     </div>
 
@@ -791,7 +965,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black tracking-tighter">R$ 197<span className="text-xl font-normal opacity-80">/mês</span></p>
+                                        <p className="text-5xl font-black tracking-tighter">R$ 419<span className="text-xl font-normal opacity-80">/mês</span></p>
                                         <p className="text-blue-200 font-medium text-sm mt-2 italic">Apareça no topo do Google</p>
                                     </div>
 
