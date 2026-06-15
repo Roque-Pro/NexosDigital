@@ -640,8 +640,6 @@ const AutoClubPro = () => {
                     </div>
                 </section>
 
-                </section>
-
                 {/* IN-PERSON IMPLEMENTATION SECTION */}
                 <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden relative">
                     <div className="max-w-7xl mx-auto">
@@ -722,7 +720,7 @@ const AutoClubPro = () => {
                                 </div>
                                 {/* Decorative elements */}
                                 <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-blue-600/5 rounded-full blur-3xl" />
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </section>
