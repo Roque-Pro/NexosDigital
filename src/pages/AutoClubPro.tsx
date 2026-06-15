@@ -66,7 +66,7 @@ const AutoClubPro = () => {
     // SEO
     useSEO({
         title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
-        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias. Com identidade visual da sua marca. R$ 2.300 implementação + R$ 219/mês. 3 meses de suporte grátis.",
+        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% focado em Vidros Automotivos. Com identidade visual da sua marca, integração com seguradoras e controle de estoque de vidros. R$ 2.300 implementação + R$ 219/mês.",
         keywords: [
             "autoclub pro",
             "sistema gestão automotivo",
@@ -324,10 +324,10 @@ const AutoClubPro = () => {
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
                                 >
-                                    Pare de usar softwares genéricos. O AutoClub Pro é a solução de elite para <strong>Vidros, Som, Estética e Centros Automotivos</strong> que carrega a sua identidade visual e profissionaliza sua operação.
+                                    Pare de usar softwares genéricos. O AutoClub Pro é a solução de elite para <strong>especialistas em Vidros Automotivos</strong> que carrega a sua identidade visual e profissionaliza sua operação de ponta a ponta.
                                 </motion.p>
 
-                                {/* Benefits Grid - NICHOS */}
+                                {/* Benefits Grid - FOCO VIDROS */}
                                 <motion.div 
                                     className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12"
                                     initial={{ opacity: 0, y: 20 }}
@@ -339,35 +339,35 @@ const AutoClubPro = () => {
                                             <Zap className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">Vidros Automotivos</p>
-                                            <p className="text-sm text-gray-600">Gestão completa de estoque e serviços de vidraçaria.</p>
+                                            <p className="font-bold text-gray-900">Estoque Especializado</p>
+                                            <p className="text-sm text-gray-600">Gestão precisa de parabrisas, laterais e vigias com rastreabilidade.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
-                                            <Headphones className="w-6 h-6" />
+                                            <Handshake className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">Som & Acessórios</p>
-                                            <p className="text-sm text-gray-600">Controle de instalações e comissões de equipe.</p>
+                                            <p className="font-bold text-gray-900">Parceria com Seguradoras</p>
+                                            <p className="text-sm text-gray-600">Agilidade no faturamento e processos de sinistros/cooperativas.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
-                                            <Star className="w-6 h-6" />
+                                            <Calendar className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">Estética Automotiva</p>
-                                            <p className="text-sm text-gray-600">Agendamentos VIP e detalhamento de serviços.</p>
+                                            <p className="font-bold text-gray-900">Agenda de Instalação</p>
+                                            <p className="text-sm text-gray-600">Calendário inteligente otimizado para tempo de troca e secagem.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-4">
                                         <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 shadow-sm">
-                                            <Car className="w-6 h-6" />
+                                            <ShieldCheck className="w-6 h-6" />
                                         </div>
                                         <div>
-                                            <p className="font-bold text-gray-900">Pneus & Mecânica</p>
-                                            <p className="text-sm text-gray-600">Check-list digital e histórico completo por placa.</p>
+                                            <p className="font-bold text-gray-900">Check-list Digital</p>
+                                            <p className="text-sm text-gray-600">Registro fotográfico de avarias e estado do veículo na recepção.</p>
                                         </div>
                                     </div>
                                 </motion.div>
