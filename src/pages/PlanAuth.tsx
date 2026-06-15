@@ -354,7 +354,7 @@ const PlanAuth = () => {
           </div>
 
           <motion.div className="rounded-[24px] bg-white p-5 shadow-xl sm:p-10">
-            <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Solicitar Captação de Leads</h3>
+            <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Receber Proposta de Captação</h3>
             <form onSubmit={handleDiagnosticSubmit} className="mt-8 space-y-4">
               <div className="space-y-1.5">
                 <Label htmlFor="diagnosticName" className="font-bold text-slate-700">Seu Nome</Label>
@@ -368,7 +368,7 @@ const PlanAuth = () => {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticPhone" className="font-bold text-slate-700">WhatsApp para receber os Leads</Label>
+                <Label htmlFor="diagnosticPhone" className="font-bold text-slate-700">WhatsApp (Para envio da proposta)</Label>
                 <Input 
                   id="diagnosticPhone" 
                   value={diagnosticData.diagnosticPhone} 
@@ -403,18 +403,18 @@ const PlanAuth = () => {
                 </select>
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticDescription" className="font-bold text-slate-700">Como você gosta dos seus leads?</Label>
+                <Label htmlFor="diagnosticDescription" className="font-bold text-slate-700">Como você deseja seus leads? (Para a proposta)</Label>
                 <textarea 
                   id="diagnosticDescription" 
                   value={diagnosticData.diagnosticDescription} 
                   onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticDescription: e.target.value })} 
-                  placeholder="Ex: perfil do cliente, região de atendimento, volume mensal desejado..." 
+                  placeholder="Ex: perfil do cliente ideal, região de atendimento, volume mensal desejado para montarmos sua proposta..." 
                   required 
                   className="min-h-24 w-full rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-900 outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
                 />
               </div>
               <Button type="submit" disabled={submitting} className="w-full h-14 bg-[#f6bf22] font-black text-[#08111d] hover:bg-[#ffd24d]">
-                {submitting ? "Enviando..." : "QUERO RECEBER LEADS QUALIFICADOS"}
+                {submitting ? "Enviando..." : "RECEBER MINHA PROPOSTA DE CAPTAÇÃO"}
               </Button>
               <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 sm:text-xs">
                 <ShieldCheck className="h-4 w-4" />
