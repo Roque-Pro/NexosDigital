@@ -65,8 +65,8 @@ const AutoClubPro = () => {
 
     // SEO
     useSEO({
-        title: "AutoClub Pro | Sistema com Personalização Visual para Serviços Automotivos | TechNexos",
-        description: "AutoClub Pro - Sistema de gestão com personalização visual 100% focado em Vidros Automotivos. Com identidade visual da sua marca, integração com seguradoras e controle de estoque de vidros. R$ 2.300 implementação + R$ 219/mês.",
+        title: "AutoClub Pro | O Sistema Definitivo para Especialistas em Vidros Automotivos",
+        description: "Pare de perder dinheiro com estoque descontrolado e burocracia de seguradoras. O AutoClub Pro é o único ecossistema white-label que transforma sua vidraçaria em uma estrutura de elite. Gestão de vidros, CRM e identidade própria. R$ 2.300 + R$ 219/mês.",
         keywords: [
             "autoclub pro",
             "sistema gestão automotivo",
@@ -324,7 +324,7 @@ const AutoClubPro = () => {
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.4, duration: 0.8 }}
                                 >
-                                    Pare de usar softwares genéricos. O AutoClub Pro é a solução de elite para <strong>especialistas em Vidros Automotivos</strong> que carrega a sua identidade visual e profissionaliza sua operação de ponta a ponta.
+                                    Pare de ser apenas mais uma "loja de vidros". O AutoClub Pro é o <strong>ecossistema de elite</strong> que resolve o gargalo das seguradoras, elimina perdas de estoque e coloca sua marca no topo. Profissionalize sua operação agora.
                                 </motion.p>
 
                                 {/* Benefits Grid - FOCO VIDROS */}
