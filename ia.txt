@@ -1,1 +1,2 @@
-https://github.com/Roque-Pro/NexosDigital.git
+neste caminho C:\Users\User\Desktop\jobs\ClubeDoVidro\nexos\src\img
+estao imagens que eu quero que vc coloque na pagina , elas tem a ver com o contexto, observe cada nome pra coloca-las no local ideal e de acordo com a mensagem e serviço 

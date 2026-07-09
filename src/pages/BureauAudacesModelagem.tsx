@@ -32,6 +32,12 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import heroAudaces from "@/img/moldes/molde tela audaces.jpg";
+import logoAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+import operandoAudaces from "@/img/moldes/operando audaces e criando moldes.jpg";
+import encaixeAudaces from "@/img/moldes/encaixe em audaces.jpg";
+import encaixePdf from "@/img/moldes/encaixe pronto em pdf.jpg";
+import moldePdf from "@/img/moldes/molde em pdf";
 
 const services = [
   {
@@ -323,13 +329,20 @@ export default function BureauAudacesModelagem() {
           >
             <div className="relative w-full max-w-lg">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-indigo-500 to-emerald-400 opacity-30 blur-lg" />
-              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 p-2 backdrop-blur-3xl">
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-3xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80"
+                  src={heroAudaces}
                   alt="Tela de computador exibindo software Audaces com moldes digitais coloridos e gradação alinhada"
-                  className="w-full h-72 sm:h-80 lg:h-96 object-cover rounded-xl"
+                  className="w-full h-72 sm:h-80 lg:h-96 object-cover rounded-t-2xl"
                 />
-                <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/15 bg-slate-950/80 p-4 backdrop-blur-md">
+                <div className="absolute top-3 right-3">
+                  <img
+                    src={logoAudaces}
+                    alt="Logo Audaces"
+                    className="h-10 sm:h-12 w-auto opacity-90"
+                  />
+                </div>
+                <div className="border-t border-white/10 bg-slate-950/90 p-4">
                   <div className="flex items-center justify-between text-xs text-indigo-300 font-bold mb-1">
                     <span>ENCAIXE AUDACES</span>
                     <span className="text-emerald-400">94.8% APROVEITAMENTO</span>
@@ -380,6 +393,18 @@ export default function BureauAudacesModelagem() {
             </p>
           </div>
 
+          <div className="relative rounded-2xl overflow-hidden mb-10 border border-slate-200 shadow-sm">
+            <img
+              src={operandoAudaces}
+              alt="Profissional operando software Audaces e criando moldes digitais para confecção"
+              className="w-full h-48 sm:h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+            <p className="absolute bottom-4 left-6 text-white text-sm font-bold">
+              Profissional operando Audaces — engenharia de modelagem digital
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((svc, i) => (
               <motion.div
@@ -390,7 +415,7 @@ export default function BureauAudacesModelagem() {
                 transition={{ delay: i * 0.1 }}
                 className="group relative rounded-2xl border border-slate-200 bg-white p-6 shadow-md transition-all hover:border-indigo-200 hover:shadow-lg hover:-translate-y-1 sm:p-8"
               >
-                <div className="flex items-start gap-5">
+                <div className={`flex items-start gap-5 ${i === 3 ? 'flex-col' : ''}`}>
                   <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 transition-colors group-hover:bg-indigo-600 group-hover:text-white">
                     <svc.icon className="h-7 w-7" />
                   </div>
@@ -402,6 +427,15 @@ export default function BureauAudacesModelagem() {
                       <Check className="h-3.5 w-3.5" />
                       {svc.delivery}
                     </div>
+                    {i === 3 && (
+                      <div className="mt-4 rounded-xl border border-slate-200 overflow-hidden">
+                        <img
+                          src={moldePdf}
+                          alt="Arquivo de molde digital em formato PDF pronto para exportação"
+                          className="w-full h-32 object-cover"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
@@ -440,31 +474,29 @@ export default function BureauAudacesModelagem() {
             </div>
 
             <div className="lg:col-span-6 lg:col-start-7">
-              <div className="relative">
+              <div className="relative space-y-6">
                 <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-indigo-500 to-emerald-400 opacity-20 blur-xl" />
-                <div className="relative bg-slate-900 text-white p-6 rounded-2xl border border-slate-800 shadow-xl">
-                  <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-4">
+                <div className="relative bg-slate-900 text-white p-4 rounded-2xl border border-slate-800 shadow-xl">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
                     <span className="text-xs font-bold tracking-wider text-slate-400">ENCAIXE OTIMIZADO AUDACES</span>
                     <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">94.8%</span>
                   </div>
-                  <div className="space-y-3">
-                    <div className="relative h-14 w-full rounded border border-indigo-500/30 bg-indigo-500/5 overflow-hidden flex items-center px-4">
-                      <div className="absolute top-3 left-2 w-16 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Frente</div>
-                      <div className="absolute top-3 left-20 w-12 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Costas</div>
-                      <div className="absolute top-3 left-[134px] w-24 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Manga</div>
-                      <div className="absolute top-3 right-2 w-14 h-8 border border-dashed border-emerald-400/60 bg-emerald-400/10 rounded flex items-center justify-center text-[10px] text-emerald-400">Encaixe</div>
-                    </div>
-                    <div className="relative h-14 w-full rounded border border-indigo-500/30 bg-indigo-500/5 overflow-hidden flex items-center px-4">
-                      <div className="absolute top-3 left-2 w-20 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Gola</div>
-                      <div className="absolute top-3 left-24 w-16 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Bolso</div>
-                      <div className="absolute top-3 left-44 w-12 h-8 border border-dashed border-indigo-400/50 bg-indigo-400/10 rounded flex items-center justify-center text-[10px]">Cinto</div>
-                      <div className="absolute top-3 right-2 w-20 h-8 border border-dashed border-emerald-400/60 bg-emerald-400/10 rounded flex items-center justify-center text-[10px] text-emerald-400">Zero Desperdício</div>
-                    </div>
+                  <img
+                    src={encaixeAudaces}
+                    alt="Encaixe automatizado Audaces com aproveitamento máximo de tecido"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+                <div className="relative bg-slate-900 text-white p-4 rounded-2xl border border-slate-800 shadow-xl">
+                  <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
+                    <span className="text-xs font-bold tracking-wider text-slate-400">RISCO PRONTO EM PDF</span>
+                    <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">ENTREGUE</span>
                   </div>
-                  <div className="mt-6 flex justify-between items-center text-xs text-slate-400">
-                    <span>Espaço Vazio Eliminado</span>
-                    <span className="font-bold text-emerald-400">Aproveitamento Máximo</span>
-                  </div>
+                  <img
+                    src={encaixePdf}
+                    alt="Risco de encaixe finalizado em PDF pronto para entrega"
+                    className="w-full rounded-lg"
+                  />
                 </div>
               </div>
             </div>
