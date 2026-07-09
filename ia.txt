@@ -1,2 +1,21 @@
-neste caminho C:\Users\User\Desktop\jobs\ClubeDoVidro\nexos\src\img
-estao imagens que eu quero que vc coloque na pagina , elas tem a ver com o contexto, observe cada nome pra coloca-las no local ideal e de acordo com a mensagem e serviço 
+No arquivo src/pages/BureauAudacesModelagem.tsx, faça as seguintes alterações:
+
+1. Nos imports, substitua:
+   import heroAudaces from "@/img/moldes/molde tela audaces.jpg";
+   por:
+   import heroAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+
+2. Remova a linha:
+   import logoAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+
+3. Adicione:
+   import moldesAntigos from "@/img/moldes/moldes antigos.jpg";
+
+4. Na hero section, substitua o bloco do <img> principal e o overlay do logo por apenas:
+   <img src={heroAudaces} alt="Logo Audaces" className="w-full h-72 sm:h-80 lg:h-96 object-contain rounded-t-2xl bg-slate-900 p-8" />
+
+5. Na seção "Digitalização" (que tem o badge vermelho "Acervo Digital"), troque:
+   src={encaixePdf}
+   por:
+   src={moldesAntigos}
+   e ajuste o alt para "Moldes físicos antigos digitalizados em PDF"

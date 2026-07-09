@@ -33,8 +33,8 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import heroAudaces from "@/img/moldes/molde tela audaces.jpg";
-import logoAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+import heroAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+import moldesAntigos from "@/img/moldes/moldes antigos.jpg";
 import operandoAudaces from "@/img/moldes/operando audaces e criando moldes.jpg";
 import encaixeAudaces from "@/img/moldes/encaixe em audaces.jpg";
 import encaixePdf from "@/img/moldes/encaixe pronto em pdf.jpg";
@@ -330,18 +330,7 @@ export default function BureauAudacesModelagem() {
             <div className="relative w-full max-w-lg">
               <div className="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-indigo-500 to-emerald-400 opacity-30 blur-lg" />
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/60 backdrop-blur-3xl">
-                <img
-                  src={heroAudaces}
-                  alt="Tela de computador exibindo software Audaces com moldes digitais coloridos e gradação alinhada"
-                  className="w-full h-72 sm:h-80 lg:h-96 object-cover rounded-t-2xl"
-                />
-                <div className="absolute top-3 right-3">
-                  <img
-                    src={logoAudaces}
-                    alt="Logo Audaces"
-                    className="h-10 sm:h-12 w-auto opacity-90"
-                  />
-                </div>
+                <img src={heroAudaces} alt="Logo Audaces" className="w-full h-72 sm:h-80 lg:h-96 object-contain rounded-t-2xl bg-slate-900 p-8" />
                 <div className="border-t border-white/10 bg-slate-950/90 p-4">
                   <div className="flex items-center justify-between text-xs text-indigo-300 font-bold mb-1">
                     <span>ENCAIXE AUDACES</span>
@@ -507,8 +496,8 @@ export default function BureauAudacesModelagem() {
                     </span>
                   </div>
                   <img
-                    src={encaixePdf}
-                    alt="Risco de encaixe em PDF pronto para impressão e corte"
+                    src={moldesAntigos}
+                    alt="Moldes físicos antigos digitalizados em PDF"
                     className="w-full rounded-b-xl"
                   />
                   <div className="bg-slate-900 text-white rounded-b-xl px-4 py-3 flex items-center justify-between text-xs">
