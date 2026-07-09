@@ -37,7 +37,6 @@ import logoAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substit
 import operandoAudaces from "@/img/moldes/operando audaces e criando moldes.jpg";
 import encaixeAudaces from "@/img/moldes/encaixe em audaces.jpg";
 import encaixePdf from "@/img/moldes/encaixe pronto em pdf.jpg";
-import moldePdf from "@/img/moldes/molde em pdf";
 
 const services = [
   {
@@ -427,15 +426,7 @@ export default function BureauAudacesModelagem() {
                       <Check className="h-3.5 w-3.5" />
                       {svc.delivery}
                     </div>
-                    {i === 3 && (
-                      <div className="mt-4 rounded-xl border border-slate-200 overflow-hidden">
-                        <img
-                          src={moldePdf}
-                          alt="Arquivo de molde digital em formato PDF pronto para exportação"
-                          className="w-full h-32 object-cover"
-                        />
-                      </div>
-                    )}
+
                   </div>
                 </div>
               </motion.div>
