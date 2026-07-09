@@ -6,6 +6,7 @@ import {
   Grid,
   Printer,
   FileCode,
+  FileText,
   Check,
   ArrowRight,
   Sparkles,
@@ -431,6 +432,92 @@ export default function BureauAudacesModelagem() {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Digitalização Section */}
+      <section className="bg-white px-4 py-20 lg:px-10 border-b border-slate-100">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
+            <div className="lg:col-span-6">
+              <div className="inline-flex h-9 items-center justify-center rounded-full bg-red-100 px-4 text-sm font-bold text-red-700 mb-4">
+                <FileText className="h-4 w-4 mr-1.5" /> Acervo Digital
+              </div>
+              <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                Digitalizamos Seus Moldes Antigos e Entregue <span className="text-indigo-600">Prontos em PDF</span>
+              </h2>
+              <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+                Aqueles moldes de papel kraft que ocupam espaço, rasgam nas bordas e estão sujeitos a mofo e extravios podem virar <b>arquivos digitais eternos</b>.
+              </p>
+              <div className="mt-8 space-y-5">
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-red-50">
+                    <FileText className="h-6 w-6 text-red-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Digitalização de Acervo Físico</h4>
+                    <p className="text-sm text-slate-500 mt-1">Escaneamos seus moldes de papel em mesa digitalizadora profissional com <b>precisão milimétrica</b>. Cada peça vira um arquivo .DXF ou PDF fiel ao original.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-indigo-50">
+                    <Layers className="h-6 w-6 text-indigo-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">Ampliação e Encaixe Já Inclusos</h4>
+                    <p className="text-sm text-slate-500 mt-1">Além de digitalizar, já entregamos os moldes <b>ampliados na grade desejada</b> (PP ao EXG) e <b>encaixados</b> no Audaces com máximo aproveitamento de tecido.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-emerald-50">
+                    <Printer className="h-6 w-6 text-emerald-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900">PDF Pronto pra Riscar na Hora que Quiser</h4>
+                    <p className="text-sm text-slate-500 mt-1">Você recebe o <b>risco de encaixe finalizado em PDF</b> nas larguras padrão do mercado. Basta abrir, imprimir na sua plotter ou levar para corte. <b>Zero espera.</b></p>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Button
+                  onClick={scrollToForm}
+                  className="h-14 rounded-xl bg-indigo-600 px-8 text-base font-black text-white shadow-xl shadow-indigo-500/30 hover:bg-indigo-700 transition-all"
+                >
+                  Digitalizar Meu Acervo
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <a
+                  href="#faq"
+                  className="flex h-14 items-center justify-center rounded-xl border border-slate-300 bg-white px-8 text-base font-bold text-slate-700 hover:bg-slate-50 transition-all"
+                >
+                  Dúvidas Frequentes
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5 lg:col-start-8">
+              <div className="relative">
+                <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-red-500 to-indigo-500 opacity-20 blur-xl" />
+                <div className="relative bg-white p-3 rounded-2xl border border-slate-200 shadow-xl">
+                  <div className="flex items-center justify-between bg-red-50 rounded-t-xl px-4 py-2 border-b border-red-100">
+                    <span className="text-xs font-bold tracking-wider text-red-700">PDF PRONTO</span>
+                    <span className="flex items-center gap-1 text-[10px] font-bold text-red-600 bg-white px-2 py-0.5 rounded">
+                      <FileText className="h-3 w-3" /> .PDF
+                    </span>
+                  </div>
+                  <img
+                    src={encaixePdf}
+                    alt="Risco de encaixe em PDF pronto para impressão e corte"
+                    className="w-full rounded-b-xl"
+                  />
+                  <div className="bg-slate-900 text-white rounded-b-xl px-4 py-3 flex items-center justify-between text-xs">
+                    <span className="text-emerald-400 font-bold">● Pronto para corte</span>
+                    <span className="text-slate-400">Ampliação + Encaixe realizados</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
