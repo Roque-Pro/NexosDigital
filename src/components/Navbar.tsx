@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, MessageCircle, ChevronDown, Car, Users, Scale, Activity, Wrench, Sparkles } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown, Car, Users, Scale, Activity, Wrench, Sparkles, Scissors } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
@@ -19,6 +19,7 @@ const links = [
     subLinks: [
       { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false, icon: <Car className="w-4 h-4" /> },
       { label: "Autônomos", href: "/autonomos", isExternal: false, icon: <Users className="w-4 h-4" /> },
+      { label: "Riscos & Moldes", href: "/riscos_moldes_moda", isExternal: false, icon: <Scissors className="w-4 h-4" /> },
       { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true, icon: <Scale className="w-4 h-4" /> },
       { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true, icon: <Activity className="w-4 h-4" /> },
       { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true, icon: <Wrench className="w-4 h-4" /> },

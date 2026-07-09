@@ -22,6 +22,8 @@ const AboutMe = lazy(() => import("./pages/AboutMe"));
 const PaidTraffic = lazy(() => import("./pages/TrafficAndSEO"));
 const TotvsConsultancy = lazy(() => import("./pages/TotvsConsultancy"));
 const Autonomos = lazy(() => import("./pages/Autonomos"));
+const RiscosMoldesModa = lazy(() => import("./pages/RiscosMoldesModa"));
+const BureauAudacesModelagem = lazy(() => import("./pages/BureauAudacesModelagem"));
 
 // Loading component
 const LoadingFallback = () => (
@@ -54,6 +56,8 @@ const App = () => (
               <Route path="/trafego-pago" element={<PaidTraffic />} />
               <Route path="/consultoria-totvs" element={<TotvsConsultancy />} />
               <Route path="/autonomos" element={<Autonomos />} />
+              <Route path="/riscos_moldes_moda" element={<RiscosMoldesModa />} />
+              <Route path="/bureau-audaces-modelagem" element={<BureauAudacesModelagem />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route

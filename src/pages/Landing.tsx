@@ -33,6 +33,7 @@ import {
   Scale,
   Activity,
   Wrench,
+  Scissors,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -100,6 +101,7 @@ const Landing = () => {
   const solutions = [
     { label: "AutoClub Pro", href: "/autoclub-pro", isExternal: false, icon: <Car className="w-4 h-4" /> },
     { label: "Autônomos", href: "/autonomos", isExternal: false, icon: <Users className="w-4 h-4" /> },
+    { label: "Riscos & Moldes", href: "/riscos_moldes_moda", isExternal: false, icon: <Scissors className="w-4 h-4" /> },
     { label: "Social Jurídico", href: "https://www.socialjuridico.com.br", isExternal: true, icon: <Scale className="w-4 h-4" /> },
     { label: "Fisio+", href: "https://fisiomais-iota.vercel.app/", isExternal: true, icon: <Activity className="w-4 h-4" /> },
     { label: "Eu Faço", href: "https://eu-faco-mu.vercel.app/", isExternal: true, icon: <Wrench className="w-4 h-4" /> },

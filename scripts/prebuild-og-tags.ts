@@ -61,6 +61,11 @@ const staticPages: StaticPage[] = [
     description: 'AutoClub Pro - Sistema de gestão com personalização visual 100% para vidraçarias, estética, películas, som, capotaria, ar-condicionado e pneuarias.'
   },
   {
+    path: '/riscos_moldes_moda',
+    title: 'Riscos para Corte e Digitalização de Moldes | Technexos',
+    description: 'Digitalização de moldes, ampliação de tamanhos e riscos para corte com encaixe inteligente para confecções de Minas Gerais e Rio de Janeiro.'
+  },
+  {
     path: '/blog',
     title: 'Blog TechNexos | Estratégias Digitais, Tecnologia e Performance',
     description: 'Artigos sobre desenvolvimento de software, tráfego pago, SEO e automação para escalar seu negócio.'
