@@ -361,6 +361,123 @@ export default function BureauAudacesModelagem() {
         </div>
       </section>
 
+      {/* Form Section */}
+      <section id="orcamento-form" className="bg-indigo-950 px-4 py-20 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] items-center">
+            <div className="space-y-6">
+              <div className="border-l-4 border-emerald-400 pl-6">
+                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+                  Solicite seu Orçamento de Modelagem Digital
+                </h2>
+                <p className="mt-4 text-lg text-indigo-200 leading-relaxed">
+                  Preencha os dados abaixo e receba uma proposta personalizada de modelagem digital para sua confecção. Entraremos em contato pelo <b className="text-white">WhatsApp</b> em até <b className="text-white">24 horas</b>.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-indigo-800 bg-indigo-900/50 p-6">
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
+                    <Zap className="h-6 w-6 text-emerald-400" />
+                  </div>
+                  <p className="text-sm text-indigo-200">
+                    Orçamento <b className="text-white">personalizado</b> para seu tipo de coleção e volume de produção. Sem compromisso.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                {["Modelagem Digital", "Gradação", "Encaixe", "Plotagem", "DXF/PLOT"].map((tag) => (
+                  <span key={tag} className="px-3 py-1.5 rounded-full border border-indigo-700 text-xs font-bold text-indigo-300">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="rounded-2xl bg-white p-6 shadow-2xl sm:p-10"
+            >
+              <h3 className="text-center text-xl font-black text-slate-900 sm:text-2xl">
+                Solicitar Orçamento de Modelagem Digital
+              </h3>
+              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                <div className="space-y-1.5">
+                  <Label htmlFor="name" className="font-bold text-slate-700">
+                    Nome do Responsável Técnico ou Dono da Confecção
+                  </Label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="Seu nome completo"
+                    required
+                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="phone" className="font-bold text-slate-700">
+                    WhatsApp Comercial (com DDD)
+                  </Label>
+                  <Input
+                    id="phone"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    placeholder="(00) 00000-0000"
+                    required
+                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="company" className="font-bold text-slate-700">
+                    Nome da Confecção ou Marca de Roupa
+                  </Label>
+                  <Input
+                    id="company"
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    placeholder="Ex.: Minha Confecção Ltda."
+                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="description" className="font-bold text-slate-700">
+                    Conte um pouco sobre sua coleção ou o que precisa desenvolver
+                  </Label>
+                  <textarea
+                    id="description"
+                    value={formData.description}
+                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
+                    placeholder="Ex.: Preciso desenvolver a modelagem de 5 modelos de moda feminina do PP ao GG, com encaixe para malha e receber tudo em DXF e PDF..."
+                    required
+                    className="min-h-28 w-full rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-900 outline-none focus:bg-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={submitting}
+                  className="w-full h-14 bg-emerald-500 font-black text-white hover:bg-emerald-600 shadow-lg shadow-emerald-500/30 transition-all"
+                >
+                  {submitting ? "Enviando..." : "Solicitar Orçamento de Modelagem Digital"}
+                </Button>
+
+                <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 sm:text-xs">
+                  <ShieldCheck className="h-4 w-4" />
+                  <span>Dados protegidos. Não enviamos spam. Orçamento sem compromisso.</span>
+                </div>
+              </form>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Stats */}
       <section className="bg-white py-8 border-b border-slate-100 shadow-sm">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -643,123 +760,6 @@ export default function BureauAudacesModelagem() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Form Section */}
-      <section id="orcamento-form" className="bg-indigo-950 px-4 py-20 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] items-center">
-            <div className="space-y-6">
-              <div className="border-l-4 border-emerald-400 pl-6">
-                <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-                  Solicite seu Orçamento de Modelagem Digital
-                </h2>
-                <p className="mt-4 text-lg text-indigo-200 leading-relaxed">
-                  Preencha os dados abaixo e receba uma proposta personalizada de modelagem digital para sua confecção. Entraremos em contato pelo <b className="text-white">WhatsApp</b> em até <b className="text-white">24 horas</b>.
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-indigo-800 bg-indigo-900/50 p-6">
-                <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500/20">
-                    <Zap className="h-6 w-6 text-emerald-400" />
-                  </div>
-                  <p className="text-sm text-indigo-200">
-                    Orçamento <b className="text-white">personalizado</b> para seu tipo de coleção e volume de produção. Sem compromisso.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
-                {["Modelagem Digital", "Gradação", "Encaixe", "Plotagem", "DXF/PLOT"].map((tag) => (
-                  <span key={tag} className="px-3 py-1.5 rounded-full border border-indigo-700 text-xs font-bold text-indigo-300">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="rounded-2xl bg-white p-6 shadow-2xl sm:p-10"
-            >
-              <h3 className="text-center text-xl font-black text-slate-900 sm:text-2xl">
-                Solicitar Orçamento de Modelagem Digital
-              </h3>
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                <div className="space-y-1.5">
-                  <Label htmlFor="name" className="font-bold text-slate-700">
-                    Nome do Responsável Técnico ou Dono da Confecção
-                  </Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Seu nome completo"
-                    required
-                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="phone" className="font-bold text-slate-700">
-                    WhatsApp Comercial (com DDD)
-                  </Label>
-                  <Input
-                    id="phone"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="(00) 00000-0000"
-                    required
-                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="company" className="font-bold text-slate-700">
-                    Nome da Confecção ou Marca de Roupa
-                  </Label>
-                  <Input
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                    placeholder="Ex.: Minha Confecção Ltda."
-                    className="h-12 bg-slate-50 border-slate-200 text-slate-900 focus:bg-white focus:border-indigo-500 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
-                  />
-                </div>
-
-                <div className="space-y-1.5">
-                  <Label htmlFor="description" className="font-bold text-slate-700">
-                    Conte um pouco sobre sua coleção ou o que precisa desenvolver
-                  </Label>
-                  <textarea
-                    id="description"
-                    value={formData.description}
-                    onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                    placeholder="Ex.: Preciso desenvolver a modelagem de 5 modelos de moda feminina do PP ao GG, com encaixe para malha e receber tudo em DXF e PDF..."
-                    required
-                    className="min-h-28 w-full rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-900 outline-none focus:bg-white focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-400"
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full h-14 bg-emerald-500 font-black text-white hover:bg-emerald-600 shadow-lg shadow-emerald-500/30 transition-all"
-                >
-                  {submitting ? "Enviando..." : "Solicitar Orçamento de Modelagem Digital"}
-                </Button>
-
-                <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 sm:text-xs">
-                  <ShieldCheck className="h-4 w-4" />
-                  <span>Dados protegidos. Não enviamos spam. Orçamento sem compromisso.</span>
-                </div>
-              </form>
-            </motion.div>
           </div>
         </div>
       </section>
