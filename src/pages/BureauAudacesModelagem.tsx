@@ -253,24 +253,18 @@ export default function BureauAudacesModelagem() {
       {/* Header */}
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-slate-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <button
-            onClick={() => window.location.href = "/"}
-            className="flex items-center gap-2 transition-opacity hover:opacity-80"
-          >
+          <div className="flex items-center gap-2">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 shadow-lg shadow-indigo-200">
               <Scissors className="h-6 w-6 text-white" />
             </div>
             <div className="text-left">
-              <h1 className="text-sm font-black tracking-tighter sm:text-base">
+              <span className="text-sm font-black tracking-tighter sm:text-base">
                 TechNexos<span className="text-indigo-600">Modelagem</span>
-              </h1>
+              </span>
             </div>
-          </button>
+          </div>
 
           <nav className="hidden items-center gap-8 md:flex">
-            <a href="#servicos" className="text-sm font-bold text-slate-600 hover:text-indigo-600">Serviços</a>
-            <a href="#beneficios" className="text-sm font-bold text-slate-600 hover:text-indigo-600">Economia</a>
-            <a href="#faq" className="text-sm font-bold text-slate-600 hover:text-indigo-600">FAQ</a>
             <Button
               onClick={scrollToForm}
               className="rounded-full bg-indigo-600 px-6 font-bold text-white hover:bg-indigo-700"
@@ -286,9 +280,6 @@ export default function BureauAudacesModelagem() {
 
         {mobileMenuOpen && (
           <div className="absolute w-full space-y-3 border-t border-slate-100 bg-white p-4 shadow-xl md:hidden">
-            <a href="#servicos" onClick={() => setMobileMenuOpen(false)} className="block p-2 text-sm font-bold text-slate-700">Serviços</a>
-            <a href="#beneficios" onClick={() => setMobileMenuOpen(false)} className="block p-2 text-sm font-bold text-slate-700">Economia</a>
-            <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="block p-2 text-sm font-bold text-slate-700">FAQ</a>
             <Button onClick={() => { scrollToForm(); setMobileMenuOpen(false); }} className="w-full bg-indigo-600 font-bold text-white">
               Solicitar Orçamento
             </Button>
