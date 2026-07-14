@@ -37,6 +37,7 @@ import {
   Activity,
   Wrench,
   Scissors,
+  Gavel,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -81,35 +82,36 @@ const PaidTraffic = () => {
   };
 
   useSEO({
-    title: "Gestão de Tráfego Pago & SEO de Performance | TechNexos Digital",
-    description: "Escale seu faturamento com anúncios agressivos no Meta Ads e Google Ads. Gestão de tráfego pago baseada em dados, ROAS alto e lucro real para sua empresa.",
+    title: "Tráfego Pago para Advogados | Captação de Clientes Jurídicos | TechNexos",
+    description: "Escale sua advocacia com Meta Ads e Google Ads para advogados. Captação previsível de clientes jurídicos com ROAS alto, funis de nutrição e conformidade OAB. Resultados em 48h.",
     keywords: [
-      "gestão de tráfego pago",
-      "especialista meta ads",
-      "anúncios instagram profissional",
-      "anúncios facebook para empresas",
-      "agência de performance",
-      "escala de vendas",
-      "roas alto",
-      "vendas online",
-      "roi",
-      "geração de leads qualificados",
-      "gestor de trafego pago profissional",
-      "seo técnico",
-      "marketing de dados",
-      "performance digital"
+      "trafego pago para advogados",
+      "anuncios para advogados",
+      "captação de clientes advocacia",
+      "meta ads advogados",
+      "google ads escritorio advocacia",
+      "marketing juridico digital",
+      "gestão de trafego juridico",
+      "oab propaganda",
+      "aquisição de clientes juridicos",
+      "funil de vendas advocacia",
+      "performance juridica",
+      "escala escritorio advocacia",
+      "roas advocacia",
+      "gerar clientes advogado",
+      "midia paga direito"
     ],
-    ogTitle: "TechNexos Digital: Tráfego Pago & SEO de Alta Performance",
-    ogDescription: "Não entregamos cliques, entregamos depósitos. Estratégias de tráfego pago desenhadas para lucro e escala.",
+    ogTitle: "TechNexos para Advocacia: Tráfego Pago que Gera Clientes de Alto Valor",
+    ogDescription: "Não entregamos cliques, entregamos causas ganhas. Estratégias de tráfego pago desenhadas para escritórios de advocacia que querem previsibilidade e escala na captação.",
     ogUrl: "https://www.technexos.com.br/trafego-pago",
-    twitterTitle: "Gestão de Tráfego Pago & Escala Digital | TechNexos",
-    twitterDescription: "Foco total em ROI e previsibilidade matemática para o seu faturamento.",
+    twitterTitle: "Tráfego Pago para Advogados | Escala Jurídica | TechNexos",
+    twitterDescription: "Foco total em captar clientes de alto valor para seu escritório com previsibilidade matemática.",
     canonicalUrl: "https://www.technexos.com.br/trafego-pago",
     schema: {
       "@context": "https://schema.org",
       "@type": "AdvertisingAgency",
-      "name": "TechNexos Performance",
-      "description": "Agência de marketing de performance especializada em tráfego pago e escala de vendas.",
+      "name": "TechNexos Performance Jurídica",
+      "description": "Agência de marketing de performance especializada em captação de clientes para escritórios de advocacia através de tráfego pago e SEO.",
       "url": "https://www.technexos.com.br/trafego-pago",
       "address": {
         "@type": "PostalAddress",
@@ -225,7 +227,6 @@ const PaidTraffic = () => {
               Especialista
             </button>
 
-            {/* Mobile Solutions */}
             <div className="flex flex-col gap-1 py-2 border-y border-slate-50">
               <span className="px-2 text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Soluções</span>
               {solutions.map((sub) => (
@@ -313,10 +314,10 @@ const PaidTraffic = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="mb-8 text-4xl font-black leading-[1.1] tracking-tight sm:text-5xl lg:text-7xl">
-              Sua empresa não precisa de curtidas. Ela precisa de <span className="text-orange-600">Lucro Real</span>.
+              Seu escritório não precisa de seguidores. Precisa de <span className="text-orange-600">Clientes de Alto Valor</span>.
             </h2>
             <p className="mb-10 max-w-2xl text-xl leading-relaxed text-slate-600">
-              Pare de "tentar" anunciar. Aplicamos engenharia de dados no <strong>Meta Ads</strong> e <strong>Google Ads</strong> para escalar seu faturamento com previsibilidade matemática.
+              Pare de depender de indicações. Aplicamos engenharia de dados no <strong>Meta Ads</strong> e <strong>Google Ads</strong> para captar clientes jurídicos com previsibilidade matemática — em conformidade com o Código de Ética da OAB.
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
@@ -324,12 +325,12 @@ const PaidTraffic = () => {
                 size="lg"
                 className="h-20 rounded-2xl bg-orange-600 px-10 text-xl font-black text-white shadow-xl shadow-orange-100 transition-all hover:scale-105 hover:bg-orange-700"
               >
-                Ativar Minha Escala Agora <ArrowRight className="ml-2" />
+                Captar Clientes Agora <ArrowRight className="ml-2" />
               </Button>
             </div>
             <div className="mt-8 flex items-center gap-4 text-sm font-bold text-slate-400">
-              <Check className="text-green-500" /> API de Conversão (CAPI) Configurada
-              <Check className="text-green-500" /> Foco 100% em ROAS e ROI
+              <Check className="text-green-500" /> Conformidade com Código de Ética OAB
+              <Check className="text-green-500" /> Foco 100% em Causas de Alto Valor
             </div>
           </motion.div>
 
@@ -341,8 +342,8 @@ const PaidTraffic = () => {
           >
             <div className="relative z-10 overflow-hidden rounded-[3rem] border-8 border-white shadow-[0_32px_64px_rgba(0,0,0,0.1)]">
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                alt="Dashboards de Performance e Lucro"
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop"
+                alt="Escritório de Advocacia e Estratégia Jurídica"
                 className="h-auto w-full transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-orange-900/40 via-transparent to-transparent opacity-60" />
@@ -358,39 +359,39 @@ const PaidTraffic = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 text-center">
             <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-4">
-              Engenharia de <span className="text-orange-600">Alta Performance</span>
+              Engenharia de <span className="text-orange-600">Captação Jurídica</span>
             </h3>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Não somos "postadores de anúncios". Somos especialistas em extrair o máximo de lucro de cada real investido no Meta e Google.
+              Não somos "impulsionadores de postagens". Somos especialistas em extrair o máximo de clientes de alto valor de cada real investido — respeitando as regras da OAB.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
               <div className="h-16 w-16 rounded-2xl bg-orange-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                <Globe2 className="h-8 w-8" />
+                <ShieldCheck className="h-8 w-8" />
               </div>
-              <h4 className="text-2xl font-black mb-4">Meta Ads CAPI</h4>
+              <h4 className="text-2xl font-black mb-4">Meta Ads OAB Conforme</h4>
               <p className="text-slate-600 leading-relaxed">
-                Implementamos a <strong>API de Conversão</strong> para ignorar bloqueios do iOS14 e enviar dados direto do servidor. Isso reduz seu CPL em até 30% instantaneamente.
+                Campanhas no Meta Ads desenhadas <strong>dentro das normas do Código de Ética da OAB</strong>. Segmentação por área de atuação, dados demográficos e interesses jurídicos para captar clientes sem infringir o provimento 205/2021.
               </p>
             </div>
             <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
               <div className="h-16 w-16 rounded-2xl bg-slate-900 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                <Focus className="h-8 w-8" />
+                <Gavel className="h-8 w-8" />
               </div>
-              <h4 className="text-2xl font-black mb-4">Públicos LTV</h4>
+              <h4 className="text-2xl font-black mb-4">Públicos por Causa</h4>
               <p className="text-slate-600 leading-relaxed">
-                Usamos modelagem de <strong>Lifetime Value</strong> para encontrar clientes que não apenas compram uma vez, mas que sustentam seu negócio a longo prazo.
+                Modelagem de audiências por <strong>tipo de causa e perfil de cliente</strong>. Direito de Família, Trabalhista, Previdenciário, Cível, Criminal — cada área com seu funil específico e criativos direcionados.
               </p>
             </div>
             <div className="p-8 rounded-[3rem] bg-slate-50 border border-slate-100 hover:shadow-xl transition-all group">
               <div className="h-16 w-16 rounded-2xl bg-orange-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                 <Search className="h-8 w-8" />
               </div>
-              <h4 className="text-2xl font-black mb-4">Google Ads Search</h4>
+              <h4 className="text-2xl font-black mb-4">Google Ads Jurídico</h4>
               <p className="text-slate-600 leading-relaxed">
-                Dominamos a intenção de compra. Através do <strong>Google Ads</strong>, colocamos sua empresa na frente de quem está digitando exatamente o que você vende, no momento exato da decisão.
+                Captamos clientes no momento exato da necessidade jurídica. "Advogado trabalhista", "pensão alimentícia", "divórcio", "revisão de benefício INSS" — seu escritório no topo do Google quando a decisão acontece.
               </p>
             </div>
           </div>
@@ -402,10 +403,10 @@ const PaidTraffic = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16">
             <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-4">
-              Resultados <span className="text-orange-400">Inquestionáveis</span>.
+              Resultados <span className="text-orange-400">Jurídicos Reais</span>.
             </h3>
             <p className="text-xl text-slate-400">
-              O que acontece quando você une estratégia agressiva e tecnologia de ponta.
+              O que acontece quando você une estratégia digital e conhecimento do mercado jurídico.
             </p>
           </div>
 
@@ -415,32 +416,31 @@ const PaidTraffic = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-orange-600 to-blue-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row gap-12 items-center">
                 <div className="flex-1">
-                  <div className="inline-block px-4 py-1 rounded-full bg-orange-600/20 text-orange-400 text-sm font-bold mb-6">Auto Center Premium</div>
-                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Redução de 73% no Custo por Lead</h4>
+                  <div className="inline-block px-4 py-1 rounded-full bg-orange-600/20 text-orange-400 text-sm font-bold mb-6">Direito Previdenciário</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Redução de 68% no Custo por Lead Jurídico</h4>
                   <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                    A "Elite Automotive" sofria com leads caros (R$ 42,00) e desqualificados. Aplicamos um funil de 
-                    <strong> Vídeo-Retenção</strong> no Meta Ads filtrando apenas quem assistiu 75% do conteúdo técnico.
+                    O escritório "Oliveira & Mendes Advocacia" gastava R$ 87,00 por lead em anúncios genéricos. Criamos um funil de <strong>conteúdo educativo no Meta Ads</strong> focado em revisão de benefício INSS, atraindo apenas aposentados e segurados com direito a revisão.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                     <div>
-                      <p className="text-3xl font-black text-orange-400">R$ 11,20</p>
+                      <p className="text-3xl font-black text-orange-400">R$ 27,50</p>
                       <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Novo CPL Médio</p>
                     </div>
                     <div>
-                      <p className="text-3xl font-black text-orange-400">+420%</p>
+                      <p className="text-3xl font-black text-orange-400">+340%</p>
                       <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Leads Qualificados</p>
                     </div>
                     <div className="hidden sm:block">
-                      <p className="text-3xl font-black text-orange-400">92%</p>
-                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Taxa de Agendamento</p>
+                      <p className="text-3xl font-black text-orange-400">10x</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">ROI em 90 dias</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                    alt="Carro de Luxo"
+                    alt="Documentos Jurídicos e Processos"
                   />
                 </div>
               </div>
@@ -451,32 +451,31 @@ const PaidTraffic = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row-reverse gap-12 items-center">
                 <div className="flex-1">
-                  <div className="inline-block px-4 py-1 rounded-full bg-green-600/20 text-green-400 text-sm font-bold mb-6">Estética Automotiva & Detalhamento</div>
-                  <h4 className="text-3xl lg:text-5xl font-black mb-6">ROAS de 9.4x com Públicos LTV</h4>
+                  <div className="inline-block px-4 py-1 rounded-full bg-green-600/20 text-green-400 text-sm font-bold mb-6">Direito de Família</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">ROAS de 8.7x com Segmentação por Interesse</h4>
                   <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                    Para o "Studio Gloss", abandonamos o botão 'impulsionar'. Criamos uma campanha de 
-                    <strong> Dynamic Creative Optimization (DCO)</strong> que testou 45 variações de criativos simultaneamente.
+                    Para o "Nogueira Sociedade de Advogados", abandonamos anúncios genéricos. Criamos campanhas de <strong>Dynamic Creative Optimization (DCO)</strong> segmentando por momento de vida: divórcio, guarda de filhos, pensão alimentícia e partilha de bens.
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                     <div>
-                      <p className="text-3xl font-black text-green-400">9.4x</p>
+                      <p className="text-3xl font-black text-green-400">8.7x</p>
                       <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Retorno sobre Anúncio</p>
                     </div>
                     <div>
-                      <p className="text-3xl font-black text-green-400">R$ 45k</p>
-                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Fat. em 30 dias</p>
+                      <p className="text-3xl font-black text-green-400">R$ 62k</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Honorários em 30d</p>
                     </div>
                     <div className="hidden sm:block">
-                      <p className="text-3xl font-black text-green-400">0.12%</p>
-                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Custo por Clique</p>
+                      <p className="text-3xl font-black text-green-400">47</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Novos Clientes no Mês</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1601362840469-51e4d8d59085?q=80&w=2070&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1589391886645-d51941baf7fb?q=80&w=2070&auto=format&fit=crop" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                    alt="Polimento Automotivo"
+                    alt="Justiça e Direito de Família"
                   />
                 </div>
               </div>
@@ -487,31 +486,31 @@ const PaidTraffic = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-orange-600 rounded-[3rem] blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative bg-slate-800 rounded-[3rem] p-8 lg:p-12 flex flex-col lg:flex-row gap-12 items-center">
                 <div className="flex-1">
-                  <div className="inline-block px-4 py-1 rounded-full bg-red-600/20 text-red-400 text-sm font-bold mb-6">Rede de Pneus & Manutenção</div>
-                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Domínio do Google Ads com Escala Nacional</h4>
+                  <div className="inline-block px-4 py-1 rounded-full bg-red-600/20 text-red-400 text-sm font-bold mb-6">Direito Trabalhista</div>
+                  <h4 className="text-3xl lg:text-5xl font-black mb-6">Domínio do Google Ads com Captação Nacional</h4>
                   <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-                    Escalamos a "Tração Pneus" exclusivamente através do <strong>Google Ads</strong>. Utilizamos campanhas de Performance Max e Search integradas ao inventário, garantindo o topo absoluto para pesquisas de alta intenção.
+                    Escalamos a "Andrade & Costa Advocacia Trabalhista" exclusivamente via <strong>Google Ads</strong>. Campanhas de Performance Max e Search integradas captando reclamantes e reclamados em todo o estado, com palavras-chave de alta intenção como "cálculo trabalhista", "rescisão indireta" e "verbas rescisórias".
                   </p>
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                     <div>
-                      <p className="text-3xl font-black text-red-400">1.2k</p>
-                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Vendas Trackeadas</p>
+                      <p className="text-3xl font-black text-red-400">+180</p>
+                      <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Novos Casos no Trimestre</p>
                     </div>
                     <div>
-                      <p className="text-3xl font-black text-red-400">-40%</p>
+                      <p className="text-3xl font-black text-red-400">-55%</p>
                       <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Custo de Aquisição</p>
                     </div>
                     <div className="hidden sm:block">
-                      <p className="text-3xl font-black text-red-400">Top 1</p>
+                      <p className="text-3xl font-black text-red-400">Top 3</p>
                       <p className="text-xs uppercase font-bold text-slate-500 tracking-widest">Leilão Google Ads</p>
                     </div>
                   </div>
                 </div>
                 <div className="flex-1 w-full h-64 lg:h-96 rounded-3xl overflow-hidden shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop" 
+                    src="https://images.unsplash.com/photo-1593113630400-ea4288922497?q=80&w=2070&auto=format&fit=crop" 
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                    alt="Pneus novos"
+                    alt="Símbolo da Justiça"
                   />
                 </div>
               </div>
@@ -526,11 +525,11 @@ const PaidTraffic = () => {
             <div className="bg-slate-900 rounded-[4rem] p-8 lg:p-20 text-white relative">
                <div className="relative z-10 max-w-3xl">
                   <h3 className="text-4xl font-black tracking-tighter sm:text-6xl mb-8">
-                    Gestão baseada em <span className="text-orange-400">Lucro</span>, não em cliques.
+                    Captação baseada em <span className="text-orange-400">Honorários</span>, não em curtidas.
                   </h3>
                   <p className="text-xl text-slate-300 mb-12 leading-relaxed">
-                    Você nunca mais ficará no escuro. Entregamos transparência total através de dashboards 
-                    que mostram o que realmente importa: quanto entrou de dinheiro para cada real investido.
+                    Você nunca mais vai se perguntar de onde vêm seus clientes. Entregamos transparência total através de dashboards 
+                    que mostram o que realmente importa: quanto entrou em honorários para cada real investido em anúncios.
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                      <div className="text-center md:text-left">
@@ -539,7 +538,7 @@ const PaidTraffic = () => {
                      </div>
                      <div className="text-center md:text-left">
                         <p className="text-orange-400 font-black text-4xl mb-2">CPL</p>
-                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Leads Qualificados</p>
+                        <p className="text-slate-400 text-sm font-bold uppercase tracking-widest">Custo por Lead Jurídico</p>
                      </div>
                      <div className="text-center md:text-left">
                         <p className="text-orange-400 font-black text-4xl mb-2">CAC</p>
@@ -551,11 +550,11 @@ const PaidTraffic = () => {
                     size="lg"
                     className="h-20 rounded-2xl bg-orange-500 px-12 text-xl font-black text-white hover:bg-orange-600 shadow-xl shadow-orange-900/20"
                   >
-                    Quero Ver Meus Números Crescerem
+                    Quero Captar Mais Clientes
                   </Button>
                </div>
                <div className="hidden lg:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-1/4 opacity-20">
-                  <PieChart className="h-[500px] w-[500px] text-orange-400" />
+                  <Scale className="h-[500px] w-[500px] text-orange-400" />
                </div>
             </div>
          </div>
@@ -568,9 +567,9 @@ const PaidTraffic = () => {
         <div className="mx-auto max-w-3xl">
           <div className="mb-16 text-center">
             <h3 className="mb-4 text-3xl font-black italic tracking-tighter sm:text-5xl">
-              Respostas <span className="text-orange-600">Honestas.</span>
+              Respostas <span className="text-orange-600">Éticas.</span>
             </h3>
-            <p className="text-slate-600">Tudo o que você precisa saber antes de escalar seu negócio.</p>
+            <p className="text-slate-600">Tudo o que você precisa saber antes de captar clientes jurídicos com anúncios.</p>
           </div>
 
           <Accordion type="single" collapsible className="w-full space-y-4">
@@ -579,11 +578,10 @@ const PaidTraffic = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Quanto eu preciso investir em anúncios?
+                É permitido advogado fazer anúncios pagos?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                Não existe valor fixo, mas sim valor estratégico. Recomendamos começar com uma verba que permita testes 
-                estatísticos reais. Nosso foco é escalar esse valor conforme o ROI se torna positivo e previsível.
+                Sim, desde que respeitado o Provimento 205/2021 da OAB. Isso significa: sem captação de clientes de forma mercantilista, sem prometer resultados, sem sensacionalismo. Nossas campanhas são construídas dentro dessas regras — usamos conteúdo educativo, autoridade profissional e informação de qualidade para atrair clientes de forma ética.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -591,10 +589,10 @@ const PaidTraffic = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Em quanto tempo vejo o retorno?
+                Em quanto tempo começo a receber clientes?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                O tráfego pago traz resultados extremamente rápidos. Em muitos casos, começamos a gerar leads qualificados em menos de 48h após o início das campanhas. O lucro real vem com a otimização contínua nas primeiras semanas.
+                O tráfego pago jurídico gera resultados rápidos. Em muitos casos, começamos a receber leads qualificados em menos de 48h após o início das campanhas. A consistência e o volume crescem com a otimização contínua nas primeiras semanas. Diferente de indicações, você não espera — você atrai.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem
@@ -602,11 +600,10 @@ const PaidTraffic = () => {
               className="overflow-hidden rounded-3xl border border-slate-200 bg-slate-50/50 px-6 py-2"
             >
               <AccordionTrigger className="text-left font-black text-slate-800 hover:no-underline">
-                Por que não contratar um "gestor de cliques" qualquer?
+                Quanto preciso investir para captar clientes?
               </AccordionTrigger>
               <AccordionContent className="leading-relaxed text-slate-600">
-                Porque cliques não pagam contas. Nós somos uma agência de performance que entende de negócio, 
-                estratégia de vendas e tecnologia. Nós focamos na sua última linha: o lucro líquido.
+                Não existe valor fixo, mas sim valor estratégico. Recomendamos uma verba inicial que permita testes estatísticos reais por área de atuação. O segredo não é o tamanho do investimento, mas a precisão da segmentação. Preferimos começar com R$ 1.500-3.000/mês bem direcionados do que R$ 10.000 em anúncios genéricos.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -624,7 +621,7 @@ const PaidTraffic = () => {
             </p>
           </div>
           <p className="text-sm text-slate-400">
-            © 2026 TechNexos Performance. Estratégia, Dados & Escala.
+            © 2026 TechNexos Performance. Estratégia, Dados & Escala Jurídica.
           </p>
         </div>
       </footer>

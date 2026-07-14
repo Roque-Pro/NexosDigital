@@ -42,8 +42,8 @@ const staticPages: StaticPage[] = [
   },
   {
     path: '/trafego-pago',
-    title: 'Gestão de Tráfego Pago & SEO de Performance | TechNexos Digital',
-    description: 'Escale seu faturamento com anúncios agressivos no Meta Ads e Google Ads. Gestão de tráfego pago baseada em dados, ROAS alto e lucro real para sua empresa.'
+    title: 'Tráfego Pago para Advogados | Captação de Clientes Jurídicos | TechNexos',
+    description: 'Escale sua advocacia com Meta Ads e Google Ads para advogados. Captação previsível de clientes jurídicos com ROAS alto, funis de nutrição e conformidade OAB.'
   },
   {
     path: '/consultoria-totvs',
