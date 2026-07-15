@@ -349,90 +349,6 @@ const PlanAuth = () => {
         </div>
       </section>
 
-      <section className="bg-white px-4 py-16 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-5xl"><span className="text-[#1a64d6]">Google Meu Negócio</span> em Juiz de Fora: Do Cadastro às Campanhas</h2>
-            <p className="mt-4 text-lg text-slate-700 sm:text-2xl">Do cadastro no Google Meu Negócio às campanhas de Google Ads com reuniões presenciais em Juiz de Fora e região:</p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            {diagnosisPoints.map(({ icon: Icon, title, description }, index) => (
-              <motion.div key={title} className="relative rounded-[24px] border border-slate-100 bg-white p-6 text-center shadow-lg">
-                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#1a64d6] text-sm font-bold text-white">{index + 1}</div>
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-50">
-                  <Icon className="h-8 w-8 text-[#071524]" />
-                </div>
-                <h3 className="text-lg font-bold leading-tight text-[#0b1320]">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#f4f6fb] px-4 py-16 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-12 max-w-3xl text-center">
-            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Por que ter <span className="text-[#1a64d6]">Google Meu Negócio</span> é essencial para sua empresa?</h2>
-            <p className="mt-4 text-lg text-slate-700">
-              96% dos consumidores buscam por empresas locais na internet. Sem um perfil no Google Meu Negócio, sua empresa simplesmente não existe para quem pesquisa no Google ou no Maps. Nós criamos, otimizamos e gerenciamos seu perfil para que você apareça nas primeiras posições em Juiz de Fora e região.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
-                <Search className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Mais Visibilidade Local</h3>
-              <p className="text-sm leading-relaxed text-slate-600">Apareça no "pacote local" do Google (aquele mapa com 3 empresas em destaque) quando alguém pesquisar por seu segmento em Juiz de Fora. É a vitrine mais valiosa para negócios locais.</p>
-            </div>
-            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
-                <TrendingUp className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Clientes Qualificados</h3>
-              <p className="text-sm leading-relaxed text-slate-600">Quem busca no Google já está procurando ativamente pelo seu serviço. São leads quentes que ligam, mandam WhatsApp ou pedem rota até seu endereço. Nós potencializamos isso com Google Ads.</p>
-            </div>
-            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
-                <ShieldCheck className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Credibilidade e Confiança</h3>
-              <p className="text-sm leading-relaxed text-slate-600">Empresas com perfil verificado no Google Meu Negócio transmitem mais confiança. Avaliações, fotos, horários e endereço confirmado aumentam a taxa de conversão de visitantes em clientes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-4 py-16 lg:px-10">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Para quem é o <span className="text-[#1a64d6]">Google Meu Negócio</span> em Juiz de Fora?</h2>
-            <p className="mt-4 text-lg text-slate-700">Nosso serviço é ideal para qualquer negócio que atende clientes presencialmente ou por região em Juiz de Fora e cidades próximas:</p>
-          </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { title: "Clínicas e Consultórios", desc: "Médicos, dentistas, psicólogos, fisioterapeutas e demais profissionais de saúde." },
-              { title: "Restaurantes e Bares", desc: "Estabelecimentos de alimentação que querem ser encontrados no Maps." },
-              { title: "Lojas e Varejo", desc: "Comércios físicos que precisam de visibilidade local e tráfego de pedestres." },
-              { title: "Prestadores de Serviço", desc: "Advogados, contadores, encanadores, eletricistas, fotógrafos e muito mais." },
-              { title: "Oficinas e Autopeças", desc: "Serviços automotivos que dependem de busca local por proximidade." },
-              { title: "Indústrias e Distribuidoras", desc: "Negócios B2B que atendem na região de Juiz de Fora." },
-            ].map(({ title, desc }) => (
-              <div key={title} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-[#f8fafc] p-4">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
-                <div>
-                  <p className="font-bold text-[#0b1320]">{title}</p>
-                  <p className="text-sm text-slate-600">{desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="diagnostic-form" className="bg-[#f4f6fb] px-4 py-16 lg:px-10">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-6">
@@ -522,6 +438,90 @@ const PlanAuth = () => {
               </div>
             </form>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-5xl"><span className="text-[#1a64d6]">Google Meu Negócio</span> em Juiz de Fora: Do Cadastro às Campanhas</h2>
+            <p className="mt-4 text-lg text-slate-700 sm:text-2xl">Do cadastro no Google Meu Negócio às campanhas de Google Ads com reuniões presenciais em Juiz de Fora e região:</p>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            {diagnosisPoints.map(({ icon: Icon, title, description }, index) => (
+              <motion.div key={title} className="relative rounded-[24px] border border-slate-100 bg-white p-6 text-center shadow-lg">
+                <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-[#1a64d6] text-sm font-bold text-white">{index + 1}</div>
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-50">
+                  <Icon className="h-8 w-8 text-[#071524]" />
+                </div>
+                <h3 className="text-lg font-bold leading-tight text-[#0b1320]">{title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6fb] px-4 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Por que ter <span className="text-[#1a64d6]">Google Meu Negócio</span> é essencial para sua empresa?</h2>
+            <p className="mt-4 text-lg text-slate-700">
+              96% dos consumidores buscam por empresas locais na internet. Sem um perfil no Google Meu Negócio, sua empresa simplesmente não existe para quem pesquisa no Google ou no Maps. Nós criamos, otimizamos e gerenciamos seu perfil para que você apareça nas primeiras posições em Juiz de Fora e região.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <Search className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Mais Visibilidade Local</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Apareça no "pacote local" do Google (aquele mapa com 3 empresas em destaque) quando alguém pesquisar por seu segmento em Juiz de Fora. É a vitrine mais valiosa para negócios locais.</p>
+            </div>
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <TrendingUp className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Clientes Qualificados</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Quem busca no Google já está procurando ativamente pelo seu serviço. São leads quentes que ligam, mandam WhatsApp ou pedem rota até seu endereço. Nós potencializamos isso com Google Ads.</p>
+            </div>
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <ShieldCheck className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Credibilidade e Confiança</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Empresas com perfil verificado no Google Meu Negócio transmitem mais confiança. Avaliações, fotos, horários e endereço confirmado aumentam a taxa de conversão de visitantes em clientes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Para quem é o <span className="text-[#1a64d6]">Google Meu Negócio</span> em Juiz de Fora?</h2>
+            <p className="mt-4 text-lg text-slate-700">Nosso serviço é ideal para qualquer negócio que atende clientes presencialmente ou por região em Juiz de Fora e cidades próximas:</p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Clínicas e Consultórios", desc: "Médicos, dentistas, psicólogos, fisioterapeutas e demais profissionais de saúde." },
+              { title: "Restaurantes e Bares", desc: "Estabelecimentos de alimentação que querem ser encontrados no Maps." },
+              { title: "Lojas e Varejo", desc: "Comércios físicos que precisam de visibilidade local e tráfego de pedestres." },
+              { title: "Prestadores de Serviço", desc: "Advogados, contadores, encanadores, eletricistas, fotógrafos e muito mais." },
+              { title: "Oficinas e Autopeças", desc: "Serviços automotivos que dependem de busca local por proximidade." },
+              { title: "Indústrias e Distribuidoras", desc: "Negócios B2B que atendem na região de Juiz de Fora." },
+            ].map(({ title, desc }) => (
+              <div key={title} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-[#f8fafc] p-4">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
+                <div>
+                  <p className="font-bold text-[#0b1320]">{title}</p>
+                  <p className="text-sm text-slate-600">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
