@@ -22,6 +22,7 @@ import {
   Store,
   Smartphone,
   Handshake,
+  Megaphone,
 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -40,8 +41,8 @@ const highlights = [
   },
   {
     icon: Globe,
-    title: "Apareça no Google Busca e Maps",
-    description: "Sua empresa nos primeiros resultados da sua região",
+    title: "Google Meu Negócio + Tráfego Pago",
+    description: "Apareça no Google orgânico e com anúncios pagos",
   },
   {
     icon: Handshake,
@@ -67,13 +68,13 @@ const diagnosisPoints = [
     icon: Search,
     title: "SEO Local para Sua Região",
     description:
-      "Otimizamos sua empresa para rankear nas buscas do Google em Juiz de Fora e cidades vizinhas.",
+      "Otimizamos sua empresa para rankear nas buscas orgânicas do Google em Juiz de Fora e cidades vizinhas.",
   },
   {
-    icon: ShieldCheck,
-    title: "Verificação Presencial",
+    icon: Megaphone,
+    title: "Tráfego Pago Segmentado",
     description:
-      "Cuidamos de todo o processo de verificação do Google com acompanhamento presencial.",
+      "Criamos campanhas de Google Ads com segmentação por palavra-chave, local e público-alvo em Juiz de Fora.",
   },
   {
     icon: Handshake,
@@ -101,35 +102,35 @@ const PlanAuth = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useSEO({
-    title: "Cadastrar Empresa no Google em Juiz de Fora | Google Meu Negócio | TechNexos",
+    title: "Cadastrar Empresa no Google em Juiz de Fora | Google Meu Negócio e Tráfego Pago | TechNexos",
     description:
-      "Cadastre sua empresa no Google em Juiz de Fora e região. Atendimento presencial. Saiba como cadastrar minha empresa no Google Maps e Google Meu Negócio.",
+      "Cadastre sua empresa no Google em Juiz de Fora e região com Google Meu Negócio, SEO local e tráfego pago. Atendimento presencial. Saiba como cadastrar minha empresa no Google Maps.",
     keywords: [
       "cadastrar empresa no google juiz de fora",
       "como cadastrar minha empresa no google juiz de fora",
       "cadastrar empresa no google maps juiz de fora",
       "google meu negócio cadastrar juiz de fora",
-      "colocar empresa no google juiz de fora",
-      "google meu negócio juiz de fora",
-      "cadastro google meu negócio jf",
+      "tráfego pago juiz de fora",
+      "google ads juiz de fora",
+      "anunciar no google juiz de fora",
       "empresa no google maps juiz de fora",
       "registrar empresa no google jf",
       "aparecer no google juiz de fora",
     ],
-    ogTitle: "Cadastrar Empresa no Google em Juiz de Fora | Atendimento Presencial | TechNexos",
+    ogTitle: "Cadastrar Empresa no Google em Juiz de Fora | Google Meu Negócio + Tráfego Pago | TechNexos",
     ogDescription:
-      "Cadastre sua empresa no Google Maps e Google Meu Negócio em Juiz de Fora e região. Atendimento presencial com acompanhamento contínuo.",
+      "Cadastre sua empresa no Google Maps e Google Meu Negócio em Juiz de Fora e região. Combinamos SEO local com tráfego pago bem feito. Atendimento presencial.",
     ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
-    twitterTitle: "Cadastre sua Empresa no Google em Juiz de Fora",
+    twitterTitle: "Cadastre sua Empresa no Google em Juiz de Fora com Tráfego Pago",
     twitterDescription:
-      "Serviço especializado em cadastrar empresa no Google em Juiz de Fora e região. Atendimento presencial.",
+      "Serviço especializado em cadastrar empresa no Google em Juiz de Fora e região com Google Meu Negócio e campanhas de tráfego pago. Atendimento presencial.",
     canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
     schema: {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Cadastro de Empresas no Google em Juiz de Fora | TechNexos",
+      name: "Cadastro de Empresas no Google e Tráfego Pago em Juiz de Fora | TechNexos",
       description:
-        "Serviço especializado em cadastrar e otimizar empresas no Google Meu Negócio e Google Maps em Juiz de Fora e região. Atendimento presencial.",
+        "Serviço especializado em cadastrar e otimizar empresas no Google Meu Negócio, Google Maps e campanhas de tráfego pago em Juiz de Fora e região. Atendimento presencial.",
       provider: {
         "@type": "ProfessionalService",
         name: "TechNexos Digital",
@@ -189,7 +190,7 @@ const PlanAuth = () => {
 
       toast({
         title: "Solicitação enviada!",
-        description: "Em breve entraremos em contato para agendar uma reunião presencial em Juiz de Fora.",
+        description: "Em breve entraremos em contato para agendar seu diagnóstico presencial em Juiz de Fora.",
       });
 
       setDiagnosticData({
@@ -306,7 +307,7 @@ const PlanAuth = () => {
                 <span className="text-3xl font-black tracking-tight text-white sm:text-5xl lg:text-[3.25rem]">TechNexos</span>
                 <MapPin className="h-6 w-6 text-[#f6bf22] sm:h-10 sm:w-10" />
               </div>
-              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:text-sm">Juiz de Fora • Presencial • Google Meu Negócio</p>
+              <p className="mt-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/80 sm:text-sm">Juiz de Fora • Presencial • Google Meu Negócio • Tráfego Pago</p>
             </div>
 
             <h1 className="text-3xl font-black leading-tight sm:text-5xl lg:text-[4.2rem]">
@@ -316,7 +317,7 @@ const PlanAuth = () => {
             <div className="my-6 h-1.5 w-16 rounded-full bg-[#f6bf22] sm:my-8 sm:w-20" />
 
             <p className="max-w-2xl text-lg leading-relaxed text-white/90 sm:text-2xl">
-              Atendimento <span className="font-bold text-[#f6bf22]">presencial em Juiz de Fora</span> e região. Se você quer saber <span className="font-bold text-[#f6bf22]">como cadastrar minha empresa no Google</span> e começar a aparecer no Google Maps e nas buscas, nós fazemos todo o processo com reuniões presenciais e acompanhamento contínuo. <span className="font-bold text-[#f6bf22]">Solicite seu cadastro gratuito agora.</span>
+              Atendimento <span className="font-bold text-[#f6bf22]">presencial em Juiz de Fora</span> e região. Se você quer saber <span className="font-bold text-[#f6bf22]">como cadastrar minha empresa no Google</span> e começar a aparecer nos resultados orgânicos, Maps e também com <span className="font-bold text-[#f6bf22]">tráfego pago bem feito</span> — com segmentação por palavra-chave, público e local — nós fazemos tudo com reuniões presenciais e acompanhamento contínuo. <span className="font-bold text-[#f6bf22]">Solicite seu diagnóstico gratuito agora.</span>
             </p>
 
             <div className="mt-8 rounded-[24px] border border-white/20 bg-white/5 p-4 backdrop-blur-sm">
@@ -336,7 +337,7 @@ const PlanAuth = () => {
             </div>
 
             <Button onClick={scrollToForm} className="mt-8 h-14 w-full rounded-xl bg-[#f6bf22] text-base font-black text-[#08111d] hover:bg-[#ffd24d] lg:hidden">
-              Quero cadastrar minha empresa no Google em JF
+              Quero meu diagnóstico gratuito em JF
             </Button>
           </motion.div>
 
@@ -350,7 +351,7 @@ const PlanAuth = () => {
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-5xl">Como <span className="text-[#1a64d6]">Cadastrar sua Empresa no Google</span> em Juiz de Fora</h2>
-            <p className="mt-4 text-lg text-slate-700 sm:text-2xl">Da criação à ativação com reuniões presenciais em Juiz de Fora e região:</p>
+            <p className="mt-4 text-lg text-slate-700 sm:text-2xl">Do cadastro no Google Meu Negócio às campanhas de tráfego pago com reuniões presenciais em Juiz de Fora e região:</p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
@@ -372,9 +373,9 @@ const PlanAuth = () => {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="space-y-6">
             <div className="border-l-4 border-[#f6bf22] pl-6">
-              <h2 className="text-3xl font-black text-[#0b1320] sm:text-4xl">Solicite seu Cadastro no Google em Juiz de Fora</h2>
+              <h2 className="text-3xl font-black text-[#0b1320] sm:text-4xl">Solicite seu Diagnóstico Gratuito em Juiz de Fora</h2>
               <p className="mt-4 text-lg text-slate-700 sm:text-xl leading-relaxed">
-                Preencha os dados abaixo e nossa equipe entrará em contato para <span className="font-bold text-[#0b1320]">agendar uma reunião presencial em Juiz de Fora</span> e cadastrar sua empresa no Google Meu Negócio e Google Maps.
+                Preencha os dados abaixo e nossa equipe entrará em contato para <span className="font-bold text-[#0b1320]">agendar uma reunião presencial em Juiz de Fora</span>. Vamos analisar sua empresa e montar uma estratégia completa de Google Meu Negócio, SEO local e tráfego pago.
               </p>
             </div>
             <div className="rounded-[20px] bg-white p-5 shadow-sm sm:p-6">
@@ -382,14 +383,14 @@ const PlanAuth = () => {
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#08111d]">
                   <Globe className="h-6 w-6 text-[#f6bf22]" />
                 </div>
-                <p className="text-sm font-medium text-slate-700 sm:text-base">Cadastro e verificação no Google Meu Negócio com reunião presencial em Juiz de Fora. 100% gratuito.</p>
+                <p className="text-sm font-medium text-slate-700 sm:text-base">Diagnóstico completo de Google Meu Negócio, SEO local e tráfego pago com reunião presencial em Juiz de Fora. 100% gratuito.</p>
               </div>
             </div>
             <p className="text-center text-xl font-bold italic text-[#1f4ea6] sm:text-2xl">Juiz de Fora e região. Apareça no Google e venda mais.</p>
           </div>
 
           <motion.div className="rounded-[24px] bg-white p-5 shadow-xl sm:p-10">
-            <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Solicitar Cadastro no Google em JF</h3>
+            <h3 className="text-center text-xl font-black text-[#0b1320] sm:text-2xl">Solicitar Diagnóstico Gratuito em JF</h3>
             <form onSubmit={handleDiagnosticSubmit} className="mt-8 space-y-4">
               <div className="space-y-1.5">
                 <Label htmlFor="diagnosticName" className="font-bold text-slate-700">Seu Nome</Label>
@@ -403,7 +404,7 @@ const PlanAuth = () => {
                 />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticPhone" className="font-bold text-slate-700">WhatsApp (Para agendar reunião presencial em JF)</Label>
+                <Label htmlFor="diagnosticPhone" className="font-bold text-slate-700">WhatsApp (Para agendar diagnóstico presencial em JF)</Label>
                 <Input 
                   id="diagnosticPhone" 
                   value={diagnosticData.diagnosticPhone} 
@@ -438,18 +439,18 @@ const PlanAuth = () => {
                 </select>
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="diagnosticDescription" className="font-bold text-slate-700">Informações sobre sua empresa (Para reunião presencial)</Label>
+                <Label htmlFor="diagnosticDescription" className="font-bold text-slate-700">Informações sobre sua empresa (Para diagnóstico presencial)</Label>
                 <textarea 
                   id="diagnosticDescription" 
                   value={diagnosticData.diagnosticDescription} 
                   onChange={(e) => setDiagnosticData({ ...diagnosticData, diagnosticDescription: e.target.value })} 
-                  placeholder="Ex: endereço da empresa, telefone, site, horário de funcionamento, bairro em Juiz de Fora..." 
+                  placeholder="Ex: endereço, telefone, site, horário de funcionamento, bairro em JF, se já tem anúncios online..." 
                   required 
                   className="min-h-24 w-full rounded-md border border-slate-200 bg-slate-50 p-3 text-sm text-slate-900 outline-none focus:bg-white focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all placeholder:text-slate-400" 
                 />
               </div>
               <Button type="submit" disabled={submitting} className="w-full h-14 bg-[#f6bf22] font-black text-[#08111d] hover:bg-[#ffd24d]">
-                {submitting ? "Enviando..." : "SOLICITAR REUNIÃO PRESENCIAL EM JF"}
+                {submitting ? "Enviando..." : "SOLICITAR DIAGNÓSTICO PRESENCIAL EM JF"}
               </Button>
               <div className="flex items-center justify-center gap-2 text-[10px] text-slate-500 sm:text-xs">
                 <ShieldCheck className="h-4 w-4" />
@@ -488,10 +489,10 @@ const PlanAuth = () => {
               <MapPin className="h-6 w-6 text-[#f6bf22]" />
             </div>
             <p className="max-w-md text-lg font-bold sm:text-xl">
-              Sua empresa no Google em Juiz de Fora. <span className="text-[#f6bf22]">Reunião presencial gratuita.</span>
+              Google Meu Negócio + Tráfego Pago em Juiz de Fora. <span className="text-[#f6bf22]">Diagnóstico presencial gratuito.</span>
             </p>
           </div>
-          <p className="max-w-xs text-center text-sm text-white/70 lg:text-left">Agende uma reunião presencial em Juiz de Fora e apareça para milhares de clientes no Google Maps e nas pesquisas.</p>
+          <p className="max-w-xs text-center text-sm text-white/70 lg:text-left">Agende um diagnóstico presencial em Juiz de Fora e apareça para milhares de clientes com SEO local e tráfego pago bem feito.</p>
         </div>
       </footer>
     </div>
