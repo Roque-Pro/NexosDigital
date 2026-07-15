@@ -193,7 +193,7 @@ const PaidTraffic = () => {
               Blog
             </button>
             <Button
-              onClick={() => navigate("/diagnostico-gratuito")}
+              onClick={() => navigate("/google-meu-negocio-juiz-de-fora")}
               variant="outline"
               className="rounded-full border-orange-200 bg-orange-50 px-6 font-bold text-orange-700 hover:bg-orange-600 hover:text-white gap-2 transition-all"
             >
@@ -283,7 +283,7 @@ const PaidTraffic = () => {
             <div className="flex flex-col gap-2 pt-2">
               <Button
                 onClick={() => {
-                  navigate("/diagnostico-gratuito");
+                  navigate("/google-meu-negocio-juiz-de-fora");
                   setMobileMenuOpen(false);
                 }}
                 variant="outline"

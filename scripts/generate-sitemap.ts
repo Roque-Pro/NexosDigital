@@ -14,7 +14,7 @@ const domain = 'https://www.technexos.com.br'
 
 const staticRoutes = [
   { path: '', priority: '1.0', changefreq: 'weekly' },
-  { path: '/diagnostico-gratuito', priority: '0.95', changefreq: 'weekly' },
+  { path: '/google-meu-negocio-juiz-de-fora', priority: '0.95', changefreq: 'weekly' },
   { path: '/autoclub-pro', priority: '0.9', changefreq: 'weekly' },
   { path: '/about-me', priority: '0.8', changefreq: 'weekly' },
   { path: '/trafego-pago', priority: '0.85', changefreq: 'weekly' },

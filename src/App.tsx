@@ -51,6 +51,7 @@ const App = () => (
               <Route path="/" element={<Landing />} />
               <Route path="/auth" element={<Auth />} />
               <Route path="/diagnostico-gratuito" element={<PlanAuth />} />
+              <Route path="/google-meu-negocio-juiz-de-fora" element={<PlanAuth />} />
               <Route path="/autoclub-pro" element={<AutoClubPro />} />
               <Route path="/about-me" element={<AboutMe />} />
               <Route path="/trafego-pago" element={<PaidTraffic />} />

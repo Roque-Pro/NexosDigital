@@ -120,11 +120,11 @@ const PlanAuth = () => {
     ogTitle: "Google Meu Negócio em Juiz de Fora | Cadastre sua Empresa no Google | TechNexos",
     ogDescription:
       "Google Meu Negócio em Juiz de Fora: cadastre sua empresa no Google Maps, apareça nas buscas e atraia mais clientes. SEO local + tráfego pago com atendimento presencial.",
-    ogUrl: "https://www.technexos.com.br/diagnostico-gratuito",
+    ogUrl: "https://www.technexos.com.br/google-meu-negocio-juiz-de-fora",
     twitterTitle: "Google Meu Negócio em Juiz de Fora | Cadastre sua Empresa no Google",
     twitterDescription:
       "Especialistas em Google Meu Negócio em Juiz de Fora. Cadastramos sua empresa no Google Maps, otimizamos seu perfil e criamos campanhas de tráfego pago.",
-    canonicalUrl: "https://www.technexos.com.br/diagnostico-gratuito",
+    canonicalUrl: "https://www.technexos.com.br/google-meu-negocio-juiz-de-fora",
     schema: {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
@@ -278,8 +278,8 @@ const PlanAuth = () => {
             <button onClick={() => navigate("/")} className="text-sm font-bold text-slate-600 hover:text-blue-600">Página Principal</button>
             <button onClick={() => navigate("/about-me")} className="text-sm font-bold text-slate-600 hover:text-blue-600">Especialista</button>
             <button onClick={() => navigate("/autoclub-pro")} className="text-sm font-bold text-slate-600 hover:text-blue-600">AutoClub Pro</button>
-            <Button onClick={() => navigate("/diagnostico-gratuito")} variant="outline" className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700">
-              Cadastrar Empresa
+            <Button onClick={() => navigate("/google-meu-negocio-juiz-de-fora")} variant="outline" className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700">
+              Google Meu Negócio
             </Button>
           </nav>
 
@@ -293,8 +293,8 @@ const PlanAuth = () => {
             <button onClick={() => { navigate("/"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">Página Principal</button>
             <button onClick={() => { navigate("/about-me"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">Especialista</button>
             <button onClick={() => { navigate("/autoclub-pro"); setMobileMenuOpen(false); }} className="block w-full p-2 text-left font-bold text-slate-700">AutoClub Pro</button>
-            <Button onClick={() => { navigate("/diagnostico-gratuito"); setMobileMenuOpen(false); }} variant="outline" className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700">
-              Cadastrar Empresa
+            <Button onClick={() => { navigate("/google-meu-negocio-juiz-de-fora"); setMobileMenuOpen(false); }} variant="outline" className="w-full border-blue-200 bg-blue-50 py-6 font-bold text-blue-700">
+              Google Meu Negócio
             </Button>
           </div>
         )}
@@ -366,6 +366,68 @@ const PlanAuth = () => {
                 <h3 className="text-lg font-bold leading-tight text-[#0b1320]">{title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-600">{description}</p>
               </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f4f6fb] px-4 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Por que ter <span className="text-[#1a64d6]">Google Meu Negócio</span> é essencial para sua empresa?</h2>
+            <p className="mt-4 text-lg text-slate-700">
+              96% dos consumidores buscam por empresas locais na internet. Sem um perfil no Google Meu Negócio, sua empresa simplesmente não existe para quem pesquisa no Google ou no Maps. Nós criamos, otimizamos e gerenciamos seu perfil para que você apareça nas primeiras posições em Juiz de Fora e região.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <Search className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Mais Visibilidade Local</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Apareça no "pacote local" do Google (aquele mapa com 3 empresas em destaque) quando alguém pesquisar por seu segmento em Juiz de Fora. É a vitrine mais valiosa para negócios locais.</p>
+            </div>
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <TrendingUp className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Clientes Qualificados</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Quem busca no Google já está procurando ativamente pelo seu serviço. São leads quentes que ligam, mandam WhatsApp ou pedem rota até seu endereço. Nós potencializamos isso com Google Ads.</p>
+            </div>
+            <div className="rounded-[20px] border border-slate-100 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50">
+                <ShieldCheck className="h-6 w-6 text-blue-600" />
+              </div>
+              <h3 className="mb-2 text-lg font-bold text-[#0b1320]">Credibilidade e Confiança</h3>
+              <p className="text-sm leading-relaxed text-slate-600">Empresas com perfil verificado no Google Meu Negócio transmitem mais confiança. Avaliações, fotos, horários e endereço confirmado aumentam a taxa de conversão de visitantes em clientes.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-4 py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-black leading-tight text-[#0b1320] sm:text-4xl">Para quem é o <span className="text-[#1a64d6]">Google Meu Negócio</span> em Juiz de Fora?</h2>
+            <p className="mt-4 text-lg text-slate-700">Nosso serviço é ideal para qualquer negócio que atende clientes presencialmente ou por região em Juiz de Fora e cidades próximas:</p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Clínicas e Consultórios", desc: "Médicos, dentistas, psicólogos, fisioterapeutas e demais profissionais de saúde." },
+              { title: "Restaurantes e Bares", desc: "Estabelecimentos de alimentação que querem ser encontrados no Maps." },
+              { title: "Lojas e Varejo", desc: "Comércios físicos que precisam de visibilidade local e tráfego de pedestres." },
+              { title: "Prestadores de Serviço", desc: "Advogados, contadores, encanadores, eletricistas, fotógrafos e muito mais." },
+              { title: "Oficinas e Autopeças", desc: "Serviços automotivos que dependem de busca local por proximidade." },
+              { title: "Indústrias e Distribuidoras", desc: "Negócios B2B que atendem na região de Juiz de Fora." },
+            ].map(({ title, desc }) => (
+              <div key={title} className="flex items-start gap-3 rounded-xl border border-slate-100 bg-[#f8fafc] p-4">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
+                <div>
+                  <p className="font-bold text-[#0b1320]">{title}</p>
+                  <p className="text-sm text-slate-600">{desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -465,7 +527,7 @@ const PlanAuth = () => {
 
       <section className="bg-white px-4 py-16 lg:px-10">
         <section className="faq-section">
-          <h2>Dúvidas Frequentes sobre como Cadastrar sua Empresa no Google</h2>
+          <h2>Dúvidas Frequentes sobre Google Meu Negócio e Cadastro de Empresas no Google</h2>
           
           <div className="faq-item">
             <h3>Como cadastrar minha empresa no Google?</h3>
@@ -480,6 +542,26 @@ const PlanAuth = () => {
           <div className="faq-item">
             <h3>Como cadastrar minha empresa no Google gratuitamente?</h3>
             <p>O processo de cadastrar e colocar a sua empresa no Google é 100% gratuito. Você não precisa pagar nenhuma taxa de adesão ou mensalidade para ter sua empresa listada nas pesquisas orgânicas ou no Google Maps. Apenas certifique-se de utilizar os canais oficiais do Google Perfil de Empresa para realizar o seu registro de forma segura.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Google Meu Negócio é pago?</h3>
+            <p>Não. O Google Meu Negócio (Google Perfil de Empresa) é uma ferramenta 100% gratuita do Google. Você nunca precisará pagar para criar ou manter sua ficha cadastral. O que oferecemos é o serviço especializado de criação, otimização e gerenciamento do seu perfil, além de campanhas de Google Ads para potencializar seus resultados — mas a plataforma em si é gratuita.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Quanto tempo leva para minha empresa aparecer no Google?</h3>
+            <p>Após criar e enviar sua ficha para verificação, o Google geralmente leva de 3 a 7 dias úteis para ativar seu perfil. Com nosso acompanhamento presencial em Juiz de Fora, agilizamos todo o processo para que sua empresa apareça no Google Maps e nas buscas o mais rápido possível.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>O que é SEO local e como ajuda minha empresa em Juiz de Fora?</h3>
+            <p>SEO local é o conjunto de técnicas para otimizar seu Google Meu Negócio e seu site para aparecer nas primeiras posições quando alguém busca por serviços na sua região. Em Juiz de Fora, isso significa que sua empresa vai aparecer para clientes que estão próximos e prontos para comprar. Inclui otimização de palavras-chave locais, fotos, avaliações e consistência de informações.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Vale a pena anunciar no Google Ads para meu negócio local?</h3>
+            <p>Sim. O Google Ads permite que sua empresa apareça no topo das pesquisas para palavras-chave específicas em Juiz de Fora. Diferente do resultado orgânico (que leva tempo para rankear), os anúncios pagos trazem resultados imediatos. Combinamos Google Meu Negócio (orgânico) com Google Ads (pago) para uma estratégia completa de presença digital.</p>
           </div>
         </section>
       </section>

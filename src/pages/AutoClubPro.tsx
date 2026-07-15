@@ -170,7 +170,7 @@ const AutoClubPro = () => {
                             Blog
                         </button>
                         <Button
-                            onClick={() => navigate("/diagnostico-gratuito")}
+                            onClick={() => navigate("/google-meu-negocio-juiz-de-fora")}
                             variant="outline"
                             className="rounded-full border-blue-200 bg-blue-50 px-6 font-bold text-blue-700 hover:bg-blue-600 hover:text-white gap-2 transition-all"
                         >
@@ -261,7 +261,7 @@ const AutoClubPro = () => {
                         <div className="flex flex-col gap-2 pt-2">
                             <Button
                                 onClick={() => {
-                                    navigate("/diagnostico-gratuito");
+                                    navigate("/google-meu-negocio-juiz-de-fora");
                                     setMobileMenuOpen(false);
                                 }}
                                 variant="outline"

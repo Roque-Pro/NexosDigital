@@ -103,7 +103,7 @@ const BlogAdmin = () => {
     const generateSitemap = async () => {
         try {
             const baseUrl = "https://www.technexos.com.br";
-            const staticPages = ["", "/diagnostico-gratuito", "/autoclub-pro", "/about-me", "/blog"];
+            const staticPages = ["", "/google-meu-negocio-juiz-de-fora", "/autoclub-pro", "/about-me", "/blog"];
             const now = new Date().toISOString().split("T")[0];
 
             let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n`;
@@ -114,7 +114,7 @@ const BlogAdmin = () => {
                 sitemap += `    <loc>${baseUrl}${route}</loc>\n`;
                 sitemap += `    <lastmod>${now}</lastmod>\n`;
                 sitemap += `    <changefreq>weekly</changefreq>\n`;
-                sitemap += `    <priority>${route === "" ? "1.0" : route === "/diagnostico-gratuito" ? "0.95" : route === "/autoclub-pro" ? "0.9" : route === "/about-me" ? "0.8" : "0.7"}</priority>\n`;
+                sitemap += `    <priority>${route === "" ? "1.0" : route === "/google-meu-negocio-juiz-de-fora" ? "0.95" : route === "/autoclub-pro" ? "0.9" : route === "/about-me" ? "0.8" : "0.7"}</priority>\n`;
                 sitemap += `  </url>\n`;
             });
 

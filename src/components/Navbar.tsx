@@ -101,7 +101,7 @@ export default function Navbar() {
           ))}
           
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm" className="rounded-full border-primary/20 bg-primary/5 font-bold text-primary hover:bg-primary hover:text-white transition-all gap-2" onClick={() => navigate("/diagnostico-gratuito")}>
+            <Button variant="outline" size="sm" className="rounded-full border-primary/20 bg-primary/5 font-bold text-primary hover:bg-primary hover:text-white transition-all gap-2" onClick={() => navigate("/google-meu-negocio-juiz-de-fora")}>
               <Sparkles className="w-4 h-4" /> + Clientes?
             </Button>
             <Button size="sm" className="glow-sm gap-2 rounded-full" asChild>
@@ -182,7 +182,7 @@ export default function Navbar() {
               )
             ))}
             <div className="flex flex-col gap-2 pt-4 border-t border-border/50">
-              <Button className="glow-sm gap-2 w-full rounded-xl py-6 text-lg font-bold" onClick={() => { navigate("/diagnostico-gratuito"); setOpen(false); }}>
+              <Button className="glow-sm gap-2 w-full rounded-xl py-6 text-lg font-bold" onClick={() => { navigate("/google-meu-negocio-juiz-de-fora"); setOpen(false); }}>
                 <Sparkles className="w-5 h-5" /> + Clientes?
               </Button>
               <Button variant="outline" className="gap-2 w-full rounded-xl py-6 text-lg font-bold" asChild>

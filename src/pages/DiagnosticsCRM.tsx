@@ -219,7 +219,7 @@ const DiagnosticsCRM = () => {
     const generateSitemap = async () => {
         try {
             const baseUrl = "https://www.technexos.com.br";
-            const staticPages = ["", "/diagnostico-gratuito", "/autoclub-pro", "/about-me", "/blog"];
+            const staticPages = ["", "/google-meu-negocio-juiz-de-fora", "/autoclub-pro", "/about-me", "/blog"];
             const now = new Date().toISOString().split('T')[0];
             
             let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;

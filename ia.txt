@@ -1,21 +1,3125 @@
-No arquivo src/pages/BureauAudacesModelagem.tsx, faça as seguintes alterações:
+sua sugestao n 1 - 
 
-1. Nos imports, substitua:
-   import heroAudaces from "@/img/moldes/molde tela audaces.jpg";
-   por:
-   import heroAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
+Palavras-chave que você forneceu
+cadastrar empresa no google
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 3,45
+R$ 5.072,60
+Ideias de palavra-chave
+google meu negócio cadastrar
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 9,23
+R$ 5.072,60
+como cadastrar minha empresa no google
+10 – 100
++∞
+0%
+Média
+—
+—
+—
+como cadastrar empresa no google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+cadastrar minha empresa no google
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+como colocar sua empresa no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+cadastrar loja no google
+10 – 100
+0%
++∞
+Média
+—
+—
+—
+como cadastrar loja no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+cadastrar no google meu negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+como cadastrar no google meu negócio
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+como cadastrar a empresa no google
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+cadastrar meu negócio no google
+10 – 100
++∞
+0%
+Baixa
+—
+—
+—
+como cadastrar sua empresa no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como cadastrar minha loja no google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+cadastrar minha loja no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como se cadastrar no google meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+cadastro google meu negócio
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+google meu negócio cadastrar grátis
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+como me cadastrar no google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+cadastro de empresa no google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+cadastrar empresa no google maps
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+cadastrar estabelecimento no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar meu negócio no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+cadastrar comercio no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+incluir empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar comercio no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar meu estabelecimento no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google cadastrar empresa
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar empresa no google grátis
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer cadastro no google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar sua empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar a loja no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar minha empresa no google grátis
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+cadastrar a empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar minha empresa no google gratuitamente
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como faço para colocar minha empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar meu comercio no google
+0 – 10
+—
+—
+—
+—
+—
+—
+como cadastrar a minha empresa no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google empresa cadastro
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar sua loja no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar estabelecimento no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar empresa no google meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+como faço para cadastrar minha empresa no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar um estabelecimento no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+colocar meu negócio no google maps
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+como colocar empresa no google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+cadastrar loja no google gratis
+0 – 10
+—
+—
+—
+—
+—
+—
+como colocar seu negócio no google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como colocar meu negócio no google maps
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+cadastrar empresa google
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 3,45
+R$ 5.072,60
+cadastre sua empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar seu negócio no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google maps cadastrar empresa
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+cadastro da empresa no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar minha empresa no google maps
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+cadastrar minha empresa no google gratis
+0 – 10
+—
+—
+—
+—
+—
+—
+cadastrar empresa no google grátis
+10 – 100
+0%
+0%
+—
+—
+—
+—
+quero cadastrar minha empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar minha empresa para aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar minha empresa no google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar minha empresa no google meu negócio
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+cadastrar negócio no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar meu estabelecimento no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar no google meu negócio grátis
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar o meu estabelecimento no google
+0 – 10
+—
+—
+—
+—
+—
+—
+como cadastrar empresa no google meu negócio
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+como cadastrar empresa para aparecer no google
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+cadastrar loja google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar meu negócio no google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar um comércio no google
+0 – 10
+—
+—
+—
+—
+—
+—
+como cadastrar meu negócio no google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar meu serviço no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar empresa google maps
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como faço para aparecer minha empresa no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar a empresa no google meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google meu negócio como cadastrar
+10 – 100
++∞
+0%
+Alta
+—
+—
+—
+cadastrar a empresa no google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar no google empresa
+0 – 10
+—
+—
+—
+—
+—
+—
+cadastro google empresa
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar minha empresa para aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+cadastro google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+cadastrar meu comercio no google
+0 – 10
+—
+—
+—
+—
+—
+—
+cadastro no google maps
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como cadastrar empresa google maps
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como cadastrar seu estabelecimento no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio criar ficha cadastral
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio ficha cadastral
+0 – 10
+—
+—
+—
+—
+—
+—
+google my business cadastro
+0 – 10
+0%
+0
 
-2. Remova a linha:
-   import logoAudaces from "@/img/moldes/logo audaces ( no hero da pagina e substitua a atual ).png";
 
-3. Adicione:
-   import moldesAntigos from "@/img/moldes/moldes antigos.jpg";
+-------------------------
+sua sugestao n 2 - 
 
-4. Na hero section, substitua o bloco do <img> principal e o overlay do logo por apenas:
-   <img src={heroAudaces} alt="Logo Audaces" className="w-full h-72 sm:h-80 lg:h-96 object-contain rounded-t-2xl bg-slate-900 p-8" />
+Palavras-chave que você forneceu
+google meu negocio
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,81
+Ideias de palavra-chave
+google meu negócio
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,81
+meu negócio google
+10 – 100
++900%
+0%
+Baixa
+—
+R$ 4,42
+R$ 41,24
+google meu negócio entrar
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+meu negócio
+100 – 1 mil
+0%
+0%
+Baixa
+—
+R$ 5,38
+R$ 36,75
+google meu negócio como funciona
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+google meu negócio gratuito
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 2,19
+R$ 34,92
+google meus negócios
+10 – 100
++900%
+0%
+Baixa
+—
+R$ 4,42
+R$ 41,24
+meu negocio
+100 – 1 mil
+0%
+0%
+Baixa
+—
+R$ 5,38
+R$ 36,75
+google meu negócio cadastro
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 9,23
+R$ 5.072,60
+google meu negócio grátis
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+meu negócio no google
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,81
+cadastro no google meu negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+site google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+google meu negócio business
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+cadastro google meu negócio
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+site do google meu negócio
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+google negócio local
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+business google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+negócio local google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+meu negocio google
+10 – 100
++900%
+0%
+Baixa
+—
+R$ 4,42
+R$ 41,24
+meu google negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+google meu negócio site
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google negócio site
+10 – 100
+0%
+0%
+—
+—
+—
+—
+pagina google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google negócio
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 3,66
+R$ 2.880,71
+googlemeunegocio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meus negócios google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+site no google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+app google meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google o meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+googlemeu negocio
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+google meu negócio como fazer
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+google ads meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+meu google negocios
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meu negócio google entrar
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google maps meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+meu negócio google maps
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meu negócio entrar
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google meu negócio é pago
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+googlemeu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+entrar no google meu negócio
+10 – 100
++∞
+0%
+Baixa
+—
+—
+—
+meu google meu negócio
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+google meu negócio o que é
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+meu negócio no google maps
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google negocio local
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio acessar
+10 – 100
+0%
+0%
+—
+—
+—
+—
+consultoria google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio valor
+0 – 10
+—
+—
+—
+—
+—
+—
+google meu negócio é gratuito
+10 – 100
+0%
+0%
+—
+—
+—
+—
+negócio google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google bom negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+o google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negocio gratis
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+meu negócio do google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio site gratuito
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google meu negócio ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google eu negocio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio 2023
+0 – 10
+0%
+0%
+—
+—
+—
+—
+ferramenta google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google com business meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+produtos google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio com
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google para negócios
+10 – 100
+0%
+0%
+—
+—
+—
+—
+acessar google meu negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+google com meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+ficha google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+entrar google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+negócio no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio para loja online
+0 – 10
+0%
+0%
+—
+—
+—
+—
+www google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+meu negócio google gratis
+0 – 10
+—
+—
+—
+—
+—
+—
+google meu
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google com br meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads e google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+meu negócio site
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio preço
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio localização
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio maps
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google meu negocio app
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+meunegocio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu serviço
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google seu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negócio 2022
+0 – 10
+0%
+0%
+—
+—
+—
+—
+0800 google meu negocio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+acessar o google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+ads meu negocio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+anderson melo google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+business meu negocio
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+ficha do google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+fotos google meu negocio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+g meu negocio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+gmail meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google business meu negocio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google com meu negocio
+0 – 10
+—
+—
+—
+—
+—
+—
+google como fazer um negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google maps meu negocio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google maps negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google meu negocio 0800
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negocio 2022
+0 – 10
+0%
 
-5. Na seção "Digitalização" (que tem o badge vermelho "Acervo Digital"), troque:
-   src={encaixePdf}
-   por:
-   src={moldesAntigos}
-   e ajuste o alt para "Moldes físicos antigos digitalizados em PDF"
+
+--------------
+
+sua sugestao n 3 - 
+
+Palavras-chave que você forneceu
+trafego pago
+100 – 1 mil
+0%
+0%
+Média
+—
+R$ 3,03
+R$ 18,69
+google ads
+1 mil – 10 mil
+0%
+0%
+Baixa
+—
+R$ 3,05
+R$ 5.077,80
+anunciar no google
+10 – 100
+0%
+0%
+Alta
+—
+R$ 8,77
+R$ 2.434,82
+Ideias de palavra-chave
+adwords
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+googleads
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+google anuncios
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+anuncio google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+como anunciar no google
+10 – 100
+0%
+0%
+Média
+—
+R$ 4,44
+R$ 5.077,80
+ads anuncios
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google leads
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+adsgoogle
+10 – 100
+0%
+0%
+—
+—
+—
+—
+keywords google
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google sem
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+como fazer anuncio no google
+10 – 100
+0%
+0%
+Alta
+—
+R$ 3,10
+R$ 3.682,91
+trafego pago instagram
+10 – 100
+0%
+0%
+Alta
+—
+R$ 2,69
+R$ 12,37
+google anuncio
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google ads como funciona
+10 – 100
+0%
+0%
+Média
+—
+R$ 0,87
+R$ 5.077,80
+google hotel ads
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+google google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads shopping
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como anunciar no google ads
+10 – 100
+0%
+0%
+Alta
+—
+—
+—
+como colocar anuncio no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+anuncios no google
+10 – 100
++∞
++∞
+Alta
+—
+—
+—
+como anunciar minha empresa no google
+10 – 100
++∞
+0%
+Alta
+—
+—
+—
+ads adwords
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google ads web
+10 – 100
++∞
+0%
+Média
+—
+—
+—
+como divulgar no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+anuncio do google
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+como anunciar no google meu negócio
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+search for ads
+0 – 10
+0%
+0%
+—
+—
+—
+—
+anunciar no google meu negócio
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+publicidade google
+10 – 100
++∞
++∞
+Alta
+—
+—
+—
+google ads adwords
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer anúncio no google
+10 – 100
+0%
+0%
+Alta
+—
+R$ 3,10
+R$ 3.682,91
+fazer anuncio no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+trafego pago como funciona
+10 – 100
+0%
+0%
+Média
+—
+R$ 1,85
+R$ 18,40
+marketing google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+tráfego pago para iniciantes
+10 – 100
+0%
+0%
+Alta
+—
+—
+—
+anúncio no google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+anuncios google ads
+10 – 100
++∞
+0%
+Baixa
+—
+—
+—
+google ads para afiliados
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como divulgar minha empresa no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google anúncios
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+ad sense
+100 – 1 mil
+-90%
+0%
+Baixa
+—
+R$ 0,55
+R$ 37,46
+anunciar minha empresa no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+anúncios google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+anunciar empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+anunciar no google ads
+10 – 100
+0%
+0%
+Alta
+—
+—
+—
+como fazer propaganda no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads de
+0 – 10
+—
+—
+—
+—
+—
+—
+tráfego pago instagram
+10 – 100
+0%
+0%
+Alta
+—
+R$ 2,69
+R$ 12,37
+google ads4
+10 – 100
+0%
+0%
+—
+—
+—
+—
+divulgar no google
+10 – 100
++∞
+0%
+Alta
+—
+—
+—
+google ads firma
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer um anuncio no google
+10 – 100
+0%
+0%
+Alta
+—
+R$ 3,10
+R$ 3.682,91
+anunciar google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+trafego organico
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+adwords marketing
+0 – 10
+0%
+0%
+—
+—
+—
+—
+anuncio patrocinado google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+adsense youtube
+10 – 100
+0%
+0%
+Média
+—
+R$ 1,60
+R$ 4,38
+divulgar minha empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+quanto custa anunciar no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+como colocar um anuncio no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+colocar anuncio no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+trafego pago google ads
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+como criar um anuncio no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+anunciar google ads
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+anuncio pago google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como colocar anúncio no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+google ads 2023
+0 – 10
+0%
+0%
+—
+—
+—
+—
+googleadsense
+100 – 1 mil
+0%
+0%
+Baixa
+—
+R$ 1,65
+R$ 114,19
+anúncio google meu negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+freelancer google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads 2022
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google ads site
+10 – 100
+0%
+0%
+—
+—
+—
+—
+anunciar google meu negócio
+10 – 100
+0%
++∞
+Alta
+—
+R$ 9,65
+R$ 5.077,80
+trafego pago facebook
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+anuncios facebook ads
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google shopping anunciar
+10 – 100
++∞
++∞
+Alta
+—
+—
+—
+criar anúncio no google
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+google ads pro
+0 – 10
+0%
+0%
+—
+—
+—
+—
+add setting google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+googlegoogle ads
+10 – 100
+0%
+0%
+Média
+—
+R$ 3,85
+R$ 5.077,80
+quero anunciar no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+criar campanha google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+https google ads
+0 – 10
+—
+—
+—
+—
+—
+—
+como pagar anuncio no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como publicar no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+anunciar site no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+especialista em google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google ads preço
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+google ads anuncios
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+especialista google ads
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+como vender no google ads
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google ads 1200
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como anunciar no youtube ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+anuncio google maps
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+como anunciar empresa no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meus anuncios google
+10 – 100
+0%
+
+
+-------------
+
+
+sua sugestao n 4 - 
+
+Palavras-chave que você forneceu
+seo local
+10 – 100
++∞
+0%
+Baixa
+—
+—
+—
+aparecer no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+empresa no google
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+Ideias de palavra-chave
+google meu negócio
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,85
+google meu negocio
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,85
+meu negócio google
+10 – 100
++900%
+0%
+Baixa
+—
+R$ 4,42
+R$ 41,29
+google empresa
+10 – 100
++900%
++900%
+Baixa
+—
+R$ 2,68
+R$ 49,45
+google para empresas
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google negocio
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+meu negócio
+100 – 1 mil
+0%
+0%
+Baixa
+—
+R$ 5,39
+R$ 36,79
+minha empresa no google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google meu negócio como funciona
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+sua empresa no google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+como aparecer no google
+10 – 100
+0%
+0%
+Média
+—
+—
+—
+como fazer minha empresa aparecer no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+meu negocio
+100 – 1 mil
+0%
+0%
+Baixa
+—
+R$ 5,39
+R$ 36,79
+google minha empresa
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+meu negócio no google
+1 mil – 10 mil
+0%
++900%
+Baixa
+—
+R$ 3,48
+R$ 39,85
+site google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+google meu negócio business
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+minha empresa no google maps
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+como fazer meu site aparecer no google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google ads empresa
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer minha loja aparecer no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+empresa de google ads
+0 – 10
+0%
+0%
+—
+—
+—
+—
+empresa google ads
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar meu site no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+empresa google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+google my business como funciona
+0 – 10
+0%
+0%
+—
+—
+—
+—
+empresa especializada em google ads
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google ads empresas
+0 – 10
+—
+—
+—
+—
+—
+—
+site do google meu negócio
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+como fazer meu negócio aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google negócio local
+10 – 100
+0%
++∞
+Baixa
+—
+—
+—
+minha loja no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como fazer para minha empresa aparecer no google
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+como fazer minha empresa aparecer em primeiro no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+business google meu negócio
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como fazer seu site aparecer no google
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+como fazer sua empresa aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+negócio local google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu local
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+seo google meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meu negocio google
+10 – 100
++900%
+0%
+Baixa
+—
+R$ 4,42
+R$ 41,29
+negócio site google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+meu google negócio
+10 – 100
+-100%
+-100%
+—
+—
+—
+—
+minha empresa google
+10 – 100
+0%
+0%
+Baixa
+—
+—
+—
+como fazer meu anuncio aparecer no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio site
+10 – 100
+0%
+0%
+—
+—
+—
+—
+faça sua empresa crescer com google ads
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google ads para empresas
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como faço para minha empresa aparecer no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer o site aparecer no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+google negócio
+10 – 100
+0%
+0%
+Baixa
+—
+R$ 3,67
+R$ 2.883,66
+como aparecer no google gratuitamente
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como colocar minha empresa em primeiro lugar no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como aparecer na pesquisa do google
+10 – 100
++∞
+0%
+Baixa
+—
+—
+—
+como fazer a empresa aparecer no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como minha empresa aparece no google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+meu google empresa
+0 – 10
+0%
+0%
+—
+—
+—
+—
+site no google meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer minha empresa aparecer na pesquisa do google
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+como fazer meu site aparecer no google em primeiro
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar minha empresa em destaque no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como aparecer minha empresa no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como aparecer nas pesquisas do google
+10 – 100
+-100%
+0%
+—
+—
+—
+—
+colocar meu site no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como aparecer no google meu negócio
+10 – 100
++∞
++∞
+Média
+—
+—
+—
+como colocar meu site na primeira pagina do google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+google o meu negócio
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer sua loja aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer para minha loja aparecer no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como colocar anuncio no topo do google
+0 – 10
+—
+—
+—
+—
+—
+—
+como colocar meu anuncio no topo do google
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+como colocar minha empresa no topo do google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como aparecer na primeira página do google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer a minha empresa aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar minha empresa para aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer meu site aparecer na pesquisa do google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como aparecer em primeiro lugar no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer o nome da minha empresa aparecer no google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer o seu site aparecer na busca do google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como deixar meu anuncio na primeira pagina do google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como fazer meu site aparecer na primeira pagina do google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como deixar minha empresa no topo do google
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+google ads meu negócio
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como colocar meu site no topo do google
+10 – 100
++∞
++∞
+Alta
+—
+—
+—
+meu google negocios
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como colocar seu site no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google maps meu negócio
+10 – 100
++∞
++∞
+Baixa
+—
+—
+—
+como deixar minha empresa visivel no google
+10 – 100
+0%
++∞
+Média
+—
+—
+—
+serviços google para empresas
+0 – 10
+0%
+0%
+—
+—
+—
+—
+como ficar em primeiro lugar no google
+0 – 10
+0%
+-100%
+—
+—
+—
+—
+como fazer minha empresa aparecer no google gratuitamente
+10 – 100
+0%
+0%
+—
+—
+—
+—
+meu negócio google maps
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como fazer empresa aparecer no google
+0 – 10
+0%
+0%
+—
+—
+—
+—
+google meu negócio é pago
+10 – 100
+0%
+-100%
+—
+—
+—
+—
+colocar meu site no topo do google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como aparecer na busca do google
+10 – 100
+0%
+0%
+—
+—
+—
+—
+como sua empresa aparecer no google
+10 – 100
+0%
+
+
+
+

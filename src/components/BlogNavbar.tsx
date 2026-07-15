@@ -124,7 +124,7 @@ export default function BlogNavbar() {
                     </Button>
                     
                     <Button
-                        onClick={() => navigate("/diagnostico-gratuito")}
+                        onClick={() => navigate("/google-meu-negocio-juiz-de-fora")}
                         variant="outline"
                         size="sm"
                         className="hidden lg:inline-flex rounded-full border-blue-200 bg-blue-50 font-bold text-blue-600 hover:bg-blue-600 hover:text-white transition-all gap-2"
@@ -251,7 +251,7 @@ export default function BlogNavbar() {
                             <div className="flex flex-col gap-2 pt-2">
                                 <Button
                                     onClick={() => {
-                                        navigate("/diagnostico-gratuito");
+                                        navigate("/google-meu-negocio-juiz-de-fora");
                                         setMobileMenuOpen(false);
                                     }}
                                     className="bg-blue-50 text-blue-600 hover:bg-blue-100 font-bold border border-blue-200 py-6 rounded-xl text-base gap-2"
