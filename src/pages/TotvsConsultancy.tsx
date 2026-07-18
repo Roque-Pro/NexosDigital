@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { 
-  Settings, 
   Code2, 
-  Zap, 
-  FileCode2, 
   Users, 
   CheckCircle2, 
   MessageCircle, 
@@ -20,32 +17,32 @@ import roqueImage from "@/img/roque-rafael-proenca-consultor.png";
 
 const TotvsConsultancy = () => {
   useSEO({
-    title: "Consultoria TOTVS Fluig & RM | Especialista Roque Rafael Proença",
-    description: "Consultoria técnica especializada em TOTVS Fluig e RM. Automação de processos (BPM), Fórmulas Visuais, suporte estratégico e desenvolvimento sob medida para o seu ERP.",
+    title: "Consultoria Fluig Especialista | Desenvolvedor Fluig Sob Demanda",
+    description: "Consultoria Fluig especializada com Roque Rafael. Destrave processos BPMN, datasets lentos e integrações API no TOTVS Fluig. Atendimento direto com o desenvolvedor, sem burocracia.",
     keywords: [
-      "Consultoria TOTVS",
+      "Consultoria Fluig",
+      "Desenvolvedor Fluig",
+      "Suporte Fluig",
       "TOTVS Fluig",
-      "TOTVS RM",
-      "Fórmulas Visuais RM",
-      "BPM Fluig",
-      "Automação de Processos",
+      "BPMN Fluig",
+      "Datasets Fluig",
+      "Widgets Customizados Fluig",
+      "integração API REST SOAP Fluig",
+      "especialista fluig",
       "Roque Rafael Proença",
-      "especialista totvs",
-      "suporte rm totvs",
-      "desenvolvimento fluig",
-      "integração erp totvs"
+      "consultor fluig sob demanda"
     ],
-    ogTitle: "Consultoria Especialista TOTVS Fluig & RM | Roque Pro",
-    ogDescription: "Potencialize seu ERP com Fórmulas Visuais, BPM e suporte estratégico de alto nível.",
+    ogTitle: "Consultoria Fluig | Desenvolvedor Especialista Sob Demanda",
+    ogDescription: "Destrave seus processos, datasets e integrações no TOTVS Fluig sem a burocracia das grandes consultorias.",
     ogUrl: "https://www.technexos.com.br/consultoria-totvs",
-    twitterTitle: "Consultoria Especialista TOTVS Fluig & RM",
-    twitterDescription: "Transformando o ecossistema TOTVS em vantagem competitiva para sua empresa.",
+    twitterTitle: "Consultoria Fluig Especialista",
+    twitterDescription: "Atendimento direto com desenvolvedor especialista Fluig. Resultado rápido, sem intermediários.",
     canonicalUrl: "https://www.technexos.com.br/consultoria-totvs",
     schema: {
       "@context": "https://schema.org",
       "@type": "ConsultingService",
-      "name": "Consultoria TOTVS Fluig & RM",
-      "description": "Serviços especializados em customização e suporte para sistemas TOTVS.",
+      "name": "Consultoria Fluig Especializada",
+      "description": "Serviços especializados em desenvolvimento e suporte para plataforma TOTVS Fluig, incluindo BPMN, datasets, widgets customizados e integrações API.",
       "provider": {
         "@type": "Person",
         "name": "Roque Rafael Proença"
@@ -61,21 +58,21 @@ const TotvsConsultancy = () => {
 
   const cases = [
     {
-      title: "Automação de Workflow de Compras",
+      title: "Automação de Workflow de Compras (BPMN)",
       system: "Fluig",
-      description: "Redução de 70% no tempo de aprovação de pedidos através da implementação de um fluxo BPM inteligente com integrações automáticas.",
-      result: "Eficiência Operacional"
+      description: "Redução de 70% no tempo de aprovação de pedidos com fluxo BPM inteligente integrado ao RM via API REST. Eliminação de gargalos operacionais e rastreabilidade total.",
+      result: "+70% Eficiência"
     },
     {
-      title: "Otimização de Fórmulas Visuais",
-      system: "RM",
-      description: "Desenvolvimento de fórmulas complexas para automação de cálculos tributários e validações de folha, eliminando erros manuais.",
-      result: "Conformidade & Precisão"
+      title: "Otimização de Datasets Lentos",
+      system: "Fluig",
+      description: "Reestruturação de datasets Fluig que travavam relatórios críticos. Aplicação de índices SQL Server e boas práticas Node.js para reduzir o tempo de resposta de minutos para segundos.",
+      result: "Performance Recuperada"
     },
     {
-      title: "Portal de Fornecedores Customizado",
+      title: "Portal de Fornecedores Fluig + RM",
       system: "Fluig + RM",
-      description: "Criação de interface intuitiva no Fluig integrada ao RM para gestão de documentos e notas fiscais de fornecedores externos.",
+      description: "Widget customizado no Fluig com integração nativa ao RM para gestão de notas fiscais e documentos. Automação que eliminou retrabalho manual da equipe fiscal.",
       result: "Integração Total"
     }
   ];
@@ -89,31 +86,31 @@ const TotvsConsultancy = () => {
         <div className="absolute top-0 right-0 w-1/3 h-full bg-cyan-50/50 -skew-x-12 transform origin-top" />
         <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-4xl">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
               <span className="inline-block px-4 py-1.5 mb-6 text-sm font-bold tracking-wider text-cyan-600 uppercase bg-cyan-50 rounded-full">
-                Consultoria Especializada
+                Consultoria Fluig Especializada
               </span>
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 mb-8 leading-tight">
-                Potencialize seu ERP <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">TOTVS Fluig & RM</span>
+                Destrave seus Processos, Datasets e Integrações no{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">TOTVS Fluig</span>
               </h1>
               <p className="text-xl md:text-2xl text-slate-600 leading-relaxed max-w-2xl mb-10">
-                Soluções técnicas avançadas em Fórmulas Visuais, Automação de Processos (BPM) e Suporte Estratégico para levar sua operação ao próximo nível.
+                Atendimento direto com o desenvolvedor especialista — sem burocracia, sem contratos mensais engessados. Resolvo gargalos em BPMN, datasets lentos, widgets quebrados e integrações API no Fluig com a agilidade que sua operação exige.
               </p>
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-cyan-600 hover:bg-cyan-700 shadow-lg transition-all gap-2" asChild>
                   <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
-                    Agendar Consultoria <MessageCircle className="w-5 h-5" />
+                    Falar Direto com o Especialista Fluig <MessageCircle className="w-5 h-5" />
                   </a>
                 </Button>
                 <Button variant="ghost" size="lg" className="h-14 px-8 text-lg rounded-full border border-slate-200" onClick={() => {
                   document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' });
                 }}>
-                  Conhecer Serviços
+                  Ver Soluções Técnicas
                 </Button>
               </div>
             </motion.div>
@@ -121,12 +118,44 @@ const TotvsConsultancy = () => {
         </div>
       </section>
 
-      {/* Intro Section - Fluig & RM */}
-      <section id="servicos" className="py-24 bg-white border-y border-slate-100">
+      {/* Pain Points Section */}
+      <section className="py-16 bg-slate-50 border-y border-slate-100">
+        <div className="container px-4 mx-auto max-w-5xl">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
+              Problemas Críticos no Fluig que Travam sua Operação?
+            </h2>
+            <p className="text-lg text-slate-600">
+              Se você reconhece algum desses sintomas, precisa de um especialista Fluig sob demanda agora.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { icon: Workflow, title: "BPMN Lentos ou Quebrados", desc: "Processos que não fluem, aprovações travadas e retrabalho manual que custa tempo e dinheiro." },
+              { icon: Database, title: "Datasets com Performance Crítica", desc: "Relatórios que demoram minutos para carregar. Impacto direto na tomada de decisão da sua empresa." },
+              { icon: Code2, title: "Integrações API Paradas", desc: "APIs REST/SOAP que pararam de funcionar após atualizações. Sistemas que não conversam entre si." }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -3 }}
+                className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm"
+              >
+                <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-red-500" />
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-600">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - Foco Total Fluig */}
+      <section id="servicos" className="py-24 bg-white">
         <div className="container px-4 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Fluig Card */}
-            <motion.div 
+          <div className="max-w-4xl mx-auto">
+            <motion.div
               whileHover={{ y: -5 }}
               className="p-8 md:p-12 rounded-[2.5rem] bg-gradient-to-br from-slate-900 to-slate-800 text-white shadow-2xl relative overflow-hidden"
             >
@@ -134,63 +163,42 @@ const TotvsConsultancy = () => {
                 <Workflow className="w-32 h-32" />
               </div>
               <div className="relative z-10">
-                <div className="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-500/20">
-                  <Cpu className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-16 h-16 bg-cyan-500 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/20">
+                    <Cpu className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h2 className="text-3xl font-bold">TOTVS Fluig</h2>
+                    <p className="text-cyan-300 text-sm font-medium">Desenvolvimento & Suporte Especializado</p>
+                  </div>
                 </div>
-                <h2 className="text-3xl font-bold mb-6">TOTVS Fluig</h2>
                 <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                  Apresento-me como seu parceiro na jornada de transformação digital com Fluig. Atuo no contexto geral da plataforma, desde a criação de portais corporativos até a automação complexa de processos (BPM).
+                  Especialista Fluig com domínio comprovado em todo o ecossistema da plataforma. Atuo direto na resolucão dos seus gargalos — de BPMN complexos a integrações nativas com o RM/ERP, garantindo que seus dados conversem perfeitamente.
                 </p>
-                <ul className="space-y-4 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 mb-10">
                   {[
-                    "Desenvolvimento de Workflows (BPMN)",
+                    "Desenvolvimento de Workflows BPMN",
                     "Criação de Portais e Widgets Customizados",
-                    "Integração via API (REST/SOAP)",
-                    "Gestão de Identidade e Acessos"
+                    "Otimização de Datasets Lentos",
+                    "Integração via API REST/SOAP",
+                    "Automação de Processos com Node.js e JavaScript",
+                    "Gestão de Identidade e Acessos (IAM)",
+                    "Consultoria em Performance Fluig",
+                    "Integração Nativa com Ecossistema RM/ERP"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-slate-200">
-                      <CheckCircle2 className="w-5 h-5 text-cyan-400" />
+                    <li key={i} className="flex items-center gap-3 text-slate-200 list-none">
+                      <CheckCircle2 className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
-                </ul>
-                <div className="pt-8 border-t border-slate-700">
-                  <p className="text-sm text-slate-400 italic font-medium">Focado em agilidade e colaboração entre departamentos.</p>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* RM Card */}
-            <motion.div 
-              whileHover={{ y: -5 }}
-              className="p-8 md:p-12 rounded-[2.5rem] bg-white border border-slate-200 shadow-xl relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-8 opacity-5">
-                <Database className="w-32 h-32" />
-              </div>
-              <div className="relative z-10">
-                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-600/20">
-                  <FileCode2 className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">TOTVS RM</h2>
-                <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                  Especialista em suporte técnico e desenvolvimento avançado para a linha RM. Meu foco é extrair o máximo de performance do seu ERP através de customizações inteligentes e seguras.
-                </p>
-                <ul className="space-y-4 mb-10">
-                  {[
-                    "Desenvolvimento de Fórmulas Visuais complexas",
-                    "Suporte Técnico em RH, Financeiro e Gestão",
-                    "Criação de Relatórios (Gerador de Saídas)",
-                    "Consultoria em Banco de Dados SQL Server"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-center gap-3 text-slate-700">
-                      <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="pt-8 border-t border-slate-100">
-                  <p className="text-sm text-slate-400 italic font-medium">Robustez e precisão para os dados vitais da sua empresa.</p>
+                <div className="pt-8 border-t border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <p className="text-sm text-slate-400 italic font-medium">Resultado: agilidade, fim dos erros manuais, eliminação de gargalos operacionais.</p>
+                  <Button size="sm" variant="secondary" className="rounded-full whitespace-nowrap" asChild>
+                    <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
+                      Solicitar Análise Técnica <ArrowRight className="w-4 h-4 ml-1" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </motion.div>
@@ -198,7 +206,7 @@ const TotvsConsultancy = () => {
         </div>
       </section>
 
-      {/* About Me Section */}
+      {/* About Me Section - Quebra de Objeções */}
       <section className="py-24 bg-slate-50 overflow-hidden">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -207,7 +215,7 @@ const TotvsConsultancy = () => {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl bg-white border-4 border-white aspect-square lg:aspect-auto lg:h-[600px]">
                 <img
                   src={roqueImage}
-                  alt="Roque Rafael Proença"
+                  alt="Roque Rafael Proença - Especialista Fluig"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
@@ -218,14 +226,14 @@ const TotvsConsultancy = () => {
                 <span>Especialista Responsável</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 leading-tight">
-                Roque Rafael Proença: <br /> Sua ponte para a eficiência.
+                Roque Rafael Proença: <br /> Seu Desenvolvedor Fluig Sob Demanda.
               </h2>
               <div className="space-y-6 text-lg text-slate-600 leading-relaxed">
                 <p>
-                  Com mais de 15 anos de experiência no mercado de tecnologia, especializei-me em transformar o ecossistema TOTVS em uma vantagem competitiva para empresas de diversos portes.
+                  Com mais de 15 anos de mercado, sou o desenvolvedor especialista que estará pessoalmente na resolucão dos seus problemas no Fluig. Diferente das grandes consultorias parceiras TOTVS, você não enfrenta intermediários comerciais nem burocracia — o contato é direto comigo.
                 </p>
                 <p>
-                  Minha abordagem une a visão técnica profunda com o entendimento das necessidades de negócio, garantindo que cada fórmula visual ou processo Fluig entregue valor real e mensurável.
+                  Minha abordagem une visão técnica profunda em BPMN, datasets, widgets customizados e APIs REST/SOAP com o entendimento das necessidades de negócio. Cada entrega é feita sob medida, sem contratos mensais engessados — você paga pelo resultado.
                 </p>
                 <div className="grid grid-cols-2 gap-8 pt-8 border-t border-slate-200">
                   <div>
@@ -234,7 +242,7 @@ const TotvsConsultancy = () => {
                   </div>
                   <div>
                     <h5 className="font-bold text-slate-900 text-3xl mb-1">100%</h5>
-                    <p className="text-sm text-slate-500">Foco em Resultados</p>
+                    <p className="text-sm text-slate-500">Atendimento Direto</p>
                   </div>
                 </div>
               </div>
@@ -249,7 +257,7 @@ const TotvsConsultancy = () => {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Casos Reais, Resultados Reais</h2>
             <p className="text-lg text-slate-600">
-              Exemplos de como a consultoria estratégica transformou operações complexas em fluxos de trabalho simplificados.
+              Exemplos reais de como a consultoria Fluig sob demanda resolveu gargalos críticos em empresas de médio e grande porte.
             </p>
           </div>
 
@@ -274,14 +282,17 @@ const TotvsConsultancy = () => {
         <div className="container px-4 mx-auto max-w-5xl text-center">
           <div className="bg-gradient-to-br from-cyan-600 to-blue-700 rounded-[3rem] p-12 lg:p-20 text-white shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">"Sua empresa não precisa de mais software, ela precisa de mais eficiência."</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">
+                Seu Processo no Fluig Travou? <br />
+                <span className="italic">"Sua empresa não precisa de mais software, ela precisa de mais eficiência."</span>
+              </h2>
               <p className="text-xl text-cyan-50 mb-12 leading-relaxed max-w-2xl mx-auto">
-                Vamos conversar sobre como posso destravar o potencial do seu TOTVS Fluig e RM hoje mesmo.
+                Pare de perder tempo com burocracia. Fale agora diretamente com o especialista responsável e receba uma análise técnica do seu cenário Fluig.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                 <Button size="lg" variant="secondary" className="h-16 px-10 text-xl font-bold rounded-full shadow-xl hover:scale-105 transition-transform" asChild>
                   <a href="https://wa.me/5532991075164" target="_blank" rel="noopener noreferrer">
-                    Iniciar Consultoria Agora
+                    Falar Direto com o Especialista Fluig <MessageCircle className="w-5 h-5 ml-2" />
                   </a>
                 </Button>
               </div>
