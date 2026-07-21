@@ -9,6 +9,10 @@
   ],
   "rewrites": [
     {
+      "source": "/fisiomais/:path*",
+      "destination": "https://fisiomais-iota.vercel.app/:path*"
+    },
+    {
       "source": "/blog/:slug",
       "destination": "/api/blog?slug=:slug"
     },

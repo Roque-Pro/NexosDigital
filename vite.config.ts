@@ -13,6 +13,13 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      '/fisiomais': {
+        target: 'https://fisiomais-iota.vercel.app',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/fisiomais/, ''),
+      },
+    },
   },
   plugins: [
     react(),
