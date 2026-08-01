@@ -62,12 +62,12 @@ export default function BlogNavbar() {
                     </Button>
 
                     <Button
-                        onClick={() => navigate("/consultoria-totvs")}
+                        onClick={() => navigate("/bi-datasul-fluig")}
                         variant="ghost"
                         size="sm"
                         className="hidden md:inline-flex text-gray-700 hover:text-blue-600 text-sm font-medium"
                     >
-                        Consultoria TOTVS
+                        BI, Datasul & Fluig
                     </Button>
 
                     {/* Solutions Dropdown */}
@@ -179,14 +179,14 @@ export default function BlogNavbar() {
                             </Button>
                             <Button
                                 onClick={() => {
-                                    navigate("/consultoria-totvs");
+                                    navigate("/bi-datasul-fluig");
                                     setMobileMenuOpen(false);
                                 }}
                                 variant="ghost"
                                 size="sm"
                                 className="justify-start text-gray-700 hover:text-blue-600 hover:bg-blue-50"
                             >
-                                Consultoria TOTVS
+                                BI, Datasul & Fluig
                             </Button>
 
                             {/* Mobile Solutions */}

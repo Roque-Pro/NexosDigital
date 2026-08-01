@@ -46,9 +46,9 @@ const staticPages: StaticPage[] = [
     description: 'Escale sua advocacia com Meta Ads e Google Ads para advogados. Captação previsível de clientes jurídicos com ROAS alto, funis de nutrição e conformidade OAB.'
   },
   {
-    path: '/consultoria-totvs',
-    title: 'Consultoria TOTVS Fluig & RM | Especialista Roque Rafael Proença',
-    description: 'Consultoria técnica especializada em TOTVS Fluig e RM. Automação de processos (BPM), Fórmulas Visuais, suporte estratégico e desenvolvimento sob medida para o seu ERP.'
+    path: '/bi-datasul-fluig',
+    title: 'Consultoria BI, Datasul e Fluig | Especialista TOTVS | TechNexos',
+    description: 'Consultoria especializada em BI, TOTVS Datasul e TOTVS Fluig. Painéis de indicadores, ERP otimizado e automação de processos BPM com atendimento direto com o especialista. Diagnóstico gratuito.'
   },
   {
     path: '/autonomos',

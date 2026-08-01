@@ -12,7 +12,7 @@ import {
 
 const links = [
   { label: "Serviços", href: "#servicos" },
-  { label: "Consultoria TOTVS", href: "/consultoria-totvs", isLink: true },
+  { label: "BI, Datasul & Fluig", href: "/bi-datasul-fluig", isLink: true },
   { 
     label: "Soluções", 
     isDropdown: true,

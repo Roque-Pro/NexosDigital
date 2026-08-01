@@ -18,7 +18,7 @@ const staticRoutes = [
   { path: '/autoclub-pro', priority: '0.9', changefreq: 'weekly' },
   { path: '/about-me', priority: '0.8', changefreq: 'weekly' },
   { path: '/trafego-pago', priority: '0.85', changefreq: 'weekly' },
-  { path: '/consultoria-totvs', priority: '0.8', changefreq: 'weekly' },
+  { path: '/bi-datasul-fluig', priority: '0.8', changefreq: 'weekly' },
   { path: '/autonomos', priority: '0.8', changefreq: 'weekly' },
   { path: '/riscos_moldes_moda', priority: '0.85', changefreq: 'weekly' },
   { path: '/blog', priority: '0.7', changefreq: 'weekly' },

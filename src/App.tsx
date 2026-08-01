@@ -20,7 +20,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const AutoClubPro = lazy(() => import("./pages/AutoClubPro"));
 const AboutMe = lazy(() => import("./pages/AboutMe"));
 const PaidTraffic = lazy(() => import("./pages/TrafficAndSEO"));
-const TotvsConsultancy = lazy(() => import("./pages/TotvsConsultancy"));
+const BiDatasulFluig = lazy(() => import("./pages/BiDatasulFluig"));
 const Autonomos = lazy(() => import("./pages/Autonomos"));
 const RiscosMoldesModa = lazy(() => import("./pages/RiscosMoldesModa"));
 const BureauModelagemFeminina = lazy(() => import("./pages/BureauModelagemFeminina"));
@@ -55,7 +55,8 @@ const App = () => (
               <Route path="/autoclub-pro" element={<AutoClubPro />} />
               <Route path="/about-me" element={<AboutMe />} />
               <Route path="/trafego-pago" element={<PaidTraffic />} />
-              <Route path="/consultoria-totvs" element={<TotvsConsultancy />} />
+              <Route path="/bi-datasul-fluig" element={<BiDatasulFluig />} />
+              <Route path="/consultoria-totvs" element={<BiDatasulFluig />} />
               <Route path="/autonomos" element={<Autonomos />} />
               <Route path="/riscos_moldes_moda" element={<RiscosMoldesModa />} />
               <Route path="/bureau-modelagem-feminina" element={<BureauModelagemFeminina />} />

@@ -232,10 +232,10 @@ const Landing = () => {
               Tráfego Pago
             </button>
             <button
-              onClick={() => navigate("/consultoria-totvs")}
+              onClick={() => navigate("/bi-datasul-fluig")}
               className="text-sm font-bold text-slate-600 transition-colors hover:text-blue-600"
             >
-              Consultoria TOTVS
+              BI, Datasul & Fluig
             </button>
             <button
               onClick={() => navigate("/blog")}
@@ -325,12 +325,12 @@ const Landing = () => {
             </button>
             <button
               onClick={() => {
-                navigate("/consultoria-totvs");
+                navigate("/bi-datasul-fluig");
                 setMobileMenuOpen(false);
               }}
               className="block w-full p-2 text-left font-bold text-slate-700"
             >
-              Consultoria TOTVS
+              BI, Datasul & Fluig
             </button>
             <button
               onClick={() => {
