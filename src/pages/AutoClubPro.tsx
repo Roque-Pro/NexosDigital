@@ -1050,7 +1050,7 @@ const AutoClubPro = () => {
             </main>
 
             <Footer />
-            <WhatsAppFloat />
+            <WhatsAppFloat phone="19983316154" label="Falar com Consultor" />
 
             {/* Image Modal */}
             {selectedImage && (

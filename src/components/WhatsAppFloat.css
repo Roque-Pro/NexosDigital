@@ -72,3 +72,34 @@
   transform: translate(-50%, -50%);
   background: transparent !important;
 }
+
+@keyframes whatsapp-wiggle {
+  0%,
+  15%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  2% {
+    transform: rotate(-14deg) scale(1.05);
+  }
+  4% {
+    transform: rotate(14deg) scale(1.05);
+  }
+  6% {
+    transform: rotate(-10deg) scale(1.05);
+  }
+  8% {
+    transform: rotate(10deg) scale(1.05);
+  }
+  10% {
+    transform: rotate(-6deg) scale(1.05);
+  }
+  12% {
+    transform: rotate(6deg) scale(1.05);
+  }
+}
+
+.animate-whatsapp-wiggle {
+  animation: whatsapp-wiggle 4s ease-in-out infinite;
+  transform-origin: center;
+}
