@@ -14,13 +14,13 @@ export default function WhatsAppFloat({ phone = "5532991075164", message, label 
     : `https://wa.me/${cleanPhone}`;
 
   return (
-    <div className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 ${label ? "animate-whatsapp-wiggle" : ""}`}>
+    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
       {label && (
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative flex items-center gap-2 rounded-full bg-[#25D366] pl-4 pr-5 py-3 text-sm font-black text-white shadow-lg shadow-green-500/40 transition-all hover:scale-105 hover:bg-[#1fbd5a]"
+          className="relative flex items-center gap-2 rounded-full bg-[#25D366] pl-4 pr-5 py-3 text-sm font-black text-white shadow-lg shadow-green-500/40 transition-colors hover:bg-[#1fbd5a]"
           aria-label={label}
         >
           <span className="relative flex h-2.5 w-2.5">
@@ -32,10 +32,10 @@ export default function WhatsAppFloat({ phone = "5532991075164", message, label 
       )}
 
       {/* Radar waves background */}
-      <div className="relative">
-        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-radar-wave-1"></div>
-        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-radar-wave-2"></div>
-        <div className="absolute inset-0 rounded-full bg-[#25D366] animate-radar-wave-3"></div>
+      <div className="relative flex h-14 w-14 items-center justify-center">
+        <div className="animate-radar-wave-1"></div>
+        <div className="animate-radar-wave-2"></div>
+        <div className="animate-radar-wave-3"></div>
 
         {/* Main button */}
         <a

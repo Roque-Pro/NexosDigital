@@ -1,13 +1,11 @@
 @keyframes radar-wave-1 {
   0% {
-    width: 56px;
-    height: 56px;
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     border: 2px solid #25D366;
   }
   100% {
-    width: 120px;
-    height: 120px;
+    transform: translate(-50%, -50%) scale(2.2);
     opacity: 0;
     border: 2px solid #25D366;
   }
@@ -15,8 +13,7 @@
 
 @keyframes radar-wave-2 {
   0% {
-    width: 56px;
-    height: 56px;
+    transform: translate(-50%, -50%) scale(1);
     opacity: 0;
     border: 2px solid #25D366;
   }
@@ -24,8 +21,7 @@
     opacity: 1;
   }
   100% {
-    width: 140px;
-    height: 140px;
+    transform: translate(-50%, -50%) scale(2.6);
     opacity: 0;
     border: 2px solid #25D366;
   }
@@ -33,8 +29,7 @@
 
 @keyframes radar-wave-3 {
   0% {
-    width: 56px;
-    height: 56px;
+    transform: translate(-50%, -50%) scale(1);
     opacity: 0;
     border: 2px solid #25D366;
   }
@@ -42,64 +37,33 @@
     opacity: 1;
   }
   100% {
-    width: 160px;
-    height: 160px;
+    transform: translate(-50%, -50%) scale(3);
     opacity: 0;
     border: 2px solid #25D366;
   }
 }
 
-.animate-radar-wave-1 {
-  animation: radar-wave-1 2s ease-out infinite;
+.animate-radar-wave-1,
+.animate-radar-wave-2,
+.animate-radar-wave-3 {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
   background: transparent !important;
+  will-change: transform, opacity;
+}
+
+.animate-radar-wave-1 {
+  animation: radar-wave-1 2s ease-out infinite;
 }
 
 .animate-radar-wave-2 {
   animation: radar-wave-2 2s ease-out infinite 0.4s;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent !important;
 }
 
 .animate-radar-wave-3 {
   animation: radar-wave-3 2s ease-out infinite 0.8s;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: transparent !important;
-}
-
-@keyframes whatsapp-wiggle {
-  0%,
-  15%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-  2% {
-    transform: rotate(-14deg) scale(1.05);
-  }
-  4% {
-    transform: rotate(14deg) scale(1.05);
-  }
-  6% {
-    transform: rotate(-10deg) scale(1.05);
-  }
-  8% {
-    transform: rotate(10deg) scale(1.05);
-  }
-  10% {
-    transform: rotate(-6deg) scale(1.05);
-  }
-  12% {
-    transform: rotate(6deg) scale(1.05);
-  }
-}
-
-.animate-whatsapp-wiggle {
-  animation: whatsapp-wiggle 4s ease-in-out infinite;
-  transform-origin: center;
 }
