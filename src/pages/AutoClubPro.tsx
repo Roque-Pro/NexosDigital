@@ -68,7 +68,7 @@ const AutoClubPro = () => {
     // SEO
     useSEO({
         title: "AutoClub Pro | O Sistema Definitivo para Especialistas em Vidros Automotivos",
-        description: "Pare de perder dinheiro com estoque descontrolado e burocracia de seguradoras. O AutoClub Pro é o único ecossistema white-label que transforma sua vidraçaria em uma estrutura de elite. Gestão de vidros, CRM e identidade própria. R$ 2.300 + R$ 219/mês.",
+        description: "Pare de perder dinheiro com estoque descontrolado e burocracia de seguradoras. O AutoClub Pro é o único ecossistema white-label que transforma sua vidraçaria em uma estrutura de elite. Gestão de vidros, CRM e identidade própria. Planos a partir de R$ 299/mês.",
         keywords: [
             "autoclub pro",
             "sistema gestão automotivo",
@@ -92,9 +92,9 @@ const AutoClubPro = () => {
             "url": "https://www.technexos.com.br/autoclub-pro",
             "offers": {
                 "@type": "Offer",
-                "price": "2300",
+                "price": "299",
                 "priceCurrency": "BRL",
-                "description": "AutoClub Pro - R$ 2.300 implementação + R$ 219/mês",
+                "description": "AutoClub Pro - Planos a partir de R$ 299/mês",
             }
         }
     });
@@ -850,8 +850,14 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 2.300</p>
-                                        <p className="text-slate-500 font-medium text-sm mt-2 italic">Pagamento único (Investimento Inicial)</p>
+                                        <Button 
+                                            size="lg"
+                                            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-7 text-lg rounded-2xl transition-all shadow-lg shadow-blue-200"
+                                            onClick={() => window.open("https://wa.me/5519983316154?text=" + encodeURIComponent("Olá! Quero solicitar um orçamento para o AutoClub Pro."))}
+                                        >
+                                            Solicitar Orçamento <ArrowRight className="ml-2 w-5 h-5" />
+                                        </Button>
+                                        <p className="text-slate-500 font-medium text-sm mt-3 text-center italic">Fale com um consultor e receba uma proposta sob medida</p>
                                     </div>
 
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-3 mb-10">
@@ -929,7 +935,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 219<span className="text-xl font-normal text-gray-400">/mês</span></p>
+                                        <p className="text-5xl font-black text-gray-900 tracking-tighter">R$ 299<span className="text-xl font-normal text-gray-400">/mês</span></p>
                                         <p className="text-slate-500 font-medium text-sm mt-2 italic">Suporte VIP direto no WhatsApp</p>
                                     </div>
 
@@ -981,7 +987,7 @@ const AutoClubPro = () => {
                                     </p>
                                     
                                     <div className="mb-8">
-                                        <p className="text-5xl font-black tracking-tighter">R$ 419<span className="text-xl font-normal opacity-80">/mês</span></p>
+                                        <p className="text-5xl font-black tracking-tighter">R$ 499<span className="text-xl font-normal opacity-80">/mês</span></p>
                                         <p className="text-blue-200 font-medium text-sm mt-2 italic">Apareça no topo do Google</p>
                                     </div>
 
